@@ -82,37 +82,37 @@ integrantes.push(  {
 }  );
 
 const crearTarjeta = (etiqueta) => {        
-   return `
-        <!-- card -->
-            <div class="card mb-5 rounded-3 text-center offset-1 col-sm-7 col-md-5 col-lg-3">
-                <!-- avatar -->
-                <div class="avatar avatar-xl mt-n7 ms-4">
-                    <img src="${etiqueta.image}" alt="Image" class="rounded-circle border-4
-                    border-white-color-40 width="350" height="100" ">
-                </div>
-                <!-- card body -->
-                <div class="card-body">
-                    <!-- Title -->
-                    <h4 class="mb-1">${etiqueta.nombre}</h4>
-                    <p>${etiqueta.rol}</p>
-                    <p>${etiqueta.frase}</p>
-                    <div>
-                    <!-- Dropdown -->
-                        <div class="d-flex justify-content-between
-                                    align-items-center">
-                            <a href="${etiqueta.linkedin}"  class="btn btn-outline-info">
-                            <i class="bi bi-linkedin"></i>
-                            </a>
-                            <a href="${etiqueta.github}"  class="btn btn-dark">
-                            <i class="bi bi-github"></i>
-                            </a>
-                            <a href="${etiqueta.correo}"  class="btn btn-danger">
-                            <i class="bi bi-envelope-at"></i>
-                            </a>
-                        </div>
+    return `
+    <!-- card -->
+        <div class="card mb-5 rounded-3 text-center offset-1 col-sm-7 col-md-5 col-lg-3">
+            <!-- avatar -->
+            <div class="avatar avatar-xl mt-n7 ms-4">
+                <img src="${etiqueta.image}" alt="Image" class="rounded-circle border-4
+                border-white-color-40 width="350" height="100" ">
+            </div>
+            <!-- card body -->
+            <div class="card-body">
+                <!-- Title -->
+                <h4 class="mb-1">${etiqueta.nombre}</h4>
+                <p>${etiqueta.rol}</p>
+                <p>${etiqueta.frase}</p>
+                <div>
+                <!-- Dropdown -->
+                    <div class="d-flex justify-content-between
+                                align-items-center">
+                        <a href="${etiqueta.linkedin}"  class="btn btn-outline-info">
+                        <i class="bi bi-linkedin"></i>
+                        </a>
+                        <a href="${etiqueta.github}"  class="btn btn-dark">
+                        <i class="bi bi-github"></i>
+                        </a>
+                        <a href="${etiqueta.correo}"  class="btn btn-danger">
+                        <i class="bi bi-envelope-at"></i>
+                        </a>
                     </div>
                 </div>
-            </div>`
+            </div>
+</div>`
 }
 
 

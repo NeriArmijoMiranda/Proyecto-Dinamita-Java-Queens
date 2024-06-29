@@ -88,7 +88,7 @@ const crearTarjeta = (etiqueta) => {
             <!-- avatar -->
             <div class="avatar avatar-xl mt-n7 ms-4">
                 <img src="${etiqueta.image}" alt="Image" class="rounded-circle border-4
-                border-white-color-40 width="350" height="100" ">
+                border-white-color-40 width="350" height="100" style="margin-top: 20px; ">
             </div>
             <!-- card body -->
             <div class="card-body">
@@ -98,16 +98,19 @@ const crearTarjeta = (etiqueta) => {
                 <p>${etiqueta.frase}</p>
                 <div>
                 <!-- Dropdown -->
-                    <div class="d-flex justify-content-between
-                                align-items-center">
+                    <div class= "d-flex ="justify-content-between
+                                align-items-center style="margin-top: 20px;">
                         <a href="${etiqueta.linkedin}"  class="btn btn-outline-info">
                         <i class="bi bi-linkedin"></i>
+                    LinkedIn
                         </a>
                         <a href="${etiqueta.github}"  class="btn btn-dark">
                         <i class="bi bi-github"></i>
+                    GitHub
                         </a>
                         <a href="${etiqueta.correo}"  class="btn btn-danger">
                         <i class="bi bi-envelope-at"></i>
+                    Email
                         </a>
                     </div>
                 </div>

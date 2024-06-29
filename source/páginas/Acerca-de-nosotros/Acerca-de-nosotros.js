@@ -108,8 +108,8 @@ const crearTarjeta = (etiqueta) => {
                         <i class="bi bi-github"></i>
                     GitHub
                         </a>
-                        <a href="${etiqueta.correo}"  class="btn btn-danger">
-                        <i class="bi bi-envelope-at"></i>
+                   <a href="mailto:${etiqueta.correo}" class="btn btn-danger" data-bs-toggle="tooltip" data-bs-placement="top" title="${etiqueta.correo}">
+                    <i class="bi bi-envelope"></i>
                     Email
                         </a>
                     </div>
@@ -117,7 +117,12 @@ const crearTarjeta = (etiqueta) => {
             </div>
 </div>`
 }
-
+document.addEventListener('DOMContentLoaded', function () {
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl);
+    });
+});
 
 
    const crearArregloTarjetas = ( integrantes ) => {

@@ -1,0 +1,105 @@
+/*Color de página general*/
+    body{
+    background-color: black;
+
+    }
+
+    /* Para tipo de leta y color de parrafo*/
+    .Dinamita-J-Q{
+        color: white;
+        text-align: center;
+        font-family: Mulish;
+        padding: 27px;
+        font-size:20px;
+        margin: 30px;
+    }
+    /Título de la página contenedor/
+    .h1aN {
+        text-align: center;
+        font-family: Corben;
+        color: white;
+        
+    }
+    /* para el color y tipo de letra de sub titulo*/
+    .h1sub {
+        font-family: Corben;
+        text-align: center;
+        background-color: black;
+        color:white;
+    }
+    /Contenedor titulo1/
+    .container {
+        text-align: center;
+        background-color:#08807B;
+        margin-left: 100px;
+        margin-right: 100px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding: 20px;
+    }
+    
+
+     /* Clase para el logo */ 
+ .logo-image {
+    max-height: 1 rem;
+    height: auto; 
+    max-width: 5rem;
+  }
+/* Estilo para distribuir el menú en toda la página. */
+.navbar-nav {
+    width: 100%;
+    justify-content: space-around;
+}
+/* Clase para barra de navegación */
+.navbar {
+    background-color: #E4007F;
+    width: 100%;
+    height: 100%;
+    font-family: "Corben", serif;
+    font-weight: 700;
+    font-size: large;
+    font-style: normal;
+}
+/* Clase para pie de página */
+.footer-basic {
+    background-color: #F1A20B;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    min-height: 2rem;
+    padding: 1%;
+    font-family: "Mulish", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    margin-top: auto;
+}
+/* Clase de fuente titulos */
+.corben-regular {
+    font-family: "Corben", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+.corben-bold {
+    font-family: "Corben", serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+
+ /* Clase para el logo */ 
+ .logo-image {
+    max-height: 1 rem;
+    height: auto; 
+    max-width: 5rem;
+  }
+
+/Estilo para el arreglo de tarjetas/
+#arregloTarjetas{
+
+    .card {
+        background-color: #08807B;
+    }
+    .card:hover {
+        background-color: #E4007F;
+    }

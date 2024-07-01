@@ -88,16 +88,92 @@ font-size: 57px;
     margin: top 10px;
     font-family: Mulish;
     color: white;
-    margin-bottom: 200px;
     justify-content: center;
     text-align: center;
     font-size: 20px;
     margin-left: 100px;
 margin-right: 100px;
+margin-bottom: 0px;
 }
 .propiedades{
     color: #E4007F;
+    margin-left: 30px;
+    margin-right: 10px;
 }
+
+/* Contenido misión y visión */
+
+.contenido {
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}    
+.contenedor-mision {
+    color: white;
+    padding: 20px;
+    text-align: center; /* Alineación del texto al centro */
+    height: 100%; /* Ocupa el 100% de la altura disponible */
+    width: 100%;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagenmision{
+    background-image:url(/public/img/Juguetes\ mexicanos.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 300px; /* Altura de la imagen */
+    width: 100%; /* Ancho completo del contenedor */
+    margin-bottom: 200px; 
+    
+}
+.Mision{
+    color: white; /* Color del texto */
+    font-family: Mulish;
+    text-align: center; /* Alineación del texto al centro */
+    margin-bottom: 50px; /* Espacio inferior */
+    font-size: 20px;
+}
+.contenedor-vision {
+    color: white;
+    padding: 20px;
+    text-align: center; /* Alineación del texto al centro */
+    height: 100%; /* Ocupa el 100% de la altura disponible */
+    width: 100%;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.Vision{
+    color: white; /* Color del texto */
+    font-family: Mulish;
+    text-align: center; /* Alineación del texto al centro */
+    margin-bottom: 200px; /* Espacio inferior */
+    font-size: 20px;
+}
+.imagenvision{
+    background-image:url(/public/img/Platos\ de\ ceramica\ mexicanos.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 300px; /* Altura de la imagen */
+    width: 100%; /* Ancho completo del contenedor */
+    margin-bottom: 50px; 
+}
+.subtitulo{
+    background-color: #8D9C09;
+    color: white;
+    text-align: center;
+    font-family: Corben;
+    padding: 10px 0;
+    width: 100%;
+    margin-bottom: 40px; /* Espacio inferior */  }
+
 
 /* Clase para pie de página */
 .footer-basic {

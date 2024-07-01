@@ -12,46 +12,6 @@ const integrante = {
 const integrantes = [   integrante   ];
 
 integrantes.push(  { 
-    nombre : " Jhorleny Arrellano Chávez ",
-    rol : " Desarrollador Java FullStack " ,
-    frase: "\" Cree en ti, esfuérzate y hazlo posible \" ",
-    linkedin: "https://www.linkedin.com/in/jhorleny-arellano/",
-    github: "https://github.com/Jhorchss",
-    correo: "jhorleny.business@gmail.com",
-    image: "/public/img/Jhor.jpg", 
-}  );
-
-integrantes.push(  { 
-    nombre : " Neri Armijo Miranda ",
-    rol : " Desarrollador Java FullStack " ,
-    frase: " \" El éxito es la suma de pequeños esfuerzos repetidos día tras día \" - Robert Collier  ",
-    linkedin: "https://www.linkedin.com/in/neri-armijo-miranda-821318195/",
-    github: "https://github.com/NeriArmijoMiranda",
-    correo: "neriarmijomiranda530@gmail.com", 
-    image: "/public/img/Neri (2).jpg",
-}  );
-
-integrantes.push(  { 
-    nombre : " Marbella Magaly Cabrera Durán ",
-    rol : " Desarrollador Java FullStack " ,
-    frase: "\" La vida es como una bicicleta, para mantener el equilibrio, debes seguir adelante \" - Albert Einstein", 
-    linkedin: "https://www.linkedin.com/in/marbella-magaly-cabrera-dur%C3%A1n-649584278/",
-    github: "https://github.com/marbellacabrera",
-    correo: "marbecduran@gmail.com",
-    image: "/public/img/Marbe.jpg",
-}  );
-
-integrantes.push(  { 
-    nombre : " Jazmín Guadalupe Cruz Ibarra ",
-    rol : " Desarrollador Java FullStack " ,
-    frase: " \" Entre más fuerte trabajes, más complicado será que te des por vencido \" - Vincent Lombardi", 
-    linkedin: "https://www.linkedin.com/in/jazm%C3%ADn-cruz-857383241/",
-    github: "https://github.com/JazzCI",
-    correo: "jazzpchan.93@gmail.com",
-    image: "/public/img/Jazz.jpg",
-}  );
-
-integrantes.push(  { 
     nombre : " Desire Guadalupe García Yañez ",
     rol : " Desarrollador Java FullStack " ,
     frase: "\" Puede que el camino sea duro y atravieses por procesos en los que no sepas cómo salir. Pero no tengas miedo porque estoy contigo cada día de tu vida \" - Isaías 41:10 ", 
@@ -72,6 +32,16 @@ integrantes.push(  {
 }  );
 
 integrantes.push(  { 
+    nombre : " Jazmín Guadalupe Cruz Ibarra ",
+    rol : " Desarrollador Java FullStack " ,
+    frase: " \" Entre más fuerte trabajes, más complicado será que te des por vencido \" - Vincent Lombardi", 
+    linkedin: "https://www.linkedin.com/in/jazm%C3%ADn-cruz-857383241/",
+    github: "https://github.com/JazzCI",
+    correo: "jazzpchan.93@gmail.com",
+    image: "/public/img/Jazz.jpg",
+}  );
+
+integrantes.push(  { 
     nombre : " Jessica Arlette Miranda Chávez ",
     rol : " Desarrollador Java FullStack " ,
     frase: "\" El éxito no es la clave de la felicidad. La felicidad es la clave del éxito. Si amas lo que haces, tendrás éxito \" - Albert Schweitzer ", 
@@ -79,6 +49,36 @@ integrantes.push(  {
     github: " https://github.com/Arlette-Miranda",
     correo: "arlettemirandac@gmail.com",
     image: "/public/img/Arlette.jpg",
+}  );
+
+integrantes.push(  { 
+    nombre : " Jhorleny Arrellano Chávez ",
+    rol : " Desarrollador Java FullStack " ,
+    frase: "\" Cree en ti, esfuérzate y hazlo posible \" ",
+    linkedin: "https://www.linkedin.com/in/jhorleny-arellano/",
+    github: "https://github.com/Jhorchss",
+    correo: "jhorleny.business@gmail.com",
+    image: "/public/img/Jhor.jpg", 
+}  );
+
+integrantes.push(  { 
+    nombre : " Marbella Magaly Cabrera Durán ",
+    rol : " Desarrollador Java FullStack " ,
+    frase: "\" La vida es como una bicicleta, para mantener el equilibrio, debes seguir adelante \" - Albert Einstein", 
+    linkedin: "https://www.linkedin.com/in/marbella-magaly-cabrera-dur%C3%A1n-649584278/",
+    github: "https://github.com/marbellacabrera",
+    correo: "marbecduran@gmail.com",
+    image: "/public/img/Marbe.jpg",
+}  );
+
+integrantes.push(  { 
+    nombre : " Neri Armijo Miranda ",
+    rol : " Desarrollador Java FullStack " ,
+    frase: " \" El éxito es la suma de pequeños esfuerzos repetidos día tras día \" - Robert Collier  ",
+    linkedin: "https://www.linkedin.com/in/neri-armijo-miranda-821318195/",
+    github: "https://github.com/NeriArmijoMiranda",
+    correo: "neriarmijomiranda530@gmail.com", 
+    image: "/public/img/Neri (2).jpg",
 }  );
 
 const crearTarjeta = (etiqueta) => {        

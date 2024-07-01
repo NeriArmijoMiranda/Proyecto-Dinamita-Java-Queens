@@ -119,11 +119,13 @@
 /*Estilo para el arreglo de tarjetas*/
 #arregloTarjetas{
     text-align: center;
-justify-content: center;
+    display: flex;
+justify-content:center;
     background: black;
     margin: 100px;
-    margin-left: 200px;
-}
+ margin-left: 200px;
+ margin-right: 500px;
+    }
 
 .card{
     background: #08807B;

@@ -139,7 +139,6 @@ body {
 }
 
 /*Estilo para el arreglo de tarjetas*/
-<<<<<<< HEAD
 #arregloTarjetas{
     text-align: center;
     display: flex;
@@ -149,15 +148,6 @@ justify-content:center;
  margin-left: 200px;
  margin-right: 500px;
     }
-=======
-#arregloTarjetas {
-  text-align: center;
-  justify-content: center;
-  background: black;
-  margin: 100px;
-  margin-left: 200px;
-}
->>>>>>> 54bab6ac8adc5ac3ded92a39a90faffe228a9268
 
 .card {
   background: #08807B;

@@ -76,6 +76,12 @@
     font-weight: 700;
     font-style: normal;
   }
+
+  /*Cómo se ve el cuerpo del form*/
+body{
+
+    background-color: black;
+}
   
   /* ///////////  NO TOCAR ////////*/
 
@@ -153,15 +159,6 @@ button:hover{
     font-weight: 700;
 }
 /*Termina apartado de preguntas frecuentes*/
-/*Cómo se ve el cuerpo del form*/
-body{
-    font-family: "Mulish", sans-serif;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: black;
-}
 
 /*Referencia al Escríbenos */
 h2{
@@ -183,8 +180,9 @@ form{
     /*display y flex-direction cambios*/
     flex-direction: column;
     max-width: 70rem;
-    margin-bottom: 18px;
+    /* margin-bottom: 18px; */
 }
+
 .object-fit-cover {
     width: 500;
     height: 10rem;
@@ -256,9 +254,9 @@ input, textarea{
 }
 
 /*Según mis averiguaciones tendría que ser responsive pero no  */
-@media screen and (max-width: 500px){
+/* @media screen and (max-width: 500px){
     .form{
         width: 80%;
     }
 
-}
+} */

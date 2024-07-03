@@ -1,8 +1,16 @@
+/* ----NO BORRAR------------ */
+/* Aquí van las rutas de conexión */
 import '/style.scss'
 import './contáctanos.css'
+import '/src/components/footer/footer.css'
+import '/src/components/navbar/navbar.css'
 import { navbarApp } from '/src/components/navbar/navbar-app.js'
+import { footerApp } from '/src/components/footer/footer-app.js'
 
 document.querySelector("#navbar-app").innerHTML= navbarApp();
+document.querySelector("#footer-app").innerHTML= footerApp();
+/* ------------------------------------------------------------- */
+/* Aquí comienzan los JS particulares de Contáctanos */
 
 console.log("Espero por todos los Dioses que te logres conectar");
 

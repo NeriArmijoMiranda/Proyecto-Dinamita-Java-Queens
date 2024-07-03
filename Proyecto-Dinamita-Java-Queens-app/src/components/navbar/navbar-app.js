@@ -88,7 +88,6 @@ const navbarApp = () => {
           </div> <!-- Cierre colapsar -->
         </div> <!-- Cierre de contenedor fluido -->
       </nav> <!-- Se cierra Header -->
-    </header>
   `;
 };
 

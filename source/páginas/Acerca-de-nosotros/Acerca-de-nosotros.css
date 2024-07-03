@@ -1,105 +1,165 @@
-/*Color de página general*/
-    body{
-    background-color: black;
-
-    }
-
-    /* Para tipo de leta y color de parrafo*/
-    .Dinamita-J-Q{
-        color: white;
-        text-align: center;
-        font-family: Mulish;
-        padding: 27px;
-        font-size:20px;
-        margin: 30px;
-    }
-    /Título de la página contenedor/
-    .h1aN {
-        text-align: center;
-        font-family: Corben;
-        color: white;
-        
-    }
-    /* para el color y tipo de letra de sub titulo*/
-    .h1sub {
-        font-family: Corben;
-        text-align: center;
-        background-color: black;
-        color:white;
-    }
-    /Contenedor titulo1/
-    .container {
-        text-align: center;
-        background-color:#08807B;
-        margin-left: 100px;
-        margin-right: 100px;
-        margin-top: 20px;
-        margin-bottom: 20px;
-        padding: 20px;
-    }
-    
-
-     /* Clase para el logo */ 
- .logo-image {
-    max-height: 1 rem;
-    height: auto; 
-    max-width: 5rem;
-  }
-/* Estilo para distribuir el menú en toda la página. */
-.navbar-nav {
-    width: 100%;
-    justify-content: space-around;
+/* Posición para Contendio GENERAL */
+#page-container {
+  position: relative;
+  min-height: 100vh;
 }
+
+/* Posición Contenido pagina */
+#content-wrap {
+  padding-bottom: 2.5rem;
+  /* altura de pie de página */
+}
+
 /* Clase para barra de navegación */
 .navbar {
-    background-color: #E4007F;
-    width: 100%;
-    height: 100%;
-    font-family: "Corben", serif;
-    font-weight: 700;
-    font-size: large;
-    font-style: normal;
+  background-color: #E4007F;
+  width: 100%;
+  height: 100%;
+  font-family: "Corben", serif;
+  font-weight: 700;
+  font-size: large;
+  font-style: normal;
 }
+
 /* Clase para pie de página */
 .footer-basic {
-    background-color: #F1A20B;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    min-height: 2rem;
-    padding: 1%;
-    font-family: "Mulish", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    margin-top: auto;
+  background-color: #F1A20B;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  min-height: 2rem;
+  /* altura de pie de página */
+  padding: 1%;
+  font-family: "Mulish", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
+
 /* Clase de fuente titulos */
 .corben-regular {
-    font-family: "Corben", serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-  
+  font-family: "Corben", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 .corben-bold {
-    font-family: "Corben", serif;
-    font-weight: 700;
-    font-style: normal;
-  }
+  font-family: "Corben", serif;
+  font-weight: 700;
+  font-style: normal;
+}
 
- /* Clase para el logo */ 
- .logo-image {
-    max-height: 1 rem;
-    height: auto; 
-    max-width: 5rem;
-  }
+/* Clase para el logo */
+.logo-image {
+  height: auto;
+  max-width: 5rem;
+}
 
-/Estilo para el arreglo de tarjetas/
+/* Estilo- Encabezado -para distribuir el menú en toda la página. */
+.navbar-nav {
+  width: 100%;
+  justify-content: space-around;
+}
+
+/*Color de página general*/
+body {
+  background-color: black;
+}
+/* ///////////////////////////////// */
+
+/*Contenedor de Acerca de Nosotros*/
+.containerS {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+/*Texto Acerca de nosotros*/
+.ph1 {
+  text-align: center;
+  color: white;
+  font-family: "Mulish", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  margin: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+
+}
+
+/* Para tipo de letra y color de parrafo*/
+.Dinamita-J-Q {
+  color: white;
+  text-align: center;
+  font-family: "Mulish", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  padding: 27px;
+  margin: 30px;
+}
+
+/*Título de la página contenedor*/
+.h1aN {
+  text-align: center;
+  font-family: "Corben", serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 35px;
+  color: white;
+  justify-content: center;
+
+}
+
+/* para el color y tipo de letra de sub titulo*/
+.h1sub {
+  font-family: "Corben", serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  background-color: black;
+  color: white;
+  margin-top: 60px;
+  margin-bottom: 50px;
+
+}
+
+/*Contenedor titulo1*/
+.container {
+  text-align: center;
+  justify-content: center;
+  background-color: #08807B;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+/*Estilo para el arreglo de tarjetas*/
 #arregloTarjetas{
-
-    .card {
-        background-color: #08807B;
+    text-align: center;
+    display: flex;
+justify-content:center;
+    background: black;
+    margin: 100px;
+ margin-left: 200px;
+ margin-right: 500px;
     }
-    .card:hover {
-        background-color: #E4007F;
-    }
+
+.card {
+  background: #08807B;
+  justify-content: center;
+  margin-bottom: 50px;
+  margin-top: 10px;
+  font-family: "Mulish", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.card:hover {
+  background: #E4007F;
+}

@@ -1,73 +1,4 @@
-/* Posición para Contendio GENERAL */
-#page-container {
-  position: relative;
-  min-height: 100vh;
-}
-
-/* Posición Contenido pagina */
-#content-wrap {
-  padding-bottom: 2.5rem;
-  /* altura de pie de página */
-}
-
-/* Clase para barra de navegación */
-.navbar {
-  background-color: #E4007F;
-  width: 100%;
-  height: 100%;
-  font-family: "Corben", serif;
-  font-weight: 700;
-  font-size: large;
-  font-style: normal;
-}
-
-/* Clase para pie de página */
-.footer-basic {
-  background-color: #F1A20B;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  min-height: 2rem;
-  /* altura de pie de página */
-  padding: 1%;
-  font-family: "Mulish", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-}
-
-/* Clase de fuente titulos */
-.corben-regular {
-  font-family: "Corben", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.corben-bold {
-  font-family: "Corben", serif;
-  font-weight: 700;
-  font-style: normal;
-}
-
-/* Clase para el logo */
-.logo-image {
-  height: auto;
-  max-width: 5rem;
-}
-
-/* Estilo- Encabezado -para distribuir el menú en toda la página. */
-.navbar-nav {
-  width: 100%;
-  justify-content: space-around;
-}
-
-/*Color de página general*/
-body {
-  background-color: black;
-}
-/* ///////////////////////////////// */
-
-/*Contenedor de Acerca de Nosotros*/
+/* Estilos particulares de Acerca de Nosotros */
 .containerS {
   margin-left: 0px;
   margin-right: 0px;
@@ -139,15 +70,15 @@ body {
 }
 
 /*Estilo para el arreglo de tarjetas*/
-#arregloTarjetas{
-    text-align: center;
-    display: flex;
-justify-content:center;
-    background: black;
-    margin: 100px;
- margin-left: 200px;
- margin-right: 500px;
-    }
+#arregloTarjetas {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  background: black;
+  margin: 100px;
+  margin-left: 200px;
+  margin-right: 500px;
+}
 
 .card {
   background: #08807B;

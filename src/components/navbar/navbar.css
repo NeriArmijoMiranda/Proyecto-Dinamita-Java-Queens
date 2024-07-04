@@ -1,4 +1,4 @@
-/* Clase para barra de navegación */
+/* Estilos particulares de La Barra de Navegación */
 .navbar {
     background-color: #E4007F;
     width: 100%;
@@ -9,12 +9,12 @@
     font-style: normal;
 }
 
-/* Clase para el logo */ 
+/* Clase para el logo */
 .logo-image {
     max-height: 1 rem;
-    height: auto; 
+    height: auto;
     max-width: 5rem;
-  }
+}
 
 /* Estilo para distribuir el menú en toda la página. */
 .navbar-nav {
@@ -22,6 +22,18 @@
     justify-content: space-around;
 }
 
-.dropdown-menu{
+.dropdown-menu {
     background-color: black;
+}
+
+.form-control {
+    background-color: rgba(238, 163, 204, 0.5);
+    border-color: black;
+    width: 1rem;
+}
+
+.btn {
+    border-color: black;
+    color: rgba(var(--bs-emphasis-color-rgb), 1);
+    ;
 }

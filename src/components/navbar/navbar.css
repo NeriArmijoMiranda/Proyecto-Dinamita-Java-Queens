@@ -26,14 +26,17 @@
     background-color: black;
 }
 
+/* Estilos de barra de busqueda */
 .form-control {
     background-color: rgba(238, 163, 204, 0.5);
-    border-color: black;
-    width: 1rem;
-}
-
-.btn {
-    border-color: black;
+    border-color: rgb(56, 55, 55);
+    font-family: "Corben", serif;
+    font-weight: 700;
+    font-size: large;
+    font-style: normal;
+  }
+  
+  .btn {
+    border-color: rgb(56, 55, 55);
     color: rgba(var(--bs-emphasis-color-rgb), 1);
-    ;
-}
+  }

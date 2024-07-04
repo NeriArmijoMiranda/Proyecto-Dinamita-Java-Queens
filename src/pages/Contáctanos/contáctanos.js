@@ -9,7 +9,9 @@ import { footerApp } from '/src/components/footer/footer-app.js'
 
 document.querySelector("#navbar-app").innerHTML= navbarApp();
 document.querySelector("#footer-app").innerHTML= footerApp();
+
 /* ------------------------------------------------------------- */
+
 /* Aquí comienzan los JS particulares de Contáctanos */
 
 console.log("Espero por todos los Dioses que te logres conectar");

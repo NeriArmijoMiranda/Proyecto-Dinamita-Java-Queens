@@ -5,7 +5,7 @@ const navbarApp = () => {
         <div class="container-fluid">
   
           <!-- Logo con link para redireccionar al Inicio -->
-          <a id="logo-title" class="navbar-brand" href="https://getbootstrap.com/docs/5.3/about/brand/#logo">
+          <a id="logo-title" class="navbar-brand" href="/src/pages/Inicio/Inicio.html">
             <img class="logo-image rounded-3 " src="/public/img/LogoYoatzin.png"
               alt="Logo de Yoatzin con flores de colores y fondo negro ">
           </a>
@@ -33,19 +33,19 @@ const navbarApp = () => {
   
               <!-- Producto con menú desplegable -->
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                <a class="nav-link dropdown-toggle" href="/src/pages/Productos/Productos.html" role="button" data-bs-toggle="dropdown"
                   aria-expanded="false">
                   Productos
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Todo</a></li>
+                  <li><a class="dropdown-item" href="/src/pages/Productos/Productos.html">Todo</a></li>
                   <li>
                     <hr class="dropdown-divider">
                   </li>
-                  <li><a class="dropdown-item" href="#">Cerámica</a></li>
-                  <li><a class="dropdown-item" href="#">Decoración</a></li>
-                  <li><a class="dropdown-item" href="#">Joyería</a></li>
-                  <li><a class="dropdown-item" href="#">Textiles</a></li>
+                  <li><a class="dropdown-item" href="/src/pages/Productos/Productos.html">Cerámica</a></li>
+                  <li><a class="dropdown-item" href="/src/pages/Productos/Productos.html">Decoración</a></li>
+                  <li><a class="dropdown-item" href="/src/pages/Productos/Productos.html">Joyería</a></li>
+                  <li><a class="dropdown-item" href="/src/pages/Productos/Productos.html">Textiles</a></li>
                 </ul>
               </li>
   
@@ -62,7 +62,10 @@ const navbarApp = () => {
                     <path
                       d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
                   </svg>
-                  Búsqueda
+                  <div class="input-group input-group-sm mb-3">
+                    <span class="input-group-text" id="inputGroup-sizing-sm">Pequeño</span>
+                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                  </div>
                 </a>
               </li>
   
@@ -80,7 +83,7 @@ const navbarApp = () => {
   
               <!-- Iniciar sesión -->
               <li class="nav-item">
-                <a class="nav-link" href="#">Iniciar Sesión</a>
+                <a class="nav-link" href="/src/pages/Iniciar-Sesión/Iniciar-Sesión.html">Iniciar Sesión</a>
               </li>
   
             </ul><!-- Termina u-lista -->

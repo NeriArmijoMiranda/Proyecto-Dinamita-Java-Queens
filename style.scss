@@ -1,0 +1,47 @@
+@import "bootstrap/scss/bootstrap";
+
+/* ///////////  NO TOCAR ////////*/
+/* Posición para Contendio GENERAL */
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Posición Contenido pagina */
+#content-wrap {
+  padding-bottom: 2.5rem;    /* altura de pie de página */
+}
+
+/* Clase de fuente titulos */
+.corben-regular {
+  font-family: "Corben", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.corben-bold {
+  font-family: "Corben", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Clase de fuente texto */
+.mulish {
+  font-family: "Mulish", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.mulish {
+  font-family: "Mulish", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+body{
+  background-color: black;
+}
+
+/* ///////////  NO TOCAR ////////*/

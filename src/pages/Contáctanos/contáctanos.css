@@ -1,0 +1,176 @@
+/* Estilos particulares de Contáctanos */
+
+.container-fluid-titulo-forms {
+    background-color:#08807B;
+    align-content:space-between;
+    font-family: "Corben", serif;
+    font-weight: 700;
+    font-style: normal;
+    font: center;
+    text-align: center;
+    color: white;
+  
+}
+
+.container-fluid-2{
+    background-color: black;
+    align-content: baseline;
+    text-align:left;
+    font-style: normal;
+    font-family: "Corben", serif;
+    font-weight: 400;
+    color: white;
+
+}
+
+.container-fluid-3{
+    background-color:#08807B;
+    align-content:space-between;
+    font-family: "Corben", serif;
+    font-weight: 700;
+    font-style: normal;
+    font: center;
+    text-align: center;
+    border: 3px;
+    border-radius: 25px;
+     
+}
+/*Apartado de preguntas frecuentes bottones*/
+.accordion-button{
+    background-color: #F85931;
+}
+/*preguntas despegables*/
+.p-preguntas {
+    font-family: "Corben", serif;
+      font-weight: 700;
+      font-style: normal;
+      font-optical-sizing: auto;
+}
+.p-respuesta{
+    font-family: "Mulish", sans-serif;
+    font-optical-sizing: auto;
+      font-weight: 400;
+      font-style: normal;
+}
+button:hover{
+    background-color: #088078;
+}
+/*Color dentro de las respuestas*/
+.accordion-item {
+    background-color: #8D9C09 ;
+}
+
+.ul {
+    color:black;
+    font-family: "Mulish", sans-serif;
+    font-weight: 400;
+}
+.p-envio {
+    font-family: "Mulish", sans-serif;
+    font-weight: 400;
+}
+.accordion-header {
+    font-weight: 700;
+}
+/*Termina apartado de preguntas frecuentes*/
+/*Cómo se ve el cuerpo del form*/
+
+/*Referencia al Escríbenos */
+h2{
+    font-family: "Mulish", sans-serif;
+    color: white;
+    font-size: 30px;
+    border-radius: 20px;
+
+}
+
+/*Creo que aquí se tendría que hacer responsive, pero no sé AIUDAAAAAA :u */
+
+form{
+    padding: 100px;
+    border-radius: 20px;
+    text-align: center;
+    width: 70rem;
+    background-color:#088078;
+    /*display y flex-direction cambios*/
+    flex-direction: column;
+    max-width: 70rem;
+    margin-bottom: 18px;
+}
+.object-fit-cover {
+    width: 500;
+    height: 10rem;
+
+}
+
+/*Modificación de los grupos input-group */
+.input-group {
+    display: grid;
+    flex-direction: column;
+    text-align: left;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 40px;
+
+}
+
+/*Modificación clase "form-content */
+.form-content{
+    display: flex;
+    flex-direction:column;
+
+}
+
+/*Modificación de etiqueta */
+label{
+    color: white;
+    font-family: "Mulish", sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    
+}
+
+
+/*Modificación de comentarios */
+input, textarea{
+        
+        padding: 20px 25px;
+        border-radius: 20px;
+        margin-bottom: 30px;
+        background-color:#5aece3;
+        border: 0cap;
+        outline: none;
+
+    }
+
+.form-txt{
+        margin-bottom: 30px;
+        display:flex;
+        justify-content: space-between;
+        text-align: center;
+
+    }
+
+    /*Botón chido */
+.btn {
+    font-size: 16px;
+    border: 0;
+    cursor: pointer;
+    color: white;
+    background-color: #055e58;
+
+}
+
+/*Lo que va a adentro de las cajitas como ejemplos "Mariana" */
+::placeholder{
+    color: rgba(46, 45, 45, 0.521);
+    font-size: 20px;
+}
+
+/*Según mis averiguaciones tendría que ser responsive pero no  */
+@media screen and (max-width: 500px){
+    .form{
+        width: 80%;
+    }
+
+}

@@ -35,7 +35,7 @@ const navbarApp = () => {
 
           <!-- Compras celular -->
           <li class="nav-item d-block d-md-none">
-            <a class="nav-link" href="https://getbootstrap.com/docs/5.3/about/brand/#logo">
+            <a class="nav-link" href="/src/pages/Compras/Compras.html">
               <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-cart4"
                 viewBox="0 0 16 16">
                 <path

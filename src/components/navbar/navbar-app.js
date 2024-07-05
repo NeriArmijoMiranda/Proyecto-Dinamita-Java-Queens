@@ -14,11 +14,14 @@ const navbarApp = () => {
 
           <!-- Busqueda barra Celular-->
           <li class="nav-item d-block d-md-none"> <!-- Muetsra la barra arriba cuando se hace pequeño -->
-            <div class="input-group">
+            
+          <div class="input-groupNav">
+              
               <input type="text" class="form-control" placeholder="" aria-label="Búsqueda"
                 aria-describedby="button-addon2">
               <button class="btn btn-outline-secondary" type="button" id="button-addon2">
-                <!-- Se agrega ícono de lupa -->
+                
+              <!-- Se agrega ícono de lupa -->
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search"
                   viewBox="0 0 16 16">
                   <path
@@ -57,7 +60,8 @@ const navbarApp = () => {
   
               <!-- ¿Quiénes somos? -->
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/src/pages/¿Quienes-somos/¿Quienes-somos.html">¿Quiénes somos?</a>
+                <a class="nav-link" href="/src/pages/¿Quienes-somos/¿Quienes-somos.html">¿Quiénes somos?</a>
+                <!-- <a class="nav-link active" aria-current="page" href="/src/pages/¿Quienes-somos/¿Quienes-somos.html">¿Quiénes somos?</a> -->
                 <!-- <a class="nav-link" href="#"> No está activa -->
                 <!-- <a class="nav-link active" aria-current="page" href="#"> Está activa
                 - nav-link active demuestra que esta activa esa página

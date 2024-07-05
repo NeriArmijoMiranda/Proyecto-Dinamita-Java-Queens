@@ -23,11 +23,11 @@
 }
 
 .dropdown-menu {
-    background-color: black;
+    background-color:  rgb(207, 88, 153);;
 }
 
 /* Estilos de barra de busqueda */
-.form-control {
+.form-control { /* Ingreso de texto */
     background-color: rgba(238, 163, 204, 0.5);
     border-color: rgb(56, 55, 55);
     font-family: "Corben", serif;

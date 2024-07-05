@@ -9,6 +9,9 @@ import '/src/components/navbar/navbar.css'
 import { navbarApp } from '/src/components/navbar/navbar-app.js'
 import { footerApp } from '/src/components/footer/footer-app.js'
 
+/*Para que se vean los icons de los botones */
+import 'bootstrap-icons/font/bootstrap-icons.css';
+
 
 document.querySelector("#navbar-app").innerHTML= navbarApp();
 document.querySelector("#footer-app").innerHTML= footerApp();
@@ -106,7 +109,7 @@ const crearTarjeta = (etiqueta) => {
             <!-- avatar -->
             <div class="avatar avatar-xl mt-n7 ms-4">
                 <img src="${etiqueta.image}" alt="Image" class="rounded-circle border-4
-                border-white-color-40 width="350" height="100" style="margin-top: 20px; ">
+                border-white-color-40 width="350" height="100" style= margin-top: 20px;">
             </div>
             <!-- card body -->
             <div class="card-body">
@@ -116,34 +119,24 @@ const crearTarjeta = (etiqueta) => {
                 <p>${etiqueta.frase}</p>
                 <div>
                 <!-- Dropdown -->
-                    <div class= "d-flex ="justify-content-between
-                                align-items-center style="margin-top: 20px;">
-                        <a href="${etiqueta.linkedin}"  class="btn btn-outline-info">
+                    <div class= "d-flex ="justify-content-center align-items-center style= "margin-top: 20px;"">
+                        <a href="${etiqueta.linkedin}"  class="btn btn-outline-primary">
                         <i class="bi bi-linkedin"></i>
-                    LinkedIn
                         </a>
                         <a href="${etiqueta.github}"  class="btn btn-dark">
                         <i class="bi bi-github"></i>
-                    GitHub
                         </a>
-                   <a href="mailto:${etiqueta.correo}" class="btn btn-danger" data-bs-toggle="tooltip" data-bs-placement="top" title="${etiqueta.correo}">
+                    <a href="mailto:${etiqueta.correo}" class="btn btn-danger" data-bs-toggle="tooltip" data-bs-placement="top" title="${etiqueta.correo}">
                     <i class="bi bi-envelope"></i>
-                    Email
                         </a>
                     </div>
                 </div>
             </div>
 </div>`
 }
-document.addEventListener('DOMContentLoaded', function () {
-    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
-    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-        return new bootstrap.Tooltip(tooltipTriggerEl);
-    });
-});
 
 
-   const crearArregloTarjetas = ( integrantes ) => {
+    const crearArregloTarjetas = ( integrantes ) => {
     let arregloFinalTarjetas = "";
     for (let i = 0; i< integrantes.length; i++){
         arregloFinalTarjetas = arregloFinalTarjetas + crearTarjeta(integrantes[i]);

@@ -1,6 +1,6 @@
 const navbarApp = () => {
-    // Filtro para seleccionar la página visitada
-    return `
+  // Filtro para seleccionar la página visitada
+  return `
         <nav class="navbar navbar-expand-lg mx-auto">
         <div class="container-fluid">
   
@@ -9,6 +9,42 @@ const navbarApp = () => {
             <img class="logo-image rounded-3 " src="/public/img/LogoYoatzin.png"
               alt="Logo de Yoatzin con flores de colores y fondo negro ">
           </a>
+
+          <!-- ---------Opciones celular -------------- -->
+
+          <!-- Busqueda barra Celular-->
+          <li class="nav-item d-block d-md-none"> <!-- Muetsra la barra arriba cuando se hace pequeño -->
+            
+          <div class="input-groupNav">
+              
+              <input type="text" class="form-control" placeholder="" aria-label="Búsqueda"
+                aria-describedby="button-addon2">
+              <button class="btn btn-outline-secondary" type="button" id="button-addon2">
+                
+              <!-- Se agrega ícono de lupa -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                </svg>
+
+                Busqueda</button>
+            </div>
+
+          </li>
+
+          <!-- Compras celular -->
+          <li class="nav-item d-block d-md-none">
+            <a class="nav-link" href="/src/pages/Compras/Compras.html">
+              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-cart4"
+                viewBox="0 0 16 16">
+                <path
+                  d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5M3.14 5l.5 2H5V5zM6 5v2h2V5zm3 0v2h2V5zm3 0v2h1.36l.5-2zm1.11 3H12v2h.61zM11 8H9v2h2zM8 8H6v2h2zM5 8H3.89l.5 2H5zm0 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0m9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0" />
+              </svg>
+            </a>
+          </li>
+
+          <!-- ----------------------- -->
   
           <!-- Botón de Hamburguesa al comprimir la página -->
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -24,7 +60,8 @@ const navbarApp = () => {
   
               <!-- ¿Quiénes somos? -->
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/src/pages/¿Quienes-somos/¿Quienes-somos.html">¿Quiénes somos?</a>
+                <a class="nav-link" href="/src/pages/¿Quienes-somos/¿Quienes-somos.html">¿Quiénes somos?</a>
+                <!-- <a class="nav-link active" aria-current="page" href="/src/pages/¿Quienes-somos/¿Quienes-somos.html">¿Quiénes somos?</a> -->
                 <!-- <a class="nav-link" href="#"> No está activa -->
                 <!-- <a class="nav-link active" aria-current="page" href="#"> Está activa
                 - nav-link active demuestra que esta activa esa página
@@ -54,23 +91,22 @@ const navbarApp = () => {
                 <a class="nav-link" href="/src/pages/Contáctanos/contáctanos.html">Contáctanos</a>
               </li>
   
-              <!-- Busqueda -->
-              <li class="nav-item">
-                <a class="nav-link" href="#"> <!-- Se agrega imagen de lupa -->
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search"
-                    viewBox="0 0 16 16">
-                    <path
-                      d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
-                  </svg>
-                  <div class="input-group input-group-sm mb-3">
-                    <span class="input-group-text" id="inputGroup-sizing-sm">Pequeño</span>
-                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
-                  </div>
-                </a>
+              <!-- Busqueda barra-->
+              <li class="nav-item d-none d-md-block"> <!-- La muestra cuando está grande y lo quita cuando es pequeño -->
+                <div class="input-group">
+                  <input type="text" class="form-control" placeholder="Buscar" aria-label="Búsqueda" aria-describedby="button-addon2">
+                  <button class="btn btn-outline-secondary" type="button" id="button-addon2">
+                    <!-- Se agrega ícono de lupa -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                      <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                    </svg>
+                    Búsqueda
+                  </button>
+                </div>
               </li>
-  
-              <!-- Compras, ya tiene link de referencia -->
-              <li class="nav-item">
+
+              <!-- Compras -->
+              <li class="nav-item  d-none d-md-block"> <!-- La muestra cuando está grande y lo quita cuando es pequeño -->
                 <a class="nav-link" href="/src/pages/Compras/Compras.html">
                   <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-cart4"
                     viewBox="0 0 16 16">

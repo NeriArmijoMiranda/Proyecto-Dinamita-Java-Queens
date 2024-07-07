@@ -11,9 +11,19 @@ body{
     color: white;
     font-family: Croben;
 }
-/* Diseño para el producto y su descripción */
 #content-wrap{
     color:white;
     font-family: Mulish;
     font-size: 20px;
+}
+/* Diseño para el producto y su descripción */
+#shopContent{
+    color: white;
+    font-family: Mulish;
+    
+}
+
+#modal-container{
+color: white;
+font-family: Mulish;
 }

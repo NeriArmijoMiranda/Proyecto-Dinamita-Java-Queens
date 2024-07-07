@@ -28,7 +28,7 @@ carrito.forEach((product) => {
     let carritoContent = document.createElement("div");
     carritoContent.className = "modal-content";
     carritoContent.innerHTML = `
-    <img src="${product}">
+    <img src="${product.imagen}">
     <h3>${product.nombre}</h3>
     <h3>${product.origen}</h3>
     <p>${product.talla}</p>

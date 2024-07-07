@@ -2,12 +2,12 @@
 /* Aquí van las rutas de conexión */
 import '/style.scss'
 import * as bootstrap from 'bootstrap' /* Para desplegar el menú / activar cosas de bootstrap */
-import './Acerca-de-nosotros.css'
+import './acerca_de_nosotros.css'
 import '/src/components/footer/footer.css'
 import '/src/components/navbar/navbar.css'
 
-import { navbarApp } from '/src/components/navbar/navbar-app.js'
-import { footerApp } from '/src/components/footer/footer-app.js'
+import { navbarApp } from '/src/components/navbar/navbar_app.js'
+import { footerApp } from '/src/components/footer/footer_app.js'
 
 /*Para que se vean los icons de los botones */
 import 'bootstrap-icons/font/bootstrap-icons.css';
@@ -27,7 +27,7 @@ const integrante = {
     linkedin: "https://www.linkedin.com/in/alejandra-alvarado-003681191?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     github: "https://github.com/AlejandraAC",
     correo: "ale.alvarado.contreras@gmail.com",
-    image:  "/public/img/Ale.jpg",
+    image:  "/public/img/ale.jpg",
 };
 
 const integrantes = [   integrante   ];
@@ -39,7 +39,7 @@ integrantes.push(  {
     linkedin: "https://www.linkedin.com/in/desire-garcia-ya%C3%B1ez-282b29181?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     github: "https://github.com/dessgrc1609",
     correo: "desiregrc@gmail.com",
-    image: "/public/img/Desire.jpg",
+    image: "/public/img/desire.jpg",
 }  );
 
 integrantes.push(  { 
@@ -49,7 +49,7 @@ integrantes.push(  {
     linkedin: "https://www.linkedin.com/in/ivonne-abigail-mendoza-cervantes-00770b312/",
     github: "https://github.com/EusbekMendoza?tab=repositories",
     correo: "abhyinfinito@hotmail.com", 
-    image: "/public/img/Mendoza.jpg",
+    image: "/public/img/mendoza.jpg",
 }  );
 
 integrantes.push(  { 
@@ -59,7 +59,7 @@ integrantes.push(  {
     linkedin: "https://www.linkedin.com/in/jazm%C3%ADn-cruz-857383241/",
     github: "https://github.com/JazzCI",
     correo: "jazzpchan.93@gmail.com",
-    image: "/public/img/Jazz.jpg",
+    image: "/public/img/jazz.jpg",
 }  );
 
 integrantes.push(  { 
@@ -69,7 +69,7 @@ integrantes.push(  {
     linkedin: "https://www.linkedin.com/in/arlette-miranda/",
     github: " https://github.com/Arlette-Miranda",
     correo: "arlettemirandac@gmail.com",
-    image: "/public/img/Arlette.jpg",
+    image: "/public/img/arlette.jpg",
 }  );
 
 integrantes.push(  { 
@@ -79,7 +79,7 @@ integrantes.push(  {
     linkedin: "https://www.linkedin.com/in/jhorleny-arellano/",
     github: "https://github.com/Jhorchss",
     correo: "jhorleny.business@gmail.com",
-    image: "/public/img/Jhor.jpg", 
+    image: "/public/img/jhor.jpg", 
 }  );
 
 integrantes.push(  { 
@@ -89,7 +89,7 @@ integrantes.push(  {
     linkedin: "https://www.linkedin.com/in/marbella-magaly-cabrera-dur%C3%A1n-649584278/",
     github: "https://github.com/marbellacabrera",
     correo: "marbecduran@gmail.com",
-    image: "/public/img/Marbe.jpg",
+    image: "/public/img/marbe.jpg",
 }  );
 
 integrantes.push(  { 
@@ -99,7 +99,7 @@ integrantes.push(  {
     linkedin: "https://www.linkedin.com/in/neri-armijo-miranda-821318195/",
     github: "https://github.com/NeriArmijoMiranda",
     correo: "neriarmijomiranda530@gmail.com", 
-    image: "/public/img/Neri (2).jpg",
+    image: "/public/img/neri.jpg",
 }  );
 
 const crearTarjeta = (etiqueta) => {        

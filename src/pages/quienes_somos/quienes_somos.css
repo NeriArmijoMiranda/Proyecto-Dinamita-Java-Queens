@@ -11,7 +11,7 @@
 .container2 {
     margin-top: 50px;
     margin-bottom: 20px;
-    background-image: url(/public/img/Cestas\ tejidas.jpg);
+    background-image: url(/public/img/cestas_tejidas.jpg);
     background-image: center;
     background-position: center;
     background-repeat: no-repeat;
@@ -37,7 +37,7 @@
 .container4 {
     margin-top: 20px;
     margin-bottom: 100px;
-    background-image: url(/public/img/Artesanías-mx-en-casa.jpg);
+    background-image: url(/public/img/artesanias_mx_en_casa.jpg);
     background-image: center;
     background-position: center;
     background-repeat: no-repeat;
@@ -120,7 +120,7 @@
 }
 
 .imagenmision {
-    background-image: url(/public/img/Juguetes\ mexicanos.jpg);
+    background-image: url(/public/img/juguetes_mexicanos.jpg);
     background-position: center;
     background-size: cover;
     height: 300px;
@@ -131,7 +131,7 @@
 
 }
 
-.Mision {
+.mision {
     color: white;
     /* Color del texto */
     font-family: Mulish;
@@ -157,7 +157,7 @@
     align-items: center;
 }
 
-.Vision {
+.vision {
     color: white;
     /* Color del texto */
     font-family: Mulish;
@@ -169,7 +169,7 @@
 }
 
 .imagenvision {
-    background-image: url(/public/img/Platos\ de\ ceramica\ mexicanos.jpg);
+    background-image: url(/public/img/platos_de_ceramica_mexicanos.jpg);
     background-position: center;
     background-size: cover;
     height: 300px;

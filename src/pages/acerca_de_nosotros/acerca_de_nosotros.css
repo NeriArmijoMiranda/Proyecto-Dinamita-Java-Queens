@@ -1,5 +1,5 @@
 /* Estilos particulares de Acerca de Nosotros */
-.containerS {
+.container-s {
   margin-left: 0px;
   margin-right: 0px;
 }
@@ -20,7 +20,7 @@
 }
 
 /* Para tipo de letra y color de parrafo*/
-.Dinamita-J-Q {
+.dinamita-j-q {
   color: white;
   text-align: center;
   font-family: "Mulish", sans-serif;
@@ -33,7 +33,7 @@
 }
 
 /*Título de la página contenedor*/
-.h1aN {
+.h1an {
   text-align: center;
   font-family: "Corben", serif;
   font-weight: 700;
@@ -70,7 +70,7 @@
 }
 
 /*Estilo para el arreglo de tarjetas*/
-#arregloTarjetas {
+#arreglo-tarjetas {
   text-align: center;
   display: flex;
   justify-content: center;
@@ -108,7 +108,7 @@
 }
 
 @media (max-width: 1199.98px) {
-  .containerS {
+  .container-s {
     margin-left: 0px;
     margin-right: 0px;
   }
@@ -129,7 +129,7 @@
   }
   
   /* Para tipo de letra y color de parrafo*/
-  .Dinamita-J-Q {
+  .dinamita-j-q {
     color: white;
     text-align: center;
     font-family: "Mulish", sans-serif;
@@ -142,7 +142,7 @@
   }
   
   /*Título de la página contenedor*/
-  .h1aN {
+  .h1an {
     text-align: center;
     font-family: "Corben", serif;
     font-weight: 700;
@@ -179,7 +179,7 @@
   }
   
   /*Estilo para el arreglo de tarjetas*/
-  #arregloTarjetas {
+  #arreglo-tarjetas {
     text-align: center;
     display: flex;
     justify-content: center;
@@ -220,7 +220,7 @@
   }
 
   @media (max-width: 991.98px) {
-    .containerS {
+    .container-s {
       margin-left: 0px;
       margin-right: 0px;
     }
@@ -241,7 +241,7 @@
     }
     
     /* Para tipo de letra y color de parrafo*/
-    .Dinamita-J-Q {
+    .dinamita-j-q {
       color: white;
       text-align: center;
       font-family: "Mulish", sans-serif;
@@ -254,7 +254,7 @@
     }
     
     /*Título de la página contenedor*/
-    .h1aN {
+    .h1an {
       text-align: center;
       font-family: "Corben", serif;
       font-weight: 700;
@@ -291,7 +291,7 @@
     }
     
     /*Estilo para el arreglo de tarjetas*/
-    #arregloTarjetas {
+    #arreglo-tarjetas {
       text-align: center;
       display: flex;
       justify-content: center;
@@ -336,7 +336,7 @@
   }
 
   @media (max-width: 767.98px) {
-    .containerS {
+    .container-s {
       margin-left: 0px;
       margin-right: 0px;
     }
@@ -357,7 +357,7 @@
     }
     
     /* Para tipo de letra y color de parrafo*/
-    .Dinamita-J-Q {
+    .dinamita-j-q {
       color: white;
       text-align: center;
       font-family: "Mulish", sans-serif;
@@ -370,7 +370,7 @@
     }
     
     /*Título de la página contenedor*/
-    .h1aN {
+    .h1an {
       text-align: center;
       font-family: "Corben", serif;
       font-weight: 700;
@@ -407,7 +407,7 @@
     }
     
     /*Estilo para el arreglo de tarjetas*/
-    #arregloTarjetas {
+    #arreglo-tarjetas {
       text-align: center;
       display: flex;
       justify-content: center;
@@ -451,7 +451,7 @@
   }
 
   @media (max-width: 575.98px) {
-    .containerS {
+    .container-s {
       margin-left: 0px;
       margin-right: 0px;
     }
@@ -472,7 +472,7 @@
     }
     
     /* Para tipo de letra y color de parrafo*/
-    .Dinamita-J-Q {
+    .dinamita-j-q {
       color: white;
       text-align: center;
       font-family: "Mulish", sans-serif;
@@ -485,7 +485,7 @@
     }
     
     /*Título de la página contenedor*/
-    .h1aN {
+    .h1an {
       text-align: center;
       font-family: "Corben", serif;
       font-weight: 700;
@@ -522,7 +522,7 @@
     }
     
     /*Estilo para el arreglo de tarjetas*/
-    #arregloTarjetas {
+    #arreglo-tarjetas {
       text-align: center;
       display: flex;
       justify-content: center;
@@ -562,3 +562,4 @@
       padding-top: 10px;
     }
   }
+  

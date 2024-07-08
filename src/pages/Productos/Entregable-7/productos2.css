@@ -1,0 +1,122 @@
+.product-container {
+    display: flex;
+    align-items: center; /* Centra verticalmente los elementos */
+    margin-bottom: 20px; /* Espacio opcional entre productos */
+    
+  }
+  
+  .image-container {
+    flex: 0 0 auto; /* Establece tamaño automático para la imagen */
+    margin-right: 20px; /* Espacio entre la imagen y los detalles */
+    margin-top: auto;
+    margin-bottom: auto;
+    display: flex;
+    align-items: center;
+
+  }
+  
+  .image-container img {
+    max-width: 100%; /* Ajusta el tamaño máximo de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+  }
+  
+  .details-container {
+    padding: 3rem 2rem;
+    margin-top: 4rem;
+  }
+  body {
+    font-family: "Mulish";
+    margin: 0;
+    padding: 20px;
+    background-color: #8d9c09;
+  }
+  
+  .tabla-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .custom-table {
+    width: 80%;
+    border-collapse: collapse;
+    background-color: #08807b;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  thead th {
+    background-color: #008080;
+    border-block-end: 1px solid white;
+  
+      color: black;
+      padding: 15px;
+      text-align: center;
+      font-size: 1.2em;
+     
+  }
+  
+  tbody td {
+    padding: 15px;
+    text-align: left;
+    vertical-align: top;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  th, td {
+    border-bottom-width: 1px solid white; /
+  }
+  
+  ul {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+  
+  ul li {
+    margin-bottom: 10px;
+  }
+  #Button-agregar-productos{
+    background-color: #008080;
+    border: 0;
+    border-radius: 6px;
+    padding: 25px 100px;
+    text-align: center;
+    margin: 10px 10px 10px;
+  }
+  .unidades{
+    padding: 20px 20px;
+  }
+
+  .titulo-muñeca-rosa{
+    text-align: center;
+    font-family: "Corben", serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 55px;
+    color: black;
+    justify-content: center;
+  }
+  .subtitulo-muñeca-rosa{
+    text-align: center;
+    font-family: "Corben", serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 25px;
+    color: black;
+    justify-content: center;
+  }
+  .precio-producto{
+    font-size: 25px;
+    justify-content: center;
+    text-align: center;
+  }
+.talla-producto{
+  text-align: center;
+}
+.unidades-producto{
+text-align: center;
+}

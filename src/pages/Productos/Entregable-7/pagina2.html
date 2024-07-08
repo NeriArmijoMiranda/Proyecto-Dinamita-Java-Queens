@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Productos</title>
+  <link rel="stylesheet" href="./productos2.css"> <!-- Archivo CSS para estilos -->
+</head>
+
+<body>
+  <div class="product-container">
+      <div class="image-container">
+        <img src="./img/muñecarosa.png" alt="Muñeca rosa">
+      </div>
+      <div class="details-container">
+          <h1 class="titulo-muñeca-rosa">Muñeca María</h1>
+          <h4 class="subtitulo-muñeca-rosa">Guadalajara, México</h4>
+          <p class="precio-producto"><strong>Precio: $140.00</strong></p>
+        <div class="container-pedido">
+          <label for="tipo de talla">Talla:</label>
+          <select class="talla-producto" name="talla">
+            <option value="seleccion">Selección</option>
+            <option value="unitalla">Unitalla</option>
+          </select>
+          <div class="unidades-producto">
+          <label for="Unidades">Unidades:</label>
+          <input name="Unidades" type="number" min="1" max="100" required>
+        </div>
+        </div>
+          <button id="Button-agregar-productos"><i class="bi bi-cart4"></i>
+            Añadir al carrito
+          </button>
+
+          
+          <div class="tabla-container">
+            <table class="custom-table">
+                <thead>
+                    <tr>
+                        <th>Descripción</th>
+                        <th>Envío</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <ul>
+                                <li>Muñeca María, preserva la magia y humildad de las mujeres mazahua.</li>
+                                <li>Categoría: Muñecas</li>
+                                <li>Material:Trapo y listones coloridos </li>
+                                <li>Técnica: Cocido a mano</li>
+                                <li>Medidas: 30 cm alto - 16 cm ancho</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>Pídelo hoy para recibirlo en torno al 05-13 jul</li>
+                                <li>Se aceptan cambios y devoluciones en el plazo de 30 días</li>
+                                <li>Envío a todo México</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>        
+      </div>
+  </div>
+
+  <!-- Footer -->
+  <footer id="footer-app" class="footer-basic container-fluid"></footer>
+
+  <!-- Aquí va la ruta del archivo js para funcionalidades -->
+  <script type="module" src="./js/productos2.js"></script>
+
+</body>
+
+</html>

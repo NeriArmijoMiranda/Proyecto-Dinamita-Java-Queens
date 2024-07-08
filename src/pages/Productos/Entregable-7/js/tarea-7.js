@@ -20,13 +20,15 @@ const getProducts = async () => {
         let content = document.createElement("div");
         content.className = "card";
         content.innerHTML = `
-        <img src= "${product.imagen}">
-        <h3>${product.nombre}</h3>
+        <img src= "${product.imagen}" height="300px" width="400px" align-center>
+        <h2>${product.nombre}</h2>
         <h3>${product.origen}</h3>
+        <div class="descripcion" align-items-center>
         <p>${product.talla}</p>
         <p>${product.descripcion}</p>
         <p>${product.precio}$</p>
         <p>${product.cantidad}</p>
+        </div>
     `;
         shopContent.append(content);
         
@@ -35,6 +37,7 @@ const getProducts = async () => {
         comprar.className = "comprar";
     
         content.append(comprar);
+
         
     /*Aquí es donde pasa la magia, use varios métodos entre ellos push, map y some, está función de aquí;
     lo que hace es que no se repitan los productos con todos sus atributos y solo se ponga la cantidad deseada,

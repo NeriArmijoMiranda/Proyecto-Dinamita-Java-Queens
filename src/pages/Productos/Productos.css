@@ -1,1 +1,42 @@
 /* Estilos particulares de Productos*/
+body{
+    background-color: black;
+}
+.h1aN{
+    text-align: center;
+    justify-content: center;
+    color: white;
+    font-family: "Mulish", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 30px;
+    margin: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    height: 70px;
+    padding: 20px;
+}
+.containerGeneral {
+    display: flex;
+    margin-top: 20px; 
+    padding: 20px; 
+}
+.container1{
+    width: 200px;
+    background-color:#08807B;
+    padding: 10px;
+    margin-right: 20px;
+    height: 1000px;
+ 
+}
+#containerProductos{
+    width: 1200px;
+    background-color:#8D9C09;
+  padding:40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Tres columnas de igual ancho */
+  gap: 10px;
+  justify-content: center;
+  text-align: center;
+  
+}

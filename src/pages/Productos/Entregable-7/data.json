@@ -72,13 +72,13 @@
     },
     {
         "id": 8,
-        "nombre": "Figurilla de Madera",
+        "nombre": "Alebrije de Gato",
         "precio": 10.00,
         "imagen": "./img/figurilla de barro.jpg",
         "origen": "Tlaxcala, México",
         "talla": "Única",
         "cantidad": 1,
-        "descripcion": "Esta encantadora figurilla de madera captura la esencia del xoloitzcuintle, el noble perro sin pelo de la antigua cultura mexicana. Tallada con madera de la región de Tlaxcala y meticulosamente pintada a mano, cada detalle de esta pieza refleja la habilidad artesanal y el respeto por la tradición. El xoloitzcuintle, con su figura elegante y distintiva ausencia de pelo, está representado con precisión y carácter en esta escultura. Los colores utilizados en la pintura resaltan su belleza natural, con tonos vibrantes y detalles cuidados que destacan sus características únicas. Esta figurilla no solo es una obra de arte decorativa, sino también un tributo al patrimonio cultural de México "
+        "descripcion": "Esta encantadora figurilla de madera captura la esencia del alebrije. Tallada con madera de la región de Tlaxcala y meticulosamente pintada a mano, cada detalle de esta pieza refleja la habilidad artesanal y el respeto por la tradición. El alebrije de gato, con su figura elegante, está representado con precisión y carácter en esta escultura. Los colores utilizados en la pintura resaltan su belleza natural, con tonos vibrantes y detalles cuidados que destacan sus características únicas. Esta figurilla no solo es una obra de arte decorativa, sino también un tributo al patrimonio cultural de México "
     },
     {
         "id": 9,
@@ -99,5 +99,26 @@
         "talla": "Grande",
         "cantidad": 1,
         "descripcion": "Esta elegante cesta de mimbre, elaborada con la destreza artesanal característica de la región de Veracruz, combina funcionalidad con belleza natural. Tejida a mano con fibras de mimbre duraderas y flexibles, esta cesta ofrece una estructura robusta ideal para el almacenamiento o el transporte de diversos objetos. Su diseño tradicional destaca por líneas limpias y una simplicidad estética que evoca la naturaleza y la artesanía local. Perfecta para uso diario en el hogar o como un detalle decorativo rústico, la cesta de mimbre de Veracruz no solo es práctica sino también un símbolo de la habilidad y el legado cultural de los artesanos veracruzanos. Su encanto natural y su capacidad de complementar cualquier ambiente hacen de esta pieza un tesoro auténtico de la artesanía mexicana."
+    },
+    {
+        "id": 11,
+        "nombre": "Muñeca Lele de Cholula",
+        "precio": 40.00,
+        "imagen": "./img/Muñeca verde.jpg",
+        "origen": "Puebla, México",
+        "talla": "Meidana, Alto:16cm Ancho:15cm ",
+        "cantidad": 1,
+        "descripcion": "Esta encantadora muñeca Lele de Cholula es una joya de la artesanía tradicional mexicana, llevando consigo la esencia y el colorido de esta región. Confeccionada a mano con telas vibrantes y detalles meticulosamente bordados, cada muñeca Lele captura la esencia cultural y la identidad única de Cholula. Ya sea como un regalo especial o como una pieza decorativa que añade color y autenticidad a cualquier espacio, la muñeca Lele de Cholula es un tributo viviente a la creatividad y el talento de los artesanos locales."
+    },
+    {
+        "id": 12,
+        "nombre": "Muñeca Lele de Guadalajara",
+        "precio": 50.00,
+        "imagen": "./img/muñeca morada.jpg",
+        "origen": "Guadalajara, México",
+        "talla": "Grande, Alto:30cm Ancho:18cm ",
+        "cantidad": 1,
+        "descripcion": "Esta encantadora muñeca Lele de Guadalajara captura la esencia vibrante y culturalmente diversa de la Perla Tapatía. Confeccionada con meticulosa artesanía, esta muñeca está vestida con trajes típicos que reflejan la rica herencia histórica y cultural de la región jalisciense. Los detalles intricados de sus vestimentas, bordados a mano con colores vivos y diseños tradicionales, evocan la elegancia y el colorido de la vestimenta típica de Guadalajara. "
     }
+
 ]

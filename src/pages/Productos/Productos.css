@@ -37,58 +37,22 @@ body{
     background-color:#08807B;
     padding: 60px;
     margin-right: 20px;
-<<<<<<< HEAD
-    height: 2220px; 
-    margin-right: 100Px;
-    margin-left: 100px;
-}
-.container-fluid{
-   margin: 20px;
-}
-#containerProductos{
-  width: 1200px;
-  background-color:#8D9C09;
-  padding:40px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Tres columnas de igual ancho */
-  gap: 10px;
-  justify-content: right;
-  text-align: center; 
-  }
-.boton-contenedor-prod1{
-    margin: 5px;
-    padding: 25px;
-    display: inline-block;
-    text-decoration: none;
-    height: 15px;
-    width: 100px;
-    border-radius: 5px;
-=======
     height: 1000px;
 
-
+ 
 }
 #containerProductos{
     width: 1200px;
     background-color:#8D9C09;
-    padding:40px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Tres columnas de igual ancho */
-    gap: 10px;
-    justify-content: center;
-    text-align: center; 
-    }
+  padding:40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Tres columnas de igual ancho */
+  gap: 10px;
+  justify-content: center;
+  text-align: center; 
+  }
 
 .button{
     background-color: #08807B;  
     color: black;
->>>>>>> Jazz
-}
-.gallery_img{
-    font-size: 2rem;
-    width: 350px;
-    height: 350px;
-}
-.container-fluid{
-    margin-bottom: 20px;
 }

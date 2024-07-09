@@ -29,7 +29,11 @@ body{
 .boton-vermas{
     background-color: #08807B;
     border-color: #08807B;
-    border-radius: 4rem;
+    border-radius: 50px;
+    width: 250px;
+    height: 60px;
+    font-family: "Mulish";
+
 }
 
 .container-productos-principal{
@@ -37,14 +41,14 @@ body{
     background-color:#08807B;
     padding: 60px;
     margin-right: 20px;
-    height: 1000px;
+    height: 3000px;
 
  
 }
 #containerProductos{
-    width: 1200px;
-    background-color:#8D9C09;
-  padding:40px;
+  width: 2550px;
+  background-color:#8D9C09;
+  padding:60px;
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* Tres columnas de igual ancho */
   gap: 10px;
@@ -52,7 +56,13 @@ body{
   text-align: center; 
   }
 
-.button{
-    background-color: #08807B;  
-    color: black;
+  .btn-filtros{
+    height: 40px;
+    width: 100px;
+    border-radius: 10px;
+  }
+
+.gallery_img{
+    height: 450px;
+    width: 450px;
 }

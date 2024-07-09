@@ -72,7 +72,7 @@
     },
     {
         "id": 8,
-        "nombre": "Figurilla de Madera",
+        "nombre": "Alebrije de Gato",
         "precio": 10.00,
         "imagen": "./img/figurilla de barro.jpg",
         "origen": "Tlaxcala, México",
@@ -112,7 +112,7 @@
     },
     {
         "id": 12,
-        "nombre": "Muñeca Lele de Gadalajara",
+        "nombre": "Muñeca Lele de Guadalajara",
         "precio": 50.00,
         "imagen": "./img/muñeca morada.jpg",
         "origen": "Guadalajara, México",

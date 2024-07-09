@@ -20,13 +20,21 @@ body{
     display: flex;
     margin-top: 20px; 
     padding: 20px; 
+
 }
+    .img-1{
+        font-size: 10px;
+
+}
+
+
 .container1{
     width: 200px;
     background-color:#08807B;
     padding: 10px;
     margin-right: 20px;
     height: 1000px;
+
  
 }
 #containerProductos{
@@ -37,6 +45,10 @@ body{
   grid-template-columns: repeat(3, 1fr); /* Tres columnas de igual ancho */
   gap: 10px;
   justify-content: center;
-  text-align: center;
-  
+  text-align: center; 
+  }
+
+.button{
+    background-color: #08807B;  
+    color: black;
 }

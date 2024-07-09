@@ -35,18 +35,18 @@ body{
     margin-right: 20px;
     height: 1000px;
 
- 
+
 }
 #containerProductos{
     width: 1200px;
     background-color:#8D9C09;
-  padding:40px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Tres columnas de igual ancho */
-  gap: 10px;
-  justify-content: center;
-  text-align: center; 
-  }
+    padding:40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas de igual ancho */
+    gap: 10px;
+    justify-content: center;
+    text-align: center; 
+    }
 
 .button{
     background-color: #08807B;  

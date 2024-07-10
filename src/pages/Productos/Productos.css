@@ -1,68 +1,83 @@
 /* Estilos particulares de Productos*/
-body{
-    background-color: black;
-}
-.h1aN{
+
+/*Diseño para el título */
+/* .nav-container{
+    color: white;
+    font-family: "Corben", serif;
+    font-weight: 400;
+    font-size: 40px;
+    font-style: normal;
+} */
+.banner{
+    color: white;
+    font-family: "Corben", serif;
+    font-weight: 400;
+    font-size: 40px;
+    font-style: normal;
     text-align: center;
-    justify-content: center;
+    
+}
+#content-wrap{
+    color:white;
+    font-family: "Mulish", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-size: 20px;
+    font-style: normal;
+}
+/* Diseño para el producto y su descripción */
+#shopContent{
     color: white;
     font-family: "Mulish", sans-serif;
     font-optical-sizing: auto;
-    font-style: normal;
-    font-size: 30px;
-    margin: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
-    height: 70px;
-    padding: 20px;
-}
-.containerGeneral {
+    font-weight: 400;
+    font-size: 20px;
+    font-style: normal;    
     display: flex;
-    margin-top: 20px; 
-    padding: 20px; 
+    justify-content: center;
+    margin: 100px;
+}
+
+#modal-container{
+color: white;
+font-family: "Mulish", sans-serif;
+font-optical-sizing: auto;
+font-weight: 400;
+font-style: normal;
+justify-content: center;
+text-align: center;
+margin: 100px;
+/* background-color: #08807B; */ 
+}
+
+/* Preguntar sonbre límites */
+.modal-content{
+    margin: 50px;
+    background-color: #F85931;
 
 }
-    .img-1{
-        font-size: 10px;
 
+.descripcion{
+    font-family: "Mulish", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
-.boton-vermas{
+
+.card{
+background-color: #8d9c09;
+text-align: center;
+}
+
+.comprar{
     background-color: #08807B;
-    border-color: #08807B;
-    border-radius: 50px;
-    width: 250px;
-    height: 60px;
-    font-family: "Mulish";
-
-}
-
-.container-productos-principal{
-    width: 200px;
-    background-color:#08807B;
-    padding: 60px;
-    margin-right: 20px;
-    height: 3000px;
-
- 
-}
-#containerProductos{
-  width: 2550px;
-  background-color:#8D9C09;
-  padding:60px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Tres columnas de igual ancho */
-  gap: 10px;
-  justify-content: center;
-  text-align: center; 
-  }
-
-  .btn-filtros{
-    height: 40px;
-    width: 100px;
     border-radius: 10px;
-  }
-
-.gallery_img{
-    height: 450px;
-    width: 450px;
+    height: 50px;
+    width: 100px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
 }
+
+

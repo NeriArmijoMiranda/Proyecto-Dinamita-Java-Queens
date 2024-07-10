@@ -70,7 +70,7 @@
 }
 
 /*Estilo para el arreglo de tarjetas*/
-#arreglo-tarjetas {
+#arregloTarjetas {
   text-align: center;
   display: flex;
   justify-content: center;

@@ -6,14 +6,14 @@ const navbarApp = () => {
   
           <!-- Logo con link para redireccionar al Inicio -->
           <a id="logo-title" class="navbar-brand" href="/src/pages/Inicio/Inicio.html">
-            <img class="logo-image rounded-3 " src="/public/img/LogoYoatzin.png"
+            <img class="logo-image rounded-3 " src="/public/img/logo_yoatzin.png"
               alt="Logo de Yoatzin con flores de colores y fondo negro ">
           </a>
 
           <!-- ---------Opciones celular -------------- -->
 
           <!-- Busqueda barra Celular-->
-          <li class="nav-item d-block d-md-none"> <!-- Muetsra la barra arriba cuando se hace pequeño -->
+          <li class="nav-item d-block d-md-none d-sm-block"> <!-- Muetsra la barra arriba cuando se hace pequeño -->
             
           <div class="input-groupNav">
               
@@ -34,8 +34,9 @@ const navbarApp = () => {
           </li>
 
           <!-- Compras celular -->
-          <li class="nav-item d-block d-md-none">
-            <a class="nav-link" href="/src/pages/Compras/Compras.html">
+
+          <li class="nav-item d-block d-md-none d-sm-block" >
+            <!--<a class="nav-link" href="/src/pages/Compras/Compras.html"> -->
               <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-cart4"
                 viewBox="0 0 16 16">
                 <path
@@ -60,7 +61,7 @@ const navbarApp = () => {
   
               <!-- ¿Quiénes somos? -->
               <li class="nav-item">
-                <a class="nav-link" href="/src/pages/¿Quienes-somos/¿Quienes-somos.html">¿Quiénes somos?</a>
+                <a class="nav-link" href="/src/pages/quienes_somos/quienes_somos.html">¿Quiénes somos?</a>
                 <!-- <a class="nav-link active" aria-current="page" href="/src/pages/¿Quienes-somos/¿Quienes-somos.html">¿Quiénes somos?</a> -->
                 <!-- <a class="nav-link" href="#"> No está activa -->
                 <!-- <a class="nav-link active" aria-current="page" href="#"> Está activa
@@ -88,7 +89,7 @@ const navbarApp = () => {
   
               <!-- Contáctanos -->
               <li class="nav-item">
-                <a class="nav-link" href="/src/pages/Contáctanos/contáctanos.html">Contáctanos</a>
+                <a class="nav-link" href="/src/pages/contactanos/contactanos.html">Contáctanos</a>
               </li>
   
               <!-- Busqueda barra-->
@@ -106,8 +107,9 @@ const navbarApp = () => {
               </li>
 
               <!-- Compras -->
-              <li class="nav-item  d-none d-md-block"> <!-- La muestra cuando está grande y lo quita cuando es pequeño -->
-                <a class="nav-link" href="/src/pages/Compras/Compras.html">
+              <li id="verCarrito" class="nav-item d-none d-md-block"> <!-- La muestra cuando está grande y lo quita cuando es pequeño -->
+               <!-- <a class="nav-link" href="/src/pages/Compras/Compras.html"> -->
+                  <span id="cantidadCarrito" class="cantidad-carrito"></span>   
                   <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-cart4"
                     viewBox="0 0 16 16">
                     <path

@@ -1,5 +1,4 @@
 
-
 .container-productos2{
     background-color: #8D9C09;
     font-size: medium;
@@ -21,7 +20,7 @@
    padding: 5rem;
     background-color: #8D9C09;
     text-align:right;
-    margin: 4rem;
+    margin: 20px;
 
 }
 .container-prod-2 {
@@ -47,6 +46,8 @@
 .btn-group{
 background-color: #08807B;
 border: #08807B;
+margin-left: 50px;
+padding: 50px;
 
 }
     
@@ -54,19 +55,19 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 20px;
-    background-color: #8d9c09;
+    background-color: black;
   }
   
   .tabla-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 500;
+    height: 30px;
     padding:flex;
 }
   
   .custom-table {
-    width: 80%;
+    width: 50%;
     border-collapse: collapse;
     background-color: #08807b;
     border-radius: 10px;
@@ -84,7 +85,7 @@ body {
       font-size: 1.2em;
   }
   .parrafo-precio{
-    font-family: "Muñish";
+    font-family: "Mulish", sans-serif;
     color: black;
     text-align: right;
     width: 4rem;

@@ -1,7 +1,16 @@
 /* Estilos particulares de Productos*/
 body{
-    background-color: black;
+     background-color: black;
+
+   /* Estilos para los elementos de la lista */
 }
+   .filter-ver-mas {
+    background-color: #08807b; /* Color de fondo de las palabras */
+    margin: 2px 0;
+    padding: 2px;
+    border-radius: 3px; /* Bordes redondeados opcionales */
+   }
+
 .h1aN{
     text-align: center;
     justify-content: center;

@@ -1,0 +1,52 @@
+/* Estilos particulares de Formulario Administrador */
+
+/* Estilos de texto */
+.texto_Adm{
+    color: white;
+    font-family: "Corben", serif;
+    font-weight: 400;
+    font-size: 40px;
+    font-style: normal;
+    text-align: center;
+}
+
+.sub_Adm {
+    color:white;
+    font-family: "Mulish", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-size: 40px;
+    font-style: normal;
+}
+
+/* Estilos de contenedores y formato de letras dentro del container */
+.container_Admn .form-container_Adm{
+    background-color: #8d9c09;
+    font-family: "Mulish", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-size: 20px;
+    font-style: normal;
+}
+
+.form-group_Adm{
+    color: white;
+    font-family: "Mulish", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    justify-content: center;
+    text-align: center;
+}
+
+.btn_Adm{
+    background-color: #08807B;
+    border-radius: 10px;
+    height: 50px;
+    width: 100px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+

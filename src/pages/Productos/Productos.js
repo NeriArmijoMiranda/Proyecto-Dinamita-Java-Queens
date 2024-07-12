@@ -30,7 +30,7 @@ let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 /*Aqui hice uan funcion para llamar a los productos del Json y que corran por que si no les pegan */
 
 const getProducts = async () => {
-    const response = await fetch("data.json");
+    const response = await fetch("../../../data.json");
     const data = await response.json();
     data.forEach((product) => {
         let content = document.createElement("div");
@@ -140,7 +140,7 @@ carrito.forEach((product) => {
     let carritoContent = document.createElement("div");
     carritoContent.className = "modal-content";
     carritoContent.innerHTML = `
-       <img src= "${product.imagen}" height="300px" width="400px" align-center>
+        <img src= "${product.imagen}" height="300px" width="400px" align-center>
         <h3>${product.nombre}</h3>
         <h3>${product.origen}</h3>
         <p>Talla: ${product.talla}</p>

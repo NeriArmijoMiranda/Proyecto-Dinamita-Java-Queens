@@ -40,3 +40,6 @@ body{
   text-align: center;
   
 }
+.producto:hover{
+background-color: azure;
+}

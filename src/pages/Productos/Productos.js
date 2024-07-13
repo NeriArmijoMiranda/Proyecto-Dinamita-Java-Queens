@@ -13,13 +13,14 @@ import { footerApp } from '/src/components/footer/footer_app.js'
 document.querySelector("#navbar-app").innerHTML= navbarApp();
 document.querySelector("#footer-app").innerHTML= footerApp();
 
-/* ------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------------------------ */
 
 /*Las const son para llamarlas del html y decirles "Eh wey te estan hablando" */
 
-const shopContent = document.getElementById("shopContent");
+const shopContent = document.getElementById("shopContent");/*Esta es la primera variable de la parte número 1 la obtuvimos
+con el id que le pusimos en el HTML*/
 const verCarrito = document.getElementById("verCarrito");
-const modalContainer = document.getElementById("modal-container");
+const modalContainer = document.getElementById("modal-container");/* */
 const cantidadCarrito = document.getElementById("cantidadCarrito");
 
 /*Aquí puse la igualdad del carrito para que me lo recupere en el localstorage, al carrito se convierte en
@@ -27,14 +28,17 @@ en lo que sea que este guardado en el localStorage. Aqui el carrito es básicame
 se convierte en eso, pero si no hay nada pues está vacío */
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
-/*Aqui hice uan funcion para llamar a los productos del Json y que corran por que si no les pegan */
+/*Aqui hice unan funcion para llamar a los productos del Json y que corran por que si no les pegan */
 
 const getProducts = async () => {
+/*Ruta del archivo Json  */
     const response = await fetch("data.json");
     const data = await response.json();
+    /*Aquí el data.forEach recorre todos los productos */
     data.forEach((product) => {
         let content = document.createElement("div");
-        content.className = "card";
+        /*Se puden agregar clases a los elementos HTML, como lo vimos en imagen por ejemplo */
+        content.className = "card";//Aquí por ejemplo esta la clase de card para el Css 
         content.innerHTML = `
         <center><img src= "${product.imagen}" height="300px" width="400px"></center>
         <h2>${product.nombre}</h2>
@@ -46,12 +50,15 @@ const getProducts = async () => {
         <p>Cantidad: ${product.cantidad}</p>
         </div>
     `;
+    /*Con la propiedad append vamos a conectar la primera parte PARTE 1 */
         shopContent.append(content);
         
+    /*Aquí utilizamos el mismo proceso, pero en vez de que sea un div, será un botón  */    
         let comprar = document.createElement("button");
-        comprar.innerText = "comprar";
-        comprar.className = "comprar";
     
+        comprar.innerText = "comprar";/*Con innertext lo ponemos texto al botón  */
+        comprar.className = "comprar";/*Aquí el botón tiene su propia clase, es el botón de compras */
+    /*Aquí lo conectamos con content y le estamos diciendo que a cada producto le agregue un botón de comprar */
         content.append(comprar);
 
         
@@ -73,7 +80,7 @@ const getProducts = async () => {
                     }
                 });
             } else{
-    
+    /*Aquí en el carrito es */
             carrito.push({
             id : product.id,
             nombre: product.nombre,
@@ -109,8 +116,10 @@ localStorage.setItem("carrito", JSON.stringify(carrito));
 
 /*get item */
 
-/* -----------------------Carrito --------------------------------------------- */
+/* -----------------------CARRITO--------------------------------------------- */
 
+
+/*Este es otro modulo por decirlo de esa manera, donde se observan los productos añadidos al carrito */
 const pintarCarrito = () => {
     modalContainer.innerHTML = "";
     modalContainer.style.display = "flex";
@@ -122,7 +131,7 @@ const pintarCarrito = () => {
 
 modalContainer.append(modalHeader);
 
-/*Esta es para literalmente hacer que la X de cerrar obtenga esa función */
+/*Esta es para literalmente hacer que la X de cerrar obtenga esa función, el botón está dentro de este modulo*/
 
 const modalbutton = document.createElement("h1");
 modalbutton.innerHTML = "x";
@@ -135,12 +144,23 @@ modalbutton.addEventListener("click", () => {
 modalHeader.append(modalbutton);
 
 /*Aquí esta lo de sumar productos por si quiren quitarselo */
+/*La relación que se tiene con el Json es que relacioné que cada uno del los productos estan relacionados con un h1 o un 
+parrafo, etc.  */
 
 carrito.forEach((product) => { 
-    let carritoContent = document.createElement("div");
-    carritoContent.className = "modal-content";
+/* PARTE NÚMERO 1. Con document.createElement se crea un elemento aquí es un div, pero puede ser un span, una imagen. un h1 etc.
+El document.createElement es toda la interfaz del HTML por eso ponemos el "div" para decirle que me creé un "div" 
+dentro de la interfaz, luego con la propiedad innerHTML me va ayudar a crear etiquetas HTML; por eso le pongo content
+y llamo a inner para crear elementos dentro del div, por eso las etiquetas deben ser como en el HTML.
+Aquí es donde se debe eliminar la descripción para que en el carrito ya no aparesca
+
+*/
+
+    let carritoContent = document.createElement("div"); /*Este div que creé lo tenemos que conectar a algún lado para que pueada
+    funcionar, en este caso lo conectamos al HTML, que es donde vienen las propiedas*/
+    carritoContent.className = "modal-content";//Clase para poder dar estilos al CSS
     carritoContent.innerHTML = `
-       <img src= "${product.imagen}" height="300px" width="400px" align-center>
+        <img src= "${product.imagen}" height="300px" width="400px" align-center>
         <h3>${product.nombre}</h3>
         <h3>${product.origen}</h3>
         <p>Talla: ${product.talla}</p>

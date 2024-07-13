@@ -1,45 +1,83 @@
 /* Estilos particulares de Productos*/
-body{
-    background-color: black;
-}
-.h1aN{
+
+/*Diseño para el título */
+/* .nav-container{
+    color: white;
+    font-family: "Corben", serif;
+    font-weight: 400;
+    font-size: 40px;
+    font-style: normal;
+} */
+.banner{
+    color: white;
+    font-family: "Corben", serif;
+    font-weight: 400;
+    font-size: 40px;
+    font-style: normal;
     text-align: center;
-    justify-content: center;
+    
+}
+#content-wrap{
+    color:white;
+    font-family: "Mulish", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-size: 20px;
+    font-style: normal;
+}
+/* Diseño para el producto y su descripción */
+#shopContent{
     color: white;
     font-family: "Mulish", sans-serif;
     font-optical-sizing: auto;
-    font-style: normal;
-    font-size: 30px;
-    margin: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
-    height: 70px;
-    padding: 20px;
-}
-.containerGeneral {
+    font-weight: 400;
+    font-size: 20px;
+    font-style: normal;    
     display: flex;
-    margin-top: 20px; 
-    padding: 20px; 
+    justify-content: center;
+    margin: 100px;
 }
-.container1{
-    width: 200px;
-    background-color:#08807B;
-    padding: 10px;
-    margin-right: 20px;
-    height: 1000px;
- 
+
+#modal-container{
+color: white;
+font-family: "Mulish", sans-serif;
+font-optical-sizing: auto;
+font-weight: 400;
+font-style: normal;
+justify-content: center;
+text-align: center;
+margin: 100px;
+/* background-color: #08807B; */ 
 }
-#containerProductos{
-    width: 1200px;
-    background-color:#8D9C09;
-  padding:40px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Tres columnas de igual ancho */
-  gap: 10px;
-  justify-content: center;
-  text-align: center;
-  
+
+/* Preguntar sonbre límites */
+.modal-content{
+    margin: 50px;
+    background-color: #F85931;
+
 }
-.producto:hover{
-background-color: azure;
+
+.descripcion{
+    font-family: "Mulish", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
+
+.card{
+background-color: #8d9c09;
+text-align: center;
+}
+
+.comprar{
+    background-color: #08807B;
+    border-radius: 10px;
+    height: 50px;
+    width: 100px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+

@@ -2,7 +2,7 @@
 /* Aquí van las rutas de conexión */
 import '/style.scss'
 import * as bootstrap from 'bootstrap' /* Para desplegar el menú / activar cosas de bootstrap */
-import './inicio.css'
+import './datos_de_envio.css'
 import '/src/components/footer/footer.css'
 import '/src/components/navbar/navbar.css'
 

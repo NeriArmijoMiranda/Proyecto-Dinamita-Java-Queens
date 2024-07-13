@@ -10,6 +10,7 @@
 } */
 .banner{
     color: white;
+    background-color: #08807B;
     font-family: "Corben", serif;
     font-weight: 400;
     font-size: 40px;
@@ -33,9 +34,23 @@
     font-weight: 400;
     font-size: 20px;
     font-style: normal;    
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas de igual ancho */
+    gap: 10px;
     justify-content: center;
     margin: 100px;
+
+}
+@media (max-width: 992px) {
+    #shopContent {
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas en pantallas medianas */
+    }
+}
+
+@media (max-width: 768px) {
+    #shopContent {
+        grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+    }
 }
 
 #modal-container{
@@ -67,6 +82,9 @@ margin: 100px;
 .card{
 background-color: #8d9c09;
 text-align: center;
+}
+.card:hover{
+    background-color: #f67ce69a;
 }
 
 .comprar{

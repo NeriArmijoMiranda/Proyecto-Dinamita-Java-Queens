@@ -129,6 +129,8 @@ padding: 10px;
     align-items: center;
     text-align: center;
     padding-top: 40px;
+    margin-top: 50px;
+    margin-left: 20px;
     
 }
 .categoryitem{
@@ -137,6 +139,7 @@ padding: 10px;
  width:90%;
  padding:20px;
  margin:10px;
+ margin-top: 20px;
  text-align: center;
  justify-content: center;
  color: white;

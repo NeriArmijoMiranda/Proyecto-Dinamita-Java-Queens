@@ -128,7 +128,8 @@ padding: 10px;
     height:600px;
     align-items: center;
     text-align: center;
-    padding-top: 30px;
+    padding-top: 40px;
+    
 }
 .categoryitem{
     background-color:#0cb3ad8b;
@@ -140,4 +141,7 @@ padding: 10px;
  justify-content: center;
  color: white;
  font-family: Mulish;
+}
+.filtros .ct_item-active{
+    background-color: #F85931;
 }

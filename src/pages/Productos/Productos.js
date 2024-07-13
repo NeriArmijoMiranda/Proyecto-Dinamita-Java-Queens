@@ -19,6 +19,7 @@ document.querySelector("#footer-app").innerHTML= footerApp();
 
 const shopContent = document.getElementById("shopContent");/*Esta es la primera variable de la parte número 1 la obtuvimos
 con el id que le pusimos en el HTML*/
+const categoryItems = document.querySelectorAll('.categoryitem');
 const verCarrito = document.getElementById("verCarrito");
 const modalContainer = document.getElementById("modal-container");/* */
 const cantidadCarrito = document.getElementById("cantidadCarrito");
@@ -62,7 +63,6 @@ const getProducts = async () => {
     /*Aquí lo conectamos con content y le estamos diciendo que a cada producto le agregue un botón de comprar */
         content.append(comprar);
 
-        
     /*Aquí es donde pasa la magia, use varios métodos entre ellos push, map y some, está función de aquí;
     lo que hace es que no se repitan los productos con todos sus atributos y solo se ponga la cantidad deseada,
     es decir en vez de tener dos sombreros con su descripcioón, lugar de origen etc, solo se duplique la cantidad.
@@ -105,9 +105,6 @@ const getProducts = async () => {
 
 getProducts(); 
 
-
-
-
 /*Si te pierdes aquí va lo del carrito Mendoza del futuro*/
 /*El localStorage funciona cn set item get item */
 /*Primero es el set item, esto me la va a guardar*/
@@ -117,7 +114,70 @@ localStorage.setItem("carrito", JSON.stringify(carrito));
 
 /*get item */
 
-/* -----------------------CARRITO--------------------------------------------- */
+/* 
+
+/*FILTROS---------------------------------------------*/
+const filterProductsByCategory = async (category) => {
+    try {
+        const response = await fetch("data.json");
+        const data = await response.json();
+        shopContent.innerHTML = "";
+        const filteredProducts = data.filter(product => product.categoría === category);
+
+  // Mostrar productos filtrados
+    filteredProducts.forEach(product => {
+    let content = document.createElement("div");
+    content.className = "card";
+    content.innerHTML = `
+        <center><img src="${product.imagen}" height="300px" width="350px" margin-bottom="15px"></center>
+        <h2>${product.nombre}</h2>
+        <h3>${product.origen}</h3>
+        <h4>${product.categoría}</h4>
+        <div class="descripcion" style="display: flex; flex-direction: column;">
+            <p>Talla: ${product.talla}</p>
+            <p>${product.descripcion}</p>
+            <p>Precio: $${product.precio.toFixed(2)}</p>
+            <p>Cantidad: ${product.cantidad}</p>
+        </div>
+    `;
+        /*Aquí utilizamos el mismo proceso, pero en vez de que sea un div, será un botón  */    
+        let comprar = document.createElement("button");
+    
+        comprar.innerText = "comprar";/*Con innertext lo ponemos texto al botón  */
+        comprar.className = "comprar";/*Aquí el botón tiene su propia clase, es el botón de compras */
+    /*Aquí lo conectamos con content y le estamos diciendo que a cada producto le agregue un botón de comprar */
+        content.append(comprar);
+    shopContent.appendChild(content);
+});
+
+
+
+
+// Si no se encontraron productos para la categoría
+if (category === "Todo") {
+getProducts();
+}
+else if (filteredProducts.length === 0) {
+    shopContent.innerHTML = "<p>No se encontraron productos para esta categoría.</p>";
+}
+} catch (error) {
+console.error("Error al filtrar productos por categoría:", error);
+};
+}
+
+categoryItems.forEach(item => {
+    item.addEventListener('click', async (event) => {
+        event.preventDefault();
+        const selectedCategory = item.getAttribute('category');
+        await filterProductsByCategory(selectedCategory);
+    });
+});
+// Mostrar todos los productos al cargar la página inicialmente
+getProducts();
+
+/*FIN---------------------FILTROS---------------*/
+
+/*----------------------CARRITO--------------------------------------------- */
 
 
 /*Este es otro modulo por decirlo de esa manera, donde se observan los productos añadidos al carrito */
@@ -243,3 +303,6 @@ const carritoCounter = () => {
 };
 
 carritoCounter();
+
+
+

@@ -77,11 +77,14 @@ margin: 100px;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
 
 .card{
 background-color: #8d9c09;
 text-align: center;
+padding: 10px;
 }
 .card:hover{
     background-color: #f67ce69a;
@@ -95,7 +98,13 @@ text-align: center;
     text-align: center;
     align-items: center;
     justify-content: center;
-    display: flex;
+    position:absolute;
+    /* Alinea el botón 10px desde el borde inferior */
+    bottom: 10px;
+   /* Centra horizontalmente el botón */
+    left:50%;
+    /* Ajusta la posición para centrarlo exactamente */
+    transform: translateX(-50%); /* Ajusta la posición para centrarlo exactamente */
 }
 
 

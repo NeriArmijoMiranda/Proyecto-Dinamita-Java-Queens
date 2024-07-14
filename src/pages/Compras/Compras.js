@@ -17,7 +17,7 @@ document.querySelector("#footer-app").innerHTML = footerApp();
 
 
 /* ------------------------------------------------------------- */
-/*Las const son para llamarlas del html y decirles "Eh wey te estan hablando" */
+/*Las const son para llamarlas del html y decirles "Eh te estan hablando" */
 
 /* const generalContent = document.getElementById("generalContent");  *//* Contenedor general de toda la página */
 const imagenProducto = document.getElementById("imagenProducto"); /* imagen del producto en sección izq html */
@@ -43,7 +43,7 @@ const cantidadCarrito = document.getElementById("cantidadCarrito");
 
 
 const pintarCarrito = () => {
-    /* modalContainer.innerHTML = ""; */
+    modalContainer.innerHTML = ""; 
     /* modalContainer.style.display = "flex"; */
 
     /* Se crea encabezado, header en modalContainer */

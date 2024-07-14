@@ -1,1 +1,75 @@
 /* Estilos particulares de Compras */
+#contenedorProductos {
+    margin: 50px;
+    background-color: #8d9c09;
+    justify-content: center;
+    border-radius: 30px;
+    padding: 30px;
+}
+
+#resumenCompras {
+  /*   margin: 50px; */
+    background-color: #8d9c09;
+    justify-content: center;
+    border-radius: 30px;
+    padding: 30px;
+}
+
+#modal-container {
+    color: white;
+    font-family: "Mulish", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: medium;
+    justify-content: center;
+    text-align: center;
+    margin: 50px;
+    /* background-color: pink; */
+    
+}
+
+/* Preguntar sonbre límites */
+.modal-content {
+    margin: 50px;
+  /*   background-color: blue; */
+    justify-content: center;
+    border-radius: 70px;
+}
+
+h3{
+    font-family: "Corben", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 16;
+}
+
+
+
+.delete{
+    cursor: pointer;
+}
+.sumar{
+    cursor: pointer;
+}
+.restar{
+    cursor: pointer;
+}
+
+.continuarBoton{
+    background-color: #08807B;
+    color: #ffffff;
+    border-radius: 10px;
+    height: 50px;
+    width: 300px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    /* Alinea el botón 10px desde el borde inferior */
+    bottom: 10px;
+   /* Centra horizontalmente el botón */
+    left:50%;
+    /* Ajusta la posición para centrarlo exactamente */
+    transform: translateX(0%); /* Ajusta la posición para centrarlo exactamente */
+}

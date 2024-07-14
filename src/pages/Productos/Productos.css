@@ -53,25 +53,7 @@
     }
 }
 
-#modal-container{
-color: white;
-font-family: "Mulish", sans-serif;
-font-optical-sizing: auto;
-font-weight: 400;
-font-style: normal;
-justify-content: center;
-text-align: center;
-margin: 100px;
-/* background-color: #08807B; */ 
-}
-
-/* Preguntar sonbre límites */
-.modal-content{
-    margin: 50px;
-    background-color: #F85931;
-
-}
-
+/* Contenido / descripción de productos mostrados */
 .descripcion{
     font-family: "Mulish", sans-serif;
     font-optical-sizing: auto;
@@ -81,15 +63,17 @@ margin: 100px;
     margin-bottom: 10px;
 }
 
+/* Tarjetas donde se muestran productos */
 .card{
 background-color: #8d9c09;
 text-align: center;
 padding: 10px;
 }
+/* Para cambiar el color de tarjetas al pasar el mouse */
 .card:hover{
     background-color: #f67ce69a;
 }
-
+/* Boton comprar */
 .comprar{
     background-color: #08807B;
     border-radius: 10px;

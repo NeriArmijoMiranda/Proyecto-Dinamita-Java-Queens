@@ -85,6 +85,7 @@ margin: 100px;
 background-color: #8d9c09;
 text-align: center;
 padding: 10px;
+padding-right: 10px;
 }
 .card:hover{
     background-color: #f67ce69a;

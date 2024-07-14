@@ -90,8 +90,8 @@ const pintarCarrito = () => {
         imagenProducto.append(imagen); */
 
 
-        let carritoContent = document.createElement("div"); /*Este div que creé lo tenemos que conectar a algún lado para que pueada
-        funcionar, en este caso lo conectamos al HTML, que es donde vienen las propiedas*/
+        let carritoContent = document.createElement("div"); /*Este div que creé lo tenemos que conectar a algún lado para que pueda
+        funcionar, en este caso lo conectamos al HTML, que es donde vienen las propiedades*/
         carritoContent.className = "modal-content";//Clase para poder dar estilos al CSS
         carritoContent.innerHTML = `
         <img src= "${product.imagen}" height="200px" width="200px" align-center>

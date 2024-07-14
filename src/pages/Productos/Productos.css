@@ -68,6 +68,7 @@
 background-color: #8d9c09;
 text-align: center;
 padding: 10px;
+padding-right: 10px;
 }
 /* Para cambiar el color de tarjetas al pasar el mouse */
 .card:hover{
@@ -92,3 +93,43 @@ padding: 10px;
 }
 
 
+.content-body{
+    background-color:#08807B; /* Color de fondo */
+    padding: 20px; /* Espaciado interno */
+    border: 1px solid #ced4da; /* Borde */
+    border-radius: 8px; /* Borde redondeado */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra */
+
+}
+/*Este es el contenedor de nuestros productos y filtros*/
+.wrap{
+    display: flex;
+}
+.filtros{
+    background-color: #08807B;
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+    height:600px;
+    align-items: center;
+    text-align: center;
+    padding-top: 40px;
+    margin-top: 50px;
+    margin-left: 20px;
+    
+}
+.categoryitem{
+    background-color:#0cb3ad8b;
+ display:block;
+ width:90%;
+ padding:20px;
+ margin:10px;
+ margin-top: 20px;
+ text-align: center;
+ justify-content: center;
+ color: white;
+ font-family: Mulish;
+}
+.filtros .ct_item-active{
+    background-color: #F85931;
+}

@@ -10,6 +10,7 @@ import { navbarApp } from '/src/components/navbar/navbar_app.js'
 import { footerApp } from '/src/components/footer/footer_app.js'
 
 
+
 document.querySelector("#navbar-app").innerHTML= navbarApp();
 document.querySelector("#footer-app").innerHTML= footerApp();
 
@@ -33,7 +34,7 @@ let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
 const getProducts = async () => {
 /*Ruta del archivo Json  */
-    const response = await fetch("data.json");
+    const response = await fetch('/src/components/data.json');
     const data = await response.json();
     /*Aquí el data.forEach recorre todos los productos */
     data.forEach((product) => {
@@ -119,7 +120,7 @@ localStorage.setItem("carrito", JSON.stringify(carrito));
 /*---------------------FILTROS--------------------------------------*/
 const filterProductsByCategory = async (category) => {
     try {
-        const response = await fetch("data.json");
+        const response = await fetch('/src/components/data.json');
         const data = await response.json();
         shopContent.innerHTML = "";
         const filteredProducts = data.filter(product => product.categoría === category);
@@ -222,6 +223,7 @@ Aquí es donde se debe eliminar la descripción para que en el carrito ya no apa
     carritoContent.className = "modal-content";//Clase para poder dar estilos al CSS
     carritoContent.innerHTML = `
         <img src= "${product.imagen}" height="300px" width="400px" align-center>
+        <img src= "${product.imagen}" height="300px" width="400px" align-center>
         <h3>${product.nombre}</h3>
         <h3>${product.origen}</h3>
         <p>Talla: ${product.talla}</p>
@@ -303,6 +305,7 @@ const carritoCounter = () => {
 };
 
 carritoCounter();
+
 
 
 

@@ -117,3 +117,4 @@ const saveLocal = () => {
 /*get item */
 
 export { getProducts}
+export {saveLocal}

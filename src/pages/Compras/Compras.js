@@ -8,8 +8,9 @@ import '/src/components/navbar/navbar.css'
 
 import { navbarApp } from '/src/components/navbar/navbar_app.js'
 import { footerApp } from '/src/components/footer/footer_app.js'
-/* import { getProducts } from '../Productos/Productos.js' */ /* importo getproducts para el carrito */
+import { getProducts } from '../Productos/Productos.js' /* importo getproducts para el carrito */
 import { carrito } from '../Productos/Productos.js' /* importamos definicion carrito */
+import { saveLocal } from '../Productos/Productos.js'
 
 document.querySelector("#navbar-app").innerHTML = navbarApp();
 document.querySelector("#footer-app").innerHTML = footerApp();
@@ -23,7 +24,7 @@ const imagenProducto = document.getElementById("imagenProducto"); /* imagen del 
 const modalContainer = document.getElementById("modal-container");/* descripción producto en html  */
 const resumenCompras = document.getElementById("resumenCompras"); /* Resumen de compras html */
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
-const verCarrito = document.getElementById("verCarrito");
+/* const verCarrito = document.getElementById("verCarrito"); */
 const cantidadCarrito = document.getElementById("cantidadCarrito");
 
 
@@ -31,9 +32,9 @@ const cantidadCarrito = document.getElementById("cantidadCarrito");
 /*Si te pierdes aquí va lo del carrito Mendoza del futuro*/
 /*El localStorage funciona cn set item get item */
 /*Primero es el set item, esto me la va a guardar*/
-const saveLocal = () => {
+/* const saveLocal = () => {
     localStorage.setItem("carrito", JSON.stringify(carrito));
-};
+}; */
 /////////////////////////////
 
 /* -----------------------CARRITO--------------------------------------------- */
@@ -190,7 +191,7 @@ const pintarCarrito = () => {
 /*Este es lo mismo cada que se escucha el timbre es la eliminación del producto,
 también elimina el contador del producto*/
 
-verCarrito.addEventListener("click", pintarCarrito);
+/* verCarrito.addEventListener("click", pintarCarrito); */ /* Se muestra  */
 
 const eliminarProducto = (id) => {
     const foundId = carrito.find((element) => element.id === id);

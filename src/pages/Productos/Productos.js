@@ -116,7 +116,7 @@ localStorage.setItem("carrito", JSON.stringify(carrito));
 
 /* 
 
-/*FILTROS---------------------------------------------*/
+/*---------------------FILTROS--------------------------------------*/
 const filterProductsByCategory = async (category) => {
     try {
         const response = await fetch("data.json");

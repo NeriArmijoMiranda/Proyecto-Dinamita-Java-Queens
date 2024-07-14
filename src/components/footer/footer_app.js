@@ -60,7 +60,7 @@ const footerApp = () => {
           <br>
           <a id=link-color href="/src/pages/acerca_de_nosotros/acerca_de_nosotros.html" > Acerca de nosotros </a>
           <br>
-          <a id=link-color href="/src/pages/FormAdm/FormAdmn/formAdmn.html" > Administración Productos </a>
+          <a id=link-color href="/src/pages/Form_crea_objetos.html" > Formulario de Productos Nuevos </a>
 
         </div>
 

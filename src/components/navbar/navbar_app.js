@@ -107,8 +107,8 @@ const navbarApp = () => {
               </li>
 
               <!-- Compras -->
-              <li id="verCarrito" class="nav-item d-none d-md-block"> <!-- La muestra cuando está grande y lo quita cuando es pequeño -->
-               <!-- <a class="nav-link" href="/src/pages/Compras/Compras.html"> -->
+              <!-- <li id="verCarrito" class="nav-item d-none d-md-block"> --> <!-- La muestra cuando está grande y lo quita cuando es pequeño -->
+               <a id="verCarrito" class="nav-link" href="/src/pages/compras/compras.html"> 
                <span id="cantidadCarrito" class="cantidad-carrito">
                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
                     <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
@@ -122,8 +122,8 @@ const navbarApp = () => {
               
               <!-- Iniciar sesión -->
               <li class="nav-item">
-              <a class="nav-link" href="/src/pages/compras/compras.html"> Iniciar Sesión</a>
-                <!--  <a class="nav-link" href="/src/pages/iniciar_sesion/iniciar_esion.html">Iniciar Sesión</a> -->
+              <!--<a class="nav-link" href="/src/pages/compras/compras.html"> Iniciar Sesión</a>-->
+              <a class="nav-link" href="/src/pages/iniciar_sesion/iniciar_esion.html">Iniciar Sesión</a> 
               </li>
   
             </ul><!-- Termina u-lista -->

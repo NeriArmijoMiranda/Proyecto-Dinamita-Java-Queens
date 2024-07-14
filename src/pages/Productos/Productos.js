@@ -95,7 +95,7 @@ const getProducts = async () => {
             origen: product.origen,
             talla: product.talla,
             cantidad: product.cantidad,
-            descripcion: product.descripcion,
+            /* descripcion: product.descripcion, */
     
             });
         }

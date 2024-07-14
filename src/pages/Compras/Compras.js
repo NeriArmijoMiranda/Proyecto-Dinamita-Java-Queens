@@ -10,7 +10,7 @@ import { navbarApp } from '/src/components/navbar/navbar_app.js'
 import { footerApp } from '/src/components/footer/footer_app.js'
 import { getProducts } from '../Productos/Productos.js' /* importo getproducts para el carrito */
 import { carrito } from '../Productos/Productos.js' /* importamos definicion carrito */
-import { saveLocal } from '../Productos/Productos.js'
+/* import { saveLocal } from '../Productos/Productos.js' */
 
 document.querySelector("#navbar-app").innerHTML = navbarApp();
 document.querySelector("#footer-app").innerHTML = footerApp();
@@ -24,7 +24,7 @@ const imagenProducto = document.getElementById("imagenProducto"); /* imagen del 
 const modalContainer = document.getElementById("modal-container");/* descripción producto en html  */
 const resumenCompras = document.getElementById("resumenCompras"); /* Resumen de compras html */
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
-/* const verCarrito = document.getElementById("verCarrito"); */
+const verCarrito = document.getElementById("verCarrito");
 const cantidadCarrito = document.getElementById("cantidadCarrito");
 
 
@@ -73,23 +73,22 @@ const pintarCarrito = () => {
     /*Aquí esta lo de sumar productos por si quiren quitarselo */
     /*La relación que se tiene con el Json es que relacioné que cada uno del los productos estan relacionados con un h1 o un 
     parrafo, etc.  */
-
-    carrito.forEach((product) => {
-        /* PARTE NÚMERO 1. Con document.createElement se crea un elemento aquí es un div, pero puede ser un span, una imagen. un h1 etc.
+    
+    /* PARTE NÚMERO 1. Con document.createElement se crea un elemento aquí es un div, pero puede ser un span, una imagen. un h1 etc.
         El document.createElement es toda la interfaz del HTML por eso ponemos el "div" para decirle que me creé un "div" 
         dentro de la interfaz, luego con la propiedad innerHTML me va ayudar a crear etiquetas HTML; por eso le pongo content
         y llamo a inner para crear elementos dentro del div, por eso las etiquetas deben ser como en el HTML.
         Aquí es donde se debe eliminar la descripción para que en el carrito ya no aparesca.
         */
-
+    carrito.forEach((product) => {
+        
         /* En contenedor 1 se pone imagen  */
-      /*   let imagen = document.createElement("div"); 
+        /*   let imagen = document.createElement("div"); 
         imagen.className = "imagenProducto";
         imagenProducto.innerHTML = `
         <img src= "${product.imagen}" height="200px" width="200px" align-center>
         `
         imagenProducto.append(imagen); */
-
 
         let carritoContent = document.createElement("div"); /*Este div que creé lo tenemos que conectar a algún lado para que pueada
         funcionar, en este caso lo conectamos al HTML, que es donde vienen las propiedas*/

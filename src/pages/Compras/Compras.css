@@ -1,21 +1,30 @@
 /* Estilos particulares de Compras */
-#contenedorProductos {
+/* #contenedorProductos {
     margin: 50px;
     background-color: #8d9c09;
     justify-content: center;
     border-radius: 30px;
     padding: 30px;
-}
+} */
 
 #resumenCompras {
-  /*   margin: 50px; */
+    margin: 50px;
     background-color: #8d9c09;
     justify-content: center;
     border-radius: 30px;
     padding: 30px;
+    max-width: 400px ; /* Hace que quepan los dos contenedores en pantalla */
+    margin-bottom: 100px;
+    /* margin-right: 100px; */
+
 }
 
-#modal-container {
+#modalContainer {
+    margin: 50px;
+    background-color: #8d9c09;
+    justify-content: center;
+    border-radius: 30px;
+    padding: 30px;
     color: white;
     font-family: "Mulish", sans-serif;
     font-optical-sizing: auto;
@@ -24,14 +33,12 @@
     font-size: medium;
     justify-content: center;
     text-align: center;
-    margin: 50px;
     /* background-color: pink; */
     
 }
 
 /* Preguntar sonbre límites */
 .modal-content {
-    margin: 50px;
   /*   background-color: blue; */
     justify-content: center;
     border-radius: 70px;
@@ -42,7 +49,8 @@ h3{
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
-    font-size: 16;
+    font-size: 12;
+    
 }
 
 

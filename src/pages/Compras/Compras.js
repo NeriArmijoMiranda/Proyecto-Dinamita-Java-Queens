@@ -8,7 +8,7 @@ import '/src/components/navbar/navbar.css'
 
 import { navbarApp } from '/src/components/navbar/navbar_app.js'
 import { footerApp } from '/src/components/footer/footer_app.js'
-import { getProducts } from '../Productos/Productos.js' /* importo getproducts para el carrito */
+/* import { getProducts } from '../Productos/Productos.js' */ /* importo getproducts para el carrito */
 import { carrito } from '../Productos/Productos.js' /* importamos definicion carrito */
 /* import { saveLocal } from '../Productos/Productos.js' */
 
@@ -19,9 +19,8 @@ document.querySelector("#footer-app").innerHTML = footerApp();
 /* ------------------------------------------------------------- */
 /*Las const son para llamarlas del html y decirles "Eh te estan hablando" */
 
-/* const generalContent = document.getElementById("generalContent");  *//* Contenedor general de toda la página */
-const imagenProducto = document.getElementById("imagenProducto"); /* imagen del producto en sección izq html */
-const modalContainer = document.getElementById("modal-container");/* descripción producto en html  */
+const contenedorGeneral = document.getElementById("contenedorGeneral"); /* Contenedor general de toda la página */
+const modalContainer  = document.getElementById("modalContainer");/* descripción producto en html  */
 const resumenCompras = document.getElementById("resumenCompras"); /* Resumen de compras html */
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 const verCarrito = document.getElementById("verCarrito");
@@ -32,9 +31,9 @@ const cantidadCarrito = document.getElementById("cantidadCarrito");
 /*Si te pierdes aquí va lo del carrito Mendoza del futuro*/
 /*El localStorage funciona cn set item get item */
 /*Primero es el set item, esto me la va a guardar*/
-/* const saveLocal = () => {
+const saveLocal = () => {
     localStorage.setItem("carrito", JSON.stringify(carrito));
-}; */
+};
 /////////////////////////////
 
 /* -----------------------CARRITO--------------------------------------------- */
@@ -43,8 +42,8 @@ const cantidadCarrito = document.getElementById("cantidadCarrito");
 
 
 const pintarCarrito = () => {
-    modalContainer.innerHTML = ""; 
-    /* modalContainer.style.display = "flex"; */
+    /* contenedorGeneral.innerHTML = "";  */
+    /* modalContainer.style.display = "flex"; */ //es para mostrar el carrito cuando se cierra/ Por ahora no se cierra
 
     /* Se crea encabezado, header en modalContainer */
     /* const modalHeader = document.createElement("div");
@@ -57,8 +56,7 @@ const pintarCarrito = () => {
 
     ///////// Por ahora comento el "cerrar" el carrito porque no está en diseño///////////
     /*Esta es para literalmente hacer que la X de cerrar obtenga esa función, el botón está dentro de este modulo*/
-
-    /* 
+     /* 
     const modalbutton = document.createElement("h1");
     modalbutton.innerHTML = "x";
     modalbutton.className = "modal-header-button align-item-center";
@@ -70,28 +68,20 @@ const pintarCarrito = () => {
     modalHeader.append(modalbutton); */
     /////////////////////////////////////////////////////////////////////////////////////
 
-    /*Aquí esta lo de sumar productos por si quiren quitarselo */
-    /*La relación que se tiene con el Json es que relacioné que cada uno del los productos estan relacionados con un h1 o un 
+    /*Aquí esta lo de sumar productos por si quiren quitarselo
+    La relación que se tiene con el Json es que relacioné que cada uno del los productos estan relacionados con un h1 o un 
     parrafo, etc.  */
-    
-    /* PARTE NÚMERO 1. Con document.createElement se crea un elemento aquí es un div, pero puede ser un span, una imagen. un h1 etc.
+
+    carrito.forEach((product) => {
+        /* PARTE NÚMERO 1. Con document.createElement se crea un elemento aquí es un div, pero puede ser un span, una imagen. un h1 etc.
         El document.createElement es toda la interfaz del HTML por eso ponemos el "div" para decirle que me creé un "div" 
         dentro de la interfaz, luego con la propiedad innerHTML me va ayudar a crear etiquetas HTML; por eso le pongo content
         y llamo a inner para crear elementos dentro del div, por eso las etiquetas deben ser como en el HTML.
         Aquí es donde se debe eliminar la descripción para que en el carrito ya no aparesca.
         */
-    carrito.forEach((product) => {
-        
-        /* En contenedor 1 se pone imagen  */
-        /*   let imagen = document.createElement("div"); 
-        imagen.className = "imagenProducto";
-        imagenProducto.innerHTML = `
-        <img src= "${product.imagen}" height="200px" width="200px" align-center>
-        `
-        imagenProducto.append(imagen); */
 
-        let carritoContent = document.createElement("div"); /*Este div que creé lo tenemos que conectar a algún lado para que pueada
-        funcionar, en este caso lo conectamos al HTML, que es donde vienen las propiedas*/
+        let carritoContent = document.createElement("div"); /*Este div que creé lo tenemos que conectar a algún lado para que pueda
+        funcionar, en este caso lo conectamos al HTML, que es donde vienen las propiedades*/
         carritoContent.className = "modal-content";//Clase para poder dar estilos al CSS
         carritoContent.innerHTML = `
         <img src= "${product.imagen}" height="200px" width="200px" align-center>
@@ -124,9 +114,7 @@ const pintarCarrito = () => {
         </svg> Eliminar producto </span>
 
         `;/*Aquí es para visualizar los productos del carrito en como número chiquito encima en el carrito */
-
-        modalContainer.append(carritoContent); /* Se agrega contenido en html */
-
+        modalContainer.append(carritoContent);/* Se agrega contenido en html */
 
         /*Esto funciona para que los signos de + y - tengan funcionalidad */
         let restar = carritoContent.querySelector(".restar")
@@ -156,7 +144,7 @@ const pintarCarrito = () => {
 
     /////////////// Resumen de Compras ///////////
     /*Esto lo que hace funcionar es el total de los productos */
-
+    /* acc = acumulador, el = cada producto */
     const total = carrito.reduce((acc, el) => acc + el.precio * el.cantidad, 0);
 
     const totalBuying = document.createElement("div")
@@ -179,18 +167,28 @@ const pintarCarrito = () => {
     resumenCompras.append(totalBuying);
 
     let continuar = document.createElement("button");
-    
     continuar.innerText = "Continuar con la compra";/*Con innertext lo ponemos texto al botón  */
     continuar.className = "continuarBoton";/*Aquí el botón tiene su propia clase, es el botón de compras */
     /*Aquí lo conectamos con content y le estamos diciendo que a cada producto le agregue un botón de comprar */
     resumenCompras.append(continuar);
 };
-
+pintarCarrito();
 
 /*Este es lo mismo cada que se escucha el timbre es la eliminación del producto,
 también elimina el contador del producto*/
 
-/* verCarrito.addEventListener("click", pintarCarrito); */ /* Se muestra  */
+/* verCarrito.addEventListener("click", pintarCarrito); */ /* Hace que se vea el contenido de la página */
+
+/*Aquí se guarda lo del localStorage y se ve reflejado en el contador del carrito */
+/*¿¿¿¿¿ Debería estar en encabezado????  Muestra el número*/
+const carritoCounter = () => {
+    /* cantidadCarrito.style.display = "block" */
+    const carritoLength = carrito.length;
+    localStorage.setItem("carritoLength", JSON.stringify(carritoLength))
+
+    cantidadCarrito.innerText = JSON.parse(localStorage.getItem("carritoLength"));
+};
+carritoCounter();
 
 const eliminarProducto = (id) => {
     const foundId = carrito.find((element) => element.id === id);
@@ -205,16 +203,3 @@ const eliminarProducto = (id) => {
     pintarCarrito();
 
 };
-
-/*Aquí se guarda lo del localStorage y se ve reflejado en el contador del carrito */
-const carritoCounter = () => {
-    cantidadCarrito.style.display = "block"
-    const carritoLength = carrito.length;
-    localStorage.setItem("carritoLength", JSON.stringify(carritoLength))
-
-    cantidadCarrito.innerText = JSON.parse(localStorage.getItem("carritoLength"));
-
-
-};
-
-carritoCounter();

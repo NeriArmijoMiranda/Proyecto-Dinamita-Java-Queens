@@ -19,7 +19,6 @@ document.querySelector("#footer-app").innerHTML= footerApp();
 const shopContent = document.getElementById("shopContent");/*Esta es la primera variable de la parte número 1 la obtuvimos
 con el id que le pusimos en el HTML*/
 
-
 /*Aquí puse la igualdad del carrito para que me lo recupere en el localstorage, al carrito se convierte en
 en lo que sea que este guardado en el localStorage. Aqui el carrito es básicamente, si hay algo guardado 
 se convierte en eso, pero si no hay nada pues está vacío */
@@ -88,7 +87,7 @@ const getProducts = async () => {
             origen: product.origen,
             talla: product.talla,
             cantidad: product.cantidad,
-            descripcion: product.descripcion,
+            /* descripcion: product.descripcion, */
     
             });
         }
@@ -117,4 +116,4 @@ const saveLocal = () => {
 /*get item */
 
 export { getProducts}
-/* export {saveLocal} */
+export {saveLocal}

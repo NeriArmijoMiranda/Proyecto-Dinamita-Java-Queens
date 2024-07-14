@@ -51,7 +51,7 @@ function createProductObject() {
 
     // Convertir a JSON
     let productJSON = JSON.stringify(product);
-    console.log('Objeto JSON:', productJSON);
+    console.log('Producto JSON:', productJSON);
 
     // Mostrar alerta de éxito (puedes ajustar el comportamiento según tus necesidades)
     showAlert('Producto creado correctamente.', 'alert-success');

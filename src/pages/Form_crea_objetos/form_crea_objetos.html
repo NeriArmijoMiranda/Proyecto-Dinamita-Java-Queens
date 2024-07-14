@@ -18,23 +18,27 @@
 
         <!-- Contenido de la página -->
         <div id="content-wrap">
-            
+            <h1>Formulario de Producto Nuevo</h1>
+
             <div class="container mt-5 col-12 col-md-12 mt-4 mb-4">
-                <center><h2>Formulario de Producto Nuevo</h2></center>
                     <form id="productForm" class="needs-validation" novalidate>
                         <div class="row">
-                            <div class="col-6 col-md-6">
+                            <div class="col-sm-4 col-md-4">
                                 <div class="form-group">
                                     <label for="ID">ID:</label>
-                                    <input type="number" class="fform-control" id="ID" name="ID" required>
-                                    <div class="invalid-feedback">Por favor ingree el ID del producto.</div>
+                                    <input type="number" class="fform-control" id="ID" name="ID" placeholder="01" required>
+                                    <div class="invalid-feedback">
+                                        Por favor ingree el ID del producto.
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-8 col-md-6 ">
+                            <div class="col-sm-8 col-md-8 ">
                                 <div class="form-group">
                                     <label for="categoria">Categoría:</label>
-                                    <input type="text" class="fform-control" id="categoria" name="categoria" required>
-                                    <div class="invalid-feedback">Por favor ingresa la categoría.</div>
+                                    <input type="text" class="fform-control" id="categoria" name="categoria" placeholder="Ceramica" required>
+                                    <div class="invalid-feedback">
+                                        Por favor ingresa la categoría.
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -42,16 +46,20 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="nombre">Nombre:</label>
-                                    <input type="text" class="fform-control" id="nombre" name="nombre" required>
-                                    <div class="invalid-feedback">Por favor ingresa el nombre.</div>
+                                    <input type="text" class="fform-control" id="nombre" name="nombre" placeholder="Alebrijes" required>
+                                    <div class="invalid-feedback">
+                                        Por favor ingresa el nombre.
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="precio">Precio:</label>
                                     <input type="number" class="fform-control" id="precio" name="precio" step="0.01"
-                                        required>
-                                    <div class="invalid-feedback">Por favor ingresa un precio válido.</div>
+                                        placeholder="100.00" required>
+                                    <div class="invalid-feedback">
+                                        Por favor ingresa un precio válido.
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -59,29 +67,37 @@
                             <div class="form-group">
                                 <label for="imagen">Imagen URL:</label>
                                 <input type="file" class="fform-control" id="imagen" name="imagen" required>
-                                <div class="invalid-feedback">Por favor ingresa una URL de imagen válida.</div>
+                                <div class="invalid-feedback">
+                                    Por favor ingresa una URL de imagen válida.
+                                </div>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-12 col-md-4">
+                            <div class="col-sm-12 col-md-4">
                                 <div class="form-group">
                                     <label for="origen">Origen:</label>
-                                    <input type="text" class="fform-control" id="origen" name="origen" required>
-                                    <div class="invalid-feedback">Por favor ingresa el origen.</div>
+                                    <input type="text" class="fform-control" id="origen" name="origen" placeholder="Monterrey" required>
+                                    <div class="invalid-feedback">
+                                        Por favor ingresa el origen.
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-7 col-md-4">
+                            <div class="col-sm-6 col-md-4">
                                 <div class="form-group">
                                     <label for="talla">Talla:</label>
-                                    <input type="text" class="fform-control" id="talla" name="talla" required>
-                                    <div class="invalid-feedback">Por favor ingresa la cantidad.</div>
+                                    <input type="text" class="fform-control" id="talla" name="talla" placeholder="Única" required>
+                                    <div class="invalid-feedback">
+                                        Por favor ingresa la talla.
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-7 col-md-4">
+                            <div class="col-sm-6 col-md-4">
                                 <div class="form-group">
                                     <label for="cantidad">Cantidad:</label>
-                                    <input type="number" class="fform-control" id="cantidad" name="cantidad" required>
-                                    <div class="invalid-feedback">Por favor ingresa la cantidad.</div>
+                                    <input type="number" class="fform-control" id="cantidad" name="cantidad" placeholder="1" required>
+                                    <div class="invalid-feedback">
+                                        Por favor ingresa la cantidad.
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -89,18 +105,17 @@
                             <div class="form-group">
                                 <label for="descripcion">Descripción:</label>
                                 <textarea class="fform-control" id="descripcion" name="descripcion" rows="3"
-                                    required></textarea>
-                                <div class="invalid-feedback">Por favor ingresa la descripción.</div>
+                                    placeholder="Descripción del producto" required></textarea>
+                                <div class="invalid-feedback">
+                                    Por favor ingresa la descripción.
+                                </div>
                             </div>
                         </div>
                             <button class="BotonCrear" type="submit">Crear Producto</button>
                     </form>
-
-                </div>
             </div>
-
-            
         </div>
+
 
     <!-- Footer -->
     <footer id="footer-app" class="footer-basic container-fluid"> </footer>

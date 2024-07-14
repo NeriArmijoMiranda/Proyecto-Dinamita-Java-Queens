@@ -10,6 +10,7 @@ import { navbarApp } from '/src/components/navbar/navbar_app.js'
 import { footerApp } from '/src/components/footer/footer_app.js'
 
 
+
 document.querySelector("#navbar-app").innerHTML= navbarApp();
 document.querySelector("#footer-app").innerHTML= footerApp();
 
@@ -18,6 +19,11 @@ document.querySelector("#footer-app").innerHTML= footerApp();
 /*Las const son para llamarlas del html y decirles "Eh wey te estan hablando" */
 const shopContent = document.getElementById("shopContent");/*Esta es la primera variable de la parte número 1 la obtuvimos
 con el id que le pusimos en el HTML*/
+const categoryItems = document.querySelectorAll('.categoryitem');
+/* ARLETTE: Ya están en compras. Verificar. */
+/* const verCarrito = document.getElementById("verCarrito");
+const modalContainer = document.getElementById("modal-container");
+const cantidadCarrito = document.getElementById("cantidadCarrito"); */
 
 /*Aquí puse la igualdad del carrito para que me lo recupere en el localstorage, al carrito se convierte en
 en lo que sea que este guardado en el localStorage. Aqui el carrito es básicamente, si hay algo guardado 
@@ -29,7 +35,7 @@ export {carrito} /* Se exporta para tenerlo en página compras */
 
 const getProducts = async () => {
 /*Ruta del archivo Json  */
-    const response = await fetch("data.json");
+    const response = await fetch('/src/components/data.json');
     const data = await response.json();
     /*Aquí el data.forEach recorre todos los productos */
     data.forEach((product) => {
@@ -59,7 +65,6 @@ const getProducts = async () => {
     /*Aquí lo conectamos con content y le estamos diciendo que a cada producto le agregue un botón de comprar */
         content.append(comprar);
 
-        
     /*Aquí es donde pasa la magia, use varios métodos entre ellos push, map y some, está función de aquí;
     lo que hace es que no se repitan los productos con todos sus atributos y solo se ponga la cantidad deseada,
     es decir en vez de tener dos sombreros con su descripcioón, lugar de origen etc, solo se duplique la cantidad.
@@ -103,7 +108,6 @@ const getProducts = async () => {
 getProducts();
 
 
-
 //////////// Aqupi quite algo, const saveLocal////////
 ///////// aquí agregué algo del final del codigo de productos//
 /*Si te pierdes aquí va lo del carrito Mendoza del futuro*/
@@ -115,5 +119,67 @@ const saveLocal = () => {
 
 /*get item */
 
+/*---------------------FILTROS--------------------------------------*/
+const filterProductsByCategory = async (category) => {
+    try {
+        const response = await fetch('/src/components/data.json');
+        const data = await response.json();
+        shopContent.innerHTML = "";
+        const filteredProducts = data.filter(product => product.categoría === category);
+
+  // Mostrar productos filtrados
+    filteredProducts.forEach(product => {
+    let content = document.createElement("div");
+    content.className = "card";
+    content.innerHTML = `
+        <center><img src="${product.imagen}" height="300px" width="350px" margin-bottom="15px"></center>
+        <h2>${product.nombre}</h2>
+        <h3>${product.origen}</h3>
+        <h4>${product.categoría}</h4>
+        <div class="descripcion" style="display: flex; flex-direction: column;">
+            <p>Talla: ${product.talla}</p>
+            <p>${product.descripcion}</p>
+            <p>Precio: $${product.precio.toFixed(2)}</p>
+            <p>Cantidad: ${product.cantidad}</p>
+        </div>
+    `;
+        /*Aquí utilizamos el mismo proceso, pero en vez de que sea un div, será un botón  */    
+        let comprar = document.createElement("button");
+    
+        comprar.innerText = "comprar";/*Con innertext lo ponemos texto al botón  */
+        comprar.className = "comprar";/*Aquí el botón tiene su propia clase, es el botón de compras */
+    /*Aquí lo conectamos con content y le estamos diciendo que a cada producto le agregue un botón de comprar */
+        content.append(comprar);
+    shopContent.appendChild(content);
+});
+
+
+
+
+// Si no se encontraron productos para la categoría
+if (category === "Todo") {
+getProducts();
+}
+else if (filteredProducts.length === 0) {
+    shopContent.innerHTML = "<p>No se encontraron productos para esta categoría.</p>";
+}
+} catch (error) {
+console.error("Error al filtrar productos por categoría:", error);
+};
+}
+
+categoryItems.forEach(item => {
+    item.addEventListener('click', async (event) => {
+        event.preventDefault();
+        const selectedCategory = item.getAttribute('category');
+        await filterProductsByCategory(selectedCategory);
+    });
+});
+// Mostrar todos los productos al cargar la página inicialmente
+getProducts();
+
+/*FIN---------------------FILTROS---------------*/
+
+/* ARLETE: Se exportan para usar en compras */
 export { getProducts}
 export {saveLocal}

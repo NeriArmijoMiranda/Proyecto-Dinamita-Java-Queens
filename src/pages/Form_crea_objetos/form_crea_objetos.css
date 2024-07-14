@@ -1,0 +1,99 @@
+/* Estilos particulares de Iniciar-Sesión */
+
+.container{
+    margin-bottom: 100px;
+    padding-bottom: 100px;
+
+}
+
+
+form {
+    padding: 100px;
+    border-radius: 20px;
+    text-align: center;
+    background-color: #088078;
+    /*display y flex-direction cambios*/
+    flex-direction: column;
+    max-width: 90rem; 
+}
+
+.form-group{
+    margin-bottom: 3px;
+    display: flex;
+    justify-content:baseline;
+    text-align:left;
+    display: flex; /* Modelo de caja flexible */
+    flex-direction: column;
+}
+
+.fform-control{
+    padding: 20px 25px; /* 20px arriba y abajo, 25px a los lados */
+    border-radius: 20px;
+    margin-bottom: 30px;
+    background-color: #5aece3;
+    border: none; /* Sin borde */
+    outline: none; /* Sin contorno */
+    font-family: "Mulish", sans-serif;
+    height: auto; /* Ajustar la altura automática */
+}
+
+label{
+    color: white;
+    font-family: "Mulish", sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.BotonCrear{
+    font-size: 20px;
+    border-radius: 10px;
+    padding: 25px;
+    cursor: pointer;
+    color: white;
+    background-color: #055e58;
+    font-family: "Mulish", sans-serif;
+}
+
+.BotonCrear:hover{
+    background-color: #088078;
+    width: auto;
+}
+
+h1{
+    margin-top: 30px;
+    background-color: #08807B;
+    align-content: space-between;
+    font-family: "Corben", serif;
+    font-weight: 700; /* Grosor de la fuente */
+    font-style: normal; /* Estilo de la fuente */
+    text-align: center;
+    color: white; /* Color del texto */
+    text-indent: 10px; /* Sangría del texto */
+}
+
+.invalid-feedback{
+    font-size: 25px;
+    font-weight: bold ;
+    font-family: "Corben", serif;
+}
+
+::placeholder { /*Lo que va a adentro de las celdas verdes como "Jorge" */
+    color: rgba(46, 45, 45, 0.521); /* Color del texto con transparencia */
+    font-size: 18px;
+}
+
+strong{
+    font-weight: bold;
+    font-family: "Corben", serif;
+    font-size: 25px;
+    background-color: #17fb67;
+}
+
+.close{
+    background-color:#17fb67;
+}
+
+.alert-success{
+    background-color: black;
+}

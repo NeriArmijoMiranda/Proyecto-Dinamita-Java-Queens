@@ -36,7 +36,7 @@ const navbarApp = () => {
           <!-- Compras celular -->
 
           <li class="nav-item d-block d-md-none d-sm-block" >
-            <!--<a class="nav-link" href="/src/pages/Compras/Compras.html"> -->
+            <!-- <a class="nav-link" href="/src/pages/Compras/Compras.html"> -->
               <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-cart4"
                 viewBox="0 0 16 16">
                 <path
@@ -108,7 +108,7 @@ const navbarApp = () => {
 
               <!-- Compras -->
               <li id="verCarrito" class="nav-item d-none d-md-block"> <!-- La muestra cuando está grande y lo quita cuando es pequeño -->
-               <!-- <a class="nav-link" href="/src/pages/Compras/Compras.html"> -->
+               <!-- <a class="nav-link" href="/src/pages/Compras/Compras.html">-->
                   <span id="cantidadCarrito" class="cantidad-carrito"></span>   
                   <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-cart4"
                     viewBox="0 0 16 16">

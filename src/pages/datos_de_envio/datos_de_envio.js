@@ -77,7 +77,7 @@ window.onload = displayTotal;
 
 // Función para el Botón Regresar-------------------------------------------------------------------->
 function goBack() {
-    window.location.href = '/src/pages/Compras/Compras.html'; // 
+    window.location.href = '/src/pages/compras/compras.html'; // 
 }
 
 // Añadir evento de clic al botón cuando el DOM esté completamente cargado

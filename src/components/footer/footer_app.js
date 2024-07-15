@@ -7,7 +7,7 @@ const footerApp = () => {
         
         <div class="col-12 col-md-4  rounded-2 text-center">
           <p>Dirección: Calle de colores 16, Colonia del Encanto, Alcaldía de Artesanías, 00000, México.
-                    <a href="/src/pages/datos_de_envio/datos_de_envio.html"> Datos de envío  </a> </p>
+          <!--<a id=link-color href="/src/pages/datos_de_envio/datos_de_envio.html"> Datos de envío  </a> </p> -->
         </div>
         <!-- Iconos -->
         <div class="col-6  col-md-4   rounded-2 text-center">

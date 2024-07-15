@@ -1,12 +1,14 @@
 /* Estilos particulares de Compras */
-/* #contenedorProductos {
-    margin: 50px;
-    background-color: #8d9c09;
-    justify-content: center;
-    border-radius: 30px;
-    padding: 30px;
-} */
-
+.banner{
+    color: white;
+    background-color: #08807B;
+    font-family: "Corben", serif;
+    font-weight: 400;
+    font-size: 40px;
+    font-style: normal;
+    text-align: center;
+    
+}
 #contenedorGeneral{
     align-items:start;
 }
@@ -45,9 +47,9 @@
 h2{
     font-family: "Corben", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 00;
+    font-weight: 400;
     font-style: normal;
-    font-size: 12;
+    font-size: large;
     
 }
 

@@ -1,1 +1,173 @@
 /* Estilos particulares de Datos de envío */
+
+/* Título Datos de Envío y Datos de Tarjeta */
+.titulos-envio {
+    background-color: #08807B;
+    align-content: space-between;
+    font-family: "Corben", serif;
+    font-weight: 700; /* Grosor de la fuente */
+    font-style: normal; /* Estilo de la fuente */
+    text-align: left;
+    color: white; /* Color del texto */
+    text-indent: 10px; /* Sangría del texto */
+}
+
+.horizontal-container {
+    display: flex;
+    justify-content: space-between; /* O "flex-start", "center", dependiendo de tu preferencia */
+    gap: 10px; /* Ajusta el valor según sea necesario */
+}
+.container-h {
+    margin-right: 0px; /* Espacio entre contenedores, ajusta según sea necesario */
+}
+
+/* Contenedor General de Formulario 1*/
+.container {
+    max-width: 95%; /* Ancho máximo */
+    border-radius: 10px; /* Bordes redondeados */
+    margin-bottom: 90px;
+}
+
+/* Estilos de los subtítulos en General*/
+label {
+    color: white;
+    font-family: "Mulish", sans-serif;
+    font-size: 25px;
+    font-weight: 600; /* Grosor de la fuente */
+    margin-bottom: 5px; /* Margen inferior */
+}
+
+/* Contenedor Formularios verdes-------------------------------- */
+.form-container {
+    padding: 50px;
+    border-radius: 20px;
+    text-align: center;
+    background-color: #088078;
+    flex-direction: column;
+    max-width: 100%;
+    margin-bottom: 1px; /* Margen inferior*/
+}
+
+.input_c { /* Estilos de las celdas verdes*/
+    padding: 20px 25px; /* 20px arriba y abajo, 25px a los lados */
+    border-radius: 20px;
+    margin-bottom: 30px;
+    background-color: #5aece3;
+    border: none; /* Sin borde */
+    outline: none; /* Sin contorno */
+    font-family: "Mulish", sans-serif;
+    height: auto; /* Ajustar la altura automática */
+}
+
+.form-content { /* Ajustes de las celdas verdes*/
+    display: flex; /* Modelo de caja flexible */
+    flex-direction: column; /*Elementos se colocan en una columna, uno debajo del otro */
+}
+
+::placeholder { /*Lo que va a adentro de las celdas verdes como "Jorge" */
+    color: rgba(46, 45, 45, 0.521); /* Color del texto con transparencia */
+    font-size: 18px;
+}
+
+/* Contenedor para los Estados------------------------------------ */
+.custom-font { /* Fuente del Dropdown de Estados */
+    font-family: "Mulish", sans-serif;
+    font-size: 18px;
+}
+
+option { /* Letra de las opciones en Estados */
+    font-family: "Mulish", sans-serif;
+    /* Familia de fuente */
+}
+
+/* Contenedor negro 1-----------------------------------------*/
+.contenedor-negro {
+    text-align: center;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Checkbox ---------------------------*/
+.checkbox {   /* Contenedor naranja */
+    background-color: #F85931   ;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+    padding: 25px; 
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+.checkbox:hover {
+    background-color: #fa7351     
+}
+
+.form-check {   /* Posición*/
+    display: flex;
+    align-items: center; /* Alineación vertical */
+    justify-content: center; /* Alineación horizontal */
+}
+
+.form-check-input { /* Cuadro de la casilla del checkbox */
+    width: 25px;
+    height: 25px;
+    margin-top: 0;
+}
+
+.form-check-label { /* Etiqueta de Checkbox */
+    margin-bottom: 0;
+    margin-left: 4px;
+    display: flex;
+    align-items: center;
+}
+
+/* Botón Guardar Dirección y Tarjeta ---------------------------*/
+.btn-guardar {
+    border-radius: 10px; /* Bordes redondeados */
+    cursor: pointer;
+    background-color: #055e58;
+    color: white;
+    padding: 25px;
+    font-size: 25px;
+    font-weight: 600; /* Grosor de la fuente */
+    text-align: center;
+}
+
+.btn-guardar:hover {
+    background-color: #088078;
+    width: auto;
+}
+
+/* Botón Regresar */
+.btn-guardar-r {
+    border-radius: 10px; /* Bordes redondeados */
+    cursor: pointer;
+    background-color:  #F1A20B;
+    color: black;
+    padding: 25px;
+    font-size: 25px;
+    font-weight: 600; /* Grosor de la fuente */
+    text-align: center;
+}
+
+.btn-guardar-r:hover {
+    background-color:  #fac665;
+}
+
+/* Contenedores Fecha de Vencimiento-------------------------------- */
+.small-input {
+    width: 90px; /* Ajusta este valor según el tamaño deseado */
+}
+.medium-input {
+    width: 90%; /* Ajusta este valor según el tamaño deseado */
+    display: flex;
+}
+
+/* .col-md-2 {
+    border: solid 3px green;
+}
+ */

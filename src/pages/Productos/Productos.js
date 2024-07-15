@@ -10,35 +10,43 @@ import { navbarApp } from '/src/components/navbar/navbar_app.js'
 import { footerApp } from '/src/components/footer/footer_app.js'
 
 
+
 document.querySelector("#navbar-app").innerHTML= navbarApp();
 document.querySelector("#footer-app").innerHTML= footerApp();
 
-/* ------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------------------------ */
 
 /*Las const son para llamarlas del html y decirles "Eh wey te estan hablando" */
-
-const shopContent = document.getElementById("shopContent");
-const verCarrito = document.getElementById("verCarrito");
+const shopContent = document.getElementById("shopContent");/*Esta es la primera variable de la parte número 1 la obtuvimos
+con el id que le pusimos en el HTML*/
+const categoryItems = document.querySelectorAll('.categoryitem');
+/* ARLETTE: Ya están en compras. Verificar. */
+/* const verCarrito = document.getElementById("verCarrito");
 const modalContainer = document.getElementById("modal-container");
-const cantidadCarrito = document.getElementById("cantidadCarrito");
+const cantidadCarrito = document.getElementById("cantidadCarrito"); */
 
 /*Aquí puse la igualdad del carrito para que me lo recupere en el localstorage, al carrito se convierte en
 en lo que sea que este guardado en el localStorage. Aqui el carrito es básicamente, si hay algo guardado 
 se convierte en eso, pero si no hay nada pues está vacío */
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
-/*Aqui hice uan funcion para llamar a los productos del Json y que corran por que si no les pegan */
+
+/*Aqui hice unan funcion para llamar a los productos del Json y que corran por que si no les pegan */
 
 const getProducts = async () => {
-    const response = await fetch("../../../data.json");
+/*Ruta del archivo Json  */
+    const response = await fetch('/src/components/data.json');
     const data = await response.json();
+    /*Aquí el data.forEach recorre todos los productos */
     data.forEach((product) => {
         let content = document.createElement("div");
-        content.className = "card";
+        /*Se puden agregar clases a los elementos HTML, como lo vimos en imagen por ejemplo */
+        content.className = "card";//Aquí por ejemplo esta la clase de card para el Css 
         content.innerHTML = `
-        <center><img src= "${product.imagen}" height="300px" width="400px"></center>
+        <center><img class="imagenProduct rounded-3" src= "${product.imagen}" margin-bottom="15px"></center>
         <h2>${product.nombre}</h2>
         <h3>${product.origen}</h3>
+        <h4>${product.categoría}</h4>
         <div class="descripcion" align-items-center>
         <p>Talla: ${product.talla}</p>
         <p>${product.descripcion}</p>
@@ -46,15 +54,17 @@ const getProducts = async () => {
         <p>Cantidad: ${product.cantidad}</p>
         </div>
     `;
+    /*Con la propiedad append vamos a conectar la primera parte PARTE 1 */
         shopContent.append(content);
         
+    /*Aquí utilizamos el mismo proceso, pero en vez de que sea un div, será un botón  */    
         let comprar = document.createElement("button");
-        comprar.innerText = "comprar";
-        comprar.className = "comprar";
     
+        comprar.innerText = "comprar";/*Con innertext lo ponemos texto al botón  */
+        comprar.className = "comprar";/*Aquí el botón tiene su propia clase, es el botón de compras */
+    /*Aquí lo conectamos con content y le estamos diciendo que a cada producto le agregue un botón de comprar */
         content.append(comprar);
 
-        
     /*Aquí es donde pasa la magia, use varios métodos entre ellos push, map y some, está función de aquí;
     lo que hace es que no se repitan los productos con todos sus atributos y solo se ponga la cantidad deseada,
     es decir en vez de tener dos sombreros con su descripcioón, lugar de origen etc, solo se duplique la cantidad.
@@ -70,10 +80,11 @@ const getProducts = async () => {
                 carrito.map((prod) => {
                     if(prod.id === product.id){
                         prod.cantidad++;
+                        
                     }
                 });
             } else{
-    
+    /*Aquí en el carrito es */
             carrito.push({
             id : product.id,
             nombre: product.nombre,
@@ -82,9 +93,9 @@ const getProducts = async () => {
             origen: product.origen,
             talla: product.talla,
             cantidad: product.cantidad,
-            descripcion: product.descripcion,
-    
-            });
+            /* descripcion: product.descripcion, */
+            });  
+         
         }
         console.log(carrito);
         console.log(carrito.length);
@@ -95,130 +106,111 @@ const getProducts = async () => {
     });
 };
 
-getProducts(); 
+getProducts();
+export {carrito} /* Se exporta para tenerlo en página compras */
 
-
-
-
+//////////// Aqupi quite algo, const saveLocal////////
+///////// aquí agregué algo del final del codigo de productos//
 /*Si te pierdes aquí va lo del carrito Mendoza del futuro*/
 /*El localStorage funciona cn set item get item */
 /*Primero es el set item, esto me la va a guardar*/
 const saveLocal = () => {
-localStorage.setItem("carrito", JSON.stringify(carrito));
+    localStorage.setItem("carrito", JSON.stringify(carrito));
 };
 
 /*get item */
 
-/* -----------------------Carrito --------------------------------------------- */
+/*---------------------FILTROS--------------------------------------*/
+const filterProductsByCategory = async (category) => {
+    try {
+        const response = await fetch('/src/components/data.json');
+        const data = await response.json();
+        shopContent.innerHTML = "";
+        const filteredProducts = data.filter(product => product.categoría === category);
 
-const pintarCarrito = () => {
-    modalContainer.innerHTML = "";
-    modalContainer.style.display = "flex";
-    const modalHeader = document.createElement("div");
-    modalHeader.className = "modal-header";
-    modalHeader.innerHTML = `
-    <h1 class="modal-header-tittle">Carrito</h1>
-    `;
-
-modalContainer.append(modalHeader);
-
-/*Esta es para literalmente hacer que la X de cerrar obtenga esa función */
-
-const modalbutton = document.createElement("h1");
-modalbutton.innerHTML = "x";
-modalbutton.className = "modal-header-button align-item-center";
-
-modalbutton.addEventListener("click", () => {
-    modalContainer.style.display = "none";
-});
-
-modalHeader.append(modalbutton);
-
-/*Aquí esta lo de sumar productos por si quiren quitarselo */
-
-carrito.forEach((product) => { 
-    let carritoContent = document.createElement("div");
-    carritoContent.className = "modal-content";
-    carritoContent.innerHTML = `
-        <img src= "${product.imagen}" height="300px" width="400px" align-center>
-        <h3>${product.nombre}</h3>
+  // Mostrar productos filtrados
+    filteredProducts.forEach(product => {
+    let content = document.createElement("div");
+    content.className = "card";
+    content.innerHTML = `
+        <center><img src="${product.imagen}" height="300px" width="350px" margin-bottom="15px"></center>
+        <h2>${product.nombre}</h2>
         <h3>${product.origen}</h3>
-        <p>Talla: ${product.talla}</p>
-        <p>${product.descripcion}</p>
-        <p>Precio: $${product.precio}</p>
-        <span class="restar"> - </span>
-        <p>Cantidad: ${product.cantidad}</p>
-        <span class="sumar"> + </span>
-        <p>Total: ${product.cantidad * product.precio}</p>
-        <span class="delete-product"> ✖️ Eliminar producto </span>
-        `;
-/*Aquí es para visualizar los productos del carrito en como número chiquito encima en el carrito */
-    modalContainer.append(carritoContent);
-
-/*Esto funciona para que los signos de + y - tengan funcionalidad */    
-    let restar = carritoContent.querySelector(".restar")
-    restar.addEventListener("click", () => {
-        if (product.cantidad !== 1){
-        product.cantidad--;
-        }
-        saveLocal();
-        pintarCarrito();
-    });
+        <h4>${product.categoría}</h4>
+        <div class="descripcion" style="display: flex; flex-direction: column;">
+            <p>Talla: ${product.talla}</p>
+            <p>${product.descripcion}</p>
+            <p>Precio: $${product.precio.toFixed(2)}</p>
+            <p>Cantidad: ${product.cantidad}</p>
+        </div>
+    `;
+        /*Aquí utilizamos el mismo proceso, pero en vez de que sea un div, será un botón  */    
+        let comprar = document.createElement("button");
     
-    let sumar = carritoContent.querySelector(".sumar");
-    sumar.addEventListener("click", () => {
-        product.cantidad++;
-        saveLocal();
-        pintarCarrito();
-    });
-    
-
-    let eliminar = carritoContent.querySelector(".delete-product");
-
-    eliminar.addEventListener("click", () => {
-        eliminarProducto(product.id);
-    });
-
+        comprar.innerText = "comprar";/*Con innertext lo ponemos texto al botón  */
+        comprar.className = "comprar";/*Aquí el botón tiene su propia clase, es el botón de compras */
+    /*Aquí lo conectamos con content y le estamos diciendo que a cada producto le agregue un botón de comprar */
+        content.append(comprar);
+    shopContent.appendChild(content);
 });
 
-/*Esto lo que hace funcionar es el total de los productos */
-    
-const total = carrito.reduce((acc, el) => acc + el.precio * el.cantidad, 0);
-    
-    const totalBuying = document.createElement("div")
-    totalBuying.className = "total-content"
-    totalBuying.innerHTML = `Total a pagar: $${total} `;
-    modalContainer.append(totalBuying);
+
+
+
+// Si no se encontraron productos para la categoría
+if (category === "Todo") {
+getProducts();
+}
+else if (filteredProducts.length === 0) {
+    shopContent.innerHTML = "<p>No se encontraron productos para esta categoría.</p>";
+}
+} catch (error) {
+console.error("Error al filtrar productos por categoría:", error);
 };
+}
 
+categoryItems.forEach(item => {
+    item.addEventListener('click', async (event) => {
+        event.preventDefault();
+        const selectedCategory = item.getAttribute('category');
+        await filterProductsByCategory(selectedCategory);
+    });
+});
+// Mostrar todos los productos al cargar la página inicialmente
+getProducts();
 
-/*Este es lo mismo cada que se escucha el timbre es la eliminación del producto,
-también elimina el contador del producto*/ 
+/*FIN---------------------FILTROS---------------*/
 
-verCarrito.addEventListener("click", pintarCarrito);
+/* ------------------------- */
+/*Aquí se guarda lo del localStorage y se ve reflejado en el contador del carrito */
+/*¿¿¿¿¿ Debería estar en encabezado????  Muestra el número*/
+const carritoCounter = () => {
+    /* cantidadCarrito.style.display = "block" */
+    const carritoLength = carrito.length;
+    localStorage.setItem("carritoLength", JSON.stringify(carritoLength))
 
+    cantidadCarrito.innerText = JSON.parse(localStorage.getItem("carritoLength"));
+};
+carritoCounter();
+
+/* -------------------- */
 const eliminarProducto = (id) => {
     const foundId = carrito.find((element) => element.id === id);
 
     carrito = carrito.filter((carritoId) => {
         return carritoId !== foundId;
-    
-    
     });
     carritoCounter();
     saveLocal();
     pintarCarrito();
-
-};
-/*Aquí se guarda lo del localStorage y se ve reflejado en el contador del carrito */
-const carritoCounter = () => {
-    cantidadCarrito.style.display = "block"
-    const carritoLength = carrito.length;
-    localStorage.setItem("carritoLength", JSON.stringify(carritoLength))
-    
-    cantidadCarrito.innerText = JSON.parse(localStorage.getItem("carritoLength"));
     
 
 };
 
-carritoCounter();
+
+
+/* ARLETE: Se exportan para usar en compras */
+export { getProducts}
+export {saveLocal}
+export {carritoCounter}
+export {eliminarProducto}

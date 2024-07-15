@@ -4,8 +4,10 @@ const footerApp = () => {
       <div class="row align-items-center">
         <!-- Se crean las 3 columnas para los datos -->
         <!-- Direccion -->
+        
         <div class="col-12 col-md-4  rounded-2 text-center">
-          <p>Dirección: Calle de colores 16, Colonia del Encanto, Alcaldía de Artesanías, 00000, México.</p>
+          <p>Dirección: Calle de colores 16, Colonia del Encanto, Alcaldía de Artesanías, 00000, México.
+          <!--<a id=link-color href="/src/pages/datos_de_envio/datos_de_envio.html"> Datos de envío  </a> </p> -->
         </div>
         <!-- Iconos -->
         <div class="col-6  col-md-4   rounded-2 text-center">
@@ -60,7 +62,7 @@ const footerApp = () => {
           <br>
           <a id=link-color href="/src/pages/acerca_de_nosotros/acerca_de_nosotros.html" > Acerca de nosotros </a>
           <br>
-          <a id=link-color href="/src/pages/form_crea_objetos/form_crea_objetos.html" > Formulario de Productos Nuevos </a>
+          <a id=link-color href="/src/pages/Form_crea_objetos/form_crea_objetos.html" > Formulario de Productos Nuevos </a>
 
         </div>
 

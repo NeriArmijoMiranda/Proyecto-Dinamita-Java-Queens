@@ -1,60 +1,86 @@
 /* Estilos particulares de Inicio */
-main {
-    padding: 40px 60px;
-    background-color: #000000;
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000;
     color: #fff;
+}
+#title {
+    background-color: #000;
+    color:#fff;
+    text-align: center;
     font-weight: bold;
     font-family: "Corben regular";
-     font-size: 700 px;
+    font-size: 700 px;
     text-align: center;
 }
-.box {
+
+#welcome{
     background-color: #08807b;
     border-radius: 30px ;
     color: #fff;
     padding: 20px 40px;
-}
-
-.welcome {
-    font-weight: bold;
+    text-align: left;
     font-family: "Corben regular";
-    font-size: 400 px;
-    display: flex;
-    flex-direction: column;
-    justify-content:center;
-    text-align:left center;
-    color: white;
 }
-
-.intro {
-    display: flex;
-    flex-direction: column;
-    justify-content: start center;
+#intro{
     text-align:right;
     font-family: mulish;
-    font-weight: regular ;
-    font-size: 700 px ;
-
-} 
-body{
-    background-color: #F85931;
-    height: auto;
-    width: auto;
+    font-weight: regular;
+    margin: -5%;
+}
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 0 auto;
+    width: 80%;
+    background-color: #ff5a36;
+    padding: 1rem;
+    border-radius: 10px;
 }
 
-#carouselExampleIndicators{
-    position: relative;
-    border-radius: 20px;
-    margin: 115px auto 0;
-    width: 60%;
-    height: 60%;
-    opacity: 100%;
-    flood-opacity: 5%;
-    transition: .15s ease; 
-     }
-    
- #image{
-    align-content: center;
-    border-radius: 20px;
-    margin: auto;
- }
+.carousel__track-container {
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel__track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel__slide {
+    min-width: 33.33%;
+    box-sizing: border-box;
+}
+
+.carousel__image {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.carousel__button {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.carousel__button--left {
+    position: absolute;
+    left: 10px;
+}
+
+.carousel__button--right {
+    position: absolute;
+    right: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .carousel__slide {
+        min-width: 100%;
+    }
+}

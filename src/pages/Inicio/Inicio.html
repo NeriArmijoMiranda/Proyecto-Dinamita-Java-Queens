@@ -22,76 +22,62 @@
       <!-- Aquí va el contenido -->
     </div>
     <!-- Contenido seccion 1 Yoatzin-->
-    <main>
-      <h1> YOATZIN</h1>
-    </main>
-    <div class="box">
-      <div class="welcome">
-        <h2>
-          <br> <br> Bienvenidos
-        </h2>
-      </div>
-      <div class="intro">
-        <p>¡Descubre lo que tenemos para ti!</p>
-        <p> Deja que nuestra amplia colección
-          <br> de artesanías te conquisten,
-          <br> ya que son elaboradas con dedicación
-          <br> por talentosas manos artesanas.
-        </p>
-        <br>
-      </div>
+     <div id="title" class="container">
+    <h1> YOATZIN</h1>
+</div>
+<div id="welcome" class="container">
+  <div class="row">
+    <div clas=" col col-sm-6">
+        Bienvenidos
     </div>
+  <div id="intro" class="col col-sm-6">
+    <p>¡Descubre lo que tenemos para ti!</p>
+    <p> Deja que nuestra amplia colección
+      <br> de artesanías te conquisten,
+      <br> ya que son elaboradas con dedicación
+      <br> por talentosas manos artesanas.
+    </p>
+    <br>
   </div>
   </div>
-  <div id="carouselExampleIndicators" class="carousel slide">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-        aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-        aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-        aria-label="Slide 3"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
-        aria-label="Slide 4"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
-        aria-label="Slide 5"></button>
-    </div>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img id="image" src="/public/img/joyeria2.png" class="d-block w-100"
-          alt="Hermosa joyería artesanal, con finos cuarzos de colores tallados a mano, colocados en forma de espiral.">
-      </div>
-      <div class="carousel-item">
-        <img id="image" src="/public/img/alebrije3.png" class="d-block w-100"
-          alt="Figura decorativa, alebrije con brillantes colores que realzan los finos acabados y texturas.">
-      </div>
-      <div class="carousel-item">
-        <img id="image" src="/public/img/platos_de_ceramica_mexicanos.jpg" class="d-block w-100"
-          alt="Platos de cerámica, decorados con flores coloridas que desatacan los trazos precisos del artesano.">
-      </div>
-      <div class="carousel-item">
-        <img id="image" src="/public/img/prenda3.png" class="d-block w-100"
-          alt="Poncho de lana, hecho en telar con decoración de flores coloridas.">
-      </div>
-      <div class="carousel-item">
-        <img id="image" src="/public/img/bolsa2.png" class="d-block w-100"
-          alt="Bolsa de mano, tamaño mediano, con finos bordados de cactus en tonalidades verdes, con flores coloridas que resaltan la diversa vegetación del país">
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-      data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-      data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
+</div>
+
+
   </div>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script>
+  <div class="carousel">
+    <button class="carousel_button carousel_button--left" onclick="moveSlide(-1)">&#9664;</button>
+    <div class="carousel__track-container">
+      <ul class="carousel__track">
+        <li class="carousel__slide">
+          <img class="carousel__image" src="/public/img/joyeria2.png"
+            alt="Hermosa joyería artesanal, con finos cuarzos de colores tallados a mano, colocados en forma de espiral.">
+        </li>
+        <li class="carousel__slide">
+          <img class="carousel__image" src="/public/img/alebrije3.png"
+            alt="Figura decorativa, alebrije con brillantes colores que realzan los finos acabados y texturas.">
+        </li>
+        <li class="carousel__slide">
+          <img class="carousel__image" src="/public/img/platos_de_ceramica_mexicanos.jpg"
+            alt="Platos de cerámica, decorados con flores coloridas que desatacan los trazos precisos del artesano.">
+        </li>
+        <li class="carousel__slide">
+          <img class="carousel__image" src="/public/img/prenda3.png"
+            alt="Poncho de lana, hecho en telar con decoración de flores coloridas.">
+        </li>
+        <li class="carousel__slide">
+          <img class="carousel__image" src="/public/img/bolsa2.png"
+            alt="Bolsa de mano, tamaño mediano, con finos bordados de cactus en tonalidades verdes, con flores coloridas que resaltan la diversa vegetación del país">
+        </li>
+        <li class="carousel__slide">
+          <img class="carousel__image" src="/public/img/alebrije1.png"
+            alt="Figura decorativa, gato alebrije con brillantes colores que realzan los finos acabados y texturas.">
+        </li>
+      </ul>
+    </div>
+    <button class="carousel_button carousel_button--right" onclick="moveSlide(1)">&#9654;</button>
+  </div>
+
+  <!-- <script src="./inicio.js"></script> -->
 
   <!-- Footer -->
   <footer id="footer-app" class="footer-basic container-fluid"> </footer>

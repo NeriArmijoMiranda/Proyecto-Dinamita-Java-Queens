@@ -19,12 +19,12 @@ document.querySelector("#footer-app").innerHTML= footerApp();
 /*Las const son para llamarlas del html y decirles "Eh wey te estan hablando" */
 const shopContent = document.getElementById("shopContent");/*Esta es la primera variable de la parte número 1 la obtuvimos
 con el id que le pusimos en el HTML*/
+
 const categoryItems = document.querySelectorAll('.categoryitem');
 /* ARLETTE: Ya están en compras. Verificar. */
 /* const verCarrito = document.getElementById("verCarrito");
 const modalContainer = document.getElementById("modal-container");
 const cantidadCarrito = document.getElementById("cantidadCarrito"); */
-
 /*Aquí puse la igualdad del carrito para que me lo recupere en el localstorage, al carrito se convierte en
 en lo que sea que este guardado en el localStorage. Aqui el carrito es básicamente, si hay algo guardado 
 se convierte en eso, pero si no hay nada pues está vacío */
@@ -119,6 +119,7 @@ const saveLocal = () => {
 
 /*get item */
 
+export { getProducts}
 /*---------------------FILTROS--------------------------------------*/
 const filterProductsByCategory = async (category) => {
     try {
@@ -212,3 +213,4 @@ export { getProducts}
 export {saveLocal}
 export {carritoCounter}
 export {eliminarProducto}
+

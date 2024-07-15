@@ -29,7 +29,7 @@ const cantidadCarrito = document.getElementById("cantidadCarrito"); */
 en lo que sea que este guardado en el localStorage. Aqui el carrito es básicamente, si hay algo guardado 
 se convierte en eso, pero si no hay nada pues está vacío */
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
-export {carrito} /* Se exporta para tenerlo en página compras */
+
 
 /*Aqui hice unan funcion para llamar a los productos del Json y que corran por que si no les pegan */
 
@@ -106,7 +106,7 @@ const getProducts = async () => {
 };
 
 getProducts();
-
+export {carrito} /* Se exporta para tenerlo en página compras */
 
 //////////// Aqupi quite algo, const saveLocal////////
 ///////// aquí agregué algo del final del codigo de productos//
@@ -180,6 +180,35 @@ getProducts();
 
 /*FIN---------------------FILTROS---------------*/
 
+/* ------------------------- */
+/*Aquí se guarda lo del localStorage y se ve reflejado en el contador del carrito */
+/*¿¿¿¿¿ Debería estar en encabezado????  Muestra el número*/
+const carritoCounter = () => {
+    /* cantidadCarrito.style.display = "block" */
+    const carritoLength = carrito.length;
+    localStorage.setItem("carritoLength", JSON.stringify(carritoLength))
+
+    cantidadCarrito.innerText = JSON.parse(localStorage.getItem("carritoLength"));
+};
+carritoCounter();
+
+/* -------------------- */
+const eliminarProducto = (id) => {
+    const foundId = carrito.find((element) => element.id === id);
+
+    carrito = carrito.filter((carritoId) => {
+        return carritoId !== foundId;
+    });
+    carritoCounter();
+    saveLocal();
+    pintarCarrito();
+
+};
+
+
+
 /* ARLETE: Se exportan para usar en compras */
 export { getProducts}
 export {saveLocal}
+export {carritoCounter}
+export {eliminarProducto}

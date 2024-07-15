@@ -7,15 +7,20 @@
     padding: 30px;
 } */
 
+#contenedorGeneral{
+    align-items:start;
+}
 #resumenCompras {
     margin: 50px;
+    margin-top: 10px;
     background-color: #8d9c09;
-    justify-content: center;
+    /* justify-content: center; */
     border-radius: 30px;
     padding: 30px;
     max-width: 400px ; /* Hace que quepan los dos contenedores en pantalla */
     margin-bottom: 100px;
     /* margin-right: 100px; */
+    float: right;
 
 }
 
@@ -37,22 +42,14 @@
     
 }
 
-/* Preguntar sonbre límites */
-.modal-content {
-  /*   background-color: blue; */
-    justify-content: center;
-    border-radius: 70px;
-}
-
-h3{
+h2{
     font-family: "Corben", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 700;
+    font-weight: 00;
     font-style: normal;
     font-size: 12;
     
 }
-
 
 
 .delete{

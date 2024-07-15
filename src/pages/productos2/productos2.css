@@ -33,7 +33,7 @@
 }
 
 .accordion-item-detalles {
-    background-color: #08807B;
+    background-color: #a8b912;
 }
 
 .accordion-button-detalles {
@@ -49,7 +49,15 @@
 }
 
 button:hover {
-    background-color: #F85931;
+    background-color: #E4007F;
+}
+.btn-sug{
+    background-color: #08807B;
+    height: 30px;
+    width: 80px;
+    border-radius: 3px;
+    text-align: center;
+    color: white;
 }
 
 #agregarCarrito {
@@ -81,13 +89,33 @@ button:hover {
     background-color: #8D9C09;
     margin: 0 auto; /* Esto centrará el contenedor horizontalmente */
     max-width: 1300px; /* Ajusta el ancho máximo según tu diseño */
-    padding: 30px; /* Añade espacio interno al contenedor */
+    padding: 40px; /* Añade espacio interno al contenedor */
+    align-content: center;
+    display: flex;
 }
-.card{
-    width: 400px;
-    height: 400px;
-    margin-bottom: 15px;
+.card-body {
+    width: 280px;
+    height: 230px;
+    background-color: #a8b912;
+    display: flex;  /* Hace que el card-body sea un contenedor flexible */
+    flex-direction: column;  /* Asegura que el contenido se alinee verticalmente */
+    justify-content: center; /* Centra verticalmente el contenido */
+    align-items: center;     /* Centra horizontalmente el contenido */
+}
+
+.card-title,
+.card-text {
+    text-align: center; /* Centra el texto dentro de la tarjeta */
 }
 .titulo-pagina2{
     text-align: center;
+}
+.card {
+
+    margin-right: 10px; /* Ajusta el margen en todos los lados de cada tarjeta */
+    padding: 3px;
+}
+.card:hover{
+box-shadow: 10px;
+transform: translate(3%);
 }

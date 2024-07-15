@@ -18,24 +18,24 @@ document.querySelector("#footer-app").innerHTML= footerApp();
 // Espera a que el documento esté completamente cargado
 document.addEventListener("DOMContentLoaded", function() {
     // Selecciona el carrusel por su ID
-    var myCarousel = document.getElementById('carouselExampleIndicators');
+    const myCarousel = document.getElementById('carouselExampleIndicators');
 
     // Crea un objeto de carrusel de Bootstrap
-    var carousel = new bootstrap.Carousel(myCarousel, {
+    const carousel = new bootstrap.Carousel(myCarousel, {
         interval: 3000, // Intervalo de 3 segundos entre slides
         wrap: true // Permite el ciclo infinito del carrusel
     });
 });
 document.addEventListener("DOMContentLoaded", function() {
     // Selecciona el botón de "Agregar al carrito"
-    var agregarCarritoBtn = document.getElementById('agregarCarrito');
+    const agregarCarritoBtn = document.getElementById('agregarCarrito');
 
     agregarCarritoBtn.addEventListener('click', function() {
         // Obtén la cantidad seleccionada
-        var cantidad = document.getElementById('cantidad').value;
+        const cantidad = document.getElementById('cantidad').value;
         
         // Obtén la talla seleccionada
-        var talla = document.getElementById('talla').value;
+        const talla = document.getElementById('talla').value;
 
         // Aquí puedes agregar lógica adicional, como enviar esta información a un carrito de compras
         console.log('Cantidad:', cantidad);
@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 document.addEventListener("DOMContentLoaded", function() {
     // Obtiene todos los botones del acordeón
-    var accordionButtons = document.querySelectorAll('.accordion-button-detalles');
+    const accordionButtons = document.querySelectorAll('.accordion-button-detalles');
 
     // Itera sobre cada botón
     accordionButtons.forEach(function(button) {
@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 if (btn !== button) {
                     btn.classList.add('collapsed');
                     btn.setAttribute('aria-expanded', 'false');
-                    var target = btn.getAttribute('data-bs-target');
+                    const target = btn.getAttribute('data-bs-target');
                     document.querySelector(target).classList.remove('show');
                 }
             });

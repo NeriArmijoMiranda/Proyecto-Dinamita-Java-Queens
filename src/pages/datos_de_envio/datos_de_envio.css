@@ -12,6 +12,15 @@
     text-indent: 10px; /* Sangría del texto */
 }
 
+.horizontal-container {
+    display: flex;
+    justify-content: space-between; /* O "flex-start", "center", dependiendo de tu preferencia */
+    gap: 10px; /* Ajusta el valor según sea necesario */
+}
+.container-h {
+    margin-right: 0px; /* Espacio entre contenedores, ajusta según sea necesario */
+}
+
 /* Contenedor General de Formulario 1*/
 .container {
     max-width: 95%; /* Ancho máximo */

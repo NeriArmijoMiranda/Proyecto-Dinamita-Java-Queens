@@ -101,6 +101,7 @@ const pintarCarrito = () => {
             }
             saveLocal();
             pintarCarrito();
+            location.reload();
         });
 
         let sumar = carritoContent.querySelector(".sumar");
@@ -108,12 +109,14 @@ const pintarCarrito = () => {
             product.cantidad++;
             saveLocal();
             pintarCarrito();
+            location.reload();
         });
 
         //////////////// Revisar NO elimina /////////////
         let eliminar = carritoContent.querySelector(".delete");
         eliminar.addEventListener("click", () => {
             eliminarProducto(product.id);
+            location.reload();
 
         });
 

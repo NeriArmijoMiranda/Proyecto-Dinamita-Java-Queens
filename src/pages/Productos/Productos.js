@@ -80,6 +80,7 @@ const getProducts = async () => {
                 carrito.map((prod) => {
                     if(prod.id === product.id){
                         prod.cantidad++;
+                        
                     }
                 });
             } else{
@@ -93,8 +94,8 @@ const getProducts = async () => {
             talla: product.talla,
             cantidad: product.cantidad,
             /* descripcion: product.descripcion, */
-    
-            });
+            });  
+         
         }
         console.log(carrito);
         console.log(carrito.length);
@@ -202,6 +203,7 @@ const eliminarProducto = (id) => {
     carritoCounter();
     saveLocal();
     pintarCarrito();
+    
 
 };
 

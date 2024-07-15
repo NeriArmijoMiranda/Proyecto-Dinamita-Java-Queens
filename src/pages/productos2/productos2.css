@@ -1,0 +1,93 @@
+.container-detalles-producto {
+    background-color: #8D9C09;
+    margin: 0 auto; /* Esto centrará el contenedor horizontalmente */
+    max-width: 1300px; /* Ajusta el ancho máximo según tu diseño */
+    padding: 30px; /* Añade espacio interno al contenedor */
+}
+
+.carousel-item img {
+    display: block;
+    margin: 0 auto; /* Centra las imágenes dentro del carousel */
+    max-width: 100%;
+    height: auto;
+}
+
+.form-group {
+    width: 100%; /* Ancho completo para las casillas de selección */
+    max-width: 300px; /* Ajusta el ancho máximo según tu diseño */
+    margin-bottom: 10px; /* Espacio inferior entre elementos */
+}
+
+#talla,
+#cantidad {
+    background-color: #a8b912;
+    border: none;
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+.container-acordeon-detalles {
+    max-width: 600px; /* Ajusta el ancho máximo del acordeón */
+    margin: 0 auto; /* Centra el acordeón */
+}
+
+.accordion-item-detalles {
+    background-color: #08807B;
+}
+
+.accordion-button-detalles {
+    background-color: #08807B;
+    width: 100%;
+    font-family: "Corben", serif;
+    font-weight: 400;
+    text-align: left;
+    border: none;
+    color: white;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+button:hover {
+    background-color: #F85931;
+}
+
+#agregarCarrito {
+    width: 100%;
+    max-width: 300px; /* Ajusta el ancho máximo del botón */
+    background-color: #08807B;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-top: 10px; /* Espacio superior */
+}
+
+#agregarCarrito svg {
+    margin-right: 5px; /* Espacio entre el icono y el texto del botón */
+}
+.container-sugerencias{
+    background-color: #08807B;
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-bottom: 10px;
+    font-family: "Corben", serif;
+    font-weight: 400;
+    text-align: center;
+    border: none;
+    color: white;
+    height: 100px;
+}
+.container-productos-sugeridos{
+    background-color: #8D9C09;
+    margin: 0 auto; /* Esto centrará el contenedor horizontalmente */
+    max-width: 1300px; /* Ajusta el ancho máximo según tu diseño */
+    padding: 30px; /* Añade espacio interno al contenedor */
+}
+.card{
+    width: 400px;
+    height: 400px;
+    margin-bottom: 15px;
+}
+.titulo-pagina2{
+    text-align: center;
+}

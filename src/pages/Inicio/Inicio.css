@@ -1,1 +1,61 @@
 /* Estilos particulares de Inicio */
+
+main {
+    padding: 40px 60px;
+    background-color: #000000;
+    color: #fff;
+    font-weight: bold;
+    font-family: "Corben regular";
+     font-size: 700 px;
+    text-align: center;
+}
+.box {
+    background-color: #08807b;
+    border-radius: 30px ;
+    color: #fff;
+    padding: 20px 40px;
+}
+
+.welcome {
+    font-weight: bold;
+    font-family: "Corben regular";
+    font-size: 400 px;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    text-align:left center;
+    color: white;
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: start center;
+    text-align:right;
+    font-family: mulish;
+    font-weight: regular ;
+    font-size: 700 px ;
+
+} 
+body{
+    background-color: #F85931;
+    height: auto;
+    width: auto;
+}
+
+#carouselExampleIndicators{
+    position: relative;
+    border-radius: 20px;
+    margin: 115px auto 0;
+    width: 60%;
+    height: 60%;
+    opacity: 100%;
+    flood-opacity: 5%;
+    transition: .15s ease; 
+     }
+    
+ #image{
+    align-content: center;
+    border-radius: 20px;
+    margin: auto;
+ }

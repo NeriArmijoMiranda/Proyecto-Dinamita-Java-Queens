@@ -16,8 +16,7 @@
 .container {
     max-width: 95%; /* Ancho máximo */
     border-radius: 10px; /* Bordes redondeados */
-    border: 3px solid rgb(81, 20, 20);
-    margin-bottom: 70px;
+    margin-bottom: 90px;
 }
 
 /* Estilos de los subtítulos en General*/
@@ -29,12 +28,6 @@ label {
     margin-bottom: 5px; /* Margen inferior */
 }
 
-/* Contenedor formulario */
-form {
-    border: 3px solid rgb(145, 136, 178)
-        /* Borde opcional */
-}
-
 /* Contenedor Formularios verdes-------------------------------- */
 .form-container {
     padding: 50px;
@@ -44,7 +37,6 @@ form {
     flex-direction: column;
     max-width: 100%;
     margin-bottom: 1px; /* Margen inferior*/
-    border: 3px solid rgb(145, 136, 178);
 }
 
 .input_c { /* Estilos de las celdas verdes*/
@@ -83,23 +75,26 @@ option { /* Letra de las opciones en Estados */
 .contenedor-negro {
     text-align: center;
     background-color: black;
-    border: 3px solid rgb(145, 136, 178); /* Borde opcional */
+    justify-content: center;
+    align-items: center;
 }
 
 /* Checkbox ---------------------------*/
 .checkbox {   /* Contenedor naranja */
-    background-color: orangered;
+    background-color: #F85931   ;
     border-radius: 10px;
     cursor: pointer;
     color: white;
-    /* padding: 25px; */
+    padding: 25px; 
     text-align: center;
     display: flex;
+    align-items: center;
     justify-content: center;
+    margin: 0;
 }
 
 .checkbox:hover {
-    background-color: rgb(172, 150, 142);
+    background-color: #fa7351     
 }
 
 .form-check {   /* Posición*/
@@ -116,7 +111,9 @@ option { /* Letra de las opciones en Estados */
 
 .form-check-label { /* Etiqueta de Checkbox */
     margin-bottom: 0;
-    /* padding-left: 25px; */
+    margin-left: 4px;
+    display: flex;
+    align-items: center;
 }
 
 /* Botón Guardar Dirección y Tarjeta ---------------------------*/
@@ -136,10 +133,11 @@ option { /* Letra de las opciones en Estados */
     width: auto;
 }
 
+/* Botón Regresar */
 .btn-guardar-r {
     border-radius: 10px; /* Bordes redondeados */
     cursor: pointer;
-    background-color: yellow;
+    background-color:  #F1A20B;
     color: black;
     padding: 25px;
     font-size: 25px;
@@ -148,10 +146,8 @@ option { /* Letra de las opciones en Estados */
 }
 
 .btn-guardar-r:hover {
-    background-color: yellowgreen;
-    width: auto;
+    background-color:  #fac665;
 }
-
 
 /* Contenedores Fecha de Vencimiento-------------------------------- */
 .small-input {
@@ -162,41 +158,7 @@ option { /* Letra de las opciones en Estados */
     display: flex;
 }
 
-
-.container2 {
-    background-color: gray
+/* .col-md-2 {
+    border: solid 3px green;
 }
-
-.col-md-3 {
-    border: 1px solid black
-        /* Borde opcional */
-
-}
-.col-md-2 {
-    border: 1px solid rgb(31, 90, 105)
-        /* Borde opcional */
-
-}
-
-.col-md-6 {
-    border: 1px solid black
-        /* Borde opcional */
-
-}
-
-.col-md-5 {
-    border: 1px solid black
-        /* Borde opcional */
-
-}
-
-/* Checkbox */
-
-
-.form-check-label {
-    margin-left: 8px;
-    /* Ajusta el espacio a la izquierda del texto */
-    display: flex;
-    align-items: center;
-    /* Alinea el texto verticalmente */
-}
+ */

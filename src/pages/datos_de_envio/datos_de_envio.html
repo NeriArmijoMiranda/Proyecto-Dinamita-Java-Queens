@@ -4,43 +4,40 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Datos-de-Envío</title>
+  <title>Datos de Envío</title>
 </head>
 
 <body>
-     <!-- CONTENEDOR GENERAL de la página -->
+  <!-- CONTENEDOR GENERAL de la página -->
   <div id="page-container">
 
     <!-- Navbar = Header -->
     <header id="navbar-app"> </header>
 
     <!-- Contenido de la página -->
-    
     <div id="content-wrap">
 
-      <!-- Título Datos de Envío ---------------------------------->
+      <!-- Título Datos de Envío -->
       <section class="titulos-envio mt-3 text-left">
-        <h1> 1. Datos de envío</h1>
+        <h1>1. Datos de envío</h1>
       </section>
 
-      <!-- -------------------------------------------- -->
       <!-- Formulario Datos de Envío -->
       <div class="container mt-3 bg-black">
-        <!-- Contenedor Formulario 1 -->
-        <form action="">
-          <!-- Contenedor verde -->
+        <form id="shipping-form" action="">
+          <!-- Contenedor Formulario 1 -->
           <div class="form-container">
             <!-- Fila 1 -->
             <div class="row">
               <!-- Nombre completo -->
               <div class="form-content col-sm-12 col-md-4">
                 <label for="full-name">Nombre Completo</label>
-                <input type="text" class="input_c" id="full-name" name="full-name" placeholder="Jorge Pérez Sánchez">
+                <input type="text" class="input_c" id="full-name" name="full-name" placeholder="Jorge Pérez Sánchez" required>
               </div>
               <!-- Estado -->
               <div class="form-content col-sm-6 col-md-4">
                 <label for="estados">Estado</label>
-                <select class="form-select input_c custom-font" id="estados" onchange="updateCities()">
+                <select class="form-select input_c custom-font" id="estados" required >
                   <option selected>Selecciona un estado</option>
                   <option value="Aguascalientes">Aguascalientes</option>
                   <option value="Baja California">Baja California</option>
@@ -79,7 +76,7 @@
               <!-- Ciudad-->
               <div class="form-content col-sm-6 col-md-4">
                 <label for="city">Ciudad</label>
-                <input type="text" class="input_c" id="city" name="city" placeholder="Coyoacán">
+                <input type="text" class="input_c" id="city" name="city" placeholder="Coyoacán" required>
               </div>
             </div>
             <br>
@@ -88,17 +85,17 @@
               <!-- Colonia -->
               <div class="form-content col-sm-12 col-md-4">
                 <label for="neighborhood">Colonia</label>
-                <input type="text" class="input_c" id="neighborhood" name="neighborhood" placeholder="Santa Catarina">
+                <input type="text" class="input_c" id="neighborhood" name="neighborhood" placeholder="Santa Catarina" required>
               </div>
               <!-- Calle -->
               <div class="form-content col-sm-6 col-md-4">
                 <label for="street">Calle y Número</label>
-                <input type="text" class="input_c" id="street" name="street" placeholder="Calle de las Artesanías, 8">
+                <input type="text" class="input_c" id="street" name="street" placeholder="Calle de las Artesanías, 8" required>
               </div>
               <!-- Código postal -->
               <div class="form-content col-sm-6 col-md-4">
                 <label for="postal-code">Código Postal</label>
-                <input type="text" class="input_c" id="postal-code" name="postal-code" placeholder="04010">
+                <input type="text" class="input_c" id="postal-code" name="postal-code" placeholder="04010" required>
               </div>
             </div>
             <br>
@@ -107,7 +104,7 @@
               <!-- Número -->
               <div class="form-content col-sm-5 col-md-4">
                 <label for="phone">Número de Teléfono</label>
-                <input type="text" class="input_c" id="phone" name="phone" placeholder="5534567890">
+                <input type="text" class="input_c" id="phone" name="phone" placeholder="5534567890" required>
               </div>
               <!-- Indicaciones Adicionales -->
               <div class="form-content col-sm-7 col-md-8">
@@ -131,65 +128,68 @@
               </div>
               <!-- Botón Guardar-->
               <div class="form-content col-sm-5 col-md-2 d-flex justify-content-center ">
-                <button type="button" class="btn-guardar" onclick="saveShippingAddress()">Guardar Dirección</button>
+                <button type="button" class="btn-guardar localstore-direccion">Guardar Dirección</button>
               </div>
             </div>
           </div>
         </form>
-      </div> <!-- ---Fin Formulario 1------------->
+      </div> <!-- Fin Formulario 1 -->
 
-      <!-- Título Datos de Tarjeta -------------------------------->
-      <section class="titulos-envio mt-3 text-left">
-        <h1> 2. Datos de Tarjeta de Débito o Crédito </h1>
+      <!-- Título Datos de Tarjeta -->
+      <section class="titulos-envio text-left">
+        <h1>2. Datos de Tarjeta de Débito o Crédito</h1>
       </section>
 
-      <!-- Formulario de Datos de Tarjeta ------------------------->
+      <!-- Formulario de Datos de Tarjeta -->
       <div class="container mt-3 bg-black">
-        <!-- Contenedor Formulario 2 -->
-        <form action="">
-          <!-- Contenedor verde -->
+        <form id="card-form" action="">
+          <!-- Contenedor Formulario 2 -->
           <div class="form-container">
             <!-- Fila 1 -->
-            <div class=" row"> <!-- Número de Tarjeta -->
+            <div class="row">
+              <!-- Número de Tarjeta -->
               <div class="form-content col-md-6">
                 <label for="card-number">Número de Tarjeta</label>
-                <input type="text" class="input_c" id="card-number" name="card-number" placeholder="xxxx xxxx xxxx xxxx">
+                <input type="text" class="input_c" id="card-number" name="card-number" placeholder="xxxx xxxx xxxx xxxx" required>
               </div>
-              <div class="form-content col-md-6"> <!-- Nombre de Tarjeta -->
+              <!-- Nombre de Tarjeta -->
+              <div class="form-content col-md-6">
                 <label for="card-name">Nombre de la Tarjeta</label>
-                <input type="text" class="input_c" id="card-name" name="card-name" placeholder="Jorge Pérez Sánchez">
+                <input type="text" class="input_c" id="card-name" name="card-name" placeholder="Jorge Pérez Sánchez" required>
               </div>
             </div>
             <br>
             <!-- Fila 2 -->
-            <div class=" row align-items-center">
+            <div class="row align-items-center">
               <!-- Fecha de vencimiento -->
               <div class="form-content col-sm-6 col-md-3">
-                <label for="exp-date">Fecha de Vencimiento</label>
+                <label>Fecha de Vencimiento</label>
                 <div class="row justify-content-center">
-                  <div class="col-auto"> <!-- Mes -->
-                    <input type="text" class="input_c small-input" id="exp-month" name="exp-month" placeholder="Mes">
+                  <div class="col-auto">
+                    <!-- Mes -->
+                    <input type="text" class="input_c small-input" id="exp-month" name="exp-month" placeholder="Mes" required>
                   </div>
-                  <div class="col-auto"> <!-- Año -->
-                    <input type="text" class="input_c small-input" id="exp-year" name="exp-year" placeholder="Año">
+                  <div class="col-auto">
+                    <!-- Año -->
+                    <input type="text" class="input_c small-input" id="exp-year" name="exp-year" placeholder="Año" required>
                   </div>
                 </div>
               </div>
               <!-- CVC -->
               <div class="form-content col-sm-3 col-md-3 align-items-center">
                 <label for="cvc">Código de Seguridad</label>
-                <input type="text" class="input_c small-input" id="cvc" name="cvc" placeholder="CVC">
+                <input type="text" class="input_c small-input" id="cvc" name="cvc" placeholder="CVC" required>
               </div>
-              <!-- Total a pagar-->
+              <!-- Total a pagar -->
               <div class="form-content col-sm-3 col-md-6 align-items-center">
-                  <label for="total">Total a Pagar</label>
-                  <input type="text" class="input_c medium-input" id="total" name="total" readonly>
+                <label for="total">Total a Pagar</label>
+                <input type="text" class="input_c medium-input" id="total" name="total" readonly>
               </div>
             </div>
             <br>
           </div>
 
-          <!-- Contenedor negro para Guardar tarjeta-->
+          <!-- Contenedor negro para Guardar tarjeta -->
           <div class="contenedor-negro mt-3">
             <div class="row">
               <!-- Checkbox -->
@@ -199,30 +199,30 @@
                   <label class="form-check-label" for="default-card"> Usar tarjeta como predeterminada</label>
                 </div>
               </div>
-              <!-- Botón Guardar Tarjeta-->
-              <div class="form-content col-sm-5 col-md-2 d-flex justify-content-center">
-                <button type="button" class="btn-guardar" onclick="saveCard()">Guardar Tarjeta</button>
+              <!-- Botón Guardar Tarjeta -->
+              <div class="form-content col-sm-6 col-md-2 d-flex justify-content-center">
+                <button type="button" class="btn-guardar localstore-tarjeta">Guardar Tarjeta</button>
               </div>
-              <div class="col-md-1"> <!-- Columna vacía -->
+              <div class="col-sm-0 col-md-1"> <!-- Columna vacía -->
               </div>
               <!-- Botón Regresar -->
               <div class="form-content col-md-2 d-flex justify-content-center">
-                <button type="button" class="btn-guardar-r" onclick="goBack()">Regresar</button>
+                <button type="button" class="btn-guardar-r">Regresar</button>
               </div>
               <!-- Botón Confirmar Pago -->
-              <div class="form-content col-md-3 d-flex justify-content-center">
-                <button type="button" class="btn-guardar" onclick="confirmPayment()">Confirmar Pago</button>
+              <div class="form-content col-sm-12 col-md-3 d-flex justify-content-center">
+                <button type="button" class="btn-guardar btn-confirmar">Confirmar Pago</button>
               </div>
             </div>
           </div>
-        </form><!-- ---Fin Formulario Formulario 2---------->
+        </form> <!-- Fin Formulario 2 -->
       </div>
-     
+
     </div> <!-- Fin del Contendor principal -->
-  
+
     <!-- Footer -->
-    
     <footer id="footer-app" class="footer-basic container-fluid"> </footer>
+    
     <!-- Aquí va la ruta del archivo js para funcionalidades -->
     <script type="module" src="./datos_de_envio.js"></script>
   </div> <!-- Page container -->

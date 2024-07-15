@@ -10,38 +10,41 @@
     
 }
 #contenedorGeneral{
-    align-items:start;
+    display: flex;
+    padding: 30px;
+    margin: 10px;
+    padding-bottom: 150px;
+    column-gap: 1cm;
 }
 #resumenCompras {
-    margin: 50px;
+    /* margin: 20px; */
     margin-top: 10px;
-    background-color: #8d9c09;
-    /* justify-content: center; */
-    border-radius: 30px;
-    padding: 30px;
-    max-width: 400px ; /* Hace que quepan los dos contenedores en pantalla */
-    margin-bottom: 100px;
-    /* margin-right: 100px; */
-    float: right;
-
-}
-
-#modalContainer {
-    margin: 50px;
     background-color: #8d9c09;
     justify-content: center;
     border-radius: 30px;
-    padding: 30px;
+    padding: 20px;
+   /*  max-width: 350px  */; /* Hace que quepan los dos contenedores en pantalla */
+   /*  margin-bottom: 100px; */
+    margin-right: 10px;
+    /* float: right;
+ */
+}
+
+#modalContainer {
+    /* margin: 20px; */
+    background-color: #8d9c09;
+    justify-content: center;
+    border-radius: 30px;
+    padding: 20px;
     color: white;
     font-family: "Mulish", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
     font-size: medium;
-    justify-content: center;
     text-align: center;
-    /* background-color: pink; */
-    
+   /*  max-width: 350px; */
+   
 }
 
 h2{
@@ -49,7 +52,7 @@ h2{
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-    font-size: large;
+    font-size: x-large;
     
 }
 
@@ -68,8 +71,8 @@ h2{
     background-color: #08807B;
     color: #ffffff;
     border-radius: 10px;
-    height: 50px;
-    width: 300px;
+    max-height: 70px;
+    max-width: 300px;
     text-align: center;
     align-items: center;
     justify-content: center;
@@ -79,4 +82,12 @@ h2{
     left:50%;
     /* Ajusta la posición para centrarlo exactamente */
     transform: translateX(0%); /* Ajusta la posición para centrarlo exactamente */
+}
+
+/* Clase para imagenes responsive */
+.imagenCompras {
+    max-height: 200px;
+    height: auto;
+    max-width: 200px;
+    margin: 10px;
 }

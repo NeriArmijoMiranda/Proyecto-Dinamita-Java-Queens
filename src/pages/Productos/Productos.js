@@ -43,7 +43,7 @@ const getProducts = async () => {
         /*Se puden agregar clases a los elementos HTML, como lo vimos en imagen por ejemplo */
         content.className = "card";//Aquí por ejemplo esta la clase de card para el Css 
         content.innerHTML = `
-        <center><img src= "${product.imagen}" height="300px" width="350px" margin-bottom="15px"></center>
+        <center><img class="imagenProduct rounded-3" src= "${product.imagen}" margin-bottom="15px"></center>
         <h2>${product.nombre}</h2>
         <h3>${product.origen}</h3>
         <h4>${product.categoría}</h4>

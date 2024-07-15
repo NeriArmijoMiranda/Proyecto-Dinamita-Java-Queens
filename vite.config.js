@@ -11,7 +11,7 @@ export default defineConfig({
                 compras: resolve(__dirname,'compras.html'),
                 contactanos: resolve (__dirname,'contactanos.html'),
                 datosEnvio: resolve (__dirname,'datos_de_envio.html'),
-                datosEnvio: resolve (__dirname,'form_crea_objetos.html'),
+                formCreaObjetos: resolve (__dirname,'form_crea_objetos.html'),
                 iniciarSesion: resolve(__dirname,'iniciar_sesion.html'),
 		        inicio: resolve(__dirname,'Inicio.html'),
 		        Productos: resolve(__dirname,'Productos.html'),

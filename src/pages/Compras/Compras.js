@@ -20,6 +20,27 @@ document.innerHTML = saveLocal();
 
 /* ------------------------------------------------------------- */
 
+/*Las const son para llamarlas del html y decirles "Eh te estan hablando" */
+
+const contenedorGeneral = document.getElementById("contenedorGeneral"); /* Contenedor general de toda la página */
+const modalContainer  = document.getElementById("modalContainer");/* descripción producto en html  */
+const resumenCompras = document.getElementById("resumenCompras"); /* Resumen de compras html */
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+const verCarrito = document.getElementById("verCarrito");
+const cantidadCarrito = document.getElementById("cantidadCarrito");
+
+
+///////// aquí agregué algo del final del codigo de productos//
+/*Si te pierdes aquí va lo del carrito Mendoza del futuro*/
+/*El localStorage funciona cn set item get item */
+/*Primero es el set item, esto me la va a guardar*/
+/* const saveLocal = () => {
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+}; */
+/////////////////////////////
+
+/* -----------------------CARRITO--------------------------------------------- */
+
 /*Este es otro modulo por decirlo de esa manera, donde se observan los productos añadidos al carrito */
 
 
@@ -109,38 +130,29 @@ const pintarCarrito = () => {
 
     const totalBuying = document.createElement("div")
     totalBuying.className = "total-content"
-    totalBuying.innerHTML = `Total a pagar: $${total} `;
-    modalContainer.append(totalBuying);
+    totalBuying.innerHTML = `
+    <h2>Resumen de compra:</h2>
+    <p>Total parcial: $ ${total} mxn</p>
+    <p>Descuento: 10 % </p>
+    <p>Costo de envío: Gratis.</p>
+    <hr/>
+    <p>Total a pagar: $${total * 0.9} mxn</p>
+    <p>Aceptamos las siguientes tarjetas:</p>
+    <p>
+        <img class="tarjetas rounded-3 " src="/public/img/visa.png" alt="Tarjeta visa" height="60px" width="70px">
+        <img class="tarjetas rounded-3 " src="/public/img/mastercard.png" alt="Tarjeta mastercard" height="40px" width="60px" >
+        <img class="tarjetas rounded-3 " src="/public/img/americanexpress.png" alt="Tarjeta american express" height="50px" width="60px">
+    </p>
+     `;
+    resumenCompras.append(totalBuying);
+
+    let continuar = document.createElement("button");
+    continuar.innerText = "Continuar con la compra";/*Con innertext lo ponemos texto al botón  */
+    continuar.className = "continuarBoton"; /*Aquí lo conectamos con content y le estamos diciendo que a cada producto le agregue un botón de comprar */
+    resumenCompras.append(continuar);
 };
+pintarCarrito();
 
-
-/*Este es lo mismo cada que se escucha el timbre es la eliminación del producto,
-también elimina el contador del producto*/ 
-
-verCarrito.addEventListener("click", pintarCarrito);
-
-const eliminarProducto = (id) => {
-    const foundId = carrito.find((element) => element.id === id);
-
-    carrito = carrito.filter((carritoId) => {
-        return carritoId !== foundId;
-    
-    
-    });
-    carritoCounter();
-    saveLocal();
-    pintarCarrito();
-
-};
-/*Aquí se guarda lo del localStorage y se ve reflejado en el contador del carrito */
-const carritoCounter = () => {
-    cantidadCarrito.style.display = "block"
-    const carritoLength = carrito.length;
-    localStorage.setItem("carritoLength", JSON.stringify(carritoLength))
-    
-    cantidadCarrito.innerText = JSON.parse(localStorage.getItem("carritoLength"));
-    
-
-};
-
-carritoCounter();
+/* Llamamos las funciones que importamos de Productos */
+carritoCounter(); /*Al llamar la función, se muestra el número del carrito.*/
+eliminarProducto(); /* Elimina elemento del carrito al refrescar */

@@ -1,0 +1,93 @@
+@import "bootstrap/scss/bootstrap";
+
+/* ///////////  NO TOCAR ////////*/
+/* Posición para Contendio GENERAL */
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Posición Contenido pagina */
+#content-wrap {
+  padding-bottom: 2.5rem;    /* altura de pie de página */
+}
+
+/* Clase de fuente titulos */
+.corben-regular {
+  font-family: "Corben", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.corben-bold {
+  font-family: "Corben", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Clase de fuente texto */
+.mulish {
+  font-family: "Mulish", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.mulish {
+  font-family: "Mulish", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+body{
+  background-color: black;
+}
+
+/* ///////////  NO TOCAR ////////*/
+
+/* Estilos particulares de Inicio */
+
+#title {
+  color:#fff;
+  text-align: center;
+  font-weight: bold;
+  font-family: "Corben regular";
+  font-size: 700 px;
+  text-align: center;
+}
+
+#welcome{
+  background-color: #08807b;
+  border-radius: 30px ;
+  color: #fff;
+  padding: 20px 40px;
+  text-align: center;
+  font-family: "Corben regular";
+  font-size: 400 px;
+  margin: 50px;
+}
+p{
+  font-family: "Mulish", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: large;
+    text-align: center;
+}
+
+/* carrusel.css */
+.container-inicio {
+    background-color: #F85931;
+    padding: 30px; /* Ajusta según sea necesario */
+    max-width: 1000px; /* Establece el ancho máximo del contenedor */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    border-radius: 20px;
+    margin-bottom: 100px;
+}
+
+.carousel-item img {
+    width: 100px; /* Ajusta el ancho de la imagen al 100% del contenedor padre */
+    height: 400px; /* Mantiene la proporción de aspecto de las imágenes */
+
+}

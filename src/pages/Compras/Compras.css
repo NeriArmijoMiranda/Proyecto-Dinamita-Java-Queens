@@ -1,0 +1,93 @@
+/* Estilos particulares de Compras */
+.banner{
+    color: white;
+    background-color: #08807B;
+    font-family: "Corben", serif;
+    font-weight: 400;
+    font-size: 40px;
+    font-style: normal;
+    text-align: center;
+    
+}
+#contenedorGeneral{
+    display: flex;
+    padding: 30px;
+    margin: 10px;
+    padding-bottom: 150px;
+    column-gap: 1cm;
+}
+#resumenCompras {
+    /* margin: 20px; */
+    margin-top: 10px;
+    background-color: #8d9c09;
+    justify-content: center;
+    border-radius: 30px;
+    padding: 20px;
+   /*  max-width: 350px  */; /* Hace que quepan los dos contenedores en pantalla */
+   /*  margin-bottom: 100px; */
+    margin-right: 10px;
+    /* float: right;
+ */
+}
+
+#modalContainer {
+    /* margin: 20px; */
+    background-color: #8d9c09;
+    justify-content: center;
+    border-radius: 30px;
+    padding: 20px;
+    color: white;
+    font-family: "Mulish", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: medium;
+    text-align: center;
+   /*  max-width: 350px; */
+   
+}
+
+h2{
+    font-family: "Corben", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: x-large;
+    
+}
+
+
+.delete{
+    cursor: pointer;
+}
+.sumar{
+    cursor: pointer;
+}
+.restar{
+    cursor: pointer;
+}
+
+.continuarBoton{
+    background-color: #08807B;
+    color: #ffffff;
+    border-radius: 10px;
+    max-height: 70px;
+    max-width: 300px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    /* Alinea el botón 10px desde el borde inferior */
+    bottom: 10px;
+   /* Centra horizontalmente el botón */
+    left:50%;
+    /* Ajusta la posición para centrarlo exactamente */
+    transform: translateX(0%); /* Ajusta la posición para centrarlo exactamente */
+}
+
+/* Clase para imagenes responsive */
+.imagenCompras {
+    max-height: 200px;
+    height: auto;
+    max-width: 200px;
+    margin: 10px;
+}

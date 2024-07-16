@@ -10,23 +10,7 @@
     width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
     height: 100%; /* Asegura que el contenedor ocupe todo el alto disponible */
 }
-/* Contenedor General de Formulario 1*/
-.container {
-    max-width: 95%; /* Ancho máximo */
-    border-radius: 10px; /* Bordes redondeados */
-    margin-bottom: 90px;
-}
 
-/* Contenedor Formularios verdes-------------------------------- */
-.form-container {
-    padding: 50px;
-    border-radius: 20px;
-    text-align: center;
-    background-color: #088078;
-    flex-direction: column;
-    max-width: 100%;
-    margin-bottom: 1px; /* Margen inferior*/
-}
 
 .container {
     max-width: 95%; /* Ancho máximo */
@@ -43,6 +27,27 @@
     max-width: 100%;
     margin-bottom: 1px; /* Margen inferior*/
 }
+.form-registro {
+    padding: 50px;
+    border-radius: 20px;
+    text-align: center;
+    background-color:#F85931;
+    flex-direction: column;
+    max-width: 100%;
+    margin-bottom: 1px; /* Margen inferior*/
+}
+
+.input_registro { /* Estilos de las celdas naranjas*/
+    padding: 20px 25px; /* 20px arriba y abajo, 25px a los lados */
+    border-radius: 20px;
+    margin-bottom: 30px;
+    background-color: #ea846a;
+    border: none; /* Sin borde */
+    outline: none; /* Sin contorno */
+    font-family: "Mulish", sans-serif;
+    height: auto; /* Ajustar la altura automática */
+}
+
 
 .input_c { /* Estilos de las celdas verdes*/
     padding: 20px 25px; /* 20px arriba y abajo, 25px a los lados */
@@ -82,6 +87,22 @@ label {
     font-weight: 600; /* Grosor de la fuente */
     text-align: center;
 }
+
+.btn-registro{
+    border-radius: 10px; /* Bordes redondeados */
+    cursor: pointer;
+    background-color: #e33c13;
+    color: white;
+    padding: 25px;
+    font-size: 25px;
+    font-weight: 600; /* Grosor de la fuente */
+    text-align: center;  
+}
+.btn-registro:hover {
+    background-color: #ec5a35;
+    width: auto;
+}
+
 
 .btn-enviar:hover {
     background-color: #088078;

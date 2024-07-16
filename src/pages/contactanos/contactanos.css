@@ -57,7 +57,7 @@
     font-style: normal;
 }
 
-button:hover {
+.botonEnviar:hover {
     background-color: #088078;
 }
 
@@ -101,7 +101,6 @@ form {
     border-radius: 20px;
     text-align: center;
     background-color: #088078;
-    /*display y flex-direction cambios*/
     flex-direction: column;
     max-width: 70rem; 
     margin-bottom: 18px;

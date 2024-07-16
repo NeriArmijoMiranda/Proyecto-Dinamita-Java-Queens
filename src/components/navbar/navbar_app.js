@@ -118,8 +118,7 @@ const navbarApp = () => {
               
               <!-- Iniciar sesión -->
               <li class="nav-item">
-
-              <a class="nav-link" href="/src/pages/iniciar_sesion/iniciar_esion.html">Iniciar Sesión</a> 
+                <a class="nav-link" href="/src/pages/iniciar_sesion/iniciar_sesion.html">Iniciar Sesión</a>
               </li>
   
             </ul><!-- Termina u-lista -->

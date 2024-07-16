@@ -5,7 +5,7 @@ const navbarApp = () => {
         <div class="container-fluid">
   
           <!-- Logo con link para redireccionar al Inicio -->
-          <a id="logo-title" class="navbar-brand" href="/src/pages/Inicio/Inicio.html">
+          <a id="logo-title" class="navbar-brand" href="/index.html">
             <img class="logo-image rounded-3 " src="/public/img/logo_yoatzin.png"
               alt="Logo de Yoatzin con flores de colores y fondo negro ">
           </a>

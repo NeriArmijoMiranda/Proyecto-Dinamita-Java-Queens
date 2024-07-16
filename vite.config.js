@@ -1,4 +1,4 @@
-/* import { main } from '@popperjs/core' */
+ import { main } from '@popperjs/core' 
 import {resolve} from 'path'
 import { defineConfig } from 'vite'
 

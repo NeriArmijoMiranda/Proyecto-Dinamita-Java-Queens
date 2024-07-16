@@ -1,0 +1,145 @@
+/* Estilos particulares de Productos*/
+
+/*Diseño para el título */
+/* .nav-container{
+    color: white;
+    font-family: "Corben", serif;
+    font-weight: 400;
+    font-size: 40px;
+    font-style: normal;
+} */
+.banner{
+    color: white;
+    background-color: #08807B;
+    font-family: "Corben", serif;
+    font-weight: 400;
+    font-size: 40px;
+    font-style: normal;
+    text-align: center;
+    
+}
+#content-wrap{
+    color:white;
+    font-family: "Mulish", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-size: 20px;
+    font-style: normal;
+}
+/* Diseño para el producto y su descripción */
+#shopContent{
+    color: white;
+    font-family: "Mulish", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-size: 20px;
+    font-style: normal;    
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas de igual ancho */
+    gap: 10px;
+    justify-content: center;
+    margin: 100px;
+
+}
+@media (max-width: 992px) {
+    #shopContent {
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas en pantallas medianas */
+    }
+}
+
+@media (max-width: 768px) {
+    #shopContent {
+        grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+    }
+}
+
+/* Contenido / descripción de productos mostrados */
+.descripcion{
+    font-family: "Mulish", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* Tarjetas donde se muestran productos */
+.card{
+background-color: #8d9c09;
+text-align: center;
+padding: 10px;
+padding-right: 10px;
+}
+/* Para cambiar el color de tarjetas al pasar el mouse */
+.card:hover{
+    background-color: #f67ce69a;
+}
+/* Boton comprar */
+.comprar{
+    background-color: #08807B;
+    color: #ffffff;
+    border-radius: 10px;
+    height: 50px;
+    width: 100px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    position:absolute;
+    /* Alinea el botón 10px desde el borde inferior */
+    bottom: 10px;
+   /* Centra horizontalmente el botón */
+    left:50%;
+    /* Ajusta la posición para centrarlo exactamente */
+    transform: translateX(-50%); /* Ajusta la posición para centrarlo exactamente */
+}
+
+
+.content-body{
+    background-color:#08807B; /* Color de fondo */
+    padding: 20px; /* Espaciado interno */
+    border: 1px solid #ced4da; /* Borde */
+    border-radius: 8px; /* Borde redondeado */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra */
+
+}
+/*Este es el contenedor de nuestros productos y filtros*/
+.wrap{
+    display: flex;
+}
+.filtros{
+    background-color: #08807B;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+    height:600px;
+    align-items: center;
+    text-align: center;
+    padding-top: 40px;
+    margin-top: 50px;
+    margin-left: 20px;
+    
+}
+.categoryitem{
+    background-color:#0cb3ad8b;
+    border-radius: 10px;
+ display:block;
+ width:90%;
+ padding:20px;
+ margin:10px;
+ margin-top: 20px;
+ text-align: center;
+ justify-content: center;
+ color: white;
+ font-family: Mulish;
+}
+.filtros .ct_item-active{
+    background-color: #F85931;
+}
+
+/* Clase para imagenes responsive */
+.imagenProduct {
+    max-height: 250px;
+    height: auto;
+    max-width: 250px;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compras</title>
+</head>
+
+<body>
+  <!-- CONTENEDOR GENERAL de la página -->
+  <div id="page-container">
+
+    <!-- Navbar = Header -->
+    <header id="navbar-app"> </header>
+    <!-- Contenido de la página -->
+    <div id="content-wrap">
+      <!-- Aquí va el contenido -->
+      <div class="banner">
+        <div class="banner-container"> </div>
+        <h1> Mi carrito </h1>
+      </div>
+      <!-- <h1 class="modal-header-tittle mt-4 ml-4"> Mi carrito: </h1> -->
+      <!-- Contenedor general-->
+      <div id="contenedorGeneral" class="row justify-content-around">
+        
+
+        <!-- Se crean las 2 columnas para los datos -->
+        <!-- Cuando sea pequeña sea 12, y grande 6, 1 columna en pequeño y dos en grande -->
+        
+        <!-- Productos -->
+        <div  id="modalContainer" class="col-12 col-md-5 col-lg-5 text-center">
+          
+        </div> <!-- Se cierra productos -->
+
+        <!-- Resumen compra -->
+        <div id="contenedorResumen" class="col-12 col-md-5 col-lg-5 text-center">
+        <div id="resumenCompras" >
+        </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer-app" class="footer-basic container-fluid"> </footer>
+
+    <!-- Aquí va la ruta del archivo js para funcionalidades -->
+    <script type="module" src="./compras.js"></script>
+
+  </div>
+
+</body>
+
+</html>

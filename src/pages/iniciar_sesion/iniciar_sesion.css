@@ -1,0 +1,88 @@
+/* Estilos particulares de Iniciar-Sesión */
+
+/* Contenedor General de Formulario 1*/
+.container {
+    max-width: 95%; /* Ancho máximo */
+    border-radius: 10px; /* Bordes redondeados */
+    margin-bottom: 90px;
+    padding: 50px;
+
+}
+
+/* Contenedor Formularios verdes-------------------------------- */
+.form-container {
+    padding: 50px;
+    border-radius: 20px;
+    text-align: center;
+    background-color: #088078;
+    flex-direction: column;
+    max-width: 100%;
+    margin-bottom: 1px; /* Margen inferior*/
+}
+
+.container {
+    max-width: 95%; /* Ancho máximo */
+    border-radius: 10px; /* Bordes redondeados */
+    margin-bottom: 90px;
+}
+/* Contenedor Formularios verdes-------------------------------- */
+.form-container {
+    padding: 50px;
+    border-radius: 20px;
+    text-align: center;
+    background-color: #088078;
+    flex-direction: column;
+    max-width: 100%;
+    margin-bottom: 1px; /* Margen inferior*/
+}
+.horizontal-container {
+    display: flex;
+    justify-content: center; /* Alineación horizontal */
+    align-items: center; /* Alineación vertical */
+    gap: 10px; /* Ajusta el espacio entre los contenedores según sea necesario */
+    height: 100vh; /* Asegúrate de que el contenedor principal ocupe toda la altura de la ventana */
+}
+
+.input_c { /* Estilos de las celdas verdes*/
+    padding: 20px 25px; /* 20px arriba y abajo, 25px a los lados */
+    border-radius: 20px;
+    margin-bottom: 30px;
+    background-color: #5aece3;
+    border: none; /* Sin borde */
+    outline: none; /* Sin contorno */
+    font-family: "Mulish", sans-serif;
+    height: auto; /* Ajustar la altura automática */
+}
+
+.form-content { /* Ajustes de las celdas verdes*/
+    display: flex; /* Modelo de caja flexible */
+    flex-direction: column; /*Elementos se colocan en una columna, uno debajo del otro */
+}
+
+::placeholder { /*Lo que va a adentro de las celdas verdes como "Jorge" */
+    color: rgba(46, 45, 45, 0.521); /* Color del texto con transparencia */
+    font-size: 18px;
+}
+/* Estilos de los subtítulos en General*/
+label {
+    color: white;
+    font-family: "Mulish", sans-serif;
+    font-size: 25px;
+    font-weight: 600; /* Grosor de la fuente */
+    margin-bottom: 5px; /* Margen inferior */
+}
+.btn-enviar {
+    border-radius: 10px; /* Bordes redondeados */
+    cursor: pointer;
+    background-color: #055e58;
+    color: white;
+    padding: 25px;
+    font-size: 25px;
+    font-weight: 600; /* Grosor de la fuente */
+    text-align: center;
+}
+
+.btn-enviar:hover {
+    background-color: #088078;
+    width: auto;
+}

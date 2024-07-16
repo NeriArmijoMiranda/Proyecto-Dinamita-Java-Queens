@@ -1,0 +1,20 @@
+/* Estilos particulares de Pie de Página */
+.footer-basic {
+    background-color: #F1A20B;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    min-height: 2rem;
+    /* altura de pie de página */
+    padding: 1%;
+    font-family: "Mulish", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#link-color {
+    color: #08807B;
+    font-weight: 700;
+}
+

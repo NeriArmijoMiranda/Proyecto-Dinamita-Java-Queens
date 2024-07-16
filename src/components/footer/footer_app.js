@@ -58,7 +58,9 @@ const footerApp = () => {
           </svg>
           Dinamita Java Queen’s
           <br>
-          <a id=link-color href="/src/pages/Acerca-de-nosotros/Acerca-de-nosotros.html" > Acerca de nosotros </a>
+          <a id=link-color href="/src/pages/acerca_de_nosotros/acerca_de_nosotros.html" > Acerca de nosotros </a>
+          <br>
+          <a id=link-color href="/src/pages/Form_crea_objetos/form_crea_objetos.html" > Formulario de Productos Nuevos </a>
 
         </div>
 

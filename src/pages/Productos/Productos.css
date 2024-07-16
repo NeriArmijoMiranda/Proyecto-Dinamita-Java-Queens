@@ -69,6 +69,7 @@ background-color: #8d9c09;
 text-align: center;
 padding: 10px;
 padding-right: 10px;
+position: relative;
 }
 /* Para cambiar el color de tarjetas al pasar el mouse */
 .card:hover{
@@ -135,11 +136,4 @@ padding-right: 10px;
 }
 .filtros .ct_item-active{
     background-color: #F85931;
-}
-
-/* Clase para imagenes responsive */
-.imagenProduct {
-    max-height: 250px;
-    height: auto;
-    max-width: 250px;
 }

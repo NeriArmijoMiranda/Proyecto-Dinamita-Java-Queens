@@ -11,6 +11,11 @@
     height: 100%; /* Asegura que el contenedor ocupe todo el alto disponible */
 }
 
+h2{
+    text-align: center;
+    color: white;
+}
+
 
 .container {
     max-width: 95%; /* Ancho máximo */

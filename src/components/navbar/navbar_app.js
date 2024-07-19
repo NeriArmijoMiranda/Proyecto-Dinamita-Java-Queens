@@ -5,7 +5,7 @@ const navbarApp = () => {
         <div class="container-fluid">
   
           <!-- Logo con link para redireccionar al Inicio -->
-          <a id="logo-title" class="navbar-brand" href="/src/pages/Inicio/Inicio.html">
+          <a id="logo-title" class="navbar-brand" href="index.html">
             <img class="logo-image rounded-3 " src="/public/img/logo_yoatzin.png"
               alt="Logo de Yoatzin con flores de colores y fondo negro ">
           </a>
@@ -13,13 +13,13 @@ const navbarApp = () => {
           <!-- ---------Opciones celular -------------- -->
 
           <!-- Busqueda barra Celular-->
-          <li class="nav-item d-block d-md-none d-sm-block"> <!-- Muetsra la barra arriba cuando se hace pequeño -->
+          <li class="nav-item d-block d-lg-none d-md-block d-sm-block justify-content-felx-start"> <!-- Muetsra la barra arriba cuando se hace pequeño -->
             
           <div class="input-groupNav">
               
               <input type="text" class="form-control" placeholder="" aria-label="Búsqueda"
                 aria-describedby="button-addon2">
-              <button class="btn btn-outline-secondary" type="button" id="button-addon2">
+              <button class="btn btn-outline-secondary"  type="button" id="button-addon2">
                 
               <!-- Se agrega ícono de lupa -->
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search"
@@ -27,16 +27,15 @@ const navbarApp = () => {
                   <path
                     d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
                 </svg>
-
-                Busqueda</button>
-            </div>
+                </button>
+          </div>
 
           </li>
 
           <!-- Compras celular -->
-
-          <li class="nav-item d-block d-md-none d-sm-block" >
-            <!--<a class="nav-link" href="/src/pages/Compras/Compras.html"> -->
+          <!--
+          <li class="nav-item d-block d-lg-none d-md-block d-sm-block" >
+            <a class="nav-link" href="/src/pages/compras/compras.html">
               <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-cart4"
                 viewBox="0 0 16 16">
                 <path
@@ -44,7 +43,7 @@ const navbarApp = () => {
               </svg>
             </a>
           </li>
-
+          -->
           <!-- ----------------------- -->
   
           <!-- Botón de Hamburguesa al comprimir la página -->
@@ -92,8 +91,8 @@ const navbarApp = () => {
                 <a class="nav-link" href="/src/pages/contactanos/contactanos.html">Contáctanos</a>
               </li>
   
-              <!-- Busqueda barra-->
-              <li class="nav-item d-none d-md-block"> <!-- La muestra cuando está grande y lo quita cuando es pequeño -->
+              <!-- Busqueda barra--> <!-- none = no se muestra--> 
+              <li class="nav-item d-none d-lg-block d-md-none d-sm-none"> <!-- La muestra cuando está grande y lo quita cuando es pequeño -->
                 <div class="input-group">
                   <input type="text" class="form-control" placeholder="Buscar" aria-label="Búsqueda" aria-describedby="button-addon2">
                   <button class="btn btn-outline-secondary" type="button" id="button-addon2">
@@ -101,13 +100,13 @@ const navbarApp = () => {
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
                       <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
                     </svg>
-                    Búsqueda
+                    
                   </button>
                 </div>
               </li>
 
-              <!-- Compras -->
-              <!-- <li id="verCarrito" class="nav-item d-none d-md-block"> --> <!-- La muestra cuando está grande y lo quita cuando es pequeño -->
+              <!-- Compras -->  
+              <!-- <li id="verCarrito" class="nav-item d-none d-lg-block d-md-block"> --> <!-- La muestra cuando está grande y lo quita cuando es pequeño -->
                <a id="verCarrito" class="nav-link" href="/src/pages/compras/compras.html"> 
                <span id="cantidadCarrito" class="cantidad-carrito"> </span> 
                   <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
@@ -119,8 +118,7 @@ const navbarApp = () => {
               
               <!-- Iniciar sesión -->
               <li class="nav-item">
-              <!--<a class="nav-link" href="/src/pages/compras/compras.html"> Iniciar Sesión</a>-->
-              <a class="nav-link" href="/src/pages/iniciar_sesion/iniciar_esion.html">Iniciar Sesión</a> 
+                <a class="nav-link" href="/src/pages/iniciar_sesion/iniciar_sesion.html">Iniciar Sesión</a>
               </li>
   
             </ul><!-- Termina u-lista -->

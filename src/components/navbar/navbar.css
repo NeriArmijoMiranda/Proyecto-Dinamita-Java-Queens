@@ -34,10 +34,15 @@
     font-weight: 700;
     font-size: large;
     font-style: normal;
+    width: 110px;
+    height:auto;
   }
   
   .btn {
     border-color: rgb(56, 55, 55);
     color: rgba(var(--bs-emphasis-color-rgb), 1);
+    width: 50px;
+    height:auto;
   }
+  
   

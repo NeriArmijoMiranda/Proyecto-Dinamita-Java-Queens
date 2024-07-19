@@ -7,15 +7,14 @@ export default defineConfig({
         rollupOptions:{
             input:{
                 main: resolve(__dirname, 'index.html'),
-                acercaNosotros: resolve(__dirname,'acerca_de_nostros.html'),
-                compras: resolve(__dirname,'compras.html'),
-                contactanos: resolve (__dirname,'contactanos.html'),
-                datosEnvio: resolve (__dirname,'datos_de_envio.html'),
-                datosEnvio: resolve (__dirname,'form_crea_objetos.html'),
-                iniciarSesion: resolve(__dirname,'iniciar_sesion.html'),
-		        inicio: resolve(__dirname,'Inicio.html'),
-		        Productos: resolve(__dirname,'Productos.html'),
-		        quienesSomos: resolve(__dirname,'quienes_somos.html'),
+                acercaNosotros: resolve(__dirname,'src/pages/acerca_de_nosotros/acerca_de_nosotros.html'),
+                compras: resolve(__dirname,'src/pages/compras/compras.html'),
+                contactanos: resolve (__dirname,'src/pages/contactanos/contactanos.html'),
+                datosEnvio: resolve (__dirname,'src/pages/datos_de_envio/datos_de_envio.html'),
+                formCreaObjetos: resolve (__dirname,'src/pages/Form_crea_objetos/form_crea_objetos.html'),
+                iniciarSesion: resolve(__dirname,'src/pages/iniciar_sesion/iniciar_sesion.html'),
+		        Productos: resolve(__dirname,'src/pages/Productos/Productos.html'),
+		        quienesSomos: resolve(__dirname,'src/pages/quienes_somos/quienes_somos.html'),
                 
             },
         },

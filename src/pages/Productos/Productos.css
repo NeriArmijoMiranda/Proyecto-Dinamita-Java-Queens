@@ -136,6 +136,7 @@ padding-right: 10px;
 .filtros .ct_item-active{
     background-color: #F85931;
 }
+<<<<<<< HEAD
 .imagenProduct {
     max-height: 250px;
     height: auto;
@@ -143,4 +144,12 @@ padding-right: 10px;
 }
 .d-block{
     border-radius: circle;
+=======
+
+/* Clase para imagenes responsive */
+.imagenProduct {
+    max-width: 100%; /* Ancho máximo del 100% del contenedor padre */
+    height: auto; /* Altura automática para mantener la proporción */
+    display: block; /* Asegura que la imagen sea un elemento de bloque */
+>>>>>>> Development
 }

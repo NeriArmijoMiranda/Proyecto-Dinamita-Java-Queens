@@ -1,6 +1,7 @@
 /* Estilos particulares de Iniciar-Sesión */
 .horizontal-container {
     display: flex;
+    text-align: center;
     justify-content: center; /* Alineación horizontal */
     align-items: center; /* Alineación vertical */
     gap: 10px; /* Ajusta el espacio entre los contenedores según sea necesario */
@@ -11,30 +12,37 @@
     height: 100%; /* Asegura que el contenedor ocupe todo el alto disponible */
 }
 
+h2{
+    text-align: center;
+    color: white;
+}
+
 
 .container {
+    margin: 0 auto; 
     max-width: 95%; /* Ancho máximo */
     border-radius: 10px; /* Bordes redondeados */
-    margin-bottom: 90px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
 }
 /* Contenedor Formularios verdes-------------------------------- */
 .form-container {
     padding: 50px;
     border-radius: 20px;
-    text-align: center;
+    text-align:left;
     background-color: #088078;
     flex-direction: column;
     max-width: 100%;
-    margin-bottom: 1px; /* Margen inferior*/
+    margin-bottom: 0px; /* Margen inferior*/
 }
 .form-registro {
     padding: 50px;
     border-radius: 20px;
-    text-align: center;
+    text-align: left;
     background-color:#F85931;
     flex-direction: column;
     max-width: 100%;
-    margin-bottom: 1px; /* Margen inferior*/
+    margin-bottom: 200px; /* Margen inferior*/
 }
 
 .input_registro { /* Estilos de las celdas naranjas*/
@@ -120,5 +128,4 @@ label {
             flex-direction: column;
             max-width: 200px;
         }
-    }
-    
+}

@@ -139,7 +139,7 @@ padding-right: 10px;
 
 /* Clase para imagenes responsive */
 .imagenProduct {
-    max-height: 250px;
-    height: auto;
-    max-width: 250px;
+    max-width: 100%; /* Ancho máximo del 100% del contenedor padre */
+    height: auto; /* Altura automática para mantener la proporción */
+    display: block; /* Asegura que la imagen sea un elemento de bloque */
 }

@@ -8,3 +8,5 @@ import { footerApp } from './src/components/footer/footer_app.js' /* funcionalid
 
 document.querySelector("#navbar-app").innerHTML= navbarApp(); /* insertar función navbarapp dentro del html */
 document.querySelector("#footer-app").innerHTML= footerApp();
+
+/* ----------------------------------------------- */

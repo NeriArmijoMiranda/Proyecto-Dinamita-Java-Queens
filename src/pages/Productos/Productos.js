@@ -34,7 +34,7 @@ let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
 const getProducts = async () => {
 /*Ruta del archivo Json  */
-    const response = await fetch('/src/components/data.json');
+    const response = await fetch('/data.json');
     const data = await response.json();
     /*Aquí el data.forEach recorre todos los productos */
     data.forEach((product) => {
@@ -122,7 +122,7 @@ const saveLocal = () => {
 /*---------------------FILTROS--------------------------------------*/
 const filterProductsByCategory = async (category) => {
     try {
-        const response = await fetch('/src/components/data.json');
+        const response = await fetch('/data.json');
         const data = await response.json();
         shopContent.innerHTML = "";
         const filteredProducts = data.filter(product => product.categoría === category);

@@ -8,10 +8,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 
-
 <body>
   <!-- CONTENEDOR GENERAL de la página -->
-
   <div id="page-container">
     <!-- Navbar = Header -->
     <header id="navbar-app"> </header>
@@ -19,14 +17,15 @@
     <!-- Contenido de la página -->
     <div id="content-wrap">
       <!-- Aquí va el contenido -->
+      <!-- Formulario de Iniciar Sesión -->
       <div class="horizontal-container">
-        <div class="container mt-3 justify-content-around">
-          <form action="">
-            <div class="form-container ">
-              <div class="row">
-                <!-- Contenido del primer formulario -->
-                <h2 id="iniciar-sesion" style="color:white">Iniciar Sesión</h2>
-                <!-- <div class="social-icons">
+          <div class="container mt-3 justify-content-around">
+              <form>
+                  <div class="form-container">
+                      <div class="row">
+                          <!-- Contenido del primer formulario -->
+                          <h2 id="iniciar-sesion">Iniciar Sesión</h2>
+                            <!-- <div class="social-icons">
                   <a href="#" class="icon">
                     <i class="fa-brands fa-google"></i></a>
                   <a href="#" class="icon">
@@ -37,72 +36,79 @@
                     <i class="fa-brands fa-linkedin"></i></a>
                 </div> -->
 
-                <div class="input-grupo">
-                  <div class="form-content">
-                    <label for="email">Email</label>
-                    <input class="input_c" type="email" name="email" id="email" placeholder="alguien@example.com">
+                          <div class="form-content">
+                              <label for="email">Email</label>
+                              <input class="input_c" type="email" name="email" id="email" placeholder="alguien@example.com" required>
+                          </div>
+                          <div class="form-content">
+                              <label for="message">Contraseña</label>
+                              <textarea class="input_c" name="contraseña" id="message" cols="30" rows="5"
+                              placeholder="Contraseña" required></textarea>
+                                <!--  <a href="#"> ¿Olvidaste tu contraseña?</a> -->
                   </div>
+                  <!--Confirmar contraseña-->
+                 <div class="form-content">
+                   <label for="message">Confirma Contraseña</label>
+                   <textarea class="input_c" name="contraseña" id="confirmacion" cols="30" rows="5"
+                     placeholder="Confirmar Contraseña" required></textarea>
+                  <!--  <a href="#"> ¿Olvidaste tu contraseña?</a> -->
 
-                  <div class="form-content">
-                    <label for="message">Contraseña</label>
-                    <textarea class="input_c" name="contraseña" id="message" cols="30" rows="5"
-                      placeholder="Contraseña"></textarea>
-                   <!--  <a href="#"> ¿Olvidaste tu contraseña?</a> -->
+        
+                          </div>
+                          <div class="form-content">
+                              <input class="btn-enviar" type="submit" value="Enviar">
+                              <p class="warnings" id="warnings"></p>
+                          </div>
+                      </div>
                   </div>
-
-                  <div class="form-content">
-                    <input class="btn-enviar" type="submit" value="Enviar">
-                    <p class="warnings" id="warnings"> </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </form>
-        </div>
-
-        <div class="container mt-3" >
-          <form action="">
-            <div class="form-registro">
-              <div class="row">
-                <!-- Contenido del segundo formulario -->
-                <h2 id="Crear-cuenta"> Crear cuenta</h2>
-                <!--División, con etiquetado e "id" conectar con javascript-->
-                <div class="input-grupo">
-
-                  <div class="form-content">
-                    <label for="name">Nombre</label>
-                    <input class="input_registro" type="text" name="name" id="name" placeholder="Mariana">
-                  </div>
-
-                  <div class="form-content">
-                    <label for="phone">Teléfono</label>
-                    <input class="input_registro" type="tel" name="phone" id="phone" placeholder="0101010101">
-                  </div>
-                </div>
-
-                <div class="input-grupo">
-                  <div class="form-content">
-                    <label for="last-name">Apellido</label>
-                    <input class="input_registro" type="text" name="last-name" id="last-name" placeholder="López Pérez">
-                  </div>
-
-                  <div class="form-content">
-                    <label for="email">Email</label>
-                    <input class="input_registro" type="email" name="email" id="email" placeholder="alguien@example.com">
-                  </div>
-                </div>
-                <div class="form-content">
-                  <label for="contraseña"> Contraseña </label> <input class="input_registro" type="text"
-                    placeholder="Contraseña">
-                </div>
-                <button class="btn-registro"> Crear cuenta</button>
-              </div>
-            </div>
-        </div>
-        </form>
+              </form>
+          </div>
       </div>
-    </div>
+  
+      <!-- Formulario de Crear Cuenta -->
+      <div class="container mt-3">
+          <form id="from-crear">
+              <div class="form-registro">
+                  <div class="row">
+                    <!-- Contenido del segundo formulario -->
+                      <h2 id="Crear-cuenta">Crear cuenta</h2>
+                       <!--División, con etiquetado e "id" conectar con javascript-->
+                       <div class="input-grupo">
+                      <div class="form-content">
+                          <label for="name">Nombre</label>
+                          <input class="input_registro" type="text" name="name" id="name" placeholder="Mariana" required>
+                      </div>
+                      <div class="form-content">
+                          <label for="phone">Teléfono</label>
+                          <input class="input_registro" type="tel" name="phone" id="phone" placeholder="0101010101" required>
+                      </div>
+                       </div>
+                       <div class="input-grupo">
 
+                      <div class="form-content">
+                          <label for="last-name">Apellido</label>
+                          <input class="input_registro" type="text" name="last-name" id="last-name" placeholder="López Pérez" required>
+                      </div>
+                      <div class="form-content">
+                          <label for="email">Email</label>
+                          <input class="input_registro" type="email" name="email" id="email" placeholder="alguien@example.com" required>
+                      </div>
+                    </div>
+                      <div class="form-content">
+                          <label for="contraseña">Contraseña</label>
+                          <input class="input_registro" type="password" id="contraseña" placeholder="Contraseña" required>
+                      </div>
+                        <!--Confirmar Contraseña-->
+                      <div class="form-content">
+                          <label for="contraseña">Confirmar Contraseña</label>
+                          <input class="input_registro"  id="Confirmar-dos"  type="password"  placeholder="Confirmar Contraseña" required>
+                      </div>
+                      <button class="btn-registro">Crear cuenta</button>
+                  </div>
+              </div>
+          </form>
+      </div>
+  </div>
 
     <!-- Footer -->
     <footer id="footer-app" class="footer-basic container-fluid"> </footer>
@@ -111,10 +117,5 @@
     <script type="module" src="./iniciar_sesion.js"></script>
 
   </div>
-
-  </div>
-
 </body>
-
-
 </html>

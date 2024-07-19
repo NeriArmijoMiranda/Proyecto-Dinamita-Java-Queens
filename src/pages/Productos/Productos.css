@@ -137,3 +137,10 @@ position: relative;
 .filtros .ct_item-active{
     background-color: #F85931;
 }
+
+/* Clase para imagenes responsive */
+.imagenProduct {
+    max-width: 100%; /* Ancho máximo del 100% del contenedor padre */
+    height: auto; /* Altura automática para mantener la proporción */
+    display: block; /* Asegura que la imagen sea un elemento de bloque */
+}

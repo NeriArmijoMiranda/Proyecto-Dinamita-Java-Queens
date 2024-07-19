@@ -136,3 +136,11 @@ padding-right: 10px;
 .filtros .ct_item-active{
     background-color: #F85931;
 }
+.imagenProduct {
+    max-height: 250px;
+    height: auto;
+    max-width: 250px;
+}
+.d-block{
+    border-radius: circle;
+}

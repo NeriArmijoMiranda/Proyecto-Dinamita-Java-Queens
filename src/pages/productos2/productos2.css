@@ -3,6 +3,7 @@
     margin: 0 auto; /* Esto centrará el contenedor horizontalmente */
     max-width: 1300px; /* Ajusta el ancho máximo según tu diseño */
     padding: 30px; /* Añade espacio interno al contenedor */
+    border-radius: 3rem;
 }
 
 .carousel-item img {
@@ -34,6 +35,7 @@
 
 .accordion-item-detalles {
     background-color: #a8b912;
+    border-radius: 2rem;
 }
 
 .accordion-button-detalles {
@@ -46,6 +48,7 @@
     color: white;
     padding: 10px;
     margin-bottom: 5px;
+    border-radius: 1rem;
 }
 
 button:hover {
@@ -79,11 +82,12 @@ button:hover {
     margin-right: 80px;
     margin-bottom: 10px;
     font-family: "Corben", serif;
-    font-weight: 400;
+    font-weight: 40;
     text-align: center;
     border: none;
     color: white;
     height: 100px;
+    border-radius: 2rem;
 }
 .container-productos-sugeridos{
     background-color: #8D9C09;
@@ -92,6 +96,8 @@ button:hover {
     padding: 40px; /* Añade espacio interno al contenedor */
     align-content: center;
     display: flex;
+    border-radius: 3rem;
+    margin-bottom: 3rem;
 }
 .card-body {
     width: 280px;
@@ -101,6 +107,7 @@ button:hover {
     flex-direction: column;  /* Asegura que el contenido se alinee verticalmente */
     justify-content: center; /* Centra verticalmente el contenido */
     align-items: center;     /* Centra horizontalmente el contenido */
+    border-radius: 1rem;
 }
 
 .card-title,
@@ -114,8 +121,18 @@ button:hover {
 
     margin-right: 10px; /* Ajusta el margen en todos los lados de cada tarjeta */
     padding: 3px;
+    border-radius: 1rem;
+    background-color: #E4007F;
 }
 .card:hover{
 box-shadow: 10px;
 transform: translate(3%);
 }
+.card-img-top{
+    border-radius: 1rem;
+    width: 280px;
+}
+.h3{
+    text-align: center;
+}
+

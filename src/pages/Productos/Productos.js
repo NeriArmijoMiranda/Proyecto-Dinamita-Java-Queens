@@ -19,22 +19,11 @@ document.querySelector("#footer-app").innerHTML= footerApp();
 /*Las const son para llamarlas del html y decirles "Eh wey te estan hablando" */
 const shopContent = document.getElementById("shopContent");/*Esta es la primera variable de la parte número 1 la obtuvimos
 con el id que le pusimos en el HTML*/
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-const categoryItems = document.querySelectorAll('.categoryitem');
-const verCarrito = document.getElementById("verCarrito");
-const modalContainer = document.getElementById("modal-container");/* */
-const cantidadCarrito = document.getElementById("cantidadCarrito");
->>>>>>> Neri
-=======
 const categoryItems = document.querySelectorAll('.categoryitem');
 /* ARLETTE: Ya están en compras. Verificar. */
 /* const verCarrito = document.getElementById("verCarrito");
 const modalContainer = document.getElementById("modal-container");
 const cantidadCarrito = document.getElementById("cantidadCarrito"); */
->>>>>>> Arlette
 
 /*Aquí puse la igualdad del carrito para que me lo recupere en el localstorage, al carrito se convierte en
 en lo que sea que este guardado en el localStorage. Aqui el carrito es básicamente, si hay algo guardado 
@@ -54,7 +43,7 @@ const getProducts = async () => {
         /*Se puden agregar clases a los elementos HTML, como lo vimos en imagen por ejemplo */
         content.className = "card";//Aquí por ejemplo esta la clase de card para el Css 
         content.innerHTML = `
-        <center><img src= "${product.imagen}" height="300px" width="350px" margin-bottom="15px"></center>
+        <center><img class="imagenProduct rounded-3" src= "${product.imagen}" margin-bottom="15px"></center>
         <h2>${product.nombre}</h2>
         <h3>${product.origen}</h3>
         <h4>${product.categoría}</h4>
@@ -117,22 +106,11 @@ const getProducts = async () => {
     });
 };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> Arlette
 getProducts();
 export {carrito} /* Se exporta para tenerlo en página compras */
 
 //////////// Aqupi quite algo, const saveLocal////////
 ///////// aquí agregué algo del final del codigo de productos//
-<<<<<<< HEAD
-=======
-getProducts(); 
-
->>>>>>> Neri
-=======
->>>>>>> Arlette
 /*Si te pierdes aquí va lo del carrito Mendoza del futuro*/
 /*El localStorage funciona cn set item get item */
 /*Primero es el set item, esto me la va a guardar*/
@@ -142,16 +120,7 @@ const saveLocal = () => {
 
 /*get item */
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-export { getProducts}
-=======
-/* 
-
-/*FILTROS---------------------------------------------*/
-=======
 /*---------------------FILTROS--------------------------------------*/
->>>>>>> Arlette
 const filterProductsByCategory = async (category) => {
     try {
         const response = await fetch('/src/components/data.json');
@@ -240,13 +209,8 @@ const eliminarProducto = (id) => {
 
 
 
-<<<<<<< HEAD
-
->>>>>>> Neri
-=======
 /* ARLETE: Se exportan para usar en compras */
 export { getProducts}
 export {saveLocal}
 export {carritoCounter}
 export {eliminarProducto}
->>>>>>> Arlette

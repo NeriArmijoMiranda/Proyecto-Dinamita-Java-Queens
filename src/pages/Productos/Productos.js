@@ -58,12 +58,24 @@ const getProducts = async () => {
         shopContent.append(content);
         
     /*Aquí utilizamos el mismo proceso, pero en vez de que sea un div, será un botón  */    
-        let comprar = document.createElement("button");
+       // let comprar = document.createElement("button");
     
-        comprar.innerText = "comprar";/*Con innertext lo ponemos texto al botón  */
-        comprar.className = "comprar";/*Aquí el botón tiene su propia clase, es el botón de compras */
+        //comprar.innerText = "comprar";/*Con innertext lo ponemos texto al botón  */
+        //comprar.className = "comprar";/*Aquí el botón tiene su propia clase, es el botón de compras */
     /*Aquí lo conectamos con content y le estamos diciendo que a cada producto le agregue un botón de comprar */
-        content.append(comprar);
+        //content.append(comprar);
+//-------------------------------Boton detalles producto -----------------------------------------------------------
+        let detalleBoton = document.createElement("button");
+    
+        detalleBoton.innerText = "Ver más";/*Con innertext lo ponemos texto al botón  */
+        detalleBoton.className = "detalleBoton";/*Aquí el botón tiene su propia clase, es el botón de compras */
+    /*Aquí lo conectamos con content y le estamos diciendo que a cada producto le agregue un botón de comprar */
+        content.append(detalleBoton);
+         // Agregar el evento click para redirigir
+    continuar.addEventListener("click", function () {
+        window.location.href = "/src/pages/datos_de_envio/datos_de_envio.html"; // Cambia esta URL por la que desees
+    });
+
 
     /*Aquí es donde pasa la magia, use varios métodos entre ellos push, map y some, está función de aquí;
     lo que hace es que no se repitan los productos con todos sus atributos y solo se ponga la cantidad deseada,

@@ -92,7 +92,32 @@ padding-right: 10px;
     /* Ajusta la posición para centrarlo exactamente */
     transform: translateX(-50%); /* Ajusta la posición para centrarlo exactamente */
 }
-
+/* Boton detalles compras */
+.detalleBoton{
+    background-color: #08807B;
+    color: #ffffff;
+    border-radius: 10px;
+    border:none;
+    height: 50px;
+    width: 100px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    position:absolute;
+    /* Alinea el botón 10px desde el borde inferior */
+    bottom: 10px;
+   /* Centra horizontalmente el botón */
+    left:50%;
+    /* Ajusta la posición para centrarlo exactamente */
+    transform: translateX(-50%); /* Ajusta la posición para centrarlo exactamente */
+}
+ .detalleBoton:hover{
+    background: #1debe4;
+    /* transform: scale(1.1); */
+ }
+ button{
+    display: inline-block;
+ }
 
 .content-body{
     background-color:#08807B; /* Color de fondo */
@@ -136,20 +161,10 @@ padding-right: 10px;
 .filtros .ct_item-active{
     background-color: #F85931;
 }
-<<<<<<< HEAD
-.imagenProduct {
-    max-height: 250px;
-    height: auto;
-    max-width: 250px;
-}
-.d-block{
-    border-radius: circle;
-=======
 
 /* Clase para imagenes responsive */
 .imagenProduct {
     max-width: 100%; /* Ancho máximo del 100% del contenedor padre */
     height: auto; /* Altura automática para mantener la proporción */
     display: block; /* Asegura que la imagen sea un elemento de bloque */
->>>>>>> Development
 }

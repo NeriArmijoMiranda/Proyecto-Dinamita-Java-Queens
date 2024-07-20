@@ -139,9 +139,9 @@ const pintarCarrito = () => {
     <p>Total a pagar: $${total * 0.9} mxn</p>
     <p>Aceptamos las siguientes tarjetas:</p>
     <p>
-        <img class="tarjetas rounded-3 " src="/public/img/visa.png" alt="Tarjeta visa" height="60px" width="70px">
-        <img class="tarjetas rounded-3 " src="/public/img/mastercard.png" alt="Tarjeta mastercard" height="40px" width="60px" >
-        <img class="tarjetas rounded-3 " src="/public/img/americanexpress.png" alt="Tarjeta american express" height="50px" width="60px">
+        <img class="tarjetas rounded-3 " src="/img/visa.png" alt="Tarjeta visa" height="60px" width="70px">
+        <img class="tarjetas rounded-3 " src="/img/mastercard.png" alt="Tarjeta mastercard" height="40px" width="60px" >
+        <img class="tarjetas rounded-3 " src="/img/americanexpress.png" alt="Tarjeta american express" height="50px" width="60px">
     </p>
      `;
     resumenCompras.append(totalBuying);

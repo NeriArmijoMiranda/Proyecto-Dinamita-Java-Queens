@@ -15,7 +15,6 @@ document.querySelector("#navbar-app").innerHTML= navbarApp();
 document.querySelector("#footer-app").innerHTML= footerApp();
 
 /* ------------------------------------------------------------------------------------------------------------ */
-
 /*Las const son para llamarlas del html y decirles "Eh wey te estan hablando" */
 const shopContent = document.getElementById("shopContent");/*Esta es la primera variable de la parte número 1 la obtuvimos
 con el id que le pusimos en el HTML*/

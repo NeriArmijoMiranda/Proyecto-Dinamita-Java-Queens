@@ -27,7 +27,7 @@ const integrante = {
     linkedin: "https://www.linkedin.com/in/alejandra-alvarado-003681191?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     github: "https://github.com/AlejandraAC",
     correo: "ale.alvarado.contreras@gmail.com",
-    image:  "/public/img/ale.jpg",
+    image:  "/public/img/Ale.jpg",
 };
 
 const integrantes = [   integrante   ];
@@ -39,7 +39,7 @@ integrantes.push(  {
     linkedin: "https://www.linkedin.com/in/desire-garcia-ya%C3%B1ez-282b29181?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     github: "https://github.com/dessgrc1609",
     correo: "desiregrc@gmail.com",
-    image: "/public/img/desire.jpg",
+    image: "/public/img/Desire.jpg",
 }  );
 
 integrantes.push(  { 
@@ -49,7 +49,7 @@ integrantes.push(  {
     linkedin: "https://www.linkedin.com/in/ivonne-abigail-mendoza-cervantes-00770b312/",
     github: "https://github.com/EusbekMendoza?tab=repositories",
     correo: "abhyinfinito@hotmail.com", 
-    image: "/public/img/mendoza.jpg",
+    image: "/public/img/Mendoza.jpg",
 }  );
 
 integrantes.push(  { 
@@ -59,7 +59,7 @@ integrantes.push(  {
     linkedin: "https://www.linkedin.com/in/jazm%C3%ADn-cruz-857383241/",
     github: "https://github.com/JazzCI",
     correo: "jazzpchan.93@gmail.com",
-    image: "/public/img/jazz.jpg",
+    image: "/public/img/Jazz.jpg",
 }  );
 
 integrantes.push(  { 
@@ -69,7 +69,7 @@ integrantes.push(  {
     linkedin: "https://www.linkedin.com/in/arlette-miranda/",
     github: " https://github.com/Arlette-Miranda",
     correo: "arlettemirandac@gmail.com",
-    image: "/public/img/arlette.jpg",
+    image: "/public/img/Arlette.jpg",
 }  );
 
 integrantes.push(  { 
@@ -79,7 +79,7 @@ integrantes.push(  {
     linkedin: "https://www.linkedin.com/in/jhorleny-arellano/",
     github: "https://github.com/Jhorchss",
     correo: "jhorleny.business@gmail.com",
-    image: "/public/img/jhor.jpg", 
+    image: "/public/img/Jhor.jpg", 
 }  );
 
 integrantes.push(  { 
@@ -89,7 +89,7 @@ integrantes.push(  {
     linkedin: "https://www.linkedin.com/in/marbella-magaly-cabrera-dur%C3%A1n-649584278/",
     github: "https://github.com/marbellacabrera",
     correo: "marbecduran@gmail.com",
-    image: "/public/img/marbe.jpg",
+    image: "/public/img/Marbe.jpg",
 }  );
 
 integrantes.push(  { 
@@ -99,7 +99,7 @@ integrantes.push(  {
     linkedin: "https://www.linkedin.com/in/neri-armijo-miranda-821318195/",
     github: "https://github.com/NeriArmijoMiranda",
     correo: "neriarmijomiranda530@gmail.com", 
-    image: "/public/img/neri.jpg",
+    image: "/public/img/Neri.jpg",
 }  );
 
 const crearTarjeta = (etiqueta) => {        
@@ -107,7 +107,7 @@ const crearTarjeta = (etiqueta) => {
     <!-- card -->
         <div class="card mb-5 rounded-3 text-center offset-1 col-sm-7 col-md-5 col-lg-3">
             <!-- avatar -->
-            <div class="avatar avatar-xl mt-n7 ms-4">
+            <div class="avatar justify-content-center avatar-xl mt-n7">
                 <img src="${etiqueta.image}" alt="Image" class="rounded-circle border-4
                 border-white-color-40 width="350" height="100" style= margin-top: 20px;">
             </div>
@@ -116,10 +116,11 @@ const crearTarjeta = (etiqueta) => {
                 <!-- Title -->
                 <h4 class="mb-1">${etiqueta.nombre}</h4>
                 <p>${etiqueta.rol}</p>
-                <p>${etiqueta.frase}</p>
-                <div>
+                <p class="d-none d-md-block">${etiqueta.frase}</p>
+            </div>
+            <div>
                 <!-- Dropdown -->
-                    <div class= "d-flex ="justify-content-center align-items-center style= "margin-top: 20px;"">
+                    <div class= "d-flex justify-content-center align-items-center ">
                         <a href="${etiqueta.linkedin}"  class="btn btn-outline-primary">
                         <i class="bi bi-linkedin"></i>
                         </a>
@@ -131,8 +132,7 @@ const crearTarjeta = (etiqueta) => {
                         </a>
                     </div>
                 </div>
-            </div>
-</div>`
+        </div>`
 }
 
 

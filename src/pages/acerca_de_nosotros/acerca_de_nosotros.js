@@ -107,7 +107,7 @@ const crearTarjeta = (etiqueta) => {
     <!-- card -->
         <div class="card mb-5 rounded-3 text-center offset-1 col-sm-7 col-md-5 col-lg-3">
             <!-- avatar -->
-            <div class="avatar avatar-xl mt-n7 ms-4">
+            <div class="avatar justify-content-center avatar-xl mt-n7">
                 <img src="${etiqueta.image}" alt="Image" class="rounded-circle border-4
                 border-white-color-40 width="350" height="100" style= margin-top: 20px;">
             </div>
@@ -116,10 +116,11 @@ const crearTarjeta = (etiqueta) => {
                 <!-- Title -->
                 <h4 class="mb-1">${etiqueta.nombre}</h4>
                 <p>${etiqueta.rol}</p>
-                <p>${etiqueta.frase}</p>
-                <div>
+                <p class="d-none d-md-block">${etiqueta.frase}</p>
+            </div>
+            <div>
                 <!-- Dropdown -->
-                    <div class= "d-flex ="justify-content-center align-items-center style= "margin-top: 20px;"">
+                    <div class= "d-flex justify-content-center align-items-center ">
                         <a href="${etiqueta.linkedin}"  class="btn btn-outline-primary">
                         <i class="bi bi-linkedin"></i>
                         </a>
@@ -131,8 +132,7 @@ const crearTarjeta = (etiqueta) => {
                         </a>
                     </div>
                 </div>
-            </div>
-</div>`
+        </div>`
 }
 
 

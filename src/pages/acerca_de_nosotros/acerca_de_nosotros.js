@@ -27,7 +27,7 @@ const integrante = {
     linkedin: "https://www.linkedin.com/in/alejandra-alvarado-003681191?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     github: "https://github.com/AlejandraAC",
     correo: "ale.alvarado.contreras@gmail.com",
-    image:  "/img/Ale_.jpg",
+    image:  "/img/Ale_.png",
 };
 
 const integrantes = [   integrante   ];
@@ -39,7 +39,7 @@ integrantes.push(  {
     linkedin: "https://www.linkedin.com/in/desire-garcia-ya%C3%B1ez-282b29181?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     github: "https://github.com/dessgrc1609",
     correo: "desiregrc@gmail.com",
-    image: "/img/Desire_.jpg",
+    image: "/img/Desire_.png",
 }  );
 
 integrantes.push(  { 
@@ -49,7 +49,7 @@ integrantes.push(  {
     linkedin: "https://www.linkedin.com/in/ivonne-abigail-mendoza-cervantes-00770b312/",
     github: "https://github.com/EusbekMendoza?tab=repositories",
     correo: "abhyinfinito@hotmail.com", 
-    image: "/img/Mendoza_.jpg",
+    image: "/img/Mendoza_.png",
 }  );
 
 integrantes.push(  { 
@@ -59,7 +59,7 @@ integrantes.push(  {
     linkedin: "https://www.linkedin.com/in/jazm%C3%ADn-cruz-857383241/",
     github: "https://github.com/JazzCI",
     correo: "jazzpchan.93@gmail.com",
-    image: "/img/Jazz_.jpg",
+    image: "/img/Jazz_.png",
 }  );
 
 integrantes.push(  { 
@@ -69,7 +69,7 @@ integrantes.push(  {
     linkedin: "https://www.linkedin.com/in/arlette-miranda/",
     github: " https://github.com/Arlette-Miranda",
     correo: "arlettemirandac@gmail.com",
-    image: "/img/Arlette_.jpg",
+    image: "/img/Arlette_.png",
 }  );
 
 integrantes.push(  { 
@@ -79,7 +79,7 @@ integrantes.push(  {
     linkedin: "https://www.linkedin.com/in/jhorleny-arellano/",
     github: "https://github.com/Jhorchss",
     correo: "jhorleny.business@gmail.com",
-    image: "/img/Jhor_.jpg", 
+    image: "/img/Jhor_.png", 
 }  );
 
 integrantes.push(  { 
@@ -89,7 +89,7 @@ integrantes.push(  {
     linkedin: "https://www.linkedin.com/in/marbella-magaly-cabrera-dur%C3%A1n-649584278/",
     github: "https://github.com/marbellacabrera",
     correo: "marbecduran@gmail.com",
-    image: "/img/Marbe_.jpg",
+    image: "/img/Marbe_.png",
 }  );
 
 integrantes.push(  { 
@@ -99,7 +99,7 @@ integrantes.push(  {
     linkedin: "https://www.linkedin.com/in/neri-armijo-miranda-821318195/",
     github: "https://github.com/NeriArmijoMiranda",
     correo: "neriarmijomiranda530@gmail.com", 
-    image: "/img/Neri_.jpg",
+    image: "/img/Neri_.png",
 }  );
 
 const crearTarjeta = (etiqueta) => {        

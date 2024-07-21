@@ -1,9 +1,9 @@
 .container-detalles-producto {
     background-color: #8D9C09;
-    margin: 0 auto; /* Esto centrará el contenedor horizontalmente */
-    max-width: 1300px; /* Ajusta el ancho máximo según tu diseño */
-    padding: 30px; /* Añade espacio interno al contenedor */
-    border-radius: 3rem;
+    padding: 2rem 2rem 2rem 2rem;
+    margin: 2rem 4rem 1rem;
+    border-radius: 2rem;
+    align-content: center;
 }
 
 .carousel-item img {
@@ -12,20 +12,44 @@
     max-width: 100%;
     height: auto;
 }
-
+/*Estilos de cantidad*/
 .form-group {
-    width: 100%; /* Ancho completo para las casillas de selección */
-    max-width: 300px; /* Ajusta el ancho máximo según tu diseño */
-    margin-bottom: 10px; /* Espacio inferior entre elementos */
+    background-color: #8D9C09;
+    width: 80%;
+    font-family: "Corben", serif;
+    font-weight: 400;
+    text-align: left;
+    border: none;
+    color: white;
+    padding: 10px;
+    margin-bottom: 1px;
+    border-radius: 1rem;
+    color:black;
 }
 
-#talla,
-#cantidad {
-    background-color: #a8b912;
+/*Estilos de talla*/
+.form-groupo{
+    background-color: #8D9C09;
+    width: 80%;
+    font-family: "Corben", serif;
+    font-weight: 400;
+    text-align: left;
     border: none;
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
+    color: white;
+    padding: 10px;
+    margin-bottom: 1px;
+    border-radius: 1rem;
+    color:black;
+}
+.form-control{ /*Estilos de fondo de cantidad y talla*/
+    background-color: #c2d041;
+    border: none;
+    border-radius: 1rem;
+    border-color: #c2d041;
+
+}
+.dentro{ /*Estilos despegable dentro de talla*/
+    background-color: #E4007F;
 }
 
 .container-acordeon-detalles {
@@ -56,81 +80,77 @@ button:hover {
 }
 .btn-sug{
     background-color: #08807B;
-    height: 30px;
-    width: 80px;
-    border-radius: 3px;
+    padding: 0.3rem 0.3rem 1rem 0.3rem;
+    margin: 5.5rem;
+    color: white;
+    width: 1rem;
     text-align: center;
-    color: white;
 }
-
-#agregarCarrito {
-    width: 100%;
-    max-width: 300px; /* Ajusta el ancho máximo del botón */
+#agregarCarrito{
     background-color: #08807B;
-    color: white;
+    border-radius: 1rem;
+    width: 12rem;
+    height: 4rem;
     border: none;
-    padding: 10px;
-    margin-top: 10px; /* Espacio superior */
+    align-content: center;
 }
 
 #agregarCarrito svg {
-    margin-right: 5px; /* Espacio entre el icono y el texto del botón */
+    margin-right: 1rem; /* Espacio entre el icono y el texto del botón */
 }
 .container-sugerencias{
     background-color: #08807B;
-    margin-left: 80px;
-    margin-right: 80px;
-    margin-bottom: 10px;
     font-family: "Corben", serif;
-    font-weight: 40;
+    margin: 1rem 1rem 1rem 2.4rem;
+    width: 95%;
+    padding: 2rem;
     text-align: center;
-    border: none;
     color: white;
-    height: 100px;
-    border-radius: 2rem;
-}
-.container-productos-sugeridos{
-    background-color: #8D9C09;
-    margin: 0 auto; /* Esto centrará el contenedor horizontalmente */
-    max-width: 1300px; /* Ajusta el ancho máximo según tu diseño */
-    padding: 40px; /* Añade espacio interno al contenedor */
-    align-content: center;
-    display: flex;
-    border-radius: 3rem;
-    margin-bottom: 3rem;
-}
-.card-body {
-    width: 280px;
-    height: 230px;
-    background-color: #a8b912;
-    display: flex;  /* Hace que el card-body sea un contenedor flexible */
-    flex-direction: column;  /* Asegura que el contenido se alinee verticalmente */
-    justify-content: center; /* Centra verticalmente el contenido */
-    align-items: center;     /* Centra horizontalmente el contenido */
     border-radius: 1rem;
 }
-
+.container-productos-sugeridos{
+    background-color: #08807B;
+    padding: 2rem 2rem 1rem 4rem;
+    margin: 2rem 3rem 1rem 4rem;
+    border-radius: 2rem;
+    align-content: center;
+}
 .card-title,
 .card-text {
     text-align: center; /* Centra el texto dentro de la tarjeta */
+    font-family: "Corben", serif;
 }
+
 .titulo-pagina2{
     text-align: center;
 }
 .card {
-
-    margin-right: 10px; /* Ajusta el margen en todos los lados de cada tarjeta */
+    margin: 1rem 2rem 2rem 0.3rem;
     padding: 3px;
-    border-radius: 1rem;
-    background-color: #E4007F;
+    padding-bottom: 3rem;
+    border-radius: 2rem;
+    background-color: #8D9C09;
+    color: black;
 }
 .card:hover{
 box-shadow: 10px;
 transform: translate(3%);
+background-color: #c2d041;
 }
 .card-img-top{
-    border-radius: 1rem;
-    width: 280px;
+    border-radius: 2rem;
+    height: 17rem;
+    margin: 0.2rem;
+    margin-right: 20rem;
+    padding:1rem;
+    text-align: center;
+}
+.card-img-muñeca{
+    border-radius: 3rem;
+    height: 18rem;
+    margin: 1rem;
+    padding: 1rem;
+    padding-bottom: 2rem;
 }
 .h3{
     text-align: center;

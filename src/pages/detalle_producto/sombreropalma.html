@@ -11,12 +11,14 @@
 </head>
 <body>
   <!-- CONTENEDOR GENERAL de la página -->
-  <div id="page-container">
+  <div id="page-container col-12 col-md-12">
     <!-- Navbar = Header -->
     <header id="navbar-app"> </header>
-
+ <!--Este div es el div donde vamos a conectar la parte NÚMERO 1, le ponemos un id para poder llevarlo de es manera
+      al Javascript-->
+      <div id="shopContent" class="container mt-4 row justify-content-center"> </div>
     <!-- Contenido detalles del producto -->
-    <section class="container-detalles-producto mt-4">
+    <section class="container-detalles-producto">
       <div class="row">
         <div class="col-md-6">
           <!-- Contenido de la columna uno (imagen) -->
@@ -58,7 +60,7 @@
               <h3 class="titulo-pagina2">Yucatán, México</h3>
               <h4 class="titulo-pagina2">Precio: $230.00</h4>
               <!-- Casilla de selección con flechas arriba y abajo -->
-              <div class="form-group">
+              <div class="form-groupo">
                 <label for="cantidad">Cantidad:</label>
                 <div class="input-group">
                   <input type="number" class="form-control" id="cantidad" value="1" min="1" max="100">
@@ -68,8 +70,8 @@
               <div class="form-group">
                 <label for="talla">Talla:</label>
                 <select class="form-control" id="talla">
-                  <option value="Seleccione">Seleccione</option>
-                  <option value="Unitalla">Unitalla</option>                  
+                  <option class="dentro" value="Seleccione">Seleccione</option>
+                  <option class="dentro" value="Unitalla">Unitalla</option>                  
                   <!-- Agrega más opciones según sea necesario -->
                 </select>
               </div>
@@ -134,15 +136,15 @@
     <section class="container-sugerencias mt-3">
       <h1>Sugerencias de compra</h1> 
     </section>
-    <section class="container-productos-sugeridos">
+    <section class="container-productos-sugeridos col-12 col-md-11">
       <div class="row">
         <!-- Tarjeta 1 -->
         <div class="card" style="width: 18rem;">
           <img src="/public/img/figurilla de barro.jpg" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">Gato de Barro</h5>
-            <p class="card-text">Gato artesanal</p>
-            <a href="./figurillabarro.html" class="btn-sug btn-primary">vermás</a>
+            <p class="card-text">Tlaxcala, México</p>
+            <a href="./figurillabarro.html" class="btn-sug btn-primary">ver más</a>
           </div>
         </div>
         <!-- Tarjeta 2 -->
@@ -150,8 +152,8 @@
           <img src="/public/img/mascara de madera.jpg" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">Mascara Madera</h5>
-            <p class="card-text">¡Arte Mexa!</p>
-            <a href="./mascaramadera.html" class="btn-sug btn-primary">vermás</a>
+            <p class="card-text">Guerrero, México</p>
+            <a href="./mascaramadera.html" class="btn-sug btn-primary">ver más</a>
           </div>
         </div>
         <!-- Tarjeta 3 -->
@@ -159,8 +161,8 @@
           <img src="/public/img/jarra de barro.jpg" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">Jarra de barro</h5>
-            <p class="card-text">Artesanía Mexicana</p>
-            <a href="./jarrabarro.html" class="btn-sug btn-primary">vermás</a>
+            <p class="card-text">Puebla, México</p>
+            <a href="./jarrabarro.html" class="btn-sug btn-primary">ver más</a>
           </div>
         </div>
         <!-- Tarjeta 4-->        
@@ -168,8 +170,8 @@
           <img src="/public/img/tapete de lana.jpg" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">Tapete Lana</h5>
-            <p class="card-text">Tapete hecho a mano</p>
-            <a href="./tapetelana.html" class="btn-sug btn-primary">vermás</a>
+            <p class="card-text">Zacatecas, México</p>
+            <a href="./tapetelana.html" class="btn-sug btn-primary">ver más</a>
           </div>
         </div>
     </section>

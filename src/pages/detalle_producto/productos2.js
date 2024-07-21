@@ -15,101 +15,66 @@ document.querySelector("#footer-app").innerHTML= footerApp();
 
 /* ------------------------------------------------------------------------------------------------------------ */
 
+// Importa las funciones necesarias de tu otro script (si es necesario)
+// import { agregarProductoAlCarrito } from './productos.js';
 
-/*Las const son para llamarlas del html y decirles "Eh wey te estan hablando" */
-const shopContent = document.getElementById("shopContent");/*Esta es la primera variable de la parte número 1 la obtuvimos
-con el id que le pusimos en el HTML*/
-const categoryItems = document.querySelectorAll('.categoryitem');
-/* const verCarrito = document.getElementById("verCarrito");
-const modalContainer = document.getElementById("modal-container");
-const cantidadCarrito = document.getElementById("cantidadCarrito"); */
+// Función para manejar el evento de agregar al carrito
+const agregarAlCarrito = () => {
+    // Selecciona el botón de agregar al carrito
+    const botonAgregar = document.getElementById('agregarCarrito');
 
-/*Aquí puse la igualdad del carrito para que me lo recupere en el localstorage, al carrito se convierte en
-en lo que sea que este guardado en el localStorage. Aqui el carrito es básicamente, si hay algo guardado 
-se convierte en eso, pero si no hay nada pues está vacío */
-let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+    // Agrega un evento click al botón
+    botonAgregar.addEventListener('click', () => {
+        // Obtiene los valores de cantidad y talla seleccionada
+        const cantidad = document.getElementById('cantidad').value;
+        const talla = document.getElementById('talla').value;
 
+        // Aquí deberías construir un objeto que represente el producto agregado
+        const producto = {
+            id: 1, // Genera un ID único para cada producto agregado
+            nombre: 'Vaso de Barro Negro', // Puedes obtener el nombre desde el DOM si lo necesitas
+            precio: 80, // Precio fijo o puedes obtenerlo del DOM
+            imagen: '/public/img/vaso de barro negro.jpg', // URL de la imagen
+            origen: 'Oaxaca, México', // Origen del producto
+            cantidad: parseInt(cantidad), // Convierte la cantidad a un número entero
+            talla: talla // Talla seleccionada
+        };
 
-/*Aqui hice unan funcion para llamar a los productos del Json y que corran por que si no les pegan */
+        // Aquí deberías llamar a una función que añada este producto al carrito
+        // Ejemplo: agregarProductoAlCarrito(producto);
 
-const getProducts = async () => {
-/*Ruta del archivo Json  */
-    const response = await fetch('/data.json');
-    const data = await response.json();
-    /*Aquí el data.forEach recorre todos los productos */
-    data.forEach((product) => {
-        let content = document.createElement("div");
-        /*Se puden agregar clases a los elementos HTML, como lo vimos en imagen por ejemplo */
-        content.className = "card";//Aquí por ejemplo esta la clase de card para el Css 
-        content.innerHTML = `
-        <center><img class="imagenProduct rounded-3" src= "${product.imagen}" margin-bottom="15px"></center>
-        <h2>${product.nombre}</h2>
-        <h3>${product.origen}</h3>
-        <h4>${product.categoría}</h4>
-        <div class="descripcion" align-items-center>
-        <p>Talla: ${product.talla}</p>
-        <p>${product.descripcion}</p>
-        <p>Precio: $${product.precio}</p>
-        <p>Cantidad: ${product.cantidad}</p>
-        </div>
-    `;
-    /*Con la propiedad append vamos a conectar la primera parte PARTE 1 */
-        shopContent.append(content);
-        
-//-------------------------------Boton detalles producto -----------------------------------------------------------
+        // Opción básica: Guardar el producto en localStorage (puede variar según tu implementación)
+        let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+        carrito.push(producto);
+        localStorage.setItem('carrito', JSON.stringify(carrito));
 
-
-    /*Aquí es donde pasa la magia, use varios métodos entre ellos push, map y some, está función de aquí;
-    lo que hace es que no se repitan los productos con todos sus atributos y solo se ponga la cantidad deseada,
-    es decir en vez de tener dos sombreros con su descripcioón, lugar de origen etc, solo se duplique la cantidad.
-    
-    Lo que hace .addEventListener es que cada que le des click a algún producto lo va a agregar como si fuera un timbre
-    llamando*/ 
-    
-        comprar.addEventListener("click", () => {
-    /*Aquí es lo que hace que no se repite el producto con todo, sino que solo duplique la cantidad*/ 
-            const repeat = carrito.some((repeatProduct) => repeatProduct.id === product.id); 
-    
-            if (repeat) {
-                carrito.map((prod) => {
-                    if(prod.id === product.id){
-                        prod.cantidad++;
-                        
-                    }
-                });
-            } else{
-    /*Aquí en el carrito es */
-            carrito.push({
-            id : product.id,
-            nombre: product.nombre,
-            precio: product.precio,
-            imagen: product.imagen,
-            origen: product.origen,
-            talla: product.talla,
-            cantidad: product.cantidad,
-            /* descripcion: product.descripcion, */
-            });  
-         
-        }
-        console.log(carrito);
-        console.log(carrito.length);
-        carritoCounter();
-    /*Aquí mismo pedí a la función que de favor me guardara lo de mi carrito */
-        saveLocal();
-    });
+        // Redirigir al usuario a la página de carrito después de agregar
+        window.location.href = '/ruta-a-tu-pagina-de-carrito.html';
     });
 };
 
-getProducts();
-export {carrito} /* Se exporta para tenerlo en página compras */
+// Ejecuta la función cuando el DOM esté completamente cargado
+document.addEventListener('DOMContentLoaded', agregarAlCarrito);
 
-//////////// Aqui quite algo, const saveLocal////////
-///////// aquí agregué algo del final del codigo de productos//
-/*Si te pierdes aquí va lo del carrito Mendoza del futuro*/
-/*El localStorage funciona cn set item get item */
-/*Primero es el set item, esto me la va a guardar*/
-const saveLocal = () => {
-    localStorage.setItem("carrito", JSON.stringify(carrito));
-};
+//=======================Otra opción====================================
 
+// JavaScript personalizado para la página de producto
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Obtener todos los botones "Agregar al carrito"
+    const botonesAgregar = document.querySelectorAll("#agregarCarrito");
+
+    // Recorrer cada botón y agregar un event listener
+    botonesAgregar.forEach(function(boton) {
+        boton.addEventListener("click", function() {
+            // Aquí puedes agregar la lógica para manejar la acción de agregar al carrito
+            // Por ejemplo, obtener la cantidad seleccionada y la talla elegida
+            const cantidad = document.querySelector("#cantidad").value;
+            const talla = document.querySelector("#talla").value;
+
+            // Aquí puedes realizar cualquier acción adicional, como enviar datos a un servidor, etc.
+            console.log(`Añadido al carrito: Cantidad ${cantidad}, Talla ${talla}`);
+        });
+    });
+});
 

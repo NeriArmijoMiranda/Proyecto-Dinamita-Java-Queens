@@ -15,7 +15,6 @@ document.querySelector("#navbar-app").innerHTML= navbarApp();
 document.querySelector("#footer-app").innerHTML= footerApp();
 
 /* ------------------------------------------------------------------------------------------------------------ */
-
 /*Las const son para llamarlas del html y decirles "Eh wey te estan hablando" */
 const shopContent = document.getElementById("shopContent");/*Esta es la primera variable de la parte número 1 la obtuvimos
 con el id que le pusimos en el HTML*/
@@ -133,7 +132,7 @@ const filterProductsByCategory = async (category) => {
     let content = document.createElement("div");
     content.className = "card";
     content.innerHTML = `
-        <center><img src="${product.imagen}" height="300px" width="350px" margin-bottom="15px"></center>
+        <center><img class="imagenProduct rounded-3" src= "${product.imagen}" margin-bottom="15px"></center>
         <h2>${product.nombre}</h2>
         <h3>${product.origen}</h3>
         <h4>${product.categoría}</h4>

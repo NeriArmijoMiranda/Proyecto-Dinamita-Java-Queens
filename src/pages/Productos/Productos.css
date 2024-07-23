@@ -92,7 +92,32 @@ padding-right: 10px;
     /* Ajusta la posición para centrarlo exactamente */
     transform: translateX(-50%); /* Ajusta la posición para centrarlo exactamente */
 }
-
+/* Boton detalles compras */
+.detalleBoton{
+    background-color: #08807B;
+    color: #ffffff;
+    border-radius: 10px;
+    border:none;
+    height: 50px;
+    width: 100px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    position:absolute;
+    /* Alinea el botón 10px desde el borde inferior */
+    bottom: 10px;
+   /* Centra horizontalmente el botón */
+    left:50%;
+    /* Ajusta la posición para centrarlo exactamente */
+    transform: translateX(-50%); /* Ajusta la posición para centrarlo exactamente */
+}
+ .detalleBoton:hover{
+    background: #1debe4;
+    /* transform: scale(1.1); */
+ }
+ button{
+    display: inline-block;
+ }
 
 .content-body{
     background-color:#08807B; /* Color de fondo */

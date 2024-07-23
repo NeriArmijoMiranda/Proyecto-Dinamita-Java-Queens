@@ -58,12 +58,28 @@ const getProducts = async () => {
         shopContent.append(content);
         
     /*Aquí utilizamos el mismo proceso, pero en vez de que sea un div, será un botón  */    
-        let comprar = document.createElement("button");
+       // let comprar = document.createElement("button");
     
-        comprar.innerText = "comprar";/*Con innertext lo ponemos texto al botón  */
-        comprar.className = "comprar";/*Aquí el botón tiene su propia clase, es el botón de compras */
+        //comprar.innerText = "comprar";/*Con innertext lo ponemos texto al botón  */
+        //comprar.className = "comprar";/*Aquí el botón tiene su propia clase, es el botón de compras */
     /*Aquí lo conectamos con content y le estamos diciendo que a cada producto le agregue un botón de comprar */
-        content.append(comprar);
+        //content.append(comprar);
+//-------------------------------Boton detalles producto -----------------------------------------------------------
+        let detalleBoton = document.createElement("button");
+    
+        detalleBoton.innerText = "Ver más";/*Con innertext lo ponemos texto al botón  */
+        detalleBoton.className = "detalleBoton";/*Aquí el botón tiene su propia clase, es el botón de compras */
+    /*Aquí lo conectamos con content y le estamos diciendo que a cada producto le agregue un botón de comprar */
+        content.append(detalleBoton);
+         // Agregar el evento click para redirigir
+
+         document.querySelectorAll(".detalleBoton").forEach(button => {
+            button.onclick = function() {
+                const productId = this.parentElement.getAttribute("id");
+                window.location.href = `/src/pages/detalle_producto/${product.id}`; // Cambia esta URL a la de tu página de detalles
+            };
+        });
+
 
     /*Aquí es donde pasa la magia, use varios métodos entre ellos push, map y some, está función de aquí;
     lo que hace es que no se repitan los productos con todos sus atributos y solo se ponga la cantidad deseada,
@@ -72,38 +88,38 @@ const getProducts = async () => {
     Lo que hace .addEventListener es que cada que le des click a algún producto lo va a agregar como si fuera un timbre
     llamando*/ 
     
-        comprar.addEventListener("click", () => {
+       // comprar.addEventListener("click", () => {
     /*Aquí es lo que hace que no se repite el producto con todo, sino que solo duplique la cantidad*/ 
-            const repeat = carrito.some((repeatProduct) => repeatProduct.id === product.id); 
+         //   const repeat = carrito.some((repeatProduct) => repeatProduct.id === product.id); 
     
-            if (repeat) {
-                carrito.map((prod) => {
-                    if(prod.id === product.id){
-                        prod.cantidad++;
+           // if (repeat) {
+             //   carrito.map((prod) => {
+               //     if(prod.id === product.id){
+                 //       prod.cantidad++;
                         
-                    }
-                });
-            } else{
+                   // }
+               // });
+           // } else{
     /*Aquí en el carrito es */
-            carrito.push({
+      /*       carrito.push({
             id : product.id,
             nombre: product.nombre,
             precio: product.precio,
             imagen: product.imagen,
             origen: product.origen,
             talla: product.talla,
-            cantidad: product.cantidad,
+            cantidad: product.cantidad, */
             /* descripcion: product.descripcion, */
-            });  
+           // });  
          
-        }
-        console.log(carrito);
-        console.log(carrito.length);
-        carritoCounter();
+       // }
+        //console.log(carrito);
+        //console.log(carrito.length);
+        //carritoCounter();
     /*Aquí mismo pedí a la función que de favor me guardara lo de mi carrito */
         saveLocal();
     });
-    });
+   // });
 };
 
 getProducts();
@@ -133,7 +149,7 @@ const filterProductsByCategory = async (category) => {
     let content = document.createElement("div");
     content.className = "card";
     content.innerHTML = `
-        <center><img src="${product.imagen}" height="300px" width="350px" margin-bottom="15px"></center>
+        <center><img class="imagenProduct rounded-3" src= "${product.imagen}" margin-bottom="15px"></center>
         <h2>${product.nombre}</h2>
         <h3>${product.origen}</h3>
         <h4>${product.categoría}</h4>

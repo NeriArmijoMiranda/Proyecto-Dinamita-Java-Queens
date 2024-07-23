@@ -15,13 +15,12 @@ document.querySelector("#navbar-app").innerHTML = navbarApp();
 document.querySelector("#footer-app").innerHTML = footerApp();
 
 /* ------------------------------------------------------------------------------------------------------------ */
-
 /*Las const son para llamarlas del html y decirles "Eh wey te estan hablando" */
 const shopContent = document.getElementById("shopContent");/*Esta es la primera variable de la parte número 1 la obtuvimos
 con el id que le pusimos en el HTML*/
 const categoryItems = document.querySelectorAll('.categoryitem');
-/* const verCarrito = document.getElementById("verCarrito");
-const modalContainer = document.getElementById("modal-container");
+/* ARLETTE: Ya están en compras. Verificar.
+const verCarrito = document.getElementById("verCarrito");
 const cantidadCarrito = document.getElementById("cantidadCarrito"); */
 
 /*Aquí puse la igualdad del carrito para que me lo recupere en el localstorage, al carrito se convierte en
@@ -31,7 +30,6 @@ let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
 
 /*Aqui hice unan funcion para llamar a los productos del Json y que corran por que si no les pegan */
-
 const getProducts = async () => {
     /*Ruta del archivo Json  */
     const response = await fetch('/data.json');
@@ -48,81 +46,72 @@ const getProducts = async () => {
         <h4>${product.categoría}</h4>
         <div class="descripcion" align-items-center>
         <p>Talla: ${product.talla}</p>
-       
+        
         <p>Precio: $${product.precio}</p>
         <p>Cantidad: ${product.cantidad}</p>
         </div>
-    `;/*  <p>${product.descripcion}</p> AGREGAR DESPUES*/
+        `;
+        //<p>${product.descripcion}</p> Agregar después
         /*Con la propiedad append vamos a conectar la primera parte PARTE 1 */
         shopContent.append(content);
 
-         ////////////////////---------- Boton COMPRAR ---------------////////////
-        //Aquí utilizamos el mismo proceso, pero en vez de que sea un div, será un botón
-        // let comprar = document.createElement("button");
+        /* //Se crea botón COMPRAR, agregar al carrito
+        let comprar = document.createElement("button");
 
-        //comprar.innerText = "comprar";/*Con innertext lo ponemos texto al botón  */
-        //comprar.className = "comprar";/*Aquí el botón tiene su propia clase, es el botón de compras */
-        //Aquí lo conectamos con content y le estamos diciendo que a cada producto le agregue un botón de comprar */
-        //content.append(comprar);
+        comprar.innerText = "comprar";//Con innertext lo ponemos texto al botón
+        comprar.className = "comprar";//Aquí el botón tiene su propia clase, es el botón de compras
+        //Aquí lo conectamos con content y le estamos diciendo que a cada producto le agregue un botón de comprar
+        content.append(comprar); */
 
         /*Aquí es donde pasa la magia, use varios métodos entre ellos push, map y some, está función de aquí;
         lo que hace es que no se repitan los productos con todos sus atributos y solo se ponga la cantidad deseada,
         es decir en vez de tener dos sombreros con su descripcioón, lugar de origen etc, solo se duplique la cantidad.
-        
         Lo que hace .addEventListener es que cada que le des click a algún producto lo va a agregar como si fuera un timbre
         llamando*/
 
-        // comprar.addEventListener("click", () => {
-        /*Aquí es lo que hace que no se repite el producto con todo, sino que solo duplique la cantidad*/
-        //   const repeat = carrito.some((repeatProduct) => repeatProduct.id === product.id); 
+        /* comprar.addEventListener("click", () => {
+            //Aquí es lo que hace que no se repite el producto con todo, sino que solo duplique la cantidad
+            const repeat = carrito.some((repeatProduct) => repeatProduct.id === product.id);
 
-        // if (repeat) {
-        //   carrito.map((prod) => {
-        //     if(prod.id === product.id){
-        //       prod.cantidad++;
+            if (repeat) {
+                carrito.map((prod) => {
+                    if (prod.id === product.id) {
+                        prod.cantidad++;
+                    }
+                });
+            } else {
+                //Aquí en el carrito es 
+                carrito.push({
+                    id: product.id,
+                    nombre: product.nombre,
+                    precio: product.precio,
+                    imagen: product.imagen,
+                    origen: product.origen,
+                    talla: product.talla,
+                    cantidad: product.cantidad,
+                    // descripcion: product.descripcion, //
+                });
+            }
+            console.log(carrito);
+            console.log(carrito.length);
+            carritoCounter();
+            //Aquí mismo pedí a la función que de favor me guardara lo de mi carrito
+            saveLocal();
+        }); */
 
-        // }
-        // });
-        // } else{
-        /*Aquí en el carrito es */
-        /*       carrito.push({
-              id : product.id,
-              nombre: product.nombre,
-              precio: product.precio,
-              imagen: product.imagen,
-              origen: product.origen,
-              talla: product.talla,
-              cantidad: product.cantidad, */
-        /* descripcion: product.descripcion, */
-        // });  
+       //-------------------------------Boton detalles producto -----------------------------------------------------------
+       let detalleBoton = document.createElement("button");
 
-        // }
-        //console.log(carrito);
-        //console.log(carrito.length);
-        //carritoCounter();
-        ////////////////////---------- Termina Boton COMPRAR ---------------////////////
- 
-//-------------------------------Boton detalles producto -----------------------------------------------------------
-        let detalleBoton = document.createElement("button");
-
-        detalleBoton.innerText = "Ver más";/*Con innertext lo ponemos texto al botón  */
-        detalleBoton.className = "detalleBoton";//Clase del boton ver mas
-        content.append(detalleBoton);
-        // Agregar el evento click para redirigir
-        document.querySelectorAll(".detalleBoton").forEach(button => {
-            button.onclick = function () {
-                const productId = this.parentElement.getAttribute("id");
-                window.location.href = `/src/pages/1.html${producto.id}`; // Cambia esta URL a la de tu página de detalles
-            };
-        });
-
-
-
-
-        /*Aquí mismo pedí a la función que de favor me guardara lo de mi carrito */
-        saveLocal();
+       detalleBoton.innerText = "Ver más";/*Con innertext lo ponemos texto al botón  */
+       detalleBoton.className = "detalleBoton";//Clase del boton ver mas
+       content.append(detalleBoton);
+       
+       // Añadir evento click al botón
+       detalleBoton.addEventListener("click", () => {
+           window.location.href = `/src/pages/detalle_producto/${product.id}.html`; // Redirigir a la página del producto
+       });
+       // ---------------------- Termina Boton detalle producto
     });
-    // });
 };
 
 getProducts();
@@ -152,29 +141,40 @@ const filterProductsByCategory = async (category) => {
             let content = document.createElement("div");
             content.className = "card";
             content.innerHTML = `
-        <center><img class="imagenProduct rounded-3" src= "${product.imagen}" margin-bottom="15px"></center>
-        <h2>${product.nombre}</h2>
-        <h3>${product.origen}</h3>
-        <h4>${product.categoría}</h4>
-        <div class="descripcion" style="display: flex; flex-direction: column;">
+            <center><img class="imagenProduct rounded-3" src= "${product.imagen}" margin-bottom="15px"></center>
+            <h2>${product.nombre}</h2>
+            <h3>${product.origen}</h3>
+            <h4>${product.categoría}</h4>
+            <div class="descripcion" style="display: flex; flex-direction: column;">
             <p>Talla: ${product.talla}</p>
-            <p>${product.descripcion}</p>
+            
             <p>Precio: $${product.precio.toFixed(2)}</p>
             <p>Cantidad: ${product.cantidad}</p>
-        </div>
-    `;
-            /*Aquí utilizamos el mismo proceso, pero en vez de que sea un div, será un botón  */
+            </div>
+            `;
+            // <p>${product.descripcion}</p> Agregar después
+            //Aquí utilizamos el mismo proceso, pero en vez de que sea un div, será un botón
             let comprar = document.createElement("button");
 
-            comprar.innerText = "comprar";/*Con innertext lo ponemos texto al botón  */
-            comprar.className = "comprar";/*Aquí el botón tiene su propia clase, es el botón de compras */
-            /*Aquí lo conectamos con content y le estamos diciendo que a cada producto le agregue un botón de comprar */
+            comprar.innerText = "comprar";//Con innertext lo ponemos texto al botón
+            comprar.className = "comprar";//Aquí el botón tiene su propia clase, es el botón de compras //
+            //Aquí lo conectamos con content y le estamos diciendo que a cada producto le agregue un botón de comprar //
             content.append(comprar);
-            shopContent.appendChild(content);
+            shopContent.appendChild(content); 
+
+            //-------------------------------Boton detalles producto -----------------------------------------------------------
+            /* let detalleBoton = document.createElement("button");
+
+            detalleBoton.innerText = "Ver más";//Con innertext lo ponemos texto al botón
+            detalleBoton.className = "detalleBoton";//Clase del boton ver mas
+            content.append(detalleBoton); */
+            
+            // Añadir evento click al botón
+           /*  detalleBoton.addEventListener("click", () => {
+                window.location.href = `/src/pages/detalle_producto/${product.id}.html`; // Redirigir a la página del producto
+            }); */
+            // ---------------------- Termina Boton detalle producto
         });
-
-
-
 
         // Si no se encontraron productos para la categoría
         if (category === "Todo") {
@@ -222,8 +222,6 @@ const eliminarProducto = (id) => {
     carritoCounter();
     saveLocal();
     pintarCarrito();
-
-
 };
 
 

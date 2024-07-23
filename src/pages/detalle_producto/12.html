@@ -3,22 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sombrero Palma</title>
+  <title>Muñeca Guadalajara</title>
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <!-- Estilos personalizados -->
-  <link rel="stylesheet" href="./productos2.css">
+  <link rel="stylesheet" href="./detalle_producto.css">
 </head>
 <body>
   <!-- CONTENEDOR GENERAL de la página -->
-  <div id="page-container col-12 col-md-12">
+  <div id="page-container">
     <!-- Navbar = Header -->
     <header id="navbar-app"> </header>
+
+     <!-- Contenido de la página -->
+     <div id="content-wrap">
  <!--Este div es el div donde vamos a conectar la parte NÚMERO 1, le ponemos un id para poder llevarlo de es manera
       al Javascript-->
       <div id="shopContent" class="container mt-4 row justify-content-center"> </div>
     <!-- Contenido detalles del producto -->
-    <section class="container-detalles-producto">
+    <section class="container-detalles-producto mt-4">
       <div class="row">
         <div class="col-md-6">
           <!-- Contenido de la columna uno (imagen) -->
@@ -31,13 +34,13 @@
               </div>
               <div class="carousel-inner">
                 <div class="carousel-item mt-4 active">
-                  <img src="/public/img/sombrero de palma.jpg" class="d-block w-100 rounded-4" alt="...">
+                  <img src="/img/muñecarosa.png" class="d-block w-100 rounded-4" alt="...">
                 </div>
                 <div class="carousel-item mt-4">
-                  <img src="/public/img/sombrero de palma.jpg" class="d-block w-100 rounded-4" alt="...">
+                  <img src="/img/muñecarosalado.png" class="d-block w-100 rounded-4" alt="...">
                 </div>
                 <div class="carousel-item mt-4">
-                  <img src="/public/img/sombrero de palma.jpg" class="d-block w-100 rounded-4" alt="...">
+                  <img src="/img/muñecarosaespalda.png" class="d-block w-100 rounded-4" alt="...">
                 </div>
               </div>
               <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -56,11 +59,11 @@
           <div class="container-detalles-producto2">
             <div class="dos">
               <!-- Contenido de la columna dos -->
-              <h1 class="titulo-pagina2">Sombrero de Palma</h1>
-              <h3 class="titulo-pagina2">Yucatán, México</h3>
-              <h4 class="titulo-pagina2">Precio: $230.00</h4>
+              <h1 class="titulo-pagina2">Muñeca Lele</h1>
+              <h3 class="titulo-pagina2">Guadalajara, México</h3>
+              <h4 class="titulo-pagina2">Precio: $180.00</h4>
               <!-- Casilla de selección con flechas arriba y abajo -->
-              <div class="form-groupo">
+              <div class="form-group">
                 <label for="cantidad">Cantidad:</label>
                 <div class="input-group">
                   <input type="number" class="form-control" id="cantidad" value="1" min="1" max="100">
@@ -70,8 +73,10 @@
               <div class="form-group">
                 <label for="talla">Talla:</label>
                 <select class="form-control" id="talla">
-                  <option class="dentro" value="Seleccione">Seleccione</option>
-                  <option class="dentro" value="Unitalla">Unitalla</option>                  
+                  <option value="Seleccione">Seleccione</option>
+                  <option value="S">S</option>
+                  <option value="M">M</option>
+                  <option value="L">G</option>
                   <!-- Agrega más opciones según sea necesario -->
                 </select>
               </div>
@@ -94,10 +99,10 @@
                     </button>
                   </h2>
                   <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body">                      
-                      <li>Sombrero de Palma.</li>
-                      <li>Material: Palma </li>
-                      <li>Medidas: 20cm x 60cm.</li>                      
+                    <div class="accordion-body">
+                      <li>Muñeca Lele.</li>
+                      <li>Material: Trapo y Listones de colores </li>
+                      <li>Medidas: 20cm x 30cm, 35cm x 40cm, 50cm x 70cm.</li>                      
                     </div>
                   </div>
                 </div>
@@ -121,7 +126,7 @@
                   </h2>
                   <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
                     <div class="accordion-body">
-                      <li>Este encantador sombrero está tejido a mano con palma natural de las regiones de Yucatán, ofreciendo un estilo clásico y funcionalidad ideal para días soleados. Su diseño ligero y transpirable proporciona comodidad durante horas, mientras que el tejido artesanalmente asegura durabilidad y resistencia. Elaborado con materiales naturales y un cuidado artesanal, cada sombrero es único, reflejando la habilidad y la tradición de los artesanos que lo crearon.</li>
+                      <li>Esta encantadora muñeca Lele de Guadalajara captura la esencia vibrante y culturalmente diversa de la Perla Tapatía. Confeccionada con meticulosa artesanía, esta muñeca está vestida con trajes típicos que reflejan la rica herencia histórica y cultural de la región jalisciense. Los detalles intricados de sus vestimentas, bordados a mano con colores vivos y diseños tradicionales, evocan la elegancia y el colorido de la vestimenta típica de Guadalajara.</li>
                     </div>
                   </div>
                 </div>
@@ -136,46 +141,46 @@
     <section class="container-sugerencias mt-3">
       <h1>Sugerencias de compra</h1> 
     </section>
-    <section class="container-productos-sugeridos col-12 col-md-11">
+    <section class="container-productos-sugeridos">
       <div class="row">
-        <!-- Tarjeta 1 -->
-        <div class="card" style="width: 18rem;">
-          <img src="/public/img/figurilla de barro.jpg" class="card-img-top" alt="...">
+         <!-- Tarjeta 1 -->
+         <div class="card" style="width: 18rem;">
+          <img src="/img/figurilla de barro.jpg" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">Gato de Barro</h5>
             <p class="card-text">Tlaxcala, México</p>
-            <a href="./figurillabarro.html" class="btn-sug btn-primary">ver más</a>
+            <a href="./figurillabarro.html" class="btn-sug btn-primary">vermás</a>
           </div>
         </div>
         <!-- Tarjeta 2 -->
         <div class="card" style="width: 18rem;">
-          <img src="/public/img/mascara de madera.jpg" class="card-img-top" alt="...">
+          <img src="/img/tapete de lana.jpg" class="card-img-top" alt="...">
           <div class="card-body">
-            <h5 class="card-title">Mascara Madera</h5>
-            <p class="card-text">Guerrero, México</p>
-            <a href="./mascaramadera.html" class="btn-sug btn-primary">ver más</a>
+            <h5 class="card-title">Tapete de lana</h5>
+            <p class="card-text">zacatecas, México</p>
+            <a href="./tapetelana.html" class="btn-sug btn-primary">ver más</a>
           </div>
         </div>
         <!-- Tarjeta 3 -->
         <div class="card" style="width: 18rem;">
-          <img src="/public/img/jarra de barro.jpg" class="card-img-top" alt="...">
+          <img src="/img/mascara de madera.jpg" class="card-img-top" alt="...">
           <div class="card-body">
-            <h5 class="card-title">Jarra de barro</h5>
-            <p class="card-text">Puebla, México</p>
-            <a href="./jarrabarro.html" class="btn-sug btn-primary">ver más</a>
+            <h5 class="card-title">Máscara de madera</h5>
+            <p class="card-text">Guerrero, México</p>
+            <a href="./mascaramadera.html" class="btn-sug btn-primary">ver más</a>
           </div>
         </div>
         <!-- Tarjeta 4-->        
         <div class="card" style="width: 18rem;">
-          <img src="/public/img/tapete de lana.jpg" class="card-img-top" alt="...">
+          <img src="/img/muñecaverde.png" class="card-img-top" alt="...">
           <div class="card-body">
-            <h5 class="card-title">Tapete Lana</h5>
-            <p class="card-text">Zacatecas, México</p>
-            <a href="./tapetelana.html" class="btn-sug btn-primary">ver más</a>
+            <h5 class="card-title">Muñeca Lele.</h5>
+            <p class="card-text">Guadalajara, México</p>
+            <a href="./muñecaverde.html" class="btn-sug btn-primary">ver más</a>
           </div>
         </div>
     </section>
-   
+     </div>
 
     <!-- Footer -->
     <footer id="footer-app" class="footer-basic container-fluid"> </footer>
@@ -184,6 +189,6 @@
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   <!-- JavaScript personalizado -->
-  <script src="./productos2.js" type="module"></script>
+  <script src="./detalle_producto.js" type="module"></script>
 </body>
 </html>

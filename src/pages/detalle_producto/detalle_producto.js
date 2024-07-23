@@ -2,12 +2,16 @@
 /* Aquí van las rutas de conexión */
 import '/style.scss'
 import * as bootstrap from 'bootstrap' /* Para desplegar el menú / activar cosas de bootstrap */
-import './Productos.css'
+import './detalle_producto.css'
 import '/src/components/footer/footer.css'
 import '/src/components/navbar/navbar.css'
 
 import { navbarApp } from '/src/components/navbar/navbar_app.js'
 import { footerApp } from '/src/components/footer/footer_app.js'
+//import { saveLocal } from '../Productos/Productos.js'
+//import { carritoCounter } from '../Productos/Productos.js'
+//import { eliminarProducto } from '../Productos/Productos.js'
+//import { carrito } from '../Productos/Productos.js'
 
 
 document.querySelector("#navbar-app").innerHTML= navbarApp();
@@ -19,7 +23,7 @@ document.querySelector("#footer-app").innerHTML= footerApp();
 // import { agregarProductoAlCarrito } from './productos.js';
 
 // Función para manejar el evento de agregar al carrito
-const agregarAlCarrito = () => {
+/* const agregarAlCarrito = () => {
     // Selecciona el botón de agregar al carrito
     const botonAgregar = document.getElementById('agregarCarrito');
 
@@ -76,4 +80,53 @@ document.addEventListener("DOMContentLoaded", function() {
             console.log(`Añadido al carrito: Cantidad ${cantidad}, Talla ${talla}`);
         });
     });
-});
+}); */
+
+//////////////////////////////////////////////
+/* //Se crea botón COMPRAR, agregar al carrito
+        let comprar = document.createElement("button");
+        const botonesAgregar = document.querySelectorAll("#agregarCarrito");
+
+        comprar.innerText = "comprar";//Con innertext lo ponemos texto al botón
+        comprar.className = "comprar";//Aquí el botón tiene su propia clase, es el botón de compras
+        //Aquí lo conectamos con content y le estamos diciendo que a cada producto le agregue un botón de comprar
+        content.append(comprar); */
+
+        /*Aquí es donde pasa la magia, use varios métodos entre ellos push, map y some, está función de aquí;
+        lo que hace es que no se repitan los productos con todos sus atributos y solo se ponga la cantidad deseada,
+        es decir en vez de tener dos sombreros con su descripcioón, lugar de origen etc, solo se duplique la cantidad.
+        Lo que hace .addEventListener es que cada que le des click a algún producto lo va a agregar como si fuera un timbre
+        llamando*/
+
+       /*  const comprar = document.querySelectorAll("#agregarCarrito");
+        comprar.addEventListener("click", () => {
+            //Aquí es lo que hace que no se repite el producto con todo, sino que solo duplique la cantidad
+            const repeat = carrito.some((repeatProduct) => repeatProduct.id === product.id);
+
+            if (repeat) {
+                carrito.map((prod) => {
+                    if (prod.id === product.id) {
+                        prod.cantidad++;
+                    }
+                });
+            } else {
+                //Aquí en el carrito es 
+                carrito.push({
+                    id: product.id,
+                    nombre: product.nombre,
+                    precio: product.precio,
+                    imagen: product.imagen,
+                    origen: product.origen,
+                    talla: product.talla,
+                    cantidad: product.cantidad,
+                    // descripcion: product.descripcion, //
+                });
+            }
+            //console.log(carrito);
+            //console.log(carrito.length);
+            carritoCounter();
+            //Aquí mismo pedí a la función que de favor me guardara lo de mi carrito
+            saveLocal();
+        }); 
+
+        //carritoCounter(); /*Al llamar la función, se muestra el número del carrito.*/

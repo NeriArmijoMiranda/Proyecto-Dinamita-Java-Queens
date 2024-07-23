@@ -20,7 +20,6 @@ document.querySelector("#footer-app").innerHTML = footerApp();
 const shopContent = document.getElementById("shopContent");/*Esta es la primera variable de la parte número 1 la obtuvimos
 con el id que le pusimos en el HTML*/
 const categoryItems = document.querySelectorAll('.categoryitem');
-/* ARLETTE: Ya están en compras. Verificar. */
 /* const verCarrito = document.getElementById("verCarrito");
 const modalContainer = document.getElementById("modal-container");
 const cantidadCarrito = document.getElementById("cantidadCarrito"); */
@@ -113,7 +112,7 @@ const getProducts = async () => {
         document.querySelectorAll(".detalleBoton").forEach(button => {
             button.onclick = function () {
                 const productId = this.parentElement.getAttribute("id");
-                window.location.href = `/src/pages/detalle_producto/${product.id}`; // Cambia esta URL a la de tu página de detalles
+                window.location.href = `/src/pages/1.html${producto.id}`; // Cambia esta URL a la de tu página de detalles
             };
         });
 

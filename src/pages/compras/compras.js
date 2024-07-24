@@ -23,7 +23,7 @@ document.innerHTML = saveLocal();
 /*Las const son para llamarlas del html y decirles "Eh te estan hablando" */
 
 const contenedorGeneral = document.getElementById("contenedorGeneral"); /* Contenedor general de toda la página */
-const modalContainer = document.getElementById("modalContainer");/* descripción producto en html  */
+const modalContainer  = document.getElementById("modalContainer");/* descripción producto en html  */
 const resumenCompras = document.getElementById("resumenCompras"); /* Resumen de compras html */
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 const verCarrito = document.getElementById("verCarrito");
@@ -139,9 +139,9 @@ const pintarCarrito = () => {
     <p>Total a pagar: $${total * 0.9} mxn</p>
     <p>Aceptamos las siguientes tarjetas:</p>
     <p>
-        <img class="tarjetas rounded-3 " src="/public/img/visa.png" alt="Tarjeta visa" height="60px" width="70px">
-        <img class="tarjetas rounded-3 " src="/public/img/mastercard.png" alt="Tarjeta mastercard" height="40px" width="60px" >
-        <img class="tarjetas rounded-3 " src="/public/img/americanexpress.png" alt="Tarjeta american express" height="50px" width="60px">
+        <img class="tarjetas rounded-3 " src="/img/visa.png" alt="Tarjeta visa" height="60px" width="70px">
+        <img class="tarjetas rounded-3 " src="/img/mastercard.png" alt="Tarjeta mastercard" height="40px" width="60px" >
+        <img class="tarjetas rounded-3 " src="/img/americanexpress.png" alt="Tarjeta american express" height="50px" width="60px">
     </p>
      `;
     resumenCompras.append(totalBuying);
@@ -150,12 +150,6 @@ const pintarCarrito = () => {
     continuar.innerText = "Continuar con la compra";/*Con innertext lo ponemos texto al botón  */
     continuar.className = "continuarBoton"; /*Aquí lo conectamos con content y le estamos diciendo que a cada producto le agregue un botón de comprar */
     resumenCompras.append(continuar);
-
-    // Agregar el evento click para redirigir
-    continuar.addEventListener("click", function () {
-        window.location.href = "/src/pages/datos_de_envio/datos_de_envio.html"; // Cambia esta URL por la que desees
-    });
-
 };
 pintarCarrito();
 

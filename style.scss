@@ -48,6 +48,7 @@ body{
 
 /* Estilos particulares de Inicio */
 
+
 #title {
   color:#fff;
   text-align: center;
@@ -76,18 +77,35 @@ p{
     text-align: center;
 }
 
+
+
 /* carrusel.css */
 .container-inicio {
     background-color: #F85931;
-    padding: 30px; /* Ajusta según sea necesario */
-    max-width: 1000px; /* Establece el ancho máximo del contenedor */
+    padding: 20px; /* Ajusta según sea necesario */
+    max-width: 100%; /* Establece el ancho máximo del contenedor */
+    max-height: auto;
     margin: 0 auto; /* Centra el contenedor horizontalmente */
-    border-radius: 20px;
-    margin-bottom: 100px;
+    border-radius: 30px;
+    margin-bottom: 100px ;
+}
+.carousel-item{
+  flex-direction: column;
+}
+.carousel-img {
+  height: 500px; /* Ajusta este valor según la altura deseada */
+  object-fit: cover; /* Mantiene el aspecto de la imagen recortando el exceso */
 }
 
-.carousel-item img {
-    width: 100px; /* Ajusta el ancho de la imagen al 100% del contenedor padre */
-    height: 400px; /* Mantiene la proporción de aspecto de las imágenes */
-
+.banner {
+  position: relative;
+  width: 100%;
+  height: 400px; /* Ajustar la altura automáticamente */
+  overflow: hidden; /* Ocultar cualquier desbordamiento */
+  margin-bottom: 150px;
+}
+.banner img {
+ width: 100%; 
+ height: auto; /* Mantener la proporción de la imagen */
+ display: block; /* Eliminar espacios blancos debajo de la imagen */
 }

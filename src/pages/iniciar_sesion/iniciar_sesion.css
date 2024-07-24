@@ -1,15 +1,23 @@
-/* Estilos particulares de Iniciar-Sesión */
-.horizontal-container {
+ /* Estilos particulares de Iniciar-Sesión */
+ .horizontal-container {
     display: flex;
-    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
-    justify-content: center; /* Alineación horizontal */
-    align-items: center; /* Alineación vertical */
-    gap: 10px; /* Ajusta el espacio entre los contenedores según sea necesario */
-    padding-top: 60px; /* Espacio suficiente para que no lo tape el navbar */
-    padding-bottom: 60px; /* Espacio suficiente para que no lo tape el footer */
-    box-sizing: border-box; /* Asegura que el padding se incluya en el cálculo del tamaño del contenedor */
-    width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
-    height: auto; /* Ajusta el alto automáticamente */
+    text-align: center;
+    justify-content: center;
+    /* Alineación horizontal */
+    align-items: center;
+    /* Alineación vertical */
+    gap: 10px;
+    /* Ajusta el espacio entre los contenedores según sea necesario */
+    padding-top: 60px;
+    /* Espacio suficiente para que no lo tape el navbar */
+    padding-bottom: 60px;
+    /* Espacio suficiente para que no lo tape el footer */
+    box-sizing: border-box;
+    /* Asegura que el padding se incluya en el cálculo del tamaño del contenedor */
+    width: 100%;
+    /* Asegura que el contenedor ocupe todo el ancho disponible */
+    height: 100%;
+    /* Asegura que el contenedor ocupe todo el alto disponible */
 }
 
 h2 {
@@ -18,118 +26,117 @@ h2 {
 }
 
 .container {
-    margin: 0 auto;
+    margin: 0 auto; 
     max-width: 95%; /* Ancho máximo */
     border-radius: 10px; /* Bordes redondeados */
     margin-bottom: 10px;
     box-sizing: border-box;
     width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
 }
-
-
-/* Contenedor Formularios verdes */
+/* Contenedor Formularios verdes-------------------------------- */
 .form-container {
     padding: 50px;
     border-radius: 20px;
     text-align: left;
     background-color: #088078;
     max-width: 100%;
+    margin-bottom: 0px; /* Margen inferior*/
 }
-
-/* Contenedor Formularios naranjas */
 .form-registro {
     padding: 50px;
     border-radius: 20px;
     text-align: left;
-    background-color: #F85931;
+    background-color:#F85931;
+    flex-direction: column;
     max-width: 100%;
+    margin-bottom: 200px; /* Margen inferior*/
 }
 
-/* Estilos de las celdas */
-.input_registro, .input_c {
+.input_registro { /* Estilos de las celdas naranjas*/
     padding: 20px 25px; /* 20px arriba y abajo, 25px a los lados */
     border-radius: 20px;
     margin-bottom: 30px;
+    background-color: #ea846a;
+    border: none; /* Sin borde */
+    outline: none; /* Sin contorno */
+    font-family: "Mulish", sans-serif;
+    height: auto;
+    /* Ajustar la altura automática */
+}
+
+
+.input_c { /* Estilos de las celdas verdes*/
+    padding: 20px 25px; /* 20px arriba y abajo, 25px a los lados */
+    border-radius: 20px;
+    margin-bottom: 30px;
+    background-color: #5aece3;
     border: none; /* Sin borde */
     outline: none; /* Sin contorno */
     font-family: "Mulish", sans-serif;
     height: auto; /* Ajustar la altura automática */
 }
 
-/* Celdas naranjas para el registro */
-.input_registro {
-    background-color: #ea846a;
-}
-
-/* Celdas verdes para iniciar sesión */
-.input_c {
-    background-color: #5aece3;
-}
-
-/* Ajustes de las celdas */
-.form-content {
+.form-content { /* Ajustes de las celdas verdes*/
     display: flex; /* Modelo de caja flexible */
-    flex-direction: column; /* Elementos se colocan en una columna, uno debajo del otro */
+    flex-direction: column; /*Elementos se colocan en una columna, uno debajo del otro */
 }
 
-/* Estilo para los placeholders */
-::placeholder {
+::placeholder { /*Lo que va a adentro de las celdas verdes como "Jorge" */
     color: rgba(46, 45, 45, 0.521); /* Color del texto con transparencia */
     font-size: 18px;
 }
-
-/* Estilos de los subtítulos */
+/* Estilos de los subtítulos en General*/
 label {
     color: white;
     font-family: "Mulish", sans-serif;
     font-size: 25px;
-    font-weight: 600; /* Grosor de la fuente */
-    margin-bottom: 5px; /* Margen inferior */
+    font-weight: 600;
+    /* Grosor de la fuente */
+    margin-bottom: 5px;
+    /* Margen inferior */
 }
-
-/* Estilos para los botones */
-.btn-enviar, .btn-registro {
+.btn-enviar {
     border-radius: 10px; /* Bordes redondeados */
     cursor: pointer;
     color: white;
     padding: 25px;
     font-size: 25px;
-    font-weight: 600; /* Grosor de la fuente */
+    font-weight: 600;
+    /* Grosor de la fuente */
     text-align: center;
 }
 
-/* Botón de enviar */
-.btn-enviar {
-    background-color: #055e58;
-}
-
-.btn-enviar:hover {
-    background-color: #088078;
-}
-
-/* Botón de registro */
-.btn-registro {
+.btn-registro{
+    border-radius: 10px; /* Bordes redondeados */
+    cursor: pointer;
     background-color: #e33c13;
+    color: white;
+    padding: 25px;
+    font-size: 25px;
+    font-weight: 600; /* Grosor de la fuente */
+    text-align: center;  
 }
 
 .btn-registro:hover {
     background-color: #ec5a35;
+    width: auto;
 }
 
 
-/* Estilos para pantallas medianas y pequeñas */
-@media (max-width: 1199.98px) {
-    .horizontal-container {
-        flex-direction: column; /* Apilar los formularios en pantallas pequeñas */
-        align-items: center; /* Centra horizontalmente en pantallas medianas y pequeñas */
-    }
-    .container {
-        max-width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
-    }
-    .form-container, .form-registro {
-        margin-bottom: 20px; /* Ajusta el margen inferior en pantallas pequeñas */
-    }
-    .form-content {
-        padding: 10px; /* Ajusta el padding en pantallas pequeñas */
-    }
+.btn-enviar:hover {
+    background-color: #088078;
+    width: auto;
+}
+
+@media (max-width: 1199.98px){
+    .form{
+            padding: 50px 55px;
+            border-radius: 20px;
+            text-align: center;
+            width: 200px;
+            background-color:#088078;
+            display: flex;
+            flex-direction: column;
+            max-width: 200px;
+        }
 }

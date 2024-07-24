@@ -97,14 +97,14 @@ p{
   object-fit: cover; /* Mantiene el aspecto de la imagen recortando el exceso */
 }
 
-.banner {
+.banner_inicio {
   position: relative;
   width: 100%;
   height: 400px; /* Ajustar la altura automáticamente */
   overflow: hidden; /* Ocultar cualquier desbordamiento */
   margin-bottom: 150px;
 }
-.banner img {
+.banner_inicio img {
  width: 100%; 
  height: auto; /* Mantener la proporción de la imagen */
  display: block; /* Eliminar espacios blancos debajo de la imagen */

@@ -10,6 +10,7 @@
     text-align: left;
     color: white; /* Color del texto */
     text-indent: 10px; /* Sangría del texto */
+    padding: 15px;
 }
 
 .horizontal-container {
@@ -25,7 +26,7 @@
 .container {
     max-width: 95%; /* Ancho máximo */
     border-radius: 10px; /* Bordes redondeados */
-    margin-bottom: 90px;
+    margin-bottom: 40px;
 }
 
 /* Estilos de los subtítulos en General*/
@@ -86,20 +87,30 @@ option { /* Letra de las opciones en Estados */
     background-color: black;
     justify-content: center;
     align-items: center;
+    margin-bottom:0px;
+}
+/* Contenedor negro 1-----------------------------------------*/
+.contenedor-negro2 {
+    text-align: center;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 150px;
 }
 
 /* Checkbox ---------------------------*/
-.checkbox {   /* Contenedor naranja */
-    background-color: #F85931   ;
+.checkbox {   
+    background-color: #F85931;
     border-radius: 10px;
     cursor: pointer;
     color: white;
-    padding: 25px; 
     text-align: center;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
+    align-items: center;  /* Centrar verticalmente */
+    justify-content: center;  /* Centrar horizontalmente */
+    height: 100px; /* Ajustar la altura */
+    margin-top: 5px;
+    padding: 25px;
 }
 
 .checkbox:hover {
@@ -126,15 +137,25 @@ option { /* Letra de las opciones en Estados */
 }
 
 /* Botón Guardar Dirección y Tarjeta ---------------------------*/
+
 .btn-guardar {
     border-radius: 10px; /* Bordes redondeados */
     cursor: pointer;
     background-color: #055e58;
     color: white;
-    padding: 25px;
-    font-size: 25px;
+    padding: 25px; /* Ajustar padding para más espacio para el texto */
+    font-size: 25px; /* Reducir tamaño de la fuente si es necesario */
     font-weight: 600; /* Grosor de la fuente */
     text-align: center;
+    overflow: hidden; /* Opcional: oculta el texto que se desborda */
+    text-align: center;
+    margin-top: 5px;
+    box-sizing: border-box;
+    display: flex; /* Usar Flexbox */
+    align-items: center; /* Centrar verticalmente */
+    justify-content: center; /* Centrar horizontalmente */
+    height: 100px; /* Ajustar altura según sea necesario */
+    width: auto; /* Ajustar ancho según sea necesario */
 }
 
 .btn-guardar:hover {
@@ -152,6 +173,13 @@ option { /* Letra de las opciones en Estados */
     font-size: 25px;
     font-weight: 600; /* Grosor de la fuente */
     text-align: center;
+    margin-top: 5px;
+    box-sizing: border-box;
+    display: flex; /* Usar Flexbox */
+    align-items: center; /* Centrar verticalmente */
+    justify-content: center; /* Centrar horizontalmente */
+    height: 100px; /* Ajustar altura según sea necesario */
+    width: auto; /* Ajustar ancho según sea necesario */
 }
 
 .btn-guardar-r:hover {

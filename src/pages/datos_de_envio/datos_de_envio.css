@@ -10,6 +10,7 @@
     text-align: left;
     color: white; /* Color del texto */
     text-indent: 10px; /* Sangría del texto */
+    padding: 5px;
 }
 
 .horizontal-container {
@@ -17,15 +18,11 @@
     justify-content: space-between; /* O "flex-start", "center", dependiendo de tu preferencia */
     gap: 10px; /* Ajusta el valor según sea necesario */
 }
-.container-h {
-    margin-right: 0px; /* Espacio entre contenedores, ajusta según sea necesario */
-}
 
 /* Contenedor General de Formulario 1*/
 .container {
     max-width: 95%; /* Ancho máximo */
     border-radius: 10px; /* Bordes redondeados */
-    margin-bottom: 90px;
 }
 
 /* Estilos de los subtítulos en General*/
@@ -87,6 +84,13 @@ option { /* Letra de las opciones en Estados */
     justify-content: center;
     align-items: center;
 }
+.contenedor-negro2 {
+    text-align: center;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+}
 
 /* Checkbox ---------------------------*/
 .checkbox {   /* Contenedor naranja */
@@ -94,12 +98,14 @@ option { /* Letra de las opciones en Estados */
     border-radius: 10px;
     cursor: pointer;
     color: white;
-    padding: 25px; 
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0;
+    height: 100px; /* Ajustar la altura */
+    box-sizing: border-box;
+    display: flex; /* Usar Flexbox */
 }
 
 .checkbox:hover {
@@ -131,10 +137,18 @@ option { /* Letra de las opciones en Estados */
     cursor: pointer;
     background-color: #055e58;
     color: white;
-    padding: 25px;
+    padding: 25px; /* Ajustar padding según sea necesario */
     font-size: 25px;
     font-weight: 600; /* Grosor de la fuente */
-    text-align: center;
+    text-align: center; /* Centra el texto horizontalmente */
+    margin: 0px;
+    margin-bottom: 30px;
+    box-sizing: border-box;
+    display: flex; /* Usar Flexbox */
+    align-items: center; /* Centrar verticalmente */
+    justify-content: center; /* Centrar horizontalmente */
+    height: 100px; /* Ajustar altura según sea necesario */
+    width: auto; /* Ajustar ancho según sea necesario */
 }
 
 .btn-guardar:hover {
@@ -152,6 +166,14 @@ option { /* Letra de las opciones en Estados */
     font-size: 25px;
     font-weight: 600; /* Grosor de la fuente */
     text-align: center;
+    margin: 0px;
+    margin-bottom: 30px;
+    box-sizing: border-box;
+    display: flex; /* Usar Flexbox */
+    align-items: center; /* Centrar verticalmente */
+    justify-content: center; /* Centrar horizontalmente */
+    height: 100px; /* Ajustar altura según sea necesario */
+    width: auto; /* Ajustar ancho según sea necesario */
 }
 
 .btn-guardar-r:hover {

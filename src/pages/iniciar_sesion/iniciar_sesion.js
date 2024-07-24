@@ -14,4 +14,3 @@ document.querySelector("#navbar-app").innerHTML= navbarApp();
 document.querySelector("#footer-app").innerHTML= footerApp();
 
 /* ------------------------------------------------------------- */
-

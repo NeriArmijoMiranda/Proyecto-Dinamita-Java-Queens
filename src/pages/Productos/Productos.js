@@ -129,65 +129,60 @@ const saveLocal = () => {
 /*get item */
 
 /*---------------------FILTROS--------------------------------------*/
+// Función para filtrar productos por categoría
 const filterProductsByCategory = async (category) => {
     try {
-        const response = await fetch('/data.json');
-        const data = await response.json();
-        shopContent.innerHTML = "";
-        const filteredProducts = data.filter(product => product.categoría === category);
-
-        // Mostrar productos filtrados
-        filteredProducts.forEach(product => {
-            let content = document.createElement("div");
-            content.className = "card";
-            content.innerHTML = `
-            <center><img class="imagenProduct rounded-3" src= "${product.imagen}" margin-bottom="15px"></center>
-            <h2>${product.nombre}</h2>
-            <h3>${product.origen}</h3>
-            <h4>${product.categoría}</h4>
-            <div class="descripcion" style="display: flex; flex-direction: column;">
-            <p>Talla: ${product.talla}</p>
-            
-            <p>Precio: $${product.precio.toFixed(2)}</p>
-            <p>Cantidad: ${product.cantidad}</p>
-            </div>
-            `;
-            // <p>${product.descripcion}</p> Agregar después
-            //Aquí utilizamos el mismo proceso, pero en vez de que sea un div, será un botón
-            let comprar = document.createElement("button");
-
-            comprar.innerText = "comprar";//Con innertext lo ponemos texto al botón
-            comprar.className = "comprar";//Aquí el botón tiene su propia clase, es el botón de compras //
-            //Aquí lo conectamos con content y le estamos diciendo que a cada producto le agregue un botón de comprar //
-            content.append(comprar);
-            shopContent.appendChild(content); 
-
-            //-------------------------------Boton detalles producto -----------------------------------------------------------
-            /* let detalleBoton = document.createElement("button");
-
-            detalleBoton.innerText = "Ver más";//Con innertext lo ponemos texto al botón
-            detalleBoton.className = "detalleBoton";//Clase del boton ver mas
-            content.append(detalleBoton); */
-            
-            // Añadir evento click al botón
-           /*  detalleBoton.addEventListener("click", () => {
-                window.location.href = `/src/pages/detalle_producto/${product.id}.html`; // Redirigir a la página del producto
-            }); */
-            // ---------------------- Termina Boton detalle producto
-        });
-
-        // Si no se encontraron productos para la categoría
         if (category === "Todo") {
-            getProducts();
-        }
-        else if (filteredProducts.length === 0) {
-            shopContent.innerHTML = "<p>No se encontraron productos para esta categoría.</p>";
+            shopContent.innerHTML = ""; // Limpiar el contenido anterior
+            getProducts(); // Mostrar todos los productos
+        } else {
+            const response = await fetch('/data.json');
+            const data = await response.json();
+            shopContent.innerHTML = ""; // Limpiamos el contenido anterior
+
+            const filteredProducts = data.filter(product => product.categoría === category);
+
+            // Mostrar productos filtrados
+            filteredProducts.forEach(product => {
+                let content = document.createElement("div");
+                content.className = "card";
+                content.innerHTML = `
+                    <center><img class="imagenProduct rounded-3" src="${product.imagen}" margin-bottom="15px"></center>
+                    <h2>${product.nombre}</h2>
+                    <h3>${product.origen}</h3>
+                    <h4>${product.categoría}</h4>
+                    <div class="descripcion" style="display: flex; flex-direction: column;">
+                        <p>Talla: ${product.talla}</p>
+                        <p>Precio: $${product.precio.toFixed(2)}</p>
+                        <p>Cantidad: ${product.cantidad}</p>
+                    </div>
+                `;
+
+                // Agregar botón de detalle
+                let detalleBoton = document.createElement("button");
+                detalleBoton.innerText = "Ver más";
+                detalleBoton.className = "detalleBoton"; // Clase del botón ver más
+                content.appendChild(detalleBoton);
+
+                // Añadir evento click al botón de detalle
+                detalleBoton.addEventListener("click", () => {
+                    window.location.href = `/src/pages/detalle_producto/${product.id}.html`; // Redirigir a la página del producto
+                });
+
+                shopContent.appendChild(content);
+            });
+
+            // Si no se encontraron productos para la categoría
+            if (filteredProducts.length === 0) {
+                shopContent.innerHTML = "<p>No se encontraron productos para esta categoría.</p>";
+            }
         }
     } catch (error) {
         console.error("Error al filtrar productos por categoría:", error);
     };
-}
+};
 
+// Escuchar eventos de click en los botones de filtro
 categoryItems.forEach(item => {
     item.addEventListener('click', async (event) => {
         event.preventDefault();
@@ -195,9 +190,6 @@ categoryItems.forEach(item => {
         await filterProductsByCategory(selectedCategory);
     });
 });
-// Mostrar todos los productos al cargar la página inicialmente
-getProducts();
-
 /*FIN---------------------FILTROS---------------*/
 
 /* ------------------------- */

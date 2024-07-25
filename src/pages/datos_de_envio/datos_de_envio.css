@@ -194,8 +194,3 @@ option { /* Letra de las opciones en Estados */
     width: 90%; /* Ajusta este valor según el tamaño deseado */
     display: flex;
 }
-
-/* .col-md-2 {
-    border: solid 3px green;
-}
- */

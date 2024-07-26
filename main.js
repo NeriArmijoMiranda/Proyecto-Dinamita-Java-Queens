@@ -7,6 +7,7 @@ import '/src/components/navbar/navbar.css' /* Estilo de la barra de navegacion *
 import { navbarApp } from './src/components/navbar/navbar_app.js' /* funcionalidad de la barra de navegacion */
 import { footerApp } from './src/components/footer/footer_app.js' /* funcionalidad del pie de pagina */
 
+
 document.querySelector("#navbar-app").innerHTML= navbarApp(); /* insertar función navbarapp dentro del html */
 document.querySelector("#footer-app").innerHTML= footerApp();
 

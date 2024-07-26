@@ -10,6 +10,7 @@ import { navbarApp } from '/src/components/navbar/navbar_app.js'
 import { footerApp } from '/src/components/footer/footer_app.js'
 
 
+
 document.querySelector("#navbar-app").innerHTML = navbarApp();
 document.querySelector("#footer-app").innerHTML = footerApp();
 

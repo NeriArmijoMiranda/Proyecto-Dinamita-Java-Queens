@@ -14,6 +14,7 @@ import { saveLocal } from '../Productos/Productos.js'
 import { carritoCounter } from '../Productos/Productos.js' //Contador de carrito
 import { eliminarProducto } from '../Productos/Productos.js' // eliminar elemnto en carrito
 
+
 document.querySelector("#navbar-app").innerHTML = navbarApp();
 document.querySelector("#footer-app").innerHTML = footerApp();
 document.innerHTML = saveLocal();

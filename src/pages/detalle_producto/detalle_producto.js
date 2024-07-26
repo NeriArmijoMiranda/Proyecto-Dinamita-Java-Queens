@@ -130,3 +130,60 @@ document.addEventListener("DOMContentLoaded", function() {
         }); 
 
         //carritoCounter(); /*Al llamar la función, se muestra el número del carrito.*/
+
+        // detalles_producto.js
+
+// Función para obtener los datos del producto desde el HTML
+function obtenerDatosProducto() {
+    const productInfo = document.getElementById('product-info');
+    return {
+      id: productInfo.getAttribute('data-id'),
+      nombre: productInfo.getAttribute('data-nombre'),
+      precio: parseFloat(productInfo.getAttribute('data-precio')),
+      imagen: productInfo.getAttribute('data-imagen'),
+      cantidad: parseInt(document.getElementById('cantidad').value, 10),
+      talla: document.getElementById('talla').value
+    };
+  }
+  
+  // Función para agregar un producto al carrito
+  function agregarAlCarrito() {
+    const producto = obtenerDatosProducto();
+  
+    // Verifica si la talla está seleccionada
+    if (producto.talla === 'Seleccione') {
+      alert('Por favor, seleccione una talla.');
+      return;
+    }
+  
+    // Obtiene el carrito desde el localStorage o crea uno nuevo si no existe
+    let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+  
+    // Verifica si el producto ya está en el carrito
+    const index = carrito.findIndex(item => item.id === producto.id && item.talla === producto.talla);
+    if (index > -1) {
+      // Si el producto ya está en el carrito, actualiza la cantidad
+      carrito[index].cantidad += producto.cantidad;
+    } else {
+      // Si el producto no está en el carrito, agrégalo
+      carrito.push(producto);
+    }
+  
+    // Guarda el carrito actualizado en el localStorage
+    localStorage.setItem('carrito', JSON.stringify(carrito));
+  
+    // Mensaje de éxito
+    alert('El producto se ha agregado al carrito.');
+  }
+  
+  // Asocia la función al botón "Agregar al carrito"
+  document.getElementById('agregarCarrito').addEventListener('click', agregarAlCarrito);
+
+  function carritoCounter() {
+    const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+    const totalProductos = carrito.reduce((acc, producto) => acc + producto.cantidad, 0);
+    document.getElementById('cantidadCarrito').textContent = totalProductos;
+  }
+  
+  // Actualiza el contador al cargar la página
+  document.addEventListener('DOMContentLoaded', carritoCounter);

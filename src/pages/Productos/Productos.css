@@ -33,7 +33,7 @@
     font-family: "Corben", serif;
 }
 
-.categoryitem {
+.categoryitem{
     background-color: #109995;
     border-radius: 1rem;
     display: inline-block; /* Para que los elementos se muestren en línea */
@@ -47,11 +47,6 @@
     max-width: 100%; /* Evita que los botones se salgan del contenedor */
     overflow: hidden; /* Oculta el contenido que sobresale */
     text-overflow: ellipsis; /* Añade puntos suspensivos (...) si el texto es demasiado largo */
-}
-
-
-.categoryitem:hover {
-    background-color: #F85931;
 }
 
 #shopContent {

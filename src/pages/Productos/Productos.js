@@ -126,56 +126,35 @@ const saveLocal = () => {
 /*get item */
 
 /*---------------------FILTROS--------------------------------------*/
+// Selecciona todos los botones con la clase 'categoryitem'
+const categoryItems1 = document.querySelectorAll('.categoryitem');
+
+// Función para cambiar el color de fondo del botón
+const changeButtonColor = (clickedButton) => {
+    categoryItems1.forEach(item => {
+        item.style.backgroundColor = '#109995'; //color principal
+    });
+    clickedButton.style.backgroundColor = '#F85931'; //cambia el color del botón clicado
+};
+
+// Escuchar eventos de click en los botones de filtro
+categoryItems1.forEach(item => {
+    item.addEventListener('click', async (event) => {
+        event.preventDefault();
+        // Cambiar color del botón clicado
+        changeButtonColor(event.currentTarget);
+        // Obtener la categoría seleccionada
+        const selectedCategory = item.getAttribute('category');
+        // Filtrar productos por categoría
+        await filterProductsByCategory(selectedCategory);
+    });
+});
+
+
+//====================================================
 // Función para filtrar productos por categoría
 const filterProductsByCategory = async (category) => {
     try {
-<<<<<<< HEAD
-        const response = await fetch('/data.json');
-        const data = await response.json();
-        shopContent.innerHTML = "";
-        const filteredProducts = data.filter(product => product.categoría === category);
-
-        // Mostrar productos filtrados
-        filteredProducts.forEach(product => {
-            let content = document.createElement("div");
-            content.className = "card";
-            content.innerHTML = `
-            <center><img class="imagenProduct rounded-3" src= "${product.imagen}" margin-bottom="15px"></center>
-            <h2>${product.nombre}</h2>
-            <h3>${product.origen}</h3>
-            <h4>${product.categoría}</h4>
-            <div class="descripcion" style="display: flex; flex-direction: column;">
-            <p>Talla: ${product.talla}</p>            
-            <p>Precio: $${product.precio.toFixed(2)}</p>
-            </div>
-            `;
-            // <p>${product.descripcion}</p> Agregar después
-            //Aquí utilizamos el mismo proceso, pero en vez de que sea un div, será un botón
-           // let comprar = document.createElement("button");
-
-            //comprar.innerText = "comprar";//Con innertext lo ponemos texto al botón
-            //comprar.className = "comprar";//Aquí el botón tiene su propia clase, es el botón de compras //
-            //Aquí lo conectamos con content y le estamos diciendo que a cada producto le agregue un botón de comprar //
-            //content.append(comprar);
-            //shopContent.appendChild(content); 
-
-            //-------------------------------Boton detalles producto -----------------------------------------------------------
-            /* let detalleBoton = document.createElement("button");
-
-            detalleBoton.innerText = "Ver más";//Con innertext lo ponemos texto al botón
-            detalleBoton.className = "detalleBoton";//Clase del boton ver mas
-            content.append(detalleBoton); */
-            
-            // Añadir evento click al botón
-           /*  detalleBoton.addEventListener("click", () => {
-                window.location.href = `/src/pages/detalle_producto/${product.id}.html`; // Redirigir a la página del producto
-            }); */
-            // ---------------------- Termina Boton detalle producto
-        });
-
-        // Si no se encontraron productos para la categoría
-=======
->>>>>>> a9fcf78b1948e7a1ba44a3a5fd4c5f43c88f3bd3
         if (category === "Todo") {
             shopContent.innerHTML = ""; // Limpiar el contenido anterior
             getProducts(); // Mostrar todos los productos
@@ -234,6 +213,8 @@ categoryItems.forEach(item => {
         await filterProductsByCategory(selectedCategory);
     });
 });
+
+
 /*FIN---------------------FILTROS---------------*/
 
 /* ------------------------- */

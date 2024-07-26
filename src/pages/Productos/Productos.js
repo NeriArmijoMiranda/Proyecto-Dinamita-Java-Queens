@@ -121,6 +121,7 @@ export { carrito } /* Se exporta para tenerlo en página compras */
 /*Primero es el set item, esto me la va a guardar*/
 const saveLocal = () => {
     localStorage.setItem("carrito", JSON.stringify(carrito));
+    carritoCounter();
 };
 
 /*get item */
@@ -222,10 +223,16 @@ categoryItems.forEach(item => {
 /*¿¿¿¿¿ Debería estar en encabezado????  Muestra el número*/
 const carritoCounter = () => {
     /* cantidadCarrito.style.display = "block" */
-    const carritoLength = carrito.length;
+    /* const carritoLength = carrito.length;
     localStorage.setItem("carritoLength", JSON.stringify(carritoLength))
 
-    cantidadCarrito.innerText = JSON.parse(localStorage.getItem("carritoLength"));
+    cantidadCarrito.innerText = JSON.parse(localStorage.getItem("carritoLength")); */
+    const carritoLength = carrito.reduce((acc, item) => acc + item.cantidad, 0);
+    localStorage.setItem("carritoLength", JSON.stringify(carritoLength));
+    const cantidadCarrito = document.getElementById("cantidadCarrito");
+    if (cantidadCarrito) {
+        cantidadCarrito.innerText = carritoLength;
+    }
 };
 carritoCounter();
 
@@ -246,5 +253,5 @@ const eliminarProducto = (id) => {
 /* ARLETE: Se exportan para usar en compras */
 export { getProducts }
 export { saveLocal }
-export { carritoCounter }
+export { carritoCounter, filterProductsByCategory }
 export { eliminarProducto }

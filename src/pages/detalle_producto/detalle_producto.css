@@ -1,0 +1,170 @@
+/* ===========================NO MOVER==========================================*/
+
+.container-detalles-producto {
+    background-color: #8D9C09;
+    padding: 2rem;
+    margin: 2rem 4rem 1rem;
+    border-radius: 2rem;
+}
+
+.contenedor-imagen {
+    position: relative;
+    overflow: hidden;
+}
+
+.img-detalles-principal {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease; /* Transición para el zoom */
+    cursor: zoom-in;
+    border-radius: 3rem;
+}
+
+.img-detalles-principal:hover {
+    transform: scale(1.10); /* Zoom al 120% al pasar el mouse sobre la imagen */
+}
+
+.lupa {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-image: url('/public/img/lupa-icon.png'); /* URL de la imagen de la lupa */
+    background-size: cover;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.contenedor-imagen:hover .lupa {
+    opacity: 1;
+}
+
+
+.form-group {
+    background-color: #8D9C09;
+    width: 80%;
+    font-family: "Corben", serif;
+    font-weight: 400;
+    text-align: left;
+    border: none;
+    color: white;
+    padding: 10px;
+    margin-bottom: 1px;
+    border-radius: 1rem;
+}
+
+.form-control {
+    background-color: #c2d041;
+    border: none;
+    border-radius: 1rem;
+    border-color: #c2d041;
+}
+
+.container-acordeon-detalles {
+    max-width: 600px;
+    margin-left: 2rem; /* Espacio entre la imagen y los elementos de la derecha */
+}
+
+.accordion-item-detalles {
+    background-color: #a8b912;
+    border-radius: 2rem;
+}
+
+.accordion-button-detalles {
+    background-color: #08807B;
+    width: 100%;
+    font-family: "Corben", serif;
+    font-weight: 400;
+    text-align: left;
+    border: none;
+    color: white;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 1rem;
+}
+
+button:hover {
+    background-color: #E4007F;
+}
+
+.btn-sug:hover {
+    background-color: #d478ab;
+}
+
+#agregarCarrito {
+    background-color: #08807B;
+    border-radius: 1rem;
+    width: 12rem;
+    height: 4rem;
+    border: none;
+}
+
+.container-sugerencias{
+    background-color: #08807B;
+    font-family: "Corben", serif;
+    margin: 1rem 1rem 1rem 2.4rem;
+    width: 95%;
+    padding: 2rem;
+    text-align: center;
+    color: white;
+    border-radius: 1rem;
+}
+.btn-sug{
+    background-color: #08807B;
+    padding: 0.3rem 0.3rem 1rem 0.3rem;
+    margin: 5.5rem;
+    color: white;
+    width: 1rem;
+    text-align: center;
+    border-radius: 1rem;
+}
+.container-productos-sugeridos{
+    background-color: #08807B;
+    padding: 2rem 2rem 1rem 4rem;
+    margin: 2rem 3rem 1rem 4rem;
+    border-radius: 2rem;
+    align-content: center;
+}
+.card-title,
+.card-text {
+    text-align: center; /* Centra el texto dentro de la tarjeta */
+    font-family: "Corben", serif;
+}
+
+.titulo-pagina2{
+    text-align: center;
+}
+.card {
+    margin: 1rem 2rem 2rem 0.3rem;
+    padding: 3px;
+    padding-bottom: 3rem;
+    border-radius: 2rem;
+    background-color: #8D9C09;
+    color: black;
+}
+.card:hover{
+box-shadow: 10px;
+transform: translate(3%);
+background-color: #c2d041;
+}
+.card-img-top{
+    border-radius: 2rem;
+    height: 17rem;
+    margin: 0.2rem;
+    margin-right: 20rem;
+    padding:1rem;
+    text-align: center;
+}
+.card-img-muñeca{
+    border-radius: 3rem;
+    height: 18rem;
+    margin: 1rem;
+    padding: 1rem;
+    padding-bottom: 2rem;
+}
+.h3{
+    text-align: center;
+}
+
+/* ===============================NO MOVER====================================*/

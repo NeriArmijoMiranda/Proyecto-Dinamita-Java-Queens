@@ -1,46 +1,86 @@
-/* Estilos particulares de Productos*/
-
-/*Diseño para el título */
-/* .nav-container{
-    color: white;
-    font-family: "Corben", serif;
-    font-weight: 400;
-    font-size: 40px;
-    font-style: normal;
-} */
-.banner{
-    color: white;
+.banner {
     background-color: #08807B;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 7rem;
     font-family: "Corben", serif;
-    font-weight: 400;
-    font-size: 40px;
-    font-style: normal;
+    margin: 0.8rem 2.4rem; /* Ajustes de margen */
+    width: calc(100% - 4.8rem); /* Ajuste para centrar y alinear */
+    padding: 2rem;
     text-align: center;
-    
+    color: white;
+    border-radius: 1rem;
 }
-#content-wrap{
-    color:white;
-    font-family: "Mulish", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-size: 20px;
-    font-style: normal;
+
+/* Contenedor de filtros */
+.wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centrar contenido verticalmente */
+    align-items: center; /* Centrar contenido horizontalmente */
 }
-/* Diseño para el producto y su descripción */
-#shopContent{
+
+.filtros {
+    background-color: #08807B;
+    border-radius: 1rem;
+    display: flex;
+    flex-wrap: wrap; /* Permitir que los elementos se envuelvan si no caben en una línea */
+    justify-content: center;
+    gap: 20px; /* Espacio entre elementos */
+    padding: 0.8rem 1rem 0.8rem 1rem; /* Ajustes de padding */
+    width: 100%; /* Ancho máximo */
+    max-width: 95%; /* Ajuste de ancho máximo */
+    font-family: "Corben", serif;
+}
+
+.categoryitem {
+    background-color: #109995;
+    border-radius: 1rem;
+    display: inline-block; /* Para que los elementos se muestren en línea */
+    padding: 1rem 3rem 1rem 3rem; /* Ajusta el padding para hacer los botones más grandes */
+    margin: 2%1; /* Ajuste de margen */
+    text-align: center;
+    color: white;
+    font-family: Mulish;
+    font-size: 1.6rem; /* Ajusta el tamaño de la fuente */
+    white-space: nowrap; /* Evita que el texto se envuelva */
+    max-width: 100%; /* Evita que los botones se salgan del contenedor */
+    overflow: hidden; /* Oculta el contenido que sobresale */
+    text-overflow: ellipsis; /* Añade puntos suspensivos (...) si el texto es demasiado largo */
+}
+
+
+.categoryitem:hover {
+    background-color: #F85931;
+}
+
+#shopContent {
+    background-color: #08807B;
     color: white;
     font-family: "Mulish", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 400;
     font-size: 20px;
-    font-style: normal;    
+    font-style: normal;
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Tres columnas de igual ancho */
-    gap: 10px;
-    justify-content: center;
-    margin: 100px;
-
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas de tamaño igual */
+    gap: 20px; /* Espacio entre tarjetas */
+    justify-items: center; /* Centrar elementos horizontalmente en el grid */
+    padding: 20px; /* Espaciado interno */
+    width: 100%; /* Ancho completo del contenedor padre */
+    max-width: 1450px; /* Ancho máximo para evitar que se expanda demasiado */
+    margin: 1rem auto 6rem; /* Margen superior e inferior de 1rem, centrado horizontalmente */
+    border-radius: 1rem;
 }
+
+.card {
+    background-color: #8d9c09;
+    text-align: center;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    max-width: 100%; /* Ancho máximo de la tarjeta */
+}
+
 @media (max-width: 992px) {
     #shopContent {
         grid-template-columns: repeat(2, 1fr); /* Dos columnas en pantallas medianas */
@@ -53,94 +93,20 @@
     }
 }
 
-/* Contenido / descripción de productos mostrados */
-.descripcion{
-    font-family: "Mulish", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    margin-top: 20px;
-    margin-bottom: 10px;
-}
 
-/* Tarjetas donde se muestran productos */
-.card{
-background-color: #8d9c09;
-text-align: center;
-padding: 10px;
-padding-right: 10px;
-position: relative;
+.card:hover {
+    background-color: #b0bd3b;
 }
-/* Para cambiar el color de tarjetas al pasar el mouse */
-.card:hover{
-    background-color: #f67ce69a;
+.imagenProduct{
+padding: 1rem 1rem 1rem 1rem;
+width: 100%;
 }
-/* Boton comprar */
-.comprar{
+.detalleBoton{
     background-color: #08807B;
-    color: #ffffff;
-    border-radius: 10px;
-    height: 50px;
-    width: 100px;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    position:absolute;
-    /* Alinea el botón 10px desde el borde inferior */
-    bottom: 10px;
-   /* Centra horizontalmente el botón */
-    left:50%;
-    /* Ajusta la posición para centrarlo exactamente */
-    transform: translateX(-50%); /* Ajusta la posición para centrarlo exactamente */
-}
-
-
-.content-body{
-    background-color:#08807B; /* Color de fondo */
-    padding: 20px; /* Espaciado interno */
-    border: 1px solid #ced4da; /* Borde */
-    border-radius: 8px; /* Borde redondeado */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra */
-
-}
-/*Este es el contenedor de nuestros productos y filtros*/
-.wrap{
-    display: flex;
-}
-.filtros{
-    background-color: #08807B;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    width: 15%;
-    height:600px;
-    align-items: center;
-    text-align: center;
-    padding-top: 40px;
-    margin-top: 50px;
-    margin-left: 20px;
-    
-}
-.categoryitem{
-    background-color:#0cb3ad8b;
-    border-radius: 10px;
- display:block;
- width:90%;
- padding:20px;
- margin:10px;
- margin-top: 20px;
- text-align: center;
- justify-content: center;
- color: white;
- font-family: Mulish;
-}
-.filtros .ct_item-active{
-    background-color: #F85931;
-}
-
-/* Clase para imagenes responsive */
-.imagenProduct {
-    max-width: 100%; /* Ancho máximo del 100% del contenedor padre */
-    height: auto; /* Altura automática para mantener la proporción */
-    display: block; /* Asegura que la imagen sea un elemento de bloque */
+    border-radius: 2rem;
+    border: none;
+    color: white;
+    width: 25rem;
+    padding: 0.3rem 1rem 0.4rem 1rem;
+    margin: 0.2rem 1rem 1rem 1rem;
 }

@@ -151,6 +151,10 @@ const pintarCarrito = () => {
     continuar.innerText = "Continuar con la compra";/*Con innertext lo ponemos texto al botón  */
     continuar.className = "continuarBoton"; /*Aquí lo conectamos con content y le estamos diciendo que a cada producto le agregue un botón de comprar */
     resumenCompras.append(continuar);
+    // Agregar el evento click para redirigir
+    continuar.addEventListener("click", function () {
+        window.location.href = "/src/pages/datos_de_envio/datos_de_envio.html"; 
+    });
 };
 pintarCarrito();
 

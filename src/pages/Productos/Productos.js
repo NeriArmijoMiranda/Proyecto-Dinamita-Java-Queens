@@ -126,8 +126,10 @@ const saveLocal = () => {
 /*get item */
 
 /*---------------------FILTROS--------------------------------------*/
+// Función para filtrar productos por categoría
 const filterProductsByCategory = async (category) => {
     try {
+<<<<<<< HEAD
         const response = await fetch('/data.json');
         const data = await response.json();
         shopContent.innerHTML = "";
@@ -172,17 +174,59 @@ const filterProductsByCategory = async (category) => {
         });
 
         // Si no se encontraron productos para la categoría
+=======
+>>>>>>> a9fcf78b1948e7a1ba44a3a5fd4c5f43c88f3bd3
         if (category === "Todo") {
-            getProducts();
-        }
-        else if (filteredProducts.length === 0) {
-            shopContent.innerHTML = "<p>No se encontraron productos para esta categoría.</p>";
+            shopContent.innerHTML = ""; // Limpiar el contenido anterior
+            getProducts(); // Mostrar todos los productos
+        } else {
+            const response = await fetch('/data.json');
+            const data = await response.json();
+            shopContent.innerHTML = ""; // Limpiamos el contenido anterior
+
+            const filteredProducts = data.filter(product => product.categoría === category);
+
+            // Mostrar productos filtrados
+            filteredProducts.forEach(product => {
+                let content = document.createElement("div");
+                content.className = "card";
+                content.innerHTML = `
+                    <center><img class="imagenProduct rounded-3" src="${product.imagen}" margin-bottom="15px"></center>
+                    <h2>${product.nombre}</h2>
+                    <h3>${product.origen}</h3>
+                    <h4>${product.categoría}</h4>
+                    <div class="descripcion" style="display: flex; flex-direction: column;">
+                        <p>Talla: ${product.talla}</p>
+                        <p>Precio: $${product.precio.toFixed(2)}</p>
+                        <p>Cantidad: ${product.cantidad}</p>
+                    </div>
+                `;
+
+                // Agregar botón de detalle
+                let detalleBoton = document.createElement("button");
+                detalleBoton.innerText = "Ver más";
+                detalleBoton.className = "detalleBoton"; // Clase del botón ver más
+                content.appendChild(detalleBoton);
+
+                // Añadir evento click al botón de detalle
+                detalleBoton.addEventListener("click", () => {
+                    window.location.href = `/src/pages/detalle_producto/${product.id}.html`; // Redirigir a la página del producto
+                });
+
+                shopContent.appendChild(content);
+            });
+
+            // Si no se encontraron productos para la categoría
+            if (filteredProducts.length === 0) {
+                shopContent.innerHTML = "<p>No se encontraron productos para esta categoría.</p>";
+            }
         }
     } catch (error) {
         console.error("Error al filtrar productos por categoría:", error);
     };
-}
+};
 
+// Escuchar eventos de click en los botones de filtro
 categoryItems.forEach(item => {
     item.addEventListener('click', async (event) => {
         event.preventDefault();
@@ -190,9 +234,6 @@ categoryItems.forEach(item => {
         await filterProductsByCategory(selectedCategory);
     });
 });
-// Mostrar todos los productos al cargar la página inicialmente
-getProducts();
-
 /*FIN---------------------FILTROS---------------*/
 
 /* ------------------------- */

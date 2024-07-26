@@ -45,10 +45,7 @@ const getProducts = async () => {
         <h3>${product.origen}</h3>
         <h4>${product.categoría}</h4>
         <div class="descripcion" align-items-center>
-        <p>Talla: ${product.talla}</p>
-        
         <p>Precio: $${product.precio}</p>
-        <p>Cantidad: ${product.cantidad}</p>
         </div>
         `;
         //<p>${product.descripcion}</p> Agregar después
@@ -146,10 +143,8 @@ const filterProductsByCategory = async (category) => {
             <h3>${product.origen}</h3>
             <h4>${product.categoría}</h4>
             <div class="descripcion" style="display: flex; flex-direction: column;">
-            <p>Talla: ${product.talla}</p>
-            
+            <p>Talla: ${product.talla}</p>            
             <p>Precio: $${product.precio.toFixed(2)}</p>
-            <p>Cantidad: ${product.cantidad}</p>
             </div>
             `;
             // <p>${product.descripcion}</p> Agregar después

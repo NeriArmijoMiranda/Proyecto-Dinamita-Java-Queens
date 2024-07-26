@@ -174,6 +174,8 @@ function obtenerDatosProducto() {
   
     // Mensaje de éxito
     alert('El producto se ha agregado al carrito.');
+    location.reload();
+
   }
   
   // Asocia la función al botón "Agregar al carrito"

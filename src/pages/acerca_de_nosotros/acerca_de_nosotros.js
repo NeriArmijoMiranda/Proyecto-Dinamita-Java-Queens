@@ -11,6 +11,7 @@ import { footerApp } from '/src/components/footer/footer_app.js'
 
 /*Para que se vean los icons de los botones */
 import 'bootstrap-icons/font/bootstrap-icons.css';
+import { carritoCounter } from '../Productos/Productos.js'
 
 
 document.querySelector("#navbar-app").innerHTML= navbarApp();
@@ -147,3 +148,5 @@ const crearTarjeta = (etiqueta) => {
 
 
 arregloTarjetas.innerHTML = crearArregloTarjetas(integrantes);
+
+carritoCounter();

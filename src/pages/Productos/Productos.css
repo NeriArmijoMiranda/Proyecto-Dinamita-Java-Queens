@@ -48,7 +48,9 @@
     overflow: hidden; /* Oculta el contenido que sobresale */
     text-overflow: ellipsis; /* Añade puntos suspensivos (...) si el texto es demasiado largo */
 }
-
+.categoryitem:hover{
+    background-color: #08807B;
+}
 #shopContent {
     background-color: #08807B;
     color: white;

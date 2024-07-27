@@ -200,6 +200,8 @@ document.querySelectorAll('.dropdown-menu .dropdown-item').forEach(item => {
         await filterProductsByCategory(selectedCategory);
     });
 });
+getProducts ();
+
 /*FIN---------------------FILTROS---------------*/
 
 /* ------------------------- */

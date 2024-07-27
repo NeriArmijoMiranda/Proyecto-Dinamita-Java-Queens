@@ -85,7 +85,7 @@
   margin-right: 50px;
 }
 
-.card {
+.card1 {
   background: #08807B;
   justify-content: center;
   margin-bottom: 50px;
@@ -98,7 +98,7 @@
   width: 300px;
 }
 
-.card:hover {
+.card1:hover {
   background: #E4007F;
 }
 

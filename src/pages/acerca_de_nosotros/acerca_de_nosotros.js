@@ -106,7 +106,7 @@ integrantes.push(  {
 const crearTarjeta = (etiqueta) => {        
     return `
     <!-- card -->
-        <div class="card mb-5 rounded-3 text-center offset-1 col-sm-7 col-md-5 col-lg-3">
+        <div class="card1 mb-5 rounded-3 text-center offset-1 col-sm-7 col-md-5 col-lg-3">
             <!-- avatar -->
             <div class="avatar justify-content-center avatar-xl mt-n7">
                 <img src="${etiqueta.image}" alt="Image" class="rounded-circle border-4

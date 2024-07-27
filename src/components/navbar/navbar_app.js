@@ -79,10 +79,10 @@ const navbarApp = () => {
                   <li>
                     <hr class="dropdown-divider">
                   </li>
-                  <li><a class="dropdown-item" href="/src/pages/Productos/Productos.html">Cerámica</a></li>
-                  <li><a class="dropdown-item" href="/src/pages/Productos/Productos.html">Decoración</a></li>
-                  <li><a class="dropdown-item" href="/src/pages/Productos/Productos.html">Joyería</a></li>
-                  <li><a class="dropdown-item" href="/src/pages/Productos/Productos.html">Textiles</a></li>
+                  <li><a class="dropdown-item" href='#' data-category="Cerámica">Cerámica</a></li>
+                  <li><a class="dropdown-item" href='#' data-category="Decoración">Decoración</a></li>
+                  <li><a class="dropdown-item" href='#' data-category="Joyería">Joyería</a></li>
+                  <li><a class="dropdown-item" href='#' data-category="Textiles">Textiles</a></li>
                 </ul>
               </li>
   

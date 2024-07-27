@@ -22,7 +22,7 @@ const categoryItems = document.querySelectorAll('.categoryitem');
 /* ARLETTE: Ya están en compras. Verificar.
 const verCarrito = document.getElementById("verCarrito");
 const cantidadCarrito = document.getElementById("cantidadCarrito"); */
-
+const datacategoryItems = document.querySelectorAll('.navbar-nav .nav-link');
 /*Aquí puse la igualdad del carrito para que me lo recupere en el localstorage, al carrito se convierte en
 en lo que sea que este guardado en el localStorage. Aqui el carrito es básicamente, si hay algo guardado 
 se convierte en eso, pero si no hay nada pues está vacío */
@@ -191,6 +191,15 @@ categoryItems.forEach(item => {
         await filterProductsByCategory(selectedCategory);
     });
 });
+
+// Escuchar eventos de clic en los enlaces del menú desplegable
+document.querySelectorAll('.dropdown-menu .dropdown-item').forEach(item => {
+    item.addEventListener('click', async (event) => {
+        event.preventDefault(); // Evitar el comportamiento por defecto del enlace
+        const selectedCategory = item.getAttribute('data-category');
+        await filterProductsByCategory(selectedCategory);
+    });
+});
 /*FIN---------------------FILTROS---------------*/
 
 /* ------------------------- */
@@ -230,3 +239,4 @@ export { getProducts }
 export { saveLocal }
 export { carritoCounter, filterProductsByCategory }
 export { eliminarProducto }
+

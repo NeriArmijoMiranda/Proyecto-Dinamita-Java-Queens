@@ -203,7 +203,71 @@ document.querySelectorAll('.dropdown-menu .dropdown-item').forEach(item => {
 getProducts ();
 
 /*FIN---------------------FILTROS---------------*/
+/*-----------------------------------------------*/
+// Función para obtener parámetros de consulta de la URL
+const getQueryParameter = (name) => {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(name);
+};
 
+// Función para cargar productos
+const loadProducts = async (category) => {
+    try {
+        const response = await fetch('/data.json');
+        const data = await response.json();
+
+        // Filtrar productos por categoría si es necesario
+        const filteredProducts = category === "Todo" 
+            ? data 
+            : data.filter(product => product.categoría === category);
+
+        displayProducts(filteredProducts);
+    } catch (error) {
+        console.error("Error al cargar los productos:", error);
+    }
+};
+
+// Función para mostrar productos
+const displayProducts = (products) => {
+    shopContent.innerHTML = ""; // Limpiar contenido anterior
+
+    products.forEach(product => {
+        let content = document.createElement("div");
+        content.className = "card";
+        content.innerHTML = `
+            <center><img class="imagenProduct rounded-3" src="${product.imagen}" margin-bottom="15px"></center>
+            <h2>${product.nombre}</h2>
+            <h3>${product.origen}</h3>
+            <h4>${product.categoría}</h4>
+            <div class="descripcion" style="display: flex; flex-direction: column;">
+                <p>Talla: ${product.talla}</p>
+                <p>Precio: $${product.precio.toFixed(2)}</p>
+                <p>Cantidad: ${product.cantidad}</p>
+            </div>
+            <button class="detalleBoton">Ver más</button>
+        `;
+        
+        // Agregar botón de detalle
+        let detalleBoton = content.querySelector('.detalleBoton');
+        detalleBoton.addEventListener("click", () => {
+            window.location.href = `/src/pages/detalle_producto/${product.id}.html`; // Redirigir a la página del producto
+        });
+
+        shopContent.appendChild(content);
+    });
+
+    // Si no se encontraron productos para la categoría
+    if (products.length === 0) {
+        shopContent.innerHTML = "<p>No se encontraron productos para esta categoría.</p>";
+    }
+};
+
+// Obtener categoría de la URL y cargar productos
+window.onload = () => {
+    const category = getQueryParameter('category') || 'Todo';
+    loadProducts(category);
+};
+/*-----------------------------------------------*/
 /* ------------------------- */
 /*Aquí se guarda lo del localStorage y se ve reflejado en el contador del carrito */
 /*¿¿¿¿¿ Debería estar en encabezado????  Muestra el número*/

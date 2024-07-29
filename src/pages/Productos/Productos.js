@@ -280,8 +280,9 @@ const setupProductFiltering = async () => {
 // Ejecutar la función de configuración al cargar la página
 window.onload = setupProductFiltering;
 
-
 /*-----------------------------------------------*/
+
+
 
 /* ------------------------- */
 /*Aquí se guarda lo del localStorage y se ve reflejado en el contador del carrito */

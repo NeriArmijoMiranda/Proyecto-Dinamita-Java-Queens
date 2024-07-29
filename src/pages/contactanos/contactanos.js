@@ -41,7 +41,3 @@ document.getElementById('form').addEventListener('submit', function(event) {
         alert('Hola, no puedes dejar campos vacíos :D');
     }
 }); 
-
-carritoCounter();
-
-

@@ -75,18 +75,16 @@ const navbarApp = () => {
                   Productos
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="/src/pages/Productos/Productos.html">Todo</a></li>
-                  <li>
-                    <hr class="dropdown-divider">
-                  </li>
-                  <li><a class="dropdown-item" href='#' data-category="Cerámica">Cerámica</a>
-                  </li>
-                  <li><a class="dropdown-item" href='#' data-category="Decoración">Decoración</a>
-                  </li>
-                  <li><a class="dropdown-item" href='#' data-category="Joyería">Joyería</a></li>
-                  <li><a class="dropdown-item" href='#' data-category="Textiles">Textiles</a></li>
-                </ul>
-              </li>
+    <li><a class="dropdown-item" href="/src/pages/Productos/Productos.html?category=Todo">Todo</a></li>
+    <li>
+      <hr class="dropdown-divider">
+    </li>
+    <li><a class="dropdown-item" href="/src/pages/Productos/Productos.html?category=Cerámica">Cerámica</a></li>
+    <li><a class="dropdown-item" href="/src/pages/Productos/Productos.html?category=Decoración">Decoración</a></li>
+    <li><a class="dropdown-item" href="/src/pages/Productos/Productos.html?category=Joyería">Joyería</a></li>
+    <li><a class="dropdown-item" href="/src/pages/Productos/Productos.html?category=Textiles">Textiles</a></li>
+  </ul>
+</li>
   
               <!-- Contáctanos -->
               <li class="nav-item">

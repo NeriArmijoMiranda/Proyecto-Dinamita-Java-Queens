@@ -174,8 +174,8 @@ const filterProductsByCategory = async (category) => {
             });
 
             // Si no se encontraron productos para la categoría
-            if (filteredProducts.length === 0) {
-                shopContent.innerHTML = "<p>No se encontraron productos para esta categoría.</p>";
+           if (filteredProducts.length === 0) {
+               getProducts(); /*shopContent.innerHTML = "<p>No se encontraron productos para esta categoría.</p>";*/
             }
         }
     } catch (error) {
@@ -205,21 +205,22 @@ getProducts ();
 /*FIN---------------------FILTROS---------------*/
 /*-----------------------------------------------*/
 // Función para obtener parámetros de consulta de la URL
-const getQueryParameter = (name) => {
+const getQueryParameter = (paramName) => {
     const urlParams = new URLSearchParams(window.location.search);
-    return urlParams.get(name);
+    return urlParams.get(paramName);
 };
 
-// Función para cargar productos
+// Función para cargar productos desde un archivo JSON y filtrar por categoría
 const loadProducts = async (category) => {
     try {
-        const response = await fetch('/data.json');
-        const data = await response.json();
+        const response = await fetch('/data.json'); // Ruta al archivo JSON con datos de productos
+        const products = await response.json();
+        console.log(`Products data:`, products);
 
         // Filtrar productos por categoría si es necesario
         const filteredProducts = category === "Todo" 
-            ? data 
-            : data.filter(product => product.categoría === category);
+            ? products 
+            : products.filter(product => product.categoría === category);
 
         displayProducts(filteredProducts);
     } catch (error) {
@@ -227,14 +228,20 @@ const loadProducts = async (category) => {
     }
 };
 
-// Función para mostrar productos
-const displayProducts = (products) => {
-    shopContent.innerHTML = ""; // Limpiar contenido anterior
+// Función para mostrar productos en la página
+const displayProducts = (productsList) => {
+    const productContainer = document.getElementById('shopContent'); 
+    if (!productContainer) {
+        console.error("No se encontró el contenedor 'shopContent'");
+        return;
+    }
 
-    products.forEach(product => {
-        let content = document.createElement("div");
-        content.className = "card";
-        content.innerHTML = `
+    productContainer.innerHTML = ""; // Limpiar contenido anterior
+
+    productsList.forEach(product => {
+        let productCard = document.createElement("div");
+        productCard.className = "card";
+        productCard.innerHTML = `
             <center><img class="imagenProduct rounded-3" src="${product.imagen}" margin-bottom="15px"></center>
             <h2>${product.nombre}</h2>
             <h3>${product.origen}</h3>
@@ -248,26 +255,34 @@ const displayProducts = (products) => {
         `;
         
         // Agregar botón de detalle
-        let detalleBoton = content.querySelector('.detalleBoton');
-        detalleBoton.addEventListener("click", () => {
+        let detailButton = productCard.querySelector('.detalleBoton');
+        detailButton.addEventListener("click", () => {
             window.location.href = `/src/pages/detalle_producto/${product.id}.html`; // Redirigir a la página del producto
         });
 
-        shopContent.appendChild(content);
+        productContainer.appendChild(productCard);
     });
 
     // Si no se encontraron productos para la categoría
-    if (products.length === 0) {
-        shopContent.innerHTML = "<p>No se encontraron productos para esta categoría.</p>";
+    if (productsList.length === 0) {
+        productContainer.innerHTML = "<p>No se encontraron productos para esta categoría.</p>";
     }
 };
 
-// Obtener categoría de la URL y cargar productos
-window.onload = () => {
-    const category = getQueryParameter('category') || 'Todo';
-    loadProducts(category);
+// Función principal para configurar el filtrado
+const setupProductFiltering = async () => {
+    if (window.location.pathname.includes("Productos.html")) {
+        const categoryParam = getQueryParameter('category') || 'Todo';
+        await filterProductsByCategory(categoryParam);
+    }
 };
+
+// Ejecutar la función de configuración al cargar la página
+window.onload = setupProductFiltering;
+
+
 /*-----------------------------------------------*/
+
 /* ------------------------- */
 /*Aquí se guarda lo del localStorage y se ve reflejado en el contador del carrito */
 /*¿¿¿¿¿ Debería estar en encabezado????  Muestra el número*/
@@ -305,4 +320,6 @@ export { getProducts }
 export { saveLocal }
 export { carritoCounter, filterProductsByCategory }
 export { eliminarProducto }
-
+export {getQueryParameter}
+export {loadProducts }
+export {displayProducts}

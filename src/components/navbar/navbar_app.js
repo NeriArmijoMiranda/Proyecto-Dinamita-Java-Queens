@@ -75,16 +75,18 @@ const navbarApp = () => {
                   Productos
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="/src/pages/Productos/Productos.html">Todo</a></li>
-                  <li>
-                    <hr class="dropdown-divider">
-                  </li>
-                  <li><a class="dropdown-item" href="/src/pages/Productos/Productos.html">Cerámica</a></li>
-                  <li><a class="dropdown-item" href="/src/pages/Productos/Productos.html">Decoración</a></li>
-                  <li><a class="dropdown-item" href="/src/pages/Productos/Productos.html">Joyería</a></li>
-                  <li><a class="dropdown-item" href="/src/pages/Productos/Productos.html">Textiles</a></li>
-                </ul>
-              </li>
+    <li><a class="dropdown-item" href="/src/pages/Productos/Productos.html?category=Todo">Todo</a></li>
+    <li>
+      <hr class="dropdown-divider">
+    </li>
+     <li class="nav-item" id="categorySection">
+    <li><a class="dropdown-item" href="/src/pages/Productos/Productos.html?category=Cerámica">Cerámica</a></li>
+    <li><a class="dropdown-item" href="/src/pages/Productos/Productos.html?category=Decoración">Decoración</a></li>
+    <li><a class="dropdown-item" href="/src/pages/Productos/Productos.html?category=Joyería">Joyería</a></li>
+    <li><a class="dropdown-item" href="/src/pages/Productos/Productos.html?category=Textiles">Textiles</a></li>
+    </li>
+  </ul>
+</li>
   
               <!-- Contáctanos -->
               <li class="nav-item">
@@ -128,5 +130,18 @@ const navbarApp = () => {
       </nav> <!-- Se cierra Header -->
   `;
 };
+
+// Manejar eventos de clic en los enlaces del menú desplegable
+document.querySelectorAll('.dropdown-menu .dropdown-item').forEach(item => {
+    item.addEventListener('click', (event) => {
+        event.preventDefault(); // Evitar el comportamiento por defecto del enlace
+        
+        // Obtener el valor de la categoría desde el atributo href del enlace
+        const selectedCategory = item.getAttribute('href').split('category=')[1];
+        
+        // Redirigir a la página de productos con el parámetro de categoría
+        window.location.href = `/src/pages/Productos/Productos.html?category=${selectedCategory}`;
+    });
+});
 
 export { navbarApp };

@@ -22,7 +22,7 @@ const categoryItems = document.querySelectorAll('.categoryitem');
 /* ARLETTE: Ya están en compras. Verificar.
 const verCarrito = document.getElementById("verCarrito");
 const cantidadCarrito = document.getElementById("cantidadCarrito"); */
-
+const datacategoryItems = document.querySelectorAll('.navbar-nav .nav-link');
 /*Aquí puse la igualdad del carrito para que me lo recupere en el localstorage, al carrito se convierte en
 en lo que sea que este guardado en el localStorage. Aqui el carrito es básicamente, si hay algo guardado 
 se convierte en eso, pero si no hay nada pues está vacío */
@@ -195,8 +195,8 @@ const filterProductsByCategory = async (category) => {
             });
 
             // Si no se encontraron productos para la categoría
-            if (filteredProducts.length === 0) {
-                shopContent.innerHTML = "<p>No se encontraron productos para esta categoría.</p>";
+           if (filteredProducts.length === 0) {
+               getProducts(); /*shopContent.innerHTML = "<p>No se encontraron productos para esta categoría.</p>";*/
             }
         }
     } catch (error) {
@@ -213,8 +213,104 @@ categoryItems.forEach(item => {
     });
 });
 
+getProducts ();
 
 /*FIN---------------------FILTROS---------------*/
+/*-----------------------------------------------*/
+// Función para obtener parámetros de consulta de la URL
+const getQueryParameter = (paramName) => {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(paramName);
+};
+
+// Función para cargar productos desde un archivo JSON y filtrar por categoría
+const loadProducts = async (category) => {
+    try {
+        const response = await fetch('/data.json'); // Ruta al archivo JSON con datos de productos
+        const products = await response.json();
+        console.log(`Products data:`, products);
+
+        // Filtrar productos por categoría si es necesario
+        const filteredProducts = category === "Todo" 
+            ? products 
+            : products.filter(product => product.categoría === category);
+
+        displayProducts(filteredProducts);
+    } catch (error) {
+        console.error("Error al cargar los productos:", error);
+    }
+};
+
+// Función para mostrar productos en la página
+const displayProducts = (productsList) => {
+    const productContainer = document.getElementById('shopContent'); 
+    if (!productContainer) {
+        console.error("No se encontró el contenedor 'shopContent'");
+        return;
+    }
+
+    productContainer.innerHTML = ""; // Limpiar contenido anterior
+
+    productsList.forEach(product => {
+        let productCard = document.createElement("div");
+        productCard.className = "card";
+        productCard.innerHTML = `
+            <center><img class="imagenProduct rounded-3" src="${product.imagen}" margin-bottom="15px"></center>
+            <h2>${product.nombre}</h2>
+            <h3>${product.origen}</h3>
+            <h4>${product.categoría}</h4>
+            <div class="descripcion" style="display: flex; flex-direction: column;">
+                <p>Talla: ${product.talla}</p>
+                <p>Precio: $${product.precio.toFixed(2)}</p>
+                <p>Cantidad: ${product.cantidad}</p>
+            </div>
+            <button class="detalleBoton">Ver más</button>
+        `;
+        
+        // Agregar botón de detalle
+        let detailButton = productCard.querySelector('.detalleBoton');
+        detailButton.addEventListener("click", () => {
+            window.location.href = `/src/pages/detalle_producto/${product.id}.html`; // Redirigir a la página del producto
+        });
+
+        productContainer.appendChild(productCard);
+    });
+
+    // Si no se encontraron productos para la categoría
+    if (productsList.length === 0) {
+        productContainer.innerHTML = "<p>No se encontraron productos para esta categoría.</p>";
+    }
+};
+
+// Función principal para configurar el filtrado
+const setupProductFiltering = async () => {
+    //if (window.location.pathname.includes("productos.html")) { // Ajustar la URL según sea necesario
+        const categoryParam = getQueryParameter('category') || 'Todo';
+        await loadProducts(categoryParam);
+    };
+
+// Ejecutar la función de configuración al cargar la página
+window.onload = setupProductFiltering;
+
+
+// Manejar eventos de clic en los enlaces del menú desplegable
+document.querySelectorAll('.dropdown-menu .dropdown-item').forEach(item => {
+    item.addEventListener('click', async (event) => {
+        event.preventDefault(); // Evitar el comportamiento por defecto del enlace
+        const selectedCategory = item.getAttribute('href').split('category=')[1];
+        
+        // Actualizar la URL con el parámetro de categoría
+        window.history.pushState({}, '', `productos.html?category=${selectedCategory}`);
+        
+        // Cargar productos filtrados
+        await loadProducts(selectedCategory);
+    });
+});
+
+
+/*-----------------------------------------------*/
+
+
 
 /* ------------------------- */
 /*Aquí se guarda lo del localStorage y se ve reflejado en el contador del carrito */
@@ -253,3 +349,6 @@ export { getProducts }
 export { saveLocal }
 export { carritoCounter, filterProductsByCategory }
 export { eliminarProducto }
+export {getQueryParameter}
+export {loadProducts }
+export {displayProducts}

@@ -53,8 +53,6 @@
 .titulo-pagina2{
 text-align: center;
 }
-
-
 /* Estilos para los grupos de cantidad y talla */
 .form-group {
     background-color: #8D9C09;
@@ -256,5 +254,10 @@ button:hover {
     display: block; /* Asegúrate de que el botón ocupe todo el ancho disponible */
     width: 100%; /* Ancho del botón igual al ancho de la tarjeta */
     margin: 1rem auto; /* Espacio alrededor del botón */
+}
+
+.atras-productos{
+    background-color: #F1A20B;
+    border-radius: 10px;
 }
 /* ===============================NO MOVER====================================*/

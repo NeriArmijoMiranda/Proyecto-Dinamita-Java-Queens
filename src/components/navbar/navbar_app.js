@@ -131,4 +131,17 @@ const navbarApp = () => {
   `;
 };
 
+// Manejar eventos de clic en los enlaces del menú desplegable
+document.querySelectorAll('.dropdown-menu .dropdown-item').forEach(item => {
+    item.addEventListener('click', (event) => {
+        event.preventDefault(); // Evitar el comportamiento por defecto del enlace
+        
+        // Obtener el valor de la categoría desde el atributo href del enlace
+        const selectedCategory = item.getAttribute('href').split('category=')[1];
+        
+        // Redirigir a la página de productos con el parámetro de categoría
+        window.location.href = `/src/pages/Productos/Productos.html?category=${selectedCategory}`;
+    });
+});
+
 export { navbarApp };

@@ -192,14 +192,6 @@ categoryItems.forEach(item => {
     });
 });
 
-// Escuchar eventos de clic en los enlaces del menú desplegable
-document.querySelectorAll('.dropdown-menu .dropdown-item').forEach(item => {
-    item.addEventListener('click', async (event) => {
-        event.preventDefault(); // Evitar el comportamiento por defecto del enlace
-        const selectedCategory = item.getAttribute('data-category');
-        await filterProductsByCategory(selectedCategory);
-    });
-});
 getProducts ();
 
 /*FIN---------------------FILTROS---------------*/
@@ -271,14 +263,29 @@ const displayProducts = (productsList) => {
 
 // Función principal para configurar el filtrado
 const setupProductFiltering = async () => {
-    if (window.location.pathname.includes("Productos.html")) {
+    //if (window.location.pathname.includes("productos.html")) { // Ajustar la URL según sea necesario
         const categoryParam = getQueryParameter('category') || 'Todo';
-        await filterProductsByCategory(categoryParam);
-    }
-};
+        await loadProducts(categoryParam);
+    };
 
 // Ejecutar la función de configuración al cargar la página
 window.onload = setupProductFiltering;
+
+
+// Manejar eventos de clic en los enlaces del menú desplegable
+document.querySelectorAll('.dropdown-menu .dropdown-item').forEach(item => {
+    item.addEventListener('click', async (event) => {
+        event.preventDefault(); // Evitar el comportamiento por defecto del enlace
+        const selectedCategory = item.getAttribute('href').split('category=')[1];
+        
+        // Actualizar la URL con el parámetro de categoría
+        window.history.pushState({}, '', `productos.html?category=${selectedCategory}`);
+        
+        // Cargar productos filtrados
+        await loadProducts(selectedCategory);
+    });
+});
+
 
 /*-----------------------------------------------*/
 

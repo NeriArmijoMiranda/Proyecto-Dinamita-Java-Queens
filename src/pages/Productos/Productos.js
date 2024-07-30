@@ -176,9 +176,7 @@ const filterProductsByCategory = async (category) => {
                     <h3>${product.origen}</h3>
                     <h4>${product.categoría}</h4>
                     <div class="descripcion" style="display: flex; flex-direction: column;">
-                        <p>Talla: ${product.talla}</p>
                         <p>Precio: $${product.precio.toFixed(2)}</p>
-                        <p>Cantidad: ${product.cantidad}</p>
                     </div>
                 `;
 

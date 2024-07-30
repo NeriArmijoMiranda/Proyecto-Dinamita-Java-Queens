@@ -1,7 +1,7 @@
 const footerApp = () => {
     return `
       <!-- Se crea fila del pie de página  -->
-      <div class="row align-items-center">
+      <div class="row align-items-center mt-6">
         <!-- Se crean las 3 columnas para los datos -->
         <!-- Direccion -->
         
@@ -60,7 +60,7 @@ const footerApp = () => {
           </svg>
           Dinamita Java Queen’s
           <br>
-          <a id=link-color href="/src/pages/acerca_de_nosotros/acerca_de_nosotros.html" > Acerca de nosotros </a>
+          <a id=link-color href="/src/pages/acerca_de_nosotros/acerca_de_nosotros.html" > Acerca de Dinamita Java Queen's </a>
           <br>
           <a id=link-color href="/src/pages/Form_crea_objetos/form_crea_objetos.html" > Formulario de Productos Nuevos </a>
 

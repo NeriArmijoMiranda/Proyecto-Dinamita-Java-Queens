@@ -50,12 +50,28 @@ body{
 
 
 #title {
-  color:#fff;
   text-align: center;
   font-weight: bold;
   font-family: "Corben regular";
-  font-size: 700 px;
+  font-size: 30rem;
   text-align: center;
+}
+#title h1{
+  font-weight: bold;
+  font-family: "Corben regular";
+  font-size: 5rem;
+  text-align: center;
+  color: white;
+  animation: mover-izquierda-derecha 3s 1;
+}
+@keyframes mover-izquierda-derecha{
+  from{
+    transform: translateX(-6rem);
+  }
+}
+
+#title h1:hover{
+  color: #08807b;
 }
 
 #welcome{

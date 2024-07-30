@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Compras</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Asegúrate de enlazar tu archivo CSS -->
 </head>
 
 <body>
@@ -16,31 +17,57 @@
     <!-- Contenido de la página -->
     <div id="content-wrap">
       <!-- Aquí va el contenido -->
-      <div class="banner">
+      <div class="banner-carrito">
         <div class="banner-container"> </div>
         <h1> Mi carrito </h1>
       </div>
-      <!-- <h1 class="modal-header-tittle mt-4 ml-4"> Mi carrito: </h1> -->
-      <!-- Contenedor general-->
-      <div id="contenedorGeneral" class="row justify-content-around">
-        
-
-        <!-- Se crean las 2 columnas para los datos -->
-        <!-- Cuando sea pequeña sea 12, y grande 6, 1 columna en pequeño y dos en grande -->
-        
+      
+      <!-- Contenedor general -->
+      <div id="contenedorGeneral" class="row">
         <!-- Productos -->
-        <div  id="modalContainer" class="col-12 col-md-5 col-lg-5 text-center">
+        <div id="modalContainer" class="col-12 col-md-5 col-lg-5 text-center">
+          <!-- Contenido de productos -->
+        </div>
+        
+        <!-- Contenedor de Resumen y Carrusel -->
+        <div class="col-12 col-md-5 col-md-5 d-flex flex-column align-items-center">
+          <div id="contenedorResumen" class="text-center">
+            <div id="resumenCompras">
+              <!-- Contenido del resumen de compra -->
+            </div>
+          </div>
           
-        </div> <!-- Se cierra productos -->
-
-        <!-- Resumen compra -->
-        <div id="contenedorResumen" class="col-12 col-md-5 col-lg-5 text-center">
-        <div id="resumenCompras" >
+          <div class="container-artesanos">
+            <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="/public/img/arte1.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="/public/img/arte2.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="/public/img/arte3.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="/public/img/arte4.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="/public/img/arte5.png" class="d-block w-100" alt="...">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
         </div>
-        </div>
-
       </div>
-
     </div>
 
     <!-- Footer -->
@@ -50,7 +77,6 @@
     <script type="module" src="./compras.js"></script>
 
   </div>
-
 </body>
 
 </html>

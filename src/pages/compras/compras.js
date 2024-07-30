@@ -24,7 +24,7 @@ document.innerHTML = saveLocal();
 /*Las const son para llamarlas del html y decirles "Eh te estan hablando" */
 
 const contenedorGeneral = document.getElementById("contenedorGeneral"); /* Contenedor general de toda la página */
-const modalContainer  = document.getElementById("modalContainer");/* descripción producto en html  */
+const Container  = document.getElementById("modalContainer");/* descripción producto en html  */
 const resumenCompras = document.getElementById("resumenCompras"); /* Resumen de compras html */
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 const verCarrito = document.getElementById("verCarrito");
@@ -63,12 +63,12 @@ const pintarCarrito = () => {
         funcionar, en este caso lo conectamos al HTML, que es donde vienen las propiedades*/
         carritoContent.className = "modal-content";//Clase para poder dar estilos al CSS
         carritoContent.innerHTML = `
-        <center><img class="imagenCompras rounded-3" src= "${product.imagen}"  ><center>
-        <h2>${product.nombre}</h2>
-        <h2>${product.origen}</h2>
-        <p>Talla: ${product.talla}</p>
-        <p>Precio: $${product.precio} mxn</p>
-        <div >
+        <img class="imagenCompras rounded-3" src= "${product.imagen}">
+        <h1><strong>${product.nombre}</strong></h1>
+        <h3>${product.origen}</h3>
+        <h4>Talla: ${product.talla}</h4>
+        <h4>Precio: $${product.precio} mxn</h4>
+        <div class= "cantidad">
             Cantidad:
             <span class="restar">
             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-caret-down-fill"
@@ -85,7 +85,7 @@ const pintarCarrito = () => {
             </svg> </span>
         </div>
 
-        <p>Total: $ ${product.cantidad * product.precio} mxn</p>
+        <p><strong>Total: $ ${product.cantidad * product.precio} mxn</strong></p>
         
         <span class="delete">
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
@@ -161,3 +161,4 @@ pintarCarrito();
 /* Llamamos las funciones que importamos de Productos */
 carritoCounter(); /*Al llamar la función, se muestra el número del carrito.*/
 eliminarProducto(); /* Elimina elemento del carrito al refrescar */
+

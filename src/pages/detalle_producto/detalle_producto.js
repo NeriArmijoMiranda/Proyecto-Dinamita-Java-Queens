@@ -1,5 +1,5 @@
 /* ----NO BORRAR------------ */
-/* Aquí van las rutas de conexión */
+/* Aquí van las rutas de conexión */ 
 import '/style.scss'
 import * as bootstrap from 'bootstrap' /* Para desplegar el menú / activar cosas de bootstrap */
 import './detalle_producto.css'

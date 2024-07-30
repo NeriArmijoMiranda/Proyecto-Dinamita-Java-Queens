@@ -1,196 +1,215 @@
 /* Estilos particulares de Contáctanos */
 
 .container-fluid-titulo-forms {
-    background-color: #08807B;
-    align-content: space-between;
+    background-image: url(/public/img/jarronesdebarrocolores.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 7rem;
     font-family: "Corben", serif;
-    font-weight: 700;
-    font-style: normal;
-    font: center;
+    margin: 0.8rem 2.4rem; /* Ajustes de margen */
+    width: calc(100% - 4.8rem); /* Ajuste para centrar y alinear */
+    padding: 2rem;
     text-align: center;
     color: white;
-
+    border-radius: 1rem;
+}
+.container-fluid-titulo-forms h1{
+    font-size: 3.6rem;
 }
 
 .container-fluid-2 {
     background-color: black;
-    align-content: baseline;
-    text-align: left;
-    font-style: normal;
+    text-align: center; /* Centra el texto dentro del contenedor */
     font-family: "Corben", serif;
     font-weight: 400;
     color: white;
-
+    padding: 2rem; /* Ajusta el padding para agregar espacio alrededor del texto */
+    box-sizing: border-box; /* Incluye el padding en el tamaño total del contenedor */
+    margin: 0 auto; /* Centra el contenedor */
+    width: calc(100% - 4.8rem); /* Ajuste para centrar y alinear */
+    border-radius: 1rem;
 }
+
+.container2 h2 {
+    font-size: 2.6rem; /* Ajusta el tamaño del texto según sea necesario */
+    margin: 0; /* Elimina márgenes predeterminados del h2 */
+}
+
 
 .container-fluid-3 {
-    background-color: #08807B;
-    align-content: space-between;
+    background-color: black;
+    height: auto; /* Ajusta automáticamente la altura según el contenido */
     font-family: "Corben", serif;
-    font-weight: 700;
-    font-style: normal;
-    font: center;
+    margin: 0rem 2.4rem; /* Ajustes de margen */
+    width: calc(100% - 4.8rem); /* Ajuste para centrar y alinear */
+    padding: 1rem; /* Ajusta el padding para evitar desbordamiento */
     text-align: center;
-    border: 3px;
-    border-radius: 25px;
-    color: white;
-
+    color: #08807B;
+    border-radius: 1rem;
+    box-sizing: border-box; /* Incluye el padding y el borde en el tamaño total */
+    overflow: hidden; /* Oculta cualquier contenido desbordante */
 }
 
-/*Apartado de preguntas frecuentes bottones*/
+/* Ajusta el tamaño del texto si es necesario */
+.container-fluid-3 h2 {
+    font-size: 2.5rem; /* Ajusta el tamaño del texto para que quepa en el contenedor */
+    margin: 0; /* Elimina márgenes predeterminados del h2 */
+}
+
+
+/*=================Apartado de preguntas frecuentes bottones==========================*/
+.custom-accordion {
+    max-width: 100%; /* Permite que el acordeón ocupe todo el ancho disponible */
+    width: 100%; /* Asegura que el acordeón ocupe todo el ancho disponible */
+}
+
+/* Asegura que el botón del acordeón tenga el tamaño adecuado */
 .accordion-button {
     background-color: #F85931;
+    font-size: 1.25rem; /* Ajusta el tamaño del texto según sea necesario */
+    padding: 1rem; /* Ajusta el padding para hacer el botón más grande */
+}
+.accordion-button:hover{
+    background-color: #f27252;
+}
+/* Ajusta el tamaño del contenedor de las preguntas */
+.accordion-header {
+    margin-bottom: 0.5rem; /* Ajusta el margen inferior si es necesario */
 }
 
-/*preguntas despegables*/
+/* Estilo de las preguntas */
 .p-preguntas {
     font-family: "Corben", serif;
     font-weight: 700;
-    font-style: normal;
-    font-optical-sizing: auto;
+    font-size: 1.7rem; /* Ajusta el tamaño del texto de las preguntas */
+    margin: 0; /* Elimina el margen por defecto */
+    color: black;
 }
 
+/* Estilo de las respuestas */
 .p-respuesta {
     font-family: "Mulish", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
+    font-size: 1.4rem; /* Ajusta el tamaño del texto de las respuestas */
+    margin: 0; /* Elimina el margen por defecto */
 }
 
-.botonEnviar:hover {
-    background-color: #088078;
+/* Estilo del cuerpo del acordeón */
+.accordion-body {
+    padding: 1rem; /* Ajusta el padding para hacer el cuerpo más grande */
 }
 
-/*Color dentro de las respuestas*/
+/* Fondo y borde del acordeón */
 .accordion-item {
-    background-color: #8D9C09;
-}
-
-.ul {
-    color: black;
+    background-color: #f0dbb3;
+    border: none; /* Elimina el borde si es necesario */
     font-family: "Mulish", sans-serif;
-    font-weight: 400;
+    font-size: 1.4rem; /* Ajusta el tamaño del texto de las respuestas */
+    margin: 0; /* Elimina el margen por defecto */
 }
 
-.p-envio {
-    font-family: "Mulish", sans-serif;
-    font-weight: 400;
+/* Ajuste para el enlace dentro de las respuestas */
+.p-respuesta a {
+    color: #F85931; /* Ajusta el color del enlace si es necesario */
+    text-decoration: underline; /* Añade un subrayado al enlace */
 }
 
-.accordion-header {
-    font-weight: 700;
+.accordion-button::after {
+    filter: invert(100%) sepia(100%) saturate(1000%) hue-rotate(180deg); /* Ajuste del ícono del acordeón */
 }
 
-/*Termina apartado de preguntas frecuentes*/
+/* Opcional: Ajuste para mejorar la accesibilidad */
+.accordion-button:focus {
+    box-shadow: none; /* Elimina el enfoque predeterminado para mejorar la accesibilidad */
+}
+
+/* ============Termina apartado de preguntas frecuentes==================*/
 /*Cómo se ve el cuerpo del form*/
 
-/*Referencia al Escríbenos */
+/* Estilo general del formulario */
+form {
+    padding: 2rem;
+    border-radius: 20px;
+    background-image: url(/public/img/huarachescolorazul.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    max-width: 100%;
+    margin: 0 auto 10rem 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilo del título */
 #escribenos {
     font-family: "Mulish", sans-serif;
     color: white;
-    font-size: 30px;
-    border-radius: 20px;
-    background-color: #5aece3;
-
-}
-
-/*Creo que aquí se tendría que hacer responsive, pero no sé AIUDAAAAAA :u */
-
-form {
-    padding: 100px;
-    border-radius: 20px;
+    font-size: 2.6rem;
+    border-radius: 1rem;
+    background-color: transparent; /* Totalmente transparente */
     text-align: center;
-    background-color: #088078;
-    flex-direction: column;
-    max-width: 70rem; 
-    margin-bottom: 18px;
+    margin-bottom: 1rem;
 }
 
-.object-fit-cover {
-    width: 500;
-    height: 10rem;
-
-}
-
-/*Modificación de los grupos input-grupo */
-.input-grupo {
-    display: grid;
-    flex-direction: column;
-    text-align: left;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 40px;
-
-}
-
-/*Modificación clase "form-content */
-.form-content {
+/* Contenedor de los grupos de campos */
+.form-row {
     display: flex;
-    flex-direction: column;
-
+    flex-wrap: wrap;
+    gap: 2rem;
 }
 
-/*Modificación de etiqueta */
+/* Estilo para el grupo de campos a la izquierda */
+.form-group-left, .form-group-right {
+    flex: 1;
+    min-width: 300px; /* Asegura que los grupos de campos se ajusten en pantallas pequeñas */
+}
+
+/* Estilo de los campos del formulario */
+.input_c {
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    background-color: rgba(240, 219, 179, 0.5); /* Color #f0dbb3 con 50% de transparencia */
+    border: none;
+    outline: none;
+    width: 100%;
+    color: white;
+}
+
+
+/* Estilo de los labels */
 label {
+    display: block;
     color: white;
     font-family: "Mulish", sans-serif;
-    font-size: 30px;
+    font-size: 1.25rem;
     font-weight: 600;
-    margin-bottom: 5px;
-
+    margin-bottom: 0.5rem;
 }
 
-
-/*Modificación de comentarios */
-.input_c{
-
-    padding: 20px 25px;
-    border-radius: 20px;
-    margin-bottom: 30px;
-    background-color: #5aece3;
-    border: 0cap;
-    outline: none;
-
+/* Estilo del botón de enviar */
+.botonEnviar {
+    font-size: 1.4rem;
+    border-radius: 1rem;
+    padding: 0.75rem;
+    color: white;
+    background-color:#c8af7f;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+    margin-top: 1rem;
+    margin-left: 9rem;
+}
+.botonEnviar:hover{
+    background-color: #1e9894;
 }
 
-.form-txt {
-    margin-bottom: 30px;
-    display: flex;
-    justify-content: space-between;
-    text-align: center;
-
-}
-
-/*Botón chido */
-    .botonEnviar{
-        font-size: 16px;
-        border-radius: 10px;
-        margin: 100px;
-        padding: 10px;
-       /*  width: 100px; */
-        margin-left: 50px;
-        margin-right: 100px;
-        cursor: pointer;
-        color: white;
-        background-color: #055e58;
-    }
-
-/*Lo que va a adentro de las cajitas como ejemplos "Mariana" */
-::placeholder {
-    color: rgba(46, 45, 45, 0.521);
-    font-size: 20px;
-}
-
-/*Según mis averiguaciones tendría que ser responsive pero no  */
-@media (max-width: 1199.98px){
-.form{
-        padding: 50px 55px;
-        border-radius: 20px;
-        text-align: center;
-        width: 200px;
-        background-color:#088078;
-        /* /display y flex-direction cambios/ */
-        display: flex;
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    .form-row {
         flex-direction: column;
-        max-width: 200px;
+    }
+    
+    .form-group-left, .form-group-right {
+        min-width: 100%;
     }
 }

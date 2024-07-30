@@ -1,6 +1,8 @@
 /* Estilos particulares de ¿Quiénes somos? */
 .container1 {
-    background-color: #088078;
+    background-image: url(/public/img/verdeaguamadera.png);
+    background-repeat: no-repeat;
+    background-size: cover;
     margin-top: 200px;
     margin-left: 0px;
     margin-right: 0px;
@@ -9,16 +11,17 @@
 }
 
 .container2 {
-    margin-top: 50px;
+    margin-top: 1.4rem;
     margin-bottom: 20px;
-    background-image: url(/public/img/cestas_tejidas.jpg);
+    background-image: url(/public/img/artesanosombreros.png);
     background-image: center;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 250px;
+    height: 400px;
     margin-left: 100px;
     margin-right: 100px;
+    border-radius: 2rem;
 }
 
 .container3 {
@@ -31,6 +34,7 @@
     min-height: 150px; /* Se puede utilizar margin al rededor del parrafo */
     justify-content: center;
     text-align: center;
+    border-radius: 1rem;
 
 }
 
@@ -45,9 +49,10 @@
     height: 400px;
     margin-left: 100px;
     margin-right: 100px;
+    border-radius: 2rem;
 }
 
-.h1 {
+.titulo-quienes-somos {
     font-family: Corben;
     color: white;
 
@@ -60,20 +65,18 @@
     margin-bottom: 10px;
 }
 
-.h2 {
-    font-size: 40px;
-}
-
-.container5 {
-    margin-top: 30px;
-    margin-bottom: 20px;
-    height: 80px;
+.titulo-nuestros-valores {
+    margin-top: 1rem;
+    margin-bottom: 0.3rem;
+    height: 100%;
     margin-left: 100px;
     margin-right: 100px;
     color: white;
-    font-size: medium;
+    font-size: 3rem;
     font-family: Corben;
-    font-size: 57px;
+}
+.titulo-nuestros-valores:hover{
+    color: #E4007F;
 }
 
 /*Nuestros Valores*/
@@ -94,7 +97,12 @@
     margin-left: 30px;
     margin-right: 10px;
 }
-
+.text-valores{
+    color: white;
+}
+.text-valores:hover{
+    color: #F1A20B;
+}
 /* Contenido misión y visión */
 
 .contenido {
@@ -120,7 +128,7 @@
 }
 
 .imagenmision {
-    background-image: url(/public/img/juguetes_mexicanos.jpg);
+    background-image: url(/public/img/aguaazzu.png);
     background-position: center;
     background-size: cover;
     height: 300px;
@@ -128,7 +136,11 @@
     width: 100%;
     /* Ancho completo del contenedor */
     margin-bottom: 200px;
+    border-radius: 2rem;
 
+}
+.imagenmision:hover{
+transform: translatex(0.3rem);
 }
 
 .mision {
@@ -140,6 +152,9 @@
     margin-bottom: 50px;
     /* Espacio inferior */
     font-size: 20px;
+}
+.mision:hover{
+    color: #F1A20B;
 }
 
 .contenedor-vision {
@@ -157,6 +172,7 @@
     align-items: center;
 }
 
+
 .vision {
     color: white;
     /* Color del texto */
@@ -167,9 +183,11 @@
     /* Espacio inferior */
     font-size: 20px;
 }
-
+.vision:hover{
+    color: #F1A20B;
+}
 .imagenvision {
-    background-image: url(/public/img/platos_de_ceramica_mexicanos.jpg);
+    background-image: url(/public/img/artesanoplatos.png);
     background-position: center;
     background-size: cover;
     height: 300px;
@@ -177,9 +195,27 @@
     width: 100%;
     /* Ancho completo del contenedor */
     margin-bottom: 50px;
+    border-radius: 2rem;
+}
+.imagenvision:hover{
+    transform: translatex(0.3rem);
 }
 
 .subtitulo {
+    background-color: #08807B;
+    color: white;
+    text-align: center;
+    font-family: "Corben", serif;
+    padding: 10px 0;
+    width: 100%;
+    margin-bottom: 40px;
+    border-radius: 1rem;
+    /* Espacio inferior */
+}
+.subtitulo:hover{
+    background-color: #0da49f;
+}
+.subtitulo2 {
     background-color: #8D9C09;
     color: white;
     text-align: center;
@@ -187,5 +223,9 @@
     padding: 10px 0;
     width: 100%;
     margin-bottom: 40px;
+    border-radius: 1rem;
     /* Espacio inferior */
+}
+.subtitulo2:hover{
+    background-color: #b0c209;
 }

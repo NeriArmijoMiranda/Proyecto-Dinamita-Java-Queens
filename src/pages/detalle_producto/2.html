@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sombrero palma</title>
+  <title>Sombrero de Palma</title>
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -22,13 +22,13 @@
       <!--Este div es el div donde vamos a conectar la parte NÚMERO 1, le ponemos un id para poder llevarlo de es manera
       al Javascript-->
       <div id="shopContent" class="container mt-4 row justify-content-center"> </div>
-      <!-- Contenido detalles del producto -->
+
       <section class="container-detalles-producto mt-4" id="1">
         <div class="row">
-            <!-- Columna para la imagen -->
+            <!-- Columna para la imagen --> 
             <div class="col-md-6">
                 <div class="uno">
-                    <img class="img-detalles-principal" src="/public/img/vaso de barro negro.jpg" alt="vaso de barro negro con flores">
+                    <img class="img-detalles-principal" src="/public/img/sombrero de palma.jpg" alt="vaso de barro negro con flores">
                     <div class="lupa"></div>
                 </div>
             </div>
@@ -37,17 +37,17 @@
                 <div class="container-detalles-producto2">
                     <div class="dos">
                       <!-- Atributos de datos del producto -->
-                <div id="product-info" data-id="vaso-negro" data-nombre="Vaso de barro negro" data-precio="80.00" data-imagen="/img/vaso de barro negro.jpg">
+                <div id="product-info" data-id="sombrero-palma" data-nombre="Sombrero de Palma" data-precio="230.00" data-imagen="/img/sombrero de palma.jpg">
                 </div>
                         <!-- Contenido de la columna dos -->
-                        <h1 class="titulo-pagina2">Vaso de barro negro</h1>
-                        <h3 class="titulo-pagina2">Oaxaca, México</h3>
-                        <h4 class="titulo-pagina2">Precio: $80.00</h4>
+                        <h1 class="titulo-pagina1">Sombrero de palma</h1>
+                        <h3 class="titulo-pagina2">Yucatán, México</h3>
+                        <h4 class="titulo-pagina2">Precio: $230.00</h4>
                         
                         <!-- Casilla de selección con flechas arriba y abajo -->
                         <div class="form-group">
                             <label for="cantidad">Cantidad:</label>
-                            <div class="input-group">
+                            <div class="input-group1">
                                 <input type="number" class="form-control" id="cantidad" value="1" min="1" max="100">
                             </div>
                         </div>
@@ -86,9 +86,9 @@
                                     data-bs-parent="#accordionFlushExample">
                                     <div class="accordion-body">
                                         <ul>
-                                            <li>Vaso de barro negro, artesanal</li>
-                                            <li>Material: Barro</li>
-                                            <li>Medidas: 30cm x 60cm</li>
+                                            <li>Sombrero de palma</li>
+                                            <li>Materiales: Palma</li>
+                                            <li>Medidas: 20cm x 13cm</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -121,18 +121,12 @@
                                     aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
                                     <div class="accordion-body">
                                         <ul>
-                                            <li>Elegante vaso de barro negro meticulosamente decorado con delicadas flores,
-                                                creando una obra
-                                                de arte funcional que combina tradición y belleza. Cada flor está
-                                                cuidadosamente pintada a
-                                                mano
-                                                por nuestros artesanos oaxaqueños, resaltando detalles vívidos y colores
-                                                contrastantes que
-                                                resaltan sobre el fondo. Ofrece una experiencia táctil única que es ideal
-                                                tanto como pieza
-                                                decorativa como para su uso diario, este vaso añadirá un toque de
-                                                distinción y autenticidad a
-                                                cualquier ambiente.</li>
+                                            <li>Este encantador sombrero está tejido a mano con palma natural de las regiones de Yucatán,
+                                                ofreciendo un estilo clásico y funcionalidad ideal para días soleados. Su diseño ligero y
+                                                transpirable proporciona comodidad durante horas, mientras que el tejido artesanalmente
+                                                asegura durabilidad y resistencia. Elaborado con materiales naturales y un cuidado artesanal,
+                                                cada sombrero es único, reflejando la habilidad y la tradición de los artesanos que lo
+                                                crearon.</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -144,55 +138,61 @@
         </div>
     </section>
 
-      <!-- Sugerencias de compra -->
-      <section class="container-sugerencias mt-3">
-        <h1>Sugerencias de compra</h1>
-      </section>
-      <section class="container-productos-sugeridos col-12 col-md-11">
-        <div class="row">
-          <!-- Tarjeta 1 -->
-          <div class="card" style="width: 18rem;">
-            <img src="/public/img/figurilla de barro.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Gato de Barro</h5>
-              <p class="card-text">Tlaxcala, México</p>
-              <a href="./8.html" class="btn-sug btn-primary">ver más</a>
-            </div>
-          </div>
-          <!-- Tarjeta 2 -->
-          <div class="card" style="width: 18rem;">
-            <img src="/public/img/mascara de madera.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Mascara Madera</h5>
-              <p class="card-text">Guerrero, México</p>
-              <a href="./5.html" class="btn-sug btn-primary">ver más</a>
-            </div>
-          </div>
-          <!-- Tarjeta 3 -->
-          <div class="card" style="width: 18rem;">
-            <img src="/public/img/jarra de barro.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Jarra de barro</h5>
-              <p class="card-text">Puebla, México</p>
-              <a href="./6.html" class="btn-sug btn-primary">ver más</a>
-            </div>
-          </div>
-          <!-- Tarjeta 4-->
-          <div class="card" style="width: 18rem;">
-            <img src="/public/img/tapete de lana.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Tapete Lana</h5>
-              <p class="card-text">Zacatecas, México</p>
-              <a href="./4.html" class="btn-sug btn-primary">ver más</a>
-            </div>
-          </div>
-      </section>
-    </div> <!-- Se cierra content-wrap -->
-
-    <!-- Footer -->
-    <footer id="footer-app" class="footer-basic container-fluid"> </footer>
+    <!-- Sugerencias de compra -->
+<section class="container-sugerencias mt-3">
+  <h1>Sugerencias de compra</h1>
+</section>
+<!--Contenedor de productos sugeridos-->
+<section class="container-productos-sugeridos">
+  <!-- Tarjeta 1 -->
+  <div class="card" style="width: 18rem;">
+      <img src="/public/img/figurilla de barro.jpg" class="card-img-top" alt="Gato de barro">
+      <div class="card-body">
+          <h5 class="card-text-sug">Gato de barro</h5>
+          <p class="card-text-sug">Tlaxcala, México</p>
+          <a href="./8.html" class="btn-sug btn-primary">ver más</a>
+      </div>
   </div>
-
+  <!-- Tarjeta 2 -->
+  <div class="card" style="width: 18rem;">
+      <img src="/public/img/tapete de lana.jpg" class="card-img-top" alt="Tapete de lana">
+      <div class="card-body">
+          <h5 class="card-text-sug">Tapete de lana</h5>
+          <p class="card-text-sug">Zacatecas, México</p>
+          <a href="./4.html" class="btn-sug btn-primary">ver más</a>
+      </div>
+  </div>
+  <!-- Tarjeta 3 -->
+  <div class="card" style="width: 18rem;">
+      <img src="/public/img/mascara de madera.jpg" class="card-img-top" alt="Máscara de madera">
+      <div class="card-body">
+          <h5 class="card-text-sug">Máscara de madera</h5>
+          <p class="card-text-sug">Guerrero, México</p>
+          <a href="./5.html" class="btn-sug btn-primary">ver más</a>
+      </div>
+  </div>
+  <!-- Tarjeta 4 -->
+  <div class="card" style="width: 18rem;">
+      <img src="/public/img/sombrero de palma.jpg" class="card-img-top" alt="Sombrero de palma">
+      <div class="card-body">
+          <h5 class="card-text-sug">Sombrero de palma</h5>
+          <p class="card-text-sug">Yucatán, México</p>
+          <a href="./2.html" class="btn-sug btn-primary">ver más</a>
+      </div>
+  </div>
+  <!-- Tarjeta 5 -->
+  <div class="card" style="width: 18rem;">
+    <img src="/public/img/muñecalele.jpg" class="card-img-top" alt="Sombrero de palma">
+    <div class="card-body">
+        <h5 class="card-text-sug">Muñeca Lele</h5>
+        <p class="card-text-sug">Querétaro, México</p>
+        <a href="./11.html" class="btn-sug btn-primary">ver más</a>
+    </div>
+</div>
+</section>
+<!-- Footer -->
+<footer id="footer-app" class="footer-basic container-fluid"> </footer>
+</div>
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"

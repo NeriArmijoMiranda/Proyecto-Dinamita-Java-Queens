@@ -17,7 +17,7 @@ document.querySelector("#footer-app").innerHTML= footerApp();
 
 /* Aquí comienzan los JS particulares de Contáctanos */
 
-console.log("Espero por todos los Dioses que te logres conectar");
+//console.log("Espero por todos los Dioses que te logres conectar");
 
 /*Vamos a crear variables que validen en consola lo que el formulario está haciendo, estas se encuentran en el HTML 
 con su respectivo "id="*/

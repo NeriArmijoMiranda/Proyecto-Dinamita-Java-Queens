@@ -76,7 +76,7 @@ integrantes.push(  {
 integrantes.push(  { 
     nombre : " Jhorleny Arrellano Chávez ",
     rol : " Desarrollador Java FullStack " ,
-    frase: "\" Cree en ti, esfuérzate y hazlo posible \" ",
+    frase: "\" Conviértete en el cambio que deseas ver en el mundo \" - Mahatma Gandhi ",
     linkedin: "https://www.linkedin.com/in/jhorleny-arellano/",
     github: "https://github.com/Jhorchss",
     correo: "jhorleny.business@gmail.com",
@@ -106,7 +106,7 @@ integrantes.push(  {
 const crearTarjeta = (etiqueta) => {        
     return `
     <!-- card -->
-        <div class="card mb-5 rounded-3 text-center offset-1 col-sm-7 col-md-5 col-lg-3">
+        <div class="card-nosotros mb-5 rounded-3 text-center offset-1 col-sm-7 col-md-5 col-lg-3">
             <!-- avatar -->
             <div class="avatar justify-content-center avatar-xl mt-n7">
                 <img src="${etiqueta.image}" alt="Image" class="rounded-circle border-4
@@ -115,7 +115,7 @@ const crearTarjeta = (etiqueta) => {
             <!-- card body -->
             <div class="card-body">
                 <!-- Title -->
-                <h4 class="mb-1">${etiqueta.nombre}</h4>
+                <h4 class="mb-1"><strong>${etiqueta.nombre}</strong></h4>
                 <p>${etiqueta.rol}</p>
                 <p class="d-none d-md-block">${etiqueta.frase}</p>
             </div>

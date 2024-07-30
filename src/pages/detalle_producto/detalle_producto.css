@@ -1,11 +1,12 @@
 /* ===========================NO MOVER==========================================*/
-
 /* Estilos generales para el contenedor de detalles del producto */
 .container-detalles-producto {
     background-color: #8D9C09;
     padding: 2rem;
-    margin: 2rem 4rem 1rem;
+    margin: 0.4rem auto; /* Centra el contenedor horizontalmente y aplica margen superior e inferior */
     border-radius: 2rem;
+    width: 90%; /* Ajusta el ancho para que todos los contenedores tengan el mismo ancho */
+    box-sizing: border-box; /* Incluye padding y border en el cálculo del ancho total */
 }
 
 /* Contenedor para la imagen con efecto de zoom */
@@ -42,22 +43,67 @@
 .contenedor-imagen:hover .lupa {
     opacity: 1;
 }
-
-/* Estilos para los grupos de formulario */
-.form-group {
-    background-color: #8D9C09;
-    width: 100%; /* Cambiado a 100% para asegurarse de que el grupo de formulario ocupe el ancho del contenedor */
-    font-family: "Corben", serif;
-    font-weight: 400;
-    text-align: left;
-    border: none;
-    color: white;
-    padding: 10px;
-    margin: 10px 0; /* Ajuste de márgenes para evitar el desplazamiento hacia la derecha */
-    border-radius: 1rem;
-    box-sizing: border-box; /* Incluye padding y border en el cálculo del ancho total */
+/*Estilos de título y texto detalles*/
+.titulo-pagina1{
+    text-align: center;
+    font-family: "Mulish";
+    font-weight: 700;
+    font-size: 3rem;
+}
+.titulo-pagina2{
+text-align: center;
 }
 
+
+/* Estilos para los grupos de cantidad y talla */
+.form-group {
+    background-color: #8D9C09;
+    width: 100%;
+    font-family: "Corben", serif;
+    font-weight: 700;
+    color: rgb(7, 7, 7);
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 1rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column; /* Cambia a row si quieres alineación horizontal */
+}
+
+.form-group label {
+    margin-bottom: 0.5rem; /* Espacio entre el label y el input/select */
+    font-size: 1.4rem;
+}
+
+.input-group1 {
+    background-color: #8D9C09;
+    display: flex;
+    align-items: center; /* Alinea el contenido verticalmente en el centro */
+}
+
+#cantidad{
+    background-color: #a8b912;
+    font-size: 1.3rem;
+    padding: 0.5rem; /* Ajusta el padding según sea necesario */
+    width: 70%; /* Asegúrate de que ocupe todo el ancho disponible */
+    box-sizing: border-box; /* Incluye padding y border en el cálculo del ancho total */
+    border: none;
+}
+#cantidad:hover{
+    background-color: #cee219;
+}
+#talla {
+    background-color: #a8b912;
+    font-size: 1.3rem;
+    border: none;
+    padding: 0.5rem; /* Ajusta el padding según sea necesario */
+    width: 70%; /* Asegúrate de que ocupe todo el ancho disponible */
+    box-sizing: border-box; /* Incluye padding y border en el cálculo del ancho total */
+}
+#talla:hover{
+    background-color: #cee219;
+}
+/*Fin de estilos cantidad y talla*/
 /* Estilos para el botón "Agregar al carrito" */
 #agregarCarrito {
     background-color: #08807B;
@@ -72,6 +118,10 @@
     align-items: center;
     justify-content: center; /* Centra el contenido del botón */
     margin-top: 10px; /* Separación del contenido superior */
+}
+#agregarCarrito:hover {
+    background-color: #408b88;
+    transform: translateY(0.1rem);
 }
 
 /* Estilos para el contenedor de acordeón de detalles */
@@ -102,7 +152,7 @@
 
 /* Estilos para botones al pasar el ratón sobre ellos */
 button:hover {
-    background-color: #E4007F;
+    background-color: #F85931;
 }
 
 /* Estilos para los botones de sugerencias al pasar el ratón sobre ellos */
@@ -112,17 +162,19 @@ button:hover {
 
 /* Estilos para el contenedor de sugerencias */
 .container-sugerencias {
-    background-color: #08807B;
+    background-image: url(/public/img/florestejidascolores.png);
+    background-repeat: no-repeat;
+    background-size: cover;
     font-family: "Corben", serif;
-    margin: 1rem 1rem 1rem 2.4rem;
-    width: 95%;
+    margin: 1rem auto 2rem auto; /* Centra el contenedor horizontalmente y aplica margen superior e inferior */
+    width: 90%; /* Ajusta el ancho para que todos los contenedores tengan el mismo ancho */
     padding: 2rem;
     text-align: center;
     color: white;
     border-radius: 1rem;
+    box-sizing: border-box; /* Incluye padding y border en el cálculo del ancho total */
 }
 
-/* Estilos para el botón de sugerencias */
 /* Estilos para el botón de sugerencias */
 .btn-sug {
     background-color: #08807B;
@@ -142,13 +194,18 @@ button:hover {
 }
 
 /* Estilos para el contenedor de productos sugeridos */
-/* Contenedor de las tarjetas con diseño flex */
 .container-productos-sugeridos {
     background-color: #08807B;
     display: flex;
-    flex-wrap: wrap; /* Permite que las tarjetas se envuelvan en múltiples líneas */
+    flex-wrap: nowrap; /* Asegura que las tarjetas no se envuelvan */
+    overflow-x: auto; /* Permite el desplazamiento horizontal si las tarjetas exceden el ancho del contenedor */
     gap: 1rem; /* Espacio entre las tarjetas */
-    padding: 2rem; /* Espacio interno alrededor de las tarjetas */
+    padding: 3rem 1rem 3rem 5rem;
+    margin: 1rem auto 11rem auto; /* Centra el contenedor horizontalmente y aplica margen superior e inferior */
+    border-radius: 2rem;
+    width: 90%; /* Ajusta el ancho para que todos los contenedores tengan el mismo ancho */
+    box-sizing: border-box; /* Incluye padding y border en el cálculo del ancho total */
+    align-items: center; /* Centra verticalmente las tarjetas */
 }
 
 /* Estilos para las tarjetas */
@@ -156,10 +213,14 @@ button:hover {
     background-color: #8D9C09;
     color: black;
     border-radius: 2rem;
-    flex: 1 1 calc(25% - 1rem); /* Ajusta el tamaño de las tarjetas para que quepan en una fila */
-    max-width: calc(25% - 1rem); /* Ancho máximo de las tarjetas */
-    margin: 0; /* Elimina el margen de las tarjetas */
-    padding: 1rem; /* Espacio interno de las tarjetas */
+    flex: 0 0 18rem; /* Cada tarjeta tiene un ancho fijo de 18rem */
+    box-sizing: border-box; /* Incluye padding y border en el cálculo del ancho total */
+    margin: 0; /* Elimina el margen alrededor de las tarjetas */
+    padding: 0.4rem; /* Espacio interno de las tarjetas */
+}
+.card:hover {
+    background-color: #a8b912;
+    transform: translateY(2rem);
 }
 
 /* Estilos para las imágenes en las tarjetas */
@@ -168,20 +229,21 @@ button:hover {
     height: 17rem;
     object-fit: cover; /* Asegura que la imagen cubra el área de la tarjeta sin distorsionar */
 }
+.card-text-sug{
+    text-align: center;
+}
 
 /* Estilos generales para pantallas pequeñas */
 @media (max-width: 768px) {
     .card {
-        flex: 1 1 calc(50% - 1rem); /* Dos tarjetas por fila */
-        max-width: calc(50% - 1rem); /* Ancho máximo de las tarjetas */
+        flex: 0 0 14rem; /* Ajusta el ancho de las tarjetas en pantallas más pequeñas */
     }
 }
 
 /* Estilos para pantallas muy pequeñas (móviles) */
 @media (max-width: 576px) {
     .card {
-        flex: 1 1 100%; /* Una tarjeta por fila */
-        max-width: 100%; /* Ancho máximo de las tarjetas */
+        flex: 0 0 100%; /* Una tarjeta por fila en pantallas muy pequeñas */
     }
 
     .card-img-top {
@@ -195,6 +257,4 @@ button:hover {
     width: 100%; /* Ancho del botón igual al ancho de la tarjeta */
     margin: 1rem auto; /* Espacio alrededor del botón */
 }
-
-
 /* ===============================NO MOVER====================================*/

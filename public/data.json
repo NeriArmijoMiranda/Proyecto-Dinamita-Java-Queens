@@ -18,11 +18,11 @@
     },
     {
         "id": 3,
-        "nombre": "Bolsa de Mimbre",
+        "nombre": "Bolsa de Flores",
         "categoría": "Textiles",
         "precio": 560.00,
         "imagen": "/img/bolsa de mimbre.jpg",
-        "origen": "Chiapas, México"
+        "origen": "Oaxaca, México"
     },
     {
         "id": 4,
@@ -64,7 +64,7 @@
         "categoría": "Decoración",
         "precio": 590.00,
         "imagen": "/img/figurilla de barro.jpg",
-        "origen": "Tlaxcala, México"
+        "origen": "Ciudad de México, México"
     },
     {
         "id": 9,
@@ -84,11 +84,11 @@
     },
     {
         "id": 11,
-        "nombre": "Muñeca Lele de Cholula",
+        "nombre": "Muñeca Lele",
         "categoría": "Decoración",
         "precio": 180.00,
         "imagen": "/img/muñecalele.jpg",
-        "origen": "Guadalajara, México"
+        "origen": "Querétaro, México"
     },
     {
         "id": 12,

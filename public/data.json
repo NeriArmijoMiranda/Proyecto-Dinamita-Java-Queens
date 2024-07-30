@@ -3,7 +3,7 @@
     {
         "id": 1,
         "nombre": "Vaso de Barro",
-        "categoría": "Barro",
+        "categoría": "Cerámica",
         "precio": 80.00,
         "imagen": "/img/vaso de barro negro.jpg",
         "origen": "Oaxaca, México"
@@ -45,7 +45,7 @@
     {
         "id": 6,
         "nombre": "Jarra de Barro",
-        "categoría": "Barro",
+        "categoría": "Cerámica",
         "precio": 360.00,
         "imagen": "/img/jarra de barro.jpg",
         "origen": "Puebla, México"
@@ -61,7 +61,7 @@
     {
         "id": 8,
         "nombre": "Alebrije de Gato",
-        "categoría": "Decoración",
+        "categoría": "Cerámica",
         "precio": 590.00,
         "imagen": "/img/figurilla de barro.jpg",
         "origen": "Ciudad de México, México"

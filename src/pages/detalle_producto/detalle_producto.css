@@ -257,7 +257,12 @@ button:hover {
 }
 
 .atras-productos{
-    background-color: #F1A20B;
-    border-radius: 10px;
+    background-color: #8D9C09;
+    border-radius: 1rem;
+    margin: 1rem 3rem;
+    width: 100%;
+    padding: 0.6rem;
+    color: white;
 }
+
 /* ===============================NO MOVER====================================*/

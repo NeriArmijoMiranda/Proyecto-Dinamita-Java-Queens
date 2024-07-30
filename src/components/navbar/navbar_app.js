@@ -6,7 +6,7 @@ const navbarApp = () => {
   
           <!-- Logo con link para redireccionar al Inicio -->
           <a id="logo-title" class="navbar-brand" href="index.html">
-            <img class="logo-image rounded-3 " src="/img/logo_yoatzin.png"
+            <img class="logo-image " src="/img/logo_yoatzin.png"
               alt="Logo de Yoatzin con flores de colores y fondo negro ">
           </a>
 
@@ -61,7 +61,7 @@ const navbarApp = () => {
               <!-- ¿Quiénes somos? -->
               <li class="nav-item">
                 <a class="nav-link" href="/src/pages/quienes_somos/quienes_somos.html">¿Quiénes somos?</a>
-                <!-- <a class="nav-link active" aria-current="page" href="/src/pages/¿Quienes-somos/¿Quienes-somos.html">¿Quiénes somos?</a> -->
+                <!-- <a class="nav-link active" aria-current="page" href="/src/pages/¿Quienes-somos/¿Quienes-somos.html"><strong>¿Quiénes somos?</strong></a> -->
                 <!-- <a class="nav-link" href="#"> No está activa -->
                 <!-- <a class="nav-link active" aria-current="page" href="#"> Está activa
                 - nav-link active demuestra que esta activa esa página
@@ -71,8 +71,8 @@ const navbarApp = () => {
               <!-- Producto con menú desplegable -->
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="/src/pages/Productos/Productos.html" role="button" data-bs-toggle="dropdown"
-                  aria-expanded="false">
-                  Productos
+                  aria-expanded="false"><strong>
+                  Productos</strong>
                 </a>
                 <ul class="dropdown-menu">
     <li><a class="dropdown-item" href="/src/pages/Productos/Productos.html?category=Todo">Todo</a></li>

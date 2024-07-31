@@ -15,6 +15,7 @@ export default defineConfig({
                 iniciarSesion: resolve(__dirname,'src/pages/iniciar_sesion/iniciar_sesion.html'),
 		        Productos: resolve(__dirname,'src/pages/Productos/Productos.html'),
 		        quienesSomos: resolve(__dirname,'src/pages/quienes_somos/quienes_somos.html'),
+                producto1: resolve(__dirname, 'src/pages/detalle_producto/1.html'),
                 
             },
         },

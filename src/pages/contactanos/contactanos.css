@@ -15,6 +15,7 @@
 }
 .container-fluid-titulo-forms h1{
     font-size: 3.6rem;
+    text-shadow: 0.4rem 0.4rem 0.2rem #000
 }
 
 .container-fluid-2 {
@@ -40,11 +41,12 @@
     background-color: black;
     height: auto; /* Ajusta automáticamente la altura según el contenido */
     font-family: "Corben", serif;
+    font-weight: 700; 
     margin: 0rem 2.4rem; /* Ajustes de margen */
     width: calc(100% - 4.8rem); /* Ajuste para centrar y alinear */
     padding: 1rem; /* Ajusta el padding para evitar desbordamiento */
     text-align: center;
-    color: #08807B;
+    color: #F1A20B;
     border-radius: 1rem;
     box-sizing: border-box; /* Incluye el padding y el borde en el tamaño total */
     overflow: hidden; /* Oculta cualquier contenido desbordante */
@@ -75,6 +77,7 @@
 /* Ajusta el tamaño del contenedor de las preguntas */
 .accordion-header {
     margin-bottom: 0.5rem; /* Ajusta el margen inferior si es necesario */
+    background-color: blue;
 }
 
 /* Estilo de las preguntas */
@@ -96,11 +99,12 @@
 /* Estilo del cuerpo del acordeón */
 .accordion-body {
     padding: 1rem; /* Ajusta el padding para hacer el cuerpo más grande */
+    background-color: #1e9894;
 }
 
 /* Fondo y borde del acordeón */
 .accordion-item {
-    background-color: #f0dbb3;
+    background-color: #1e9894;
     border: none; /* Elimina el borde si es necesario */
     font-family: "Mulish", sans-serif;
     font-size: 1.4rem; /* Ajusta el tamaño del texto de las respuestas */
@@ -120,6 +124,7 @@
 /* Opcional: Ajuste para mejorar la accesibilidad */
 .accordion-button:focus {
     box-shadow: none; /* Elimina el enfoque predeterminado para mejorar la accesibilidad */
+    background-color: #f27252;
 }
 
 /* ============Termina apartado de preguntas frecuentes==================*/
@@ -212,4 +217,7 @@ label {
     .form-group-left, .form-group-right {
         min-width: 100%;
     }
+}
+.accordion-button:not(.collapsed) {
+    background-color: #f27252;
 }

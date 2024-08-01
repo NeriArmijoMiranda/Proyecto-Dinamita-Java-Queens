@@ -11,6 +11,7 @@ import { footerApp } from '/src/components/footer/footer_app.js'
 
 /*Para que se vean los icons de los botones */
 import 'bootstrap-icons/font/bootstrap-icons.css';
+import { carritoCounter } from '../Productos/Productos.js'
 
 
 document.querySelector("#navbar-app").innerHTML= navbarApp();
@@ -27,7 +28,7 @@ const integrante = {
     linkedin: "https://www.linkedin.com/in/alejandra-alvarado-003681191?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     github: "https://github.com/AlejandraAC",
     correo: "ale.alvarado.contreras@gmail.com",
-    image:  "/public/img/Ale.jpg",
+    image:  "/img/Ale_.png",
 };
 
 const integrantes = [   integrante   ];
@@ -39,7 +40,7 @@ integrantes.push(  {
     linkedin: "https://www.linkedin.com/in/desire-garcia-ya%C3%B1ez-282b29181?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     github: "https://github.com/dessgrc1609",
     correo: "desiregrc@gmail.com",
-    image: "/public/img/Desire.jpg",
+    image: "/img/Desire_.png",
 }  );
 
 integrantes.push(  { 
@@ -49,7 +50,7 @@ integrantes.push(  {
     linkedin: "https://www.linkedin.com/in/ivonne-abigail-mendoza-cervantes-00770b312/",
     github: "https://github.com/EusbekMendoza?tab=repositories",
     correo: "abhyinfinito@hotmail.com", 
-    image: "/public/img/Mendoza.jpg",
+    image: "/img/Mendoza_.png",
 }  );
 
 integrantes.push(  { 
@@ -59,7 +60,7 @@ integrantes.push(  {
     linkedin: "https://www.linkedin.com/in/jazm%C3%ADn-cruz-857383241/",
     github: "https://github.com/JazzCI",
     correo: "jazzpchan.93@gmail.com",
-    image: "/public/img/Jazz.jpg",
+    image: "/img/Jazz_.png",
 }  );
 
 integrantes.push(  { 
@@ -69,17 +70,17 @@ integrantes.push(  {
     linkedin: "https://www.linkedin.com/in/arlette-miranda/",
     github: " https://github.com/Arlette-Miranda",
     correo: "arlettemirandac@gmail.com",
-    image: "/public/img/Arlette.jpg",
+    image: "/img/Arlette_.png",
 }  );
 
 integrantes.push(  { 
     nombre : " Jhorleny Arrellano Chávez ",
     rol : " Desarrollador Java FullStack " ,
-    frase: "\" Cree en ti, esfuérzate y hazlo posible \" ",
+    frase: "\" Conviértete en el cambio que deseas ver en el mundo \" - Mahatma Gandhi ",
     linkedin: "https://www.linkedin.com/in/jhorleny-arellano/",
     github: "https://github.com/Jhorchss",
     correo: "jhorleny.business@gmail.com",
-    image: "/public/img/Jhor.jpg", 
+    image: "/img/Jhor_.png", 
 }  );
 
 integrantes.push(  { 
@@ -89,7 +90,7 @@ integrantes.push(  {
     linkedin: "https://www.linkedin.com/in/marbella-magaly-cabrera-dur%C3%A1n-649584278/",
     github: "https://github.com/marbellacabrera",
     correo: "marbecduran@gmail.com",
-    image: "/public/img/Marbe.jpg",
+    image: "/img/Marbe_.png",
 }  );
 
 integrantes.push(  { 
@@ -99,13 +100,13 @@ integrantes.push(  {
     linkedin: "https://www.linkedin.com/in/neri-armijo-miranda-821318195/",
     github: "https://github.com/NeriArmijoMiranda",
     correo: "neriarmijomiranda530@gmail.com", 
-    image: "/public/img/Neri.jpg",
+    image: "/img/Neri_.png",
 }  );
 
 const crearTarjeta = (etiqueta) => {        
     return `
     <!-- card -->
-        <div class="card mb-5 rounded-3 text-center offset-1 col-sm-7 col-md-5 col-lg-3">
+        <div class="card-nosotros mb-5 rounded-3 text-center offset-1 col-sm-7 col-md-5 col-lg-3">
             <!-- avatar -->
             <div class="avatar justify-content-center avatar-xl mt-n7">
                 <img src="${etiqueta.image}" alt="Image" class="rounded-circle border-4
@@ -114,7 +115,7 @@ const crearTarjeta = (etiqueta) => {
             <!-- card body -->
             <div class="card-body">
                 <!-- Title -->
-                <h4 class="mb-1">${etiqueta.nombre}</h4>
+                <h4 class="mb-1"><strong>${etiqueta.nombre}</strong></h4>
                 <p>${etiqueta.rol}</p>
                 <p class="d-none d-md-block">${etiqueta.frase}</p>
             </div>
@@ -147,3 +148,5 @@ const crearTarjeta = (etiqueta) => {
 
 
 arregloTarjetas.innerHTML = crearArregloTarjetas(integrantes);
+
+carritoCounter();

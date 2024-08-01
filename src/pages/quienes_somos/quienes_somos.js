@@ -8,9 +8,10 @@ import '/src/components/navbar/navbar.css'
 
 import { navbarApp } from '/src/components/navbar/navbar_app.js'
 import { footerApp } from '/src/components/footer/footer_app.js'
-
+import { carritoCounter } from '../Productos/Productos.js'
 
 document.querySelector("#navbar-app").innerHTML= navbarApp();
 document.querySelector("#footer-app").innerHTML= footerApp();
 
 /* ------------------------------------------------------------- */
+carritoCounter();

@@ -5,7 +5,7 @@
     height: 100%;
     font-family: "Corben", serif;
     font-weight: 700;
-    font-size: large;
+    font-size: 1.5rem;
     font-style: normal;
 }
 
@@ -13,7 +13,8 @@
 .logo-image {
     max-height: 1 rem;
     height: auto;
-    max-width: 5rem;
+    max-width: 7rem;
+    border-radius: 1.3rem;
 }
 
 /* Estilo para distribuir el menú en toda la página. */
@@ -36,6 +37,7 @@
     font-style: normal;
     width: 110px;
     height:auto;
+    
   }
   
   .btn {
@@ -44,5 +46,3 @@
     width: 50px;
     height:auto;
   }
-  
-  

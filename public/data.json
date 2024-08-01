@@ -4,133 +4,99 @@
         "id": 1,
         "nombre": "Vaso de Barro",
         "categoría": "Cerámica",
-        "precio": 15.00,
+        "precio": 80.00,
         "imagen": "/img/vaso de barro negro.jpg",
-        "origen": "Oaxaca, México",
-        "talla": "Única",
-        "cantidad": 1,
-        "descripcion": "Elegante vaso de barro negro meticulosamente decorado con delicadas flores, creando una obra de arte funcional que combina tradición y belleza. Cada flor está cuidadosamente pintada a mano por nuestros artesanos oaxaqueños, resaltando detalles vívidos y colores contrastantes que resaltan sobre el fondo. Ofrece una experiencia táctil única que es ideal tanto como pieza decorativa como para su uso diario, este vaso añadirá un toque de distinción y autenticidad a cualquier ambiente."
+        "origen": "Oaxaca, México"
     },
     {
         "id": 2,
         "nombre": "Sombrero de Palma",
         "categoría": "Textiles",
-        "precio": 20.00,
+        "precio": 230.00,
         "imagen": "/img/sombrero de palma.jpg",
-        "origen": "Yucatán, México",
-        "talla": "M",
-        "cantidad": 1,
-        "descripcion": "Este encantador sombrero está tejido a mano con palma natural de las regiones de Yucatán, ofreciendo un estilo clásico y funcionalidad ideal para días soleados. Su diseño ligero y transpirable proporciona comodidad durante horas, mientras que el tejido artesanalmente asegura durabilidad y resistencia. Elaborado con materiales naturales y un cuidado artesanal, cada sombrero es único, reflejando la habilidad y la tradición de los artesanos que lo crearon."
+        "origen": "Yucatán, México"
     },
     {
         "id": 3,
-        "nombre": "Bolsa de Mimbre",
+        "nombre": "Bolsa de Flores",
         "categoría": "Textiles",
-        "precio": 25.00,
+        "precio": 560.00,
         "imagen": "/img/bolsa de mimbre.jpg",
-        "origen": "Chiapas, México",
-        "talla": "Grande",
-        "cantidad": 1,
-        "descripcion": "Esta encantadora bolsa de mimbre fusiona elegancia y tradición con su diseño mexicano auténtico de Chiapas. El mimbre tejido a mano ofrece una estructura robusta y ligera, perfecta para llevar tus pertenencias con estilo. Decorada con detalles típicos mexicanos como bordados vibrantes, pompones coloridos y figuras geométricas inspiradas en la artesanía tradicional, cada bolsa es una obra de arte única. Su tamaño espacioso y práctico la convierte en un accesorio versátil para el día a día."
+        "origen": "Oaxaca, México"
     },
     {
         "id": 4,
         "nombre": "Tapete de Lana",
         "categoría": "Textiles",
-        "precio": 50.00,
+        "precio": 350.00,
         "imagen": "/img/tapete de lana.jpg",
-        "origen": "Zacatecas, México",
-        "talla": "2x3 metros",
-        "cantidad": 1,
-        "descripcion": "Este exquisito tapete de lana combina la calidez y la suavidad natural con un diseño decorativo que realza cualquier espacio. Tejido a mano con técnicas tradicionales de Zacatecas, cada detalle en su patrón está meticulosamente trabajado para crear una obra de arte funcional. Los colores ricos y las texturas sutiles resaltan el trabajo artesanal, mientras que el decorativo de flores, añade un toque de elegancia y estilo. Este tapete no solo proporciona confort bajo los pies, sino que también se convierte en el punto focal de cualquier habitación, reflejando el cuidado y la habilidad de los artesanos que lo crearon. Perfecto para añadir calidez y personalidad a tu hogar."
+        "origen": "Zacatecas, México"
+        
     },
     {
         "id": 5,
         "nombre": "Máscara de Madera",
         "categoría": "Decoración",
-        "precio": 30.00,
+        "precio": 440.00,
         "imagen": "/img/mascara de madera.jpg",
-        "origen": "Guerrero, México",
-        "talla": "Única",
-        "cantidad": 1,
-        "descripcion": "Esta impresionante máscara de madera mexicana es una expresión vibrante de la rica cultura y tradición artesanal del Estado de Guerrero. Tallada a mano por hábiles artesanos, cada detalle de esta máscara refleja el profundo simbolismo y la historia que envuelve la iconografía mexicana. Los colores brillantes y los patrones intrincados pintados a mano resaltan contra el fondo de madera natural, creando una obra de arte única y cautivadora."
+        "origen": "Guerrero, México"
+        
     },
     {
         "id": 6,
         "nombre": "Jarra de Barro",
         "categoría": "Cerámica",
-        "precio": 18.00,
+        "precio": 360.00,
         "imagen": "/img/jarra de barro.jpg",
-        "origen": "Puebla, México",
-        "talla": "Única",
-        "cantidad": 1,
-        "descripcion": "Esta encantadora jarra de barro es un tributo a la rica artesanía mexicana de Puebla, combinando funcionalidad con belleza artística. Hecha a mano por talentosos artesanos, cada jarra es única en su diseño y textura, reflejando la habilidad y la tradición centenaria del trabajo con barro en México. Su forma clásica y robusta se complementa con una decoración pintada a mano. Ideal para servir bebidas frías o como pieza decorativa en la mesa o estantería, esta jarra no solo añade un toque de autenticidad y color a cualquier ambiente, sino que también celebra la artesanía artística que perdura a través del tiempo."
+        "origen": "Puebla, México"
     },
     {
         "id": 7,
         "nombre": "Rebozo de Algodón",
         "categoría": "Textiles",
-        "precio": 40.00,
+        "precio": 580.00,
         "imagen": "/img/reboso de algodon.jpg",
-        "origen": "Hidalgo, México",
-        "talla": "Única",
-        "cantidad": 1,
-        "descripcion": "Este exquisito reboso de algodón, originario de la pintoresca región de Hidalgo, es una celebración de la artesanía y la tradición mexicana. Tejido con algodón suave y ligero, ofrece una sensación de confort y frescura al tiempo que destaca por su belleza visual. El diseño está adornado con un delicado patrón floral que incorpora los vibrantes colores de morado, blanco, verde, azul y naranja, creando un contraste armonioso y llamativo. Cada detalle en el tejido refleja el trabajo meticuloso de los artesanos locales, cuyo conocimiento ancestral se transmite en cada hilo. Perfecto para ser usado como accesorio elegante o como pieza de colección, este reboso no solo es una expresión de estilo, sino también un homenaje a la cultura y el arte textil de México."
+        "origen": "Hidalgo, México"
     },
     {
         "id": 8,
         "nombre": "Alebrije de Gato",
-        "categoría": "Decoración",
-        "precio": 10.00,
+        "categoría": "Cerámica",
+        "precio": 590.00,
         "imagen": "/img/figurilla de barro.jpg",
-        "origen": "Tlaxcala, México",
-        "talla": "Única",
-        "cantidad": 1,
-        "descripcion": "Esta encantadora figurilla de madera captura la esencia del alebrije. Tallada con madera de la región de Tlaxcala y meticulosamente pintada a mano, cada detalle de esta pieza refleja la habilidad artesanal y el respeto por la tradición. El alebrije de gato, con su figura elegante, está representado con precisión y carácter en esta escultura. Los colores utilizados en la pintura resaltan su belleza natural, con tonos vibrantes y detalles cuidados que destacan sus características únicas. Esta figurilla no solo es una obra de arte decorativa, sino también un tributo al patrimonio cultural de México "
+        "origen": "Ciudad de México, México"
     },
     {
         "id": 9,
         "nombre": "Collar de Cuentas",
         "categoría": "Joyería",
-        "precio": 22.00,
+        "precio": 270.00,
         "imagen": "/img/collar de cuentas.jpg",
-        "origen": "Nayarit, México",
-        "talla": "Única",
-        "cantidad": 1,
-        "descripcion": "Este espectacular collar de cuentas, originario de la vibrante región de Nayarit, es una expresión de la rica tradición artesanal y la creatividad local. Cada cuenta está meticulosamente seleccionada y ensartada a mano, creando un diseño lleno de color y textura que refleja la alegría y el espíritu dinámico de la cultura nayarita. Las cuentas de colores vibrantes, se entrelazan con numerosas piedras preciosas y semipreciosas que añaden un brillo único y un toque de elegancia al collar. "
+        "origen": "Nayarit, México"    
     },
     {
         "id": 10,
         "nombre": "Cesta de Mimbre",
         "categoría": "Textiles",
-        "precio": 35.00,
+        "precio": 630.00,
         "imagen": "/img/cesta de mimbre.jpg",
-        "origen": "Veracruz, México",
-        "talla": "Grande",
-        "cantidad": 1,
-        "descripcion": "Esta elegante cesta de mimbre, elaborada con la destreza artesanal característica de la región de Veracruz, combina funcionalidad con belleza natural. Tejida a mano con fibras de mimbre duraderas y flexibles, esta cesta ofrece una estructura robusta ideal para el almacenamiento o el transporte de diversos objetos. Su diseño tradicional destaca por líneas limpias y una simplicidad estética que evoca la naturaleza y la artesanía local. Perfecta para uso diario en el hogar o como un detalle decorativo rústico, la cesta de mimbre de Veracruz no solo es práctica sino también un símbolo de la habilidad y el legado cultural de los artesanos veracruzanos. Su encanto natural y su capacidad de complementar cualquier ambiente hacen de esta pieza un tesoro auténtico de la artesanía mexicana."
+        "origen": "Veracruz, México"
     },
     {
         "id": 11,
-        "nombre": "Muñeca Lele de Cholula",
+        "nombre": "Muñeca Lele",
         "categoría": "Decoración",
-        "precio": 40.00,
-        "imagen": "/img/Muñeca verde.jpg",
-        "origen": "Puebla, México",
-        "talla": "Mediana, Alto:16cm Ancho:15cm ",
-        "cantidad": 1,
-        "descripcion": "Esta encantadora muñeca Lele de Cholula es una joya de la artesanía tradicional mexicana, llevando consigo la esencia y el colorido de esta región. Confeccionada a mano con telas vibrantes y detalles meticulosamente bordados, cada muñeca Lele captura la esencia cultural y la identidad única de Cholula. Ya sea como un regalo especial o como una pieza decorativa que añade color y autenticidad a cualquier espacio, la muñeca Lele de Cholula es un tributo viviente a la creatividad y el talento de los artesanos locales."
+        "precio": 180.00,
+        "imagen": "/img/muñecalele.jpg",
+        "origen": "Querétaro, México"
     },
     {
         "id": 12,
-        "nombre": "Muñeca Lele de Guadalajara",
-        "categoría": "Decoración",
-        "precio": 50.00,
-        "imagen": "/img/muñeca morada.jpg",
-        "origen": "Guadalajara, México",
-        "talla": "Grande, Alto:30cm Ancho:18cm ",
-        "cantidad": 1,
-        "descripcion": "Esta encantadora muñeca Lele de Guadalajara captura la esencia vibrante y culturalmente diversa de la Perla Tapatía. Confeccionada con meticulosa artesanía, esta muñeca está vestida con trajes típicos que reflejan la rica herencia histórica y cultural de la región jalisciense. Los detalles intricados de sus vestimentas, bordados a mano con colores vivos y diseños tradicionales, evocan la elegancia y el colorido de la vestimenta típica de Guadalajara. "
+        "nombre": "Vajilla de Cerámica",
+        "categoría": "Cerámica",
+        "precio": 2300.00,
+        "imagen": "/img/platosceramica.jpg",
+        "origen": "Puebla, México"
     }
 
 ]

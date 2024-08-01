@@ -8,6 +8,7 @@ import '/src/components/navbar/navbar.css'
 
 import { navbarApp } from '/src/components/navbar/navbar_app.js'
 import { footerApp } from '/src/components/footer/footer_app.js'
+import { carritoCounter } from '../Productos/Productos.js'
 
 
 document.querySelector("#navbar-app").innerHTML = navbarApp();
@@ -250,3 +251,5 @@ document.addEventListener('DOMContentLoaded', () => {
     const confirmButton = document.querySelector('.btn-confirmar');
     confirmButton.addEventListener('click', validateAndSubmit);
 });
+
+carritoCounter();

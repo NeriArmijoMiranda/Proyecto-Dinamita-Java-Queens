@@ -6,7 +6,7 @@ const navbarApp = () => {
   
           <!-- Logo con link para redireccionar al Inicio -->
           <a id="logo-title" class="navbar-brand" href="index.html">
-            <img class="logo-image rounded-3 " src="/public/img/logo_yoatzin.png"
+            <img class="logo-image " src="/img/logo_yoatzin.png"
               alt="Logo de Yoatzin con flores de colores y fondo negro ">
           </a>
 
@@ -61,7 +61,7 @@ const navbarApp = () => {
               <!-- ¿Quiénes somos? -->
               <li class="nav-item">
                 <a class="nav-link" href="/src/pages/quienes_somos/quienes_somos.html">¿Quiénes somos?</a>
-                <!-- <a class="nav-link active" aria-current="page" href="/src/pages/¿Quienes-somos/¿Quienes-somos.html">¿Quiénes somos?</a> -->
+                <!-- <a class="nav-link active" aria-current="page" href="/src/pages/¿Quienes-somos/¿Quienes-somos.html"><strong>¿Quiénes somos?</strong></a> -->
                 <!-- <a class="nav-link" href="#"> No está activa -->
                 <!-- <a class="nav-link active" aria-current="page" href="#"> Está activa
                 - nav-link active demuestra que esta activa esa página
@@ -71,20 +71,22 @@ const navbarApp = () => {
               <!-- Producto con menú desplegable -->
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="/src/pages/Productos/Productos.html" role="button" data-bs-toggle="dropdown"
-                  aria-expanded="false">
-                  Productos
+                  aria-expanded="false"><strong>
+                  Productos</strong>
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="/src/pages/Productos/Productos.html">Todo</a></li>
-                  <li>
-                    <hr class="dropdown-divider">
-                  </li>
-                  <li><a class="dropdown-item" href="/src/pages/Productos/Productos.html">Cerámica</a></li>
-                  <li><a class="dropdown-item" href="/src/pages/Productos/Productos.html">Decoración</a></li>
-                  <li><a class="dropdown-item" href="/src/pages/Productos/Productos.html">Joyería</a></li>
-                  <li><a class="dropdown-item" href="/src/pages/Productos/Productos.html">Textiles</a></li>
-                </ul>
-              </li>
+    <li><a class="dropdown-item" href="/src/pages/Productos/Productos.html?category=Todo">Todo</a></li>
+    <li>
+      <hr class="dropdown-divider">
+    </li>
+     <li class="nav-item" id="categorySection">
+    <li><a class="dropdown-item" href="/src/pages/Productos/Productos.html?category=Cerámica">Cerámica</a></li>
+    <li><a class="dropdown-item" href="/src/pages/Productos/Productos.html?category=Decoración">Decoración</a></li>
+    <li><a class="dropdown-item" href="/src/pages/Productos/Productos.html?category=Joyería">Joyería</a></li>
+    <li><a class="dropdown-item" href="/src/pages/Productos/Productos.html?category=Textiles">Textiles</a></li>
+    </li>
+  </ul>
+</li>
   
               <!-- Contáctanos -->
               <li class="nav-item">
@@ -128,5 +130,18 @@ const navbarApp = () => {
       </nav> <!-- Se cierra Header -->
   `;
 };
+
+// Manejar eventos de clic en los enlaces del menú desplegable
+document.querySelectorAll('.dropdown-menu .dropdown-item').forEach(item => {
+    item.addEventListener('click', (event) => {
+        event.preventDefault(); // Evitar el comportamiento por defecto del enlace
+        
+        // Obtener el valor de la categoría desde el atributo href del enlace
+        const selectedCategory = item.getAttribute('href').split('category=')[1];
+        
+        // Redirigir a la página de productos con el parámetro de categoría
+        window.location.href = `/src/pages/Productos/Productos.html?category=${selectedCategory}`;
+    });
+});
 
 export { navbarApp };

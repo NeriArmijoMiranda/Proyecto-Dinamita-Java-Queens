@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="UTF-8">
@@ -151,7 +151,7 @@
               <!-- Número de Tarjeta -->
               <div class="form-content col-md-6">
                 <label for="card-number">Número de Tarjeta</label>
-                <input type="text" class="input_c" id="card-number" name="card-number" placeholder="xxxx xxxx xxxx xxxx" required>
+                <input type="text" class="input_c" id="card-number" name="card-number" maxlength="16" placeholder="xxxx xxxx xxxx xxxx" required>
               </div>
               <!-- Nombre de Tarjeta -->
               <div class="form-content col-md-6">
@@ -168,18 +168,18 @@
                 <div class="row justify-content-center">
                   <div class="col-auto">
                     <!-- Mes -->
-                    <input type="text" class="input_c small-input" id="exp-month" name="exp-month" placeholder="Mes" required>
+                    <input type="text" class="input_c small-input" id="exp-month" name="exp-month" maxlength="2" placeholder="Mes" required>
                   </div>
                   <div class="col-auto">
                     <!-- Año -->
-                    <input type="text" class="input_c small-input" id="exp-year" name="exp-year" placeholder="Año" required>
+                    <input type="text" class="input_c small-input" id="exp-year" name="exp-year" maxlength="4" placeholder="Año" required>
                   </div>
                 </div>
               </div>
               <!-- CVC -->
               <div class="form-content col-sm-3 col-md-3 align-items-center">
                 <label for="cvc">Código de Seguridad</label>
-                <input type="text" class="input_c small-input" id="cvc" name="cvc" placeholder="CVC" required>
+                <input type="text" class="input_c small-input" id="cvc" name="cvc" maxlength="3" placeholder="CVC" required>
               </div>
               <!-- Total a pagar -->
               <div class="form-content col-sm-3 col-md-6 align-items-center">
@@ -191,7 +191,7 @@
           </div>
 
           <!-- Contenedor negro para Guardar tarjeta -->
-          <div class="contenedor-negro mt-3">
+          <div class="contenedor-negro2 mt-3">
             <div class="row">
               <!-- Checkbox -->
               <div class="col-sm-6 col-md-4 checkbox">

@@ -1,77 +1,50 @@
 /* Estilos particulares de Acerca de Nosotros */
 .container-s {
-  margin-left: 0px;
-  margin-right: 0px;
-}
-
-/*Texto Acerca de nosotros*/
-.ph1 {
+  background-image: url(/public/img/verdecafe.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin:1rem auto;
   text-align: center;
+  padding: 2rem;
   color: white;
-  font-family: "Mulish", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 20px;
-  margin: 20px;
-  margin-left: 20px;
-  margin-right: 20px;
-
+  text-shadow: 0.3rem 0.3rem 0rem #000
 }
+.container-s h1{
+  font-family: "Corben";
+  font-size: 3rem;
+}
+/*Texto Acerca de nosotros*/
 
 .etiqueta-frase{
   display: block;
   display: none;
 }
 
-/* Para tipo de letra y color de parrafo*/
-.dinamita-j-q {
+.container-texto-dinamitas{
+
+}
+.container-texto-dinamitas h1 {
   color: white;
   text-align: center;
-  font-family: "Mulish", sans-serif;
+  font-family: "Mulish";
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  font-size: 18px;
-  padding: 27px;
-  margin: 30px;
+  font-size: 2.3rem;
 }
-
-/*Título de la página contenedor*/
-.h1an {
-  text-align: center;
-  font-family: "Corben", serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 35px;
+.container-texto-dinamitas p{
   color: white;
-  justify-content: center;
-
-}
-
-/* para el color y tipo de letra de sub titulo*/
-.h1sub {
+  height: 20%;
   font-family: "Corben", serif;
-  font-weight: 400;
-  font-style: normal;
+  font-size: 1.5rem;
+  margin: 0.8rem 2.4rem; /* Ajustes de margen */
+  width: calc(100% - 4.8rem); /* Ajuste para centrar y alinear */
+  padding: 2rem;
   text-align: center;
-  background-color: black;
-  color: white;
-  margin-top: 60px;
-  margin-bottom: 50px;
-
+  border-radius: 1rem;
 }
-
-/*Contenedor titulo1*/
-.containerA {
-  text-align: center;
-  justify-content: center;
-  background-color: #08807B;
-  margin-left: 100px;
-  margin-right: 100px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  padding: 50px;
+.container-tarjetas-nosotros{
+  margin: 2rem 4rem;
 }
 
 /*Estilo para el arreglo de tarjetas*/
@@ -79,13 +52,15 @@
   text-align: center;
   display: flex;
   justify-content: center;
-  background: black;
-  margin: 100px;
-  margin-left: 50px;
-  margin-right: 50px;
+  background-color: black;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 2rem 4rem 10rem 4rem;
+  border-radius: 1rem;
+  padding: 2rem 1rem 2rem 1rem;
 }
 
-.card {
+.card-nosotros {
   background: #08807B;
   justify-content: center;
   margin-bottom: 50px;
@@ -96,9 +71,10 @@
   font-weight: 400;
   font-style: normal;
   width: 300px;
+  padding: 1rem auto;
 }
 
-.card:hover {
+.card-nosotros:hover {
   background: #E4007F;
 }
 
@@ -112,7 +88,8 @@
 }
 
 .avatar{
-  padding-top: 10px;
+  margin: 1rem;
+  padding: 1rem;
 }
 
 .ms-4 {

@@ -14,6 +14,7 @@ import { saveLocal } from '../Productos/Productos.js'
 import { carritoCounter } from '../Productos/Productos.js' //Contador de carrito
 import { eliminarProducto } from '../Productos/Productos.js' // eliminar elemnto en carrito
 
+
 document.querySelector("#navbar-app").innerHTML = navbarApp();
 document.querySelector("#footer-app").innerHTML = footerApp();
 document.innerHTML = saveLocal();
@@ -23,7 +24,11 @@ document.innerHTML = saveLocal();
 /*Las const son para llamarlas del html y decirles "Eh te estan hablando" */
 
 const contenedorGeneral = document.getElementById("contenedorGeneral"); /* Contenedor general de toda la página */
+<<<<<<< HEAD
 const modalContainer  = document.getElementById("modalContainer");/* descripción producto en html  */
+=======
+const Container  = document.getElementById("modalContainer");/* descripción producto en html  */
+>>>>>>> Development
 const resumenCompras = document.getElementById("resumenCompras"); /* Resumen de compras html */
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 const verCarrito = document.getElementById("verCarrito");
@@ -62,12 +67,12 @@ const pintarCarrito = () => {
         funcionar, en este caso lo conectamos al HTML, que es donde vienen las propiedades*/
         carritoContent.className = "modal-content";//Clase para poder dar estilos al CSS
         carritoContent.innerHTML = `
-        <center><img class="imagenCompras rounded-3" src= "${product.imagen}"  ><center>
-        <h2>${product.nombre}</h2>
-        <h2>${product.origen}</h2>
-        <p>Talla: ${product.talla}</p>
-        <p>Precio: $${product.precio} mxn</p>
-        <div >
+        <img class="imagenCompras rounded-3" src= "${product.imagen}">
+        <h1><strong>${product.nombre}</strong></h1>
+        <h3>${product.origen}</h3>
+        <h4>Talla: ${product.talla}</h4>
+        <h4>Precio: $${product.precio} mxn</h4>
+        <div class= "cantidad">
             Cantidad:
             <span class="restar">
             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-caret-down-fill"
@@ -84,7 +89,7 @@ const pintarCarrito = () => {
             </svg> </span>
         </div>
 
-        <p>Total: $ ${product.cantidad * product.precio} mxn</p>
+        <p><strong>Total: $ ${product.cantidad * product.precio} mxn</strong></p>
         
         <span class="delete">
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
@@ -139,9 +144,9 @@ const pintarCarrito = () => {
     <p>Total a pagar: $${total * 0.9} mxn</p>
     <p>Aceptamos las siguientes tarjetas:</p>
     <p>
-        <img class="tarjetas rounded-3 " src="/public/img/visa.png" alt="Tarjeta visa" height="60px" width="70px">
-        <img class="tarjetas rounded-3 " src="/public/img/mastercard.png" alt="Tarjeta mastercard" height="40px" width="60px" >
-        <img class="tarjetas rounded-3 " src="/public/img/americanexpress.png" alt="Tarjeta american express" height="50px" width="60px">
+        <img class="tarjetas rounded-3 " src="/img/visa.png" alt="Tarjeta visa" height="60px" width="70px">
+        <img class="tarjetas rounded-3 " src="/img/mastercard.png" alt="Tarjeta mastercard" height="40px" width="60px" >
+        <img class="tarjetas rounded-3 " src="/img/americanexpress.png" alt="Tarjeta american express" height="50px" width="60px">
     </p>
      `;
     resumenCompras.append(totalBuying);
@@ -150,9 +155,17 @@ const pintarCarrito = () => {
     continuar.innerText = "Continuar con la compra";/*Con innertext lo ponemos texto al botón  */
     continuar.className = "continuarBoton"; /*Aquí lo conectamos con content y le estamos diciendo que a cada producto le agregue un botón de comprar */
     resumenCompras.append(continuar);
+<<<<<<< HEAD
+=======
+    // Agregar el evento click para redirigir
+    continuar.addEventListener("click", function () {
+        window.location.href = "/src/pages/datos_de_envio/datos_de_envio.html"; 
+    });
+>>>>>>> Development
 };
 pintarCarrito();
 
 /* Llamamos las funciones que importamos de Productos */
 carritoCounter(); /*Al llamar la función, se muestra el número del carrito.*/
 eliminarProducto(); /* Elimina elemento del carrito al refrescar */
+

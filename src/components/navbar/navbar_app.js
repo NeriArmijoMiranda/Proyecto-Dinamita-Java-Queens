@@ -13,11 +13,11 @@ const navbarApp = () => {
           <!-- ---------Opciones celular -------------- -->
 
           <!-- Busqueda barra Celular-->
-          <li class="nav-item d-block d-lg-none d-md-block d-sm-block justify-content-felx-start"> <!-- Muetsra la barra arriba cuando se hace pequeño -->
+          <li class="nav-item d-block d-lg-none d-md-block d-sm-block justify-content-flex-start"> <!-- Mustra la barra arriba cuando se hace pequeño -->
             
           <div class="input-groupNav">
               
-              <input type="text" class="form-control" placeholder="" aria-label="Búsqueda"
+              <input type="text" id="search-input-mobile" class="form-control" placeholder="" aria-label="Búsqueda"
                 aria-describedby="button-addon2">
               <button class="btn btn-outline-secondary"  type="button" id="button-addon2">
                 
@@ -96,7 +96,7 @@ const navbarApp = () => {
               <!-- Busqueda barra--> <!-- none = no se muestra--> 
               <li class="nav-item d-none d-lg-block d-md-none d-sm-none"> <!-- La muestra cuando está grande y lo quita cuando es pequeño -->
                 <div class="input-group">
-                  <input type="text" class="form-control" placeholder="Buscar" aria-label="Búsqueda" aria-describedby="button-addon2">
+                  <input type="text" id="search-input-desktop" class="form-control" placeholder="Buscar" aria-label="Búsqueda" aria-describedby="button-addon2">
                   <button class="btn btn-outline-secondary" type="button" id="button-addon2">
                     <!-- Se agrega ícono de lupa -->
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
@@ -143,5 +143,8 @@ document.querySelectorAll('.dropdown-menu .dropdown-item').forEach(item => {
         window.location.href = `/src/pages/Productos/Productos.html?category=${selectedCategory}`;
     });
 });
+
+
+
 
 export { navbarApp };

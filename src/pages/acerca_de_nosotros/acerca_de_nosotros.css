@@ -19,6 +19,11 @@
 
 }
 
+.etiqueta-frase{
+  display: block;
+  display: none;
+}
+
 /* Para tipo de letra y color de parrafo*/
 .dinamita-j-q {
   color: white;
@@ -58,7 +63,7 @@
 }
 
 /*Contenedor titulo1*/
-.container {
+.containerA {
   text-align: center;
   justify-content: center;
   background-color: #08807B;
@@ -66,7 +71,7 @@
   margin-right: 100px;
   margin-top: 20px;
   margin-bottom: 20px;
-  padding: 20px;
+  padding: 50px;
 }
 
 /*Estilo para el arreglo de tarjetas*/
@@ -85,10 +90,12 @@
   justify-content: center;
   margin-bottom: 50px;
   margin-top: 10px;
+  margin-left: 40px;
   font-family: "Mulish", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+  width: 300px;
 }
 
 .card:hover {
@@ -96,7 +103,8 @@
 }
 
 .d-flex{
-  margin-left: 30px;
+  margin-left: 10px;
+  margin-bottom: 40px;
 }
 
 .btn{
@@ -107,459 +115,8 @@
   padding-top: 10px;
 }
 
-@media (max-width: 1199.98px) {
-  .container-s {
-    margin-left: 0px;
-    margin-right: 0px;
-  }
-  
-  /*Texto Acerca de nosotros*/
-  .ph1 {
-    text-align: center;
-    color: white;
-    font-family: "Mulish", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 20px;
-    margin: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
-  
-  }
-  
-  /* Para tipo de letra y color de parrafo*/
-  .dinamita-j-q {
-    color: white;
-    text-align: center;
-    font-family: "Mulish", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 18px;
-    padding: 27px;
-    margin: 30px;
-  }
-  
-  /*Título de la página contenedor*/
-  .h1an {
-    text-align: center;
-    font-family: "Corben", serif;
-    font-weight: 700;
-    font-style: normal;
-    font-size: 35px;
-    color: white;
-    justify-content: center;
-  
-  }
-  
-  /* para el color y tipo de letra de sub titulo*/
-  .h1sub {
-    font-family: "Corben", serif;
-    font-weight: 400;
-    font-style: normal;
-    text-align: center;
-    background-color: black;
-    color: white;
-    margin-top: 60px;
-    margin-bottom: 50px;
-  
-  }
-  
-  /*Contenedor titulo1*/
-  .container {
-    text-align: center;
-    justify-content: center;
-    background-color: #08807B;
-    margin-left: 100px;
-    margin-right: 100px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding: 20px;
-  }
-  
-  /*Estilo para el arreglo de tarjetas*/
-  #arreglo-tarjetas {
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    background: black;
-    margin: 100px;
-    margin-left: 2px;
-    margin-right: 50px;
-  }
-  
-  .card {
-    background: #08807B;
-    justify-content: center;
-    margin-bottom: 50px;
-    margin-top: 10px;
-    width: 300px;
-    margin: 15px 15px;
-    font-family: "Mulish", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-  }
-  
-  .card:hover {
-    background: #E4007F;
-  }
-  
-  .d-flex{
-    margin-left: 50px;
-  }
-  
-  .btn{
-    margin-right: 10px;
-  }
+.ms-4 {
+  margin-left: 20px;
+}
 
-  .avatar{
-    padding-top: 10px;
-  } 
-  }
 
-  @media (max-width: 991.98px) {
-    .container-s {
-      margin-left: 0px;
-      margin-right: 0px;
-    }
-    
-    /*Texto Acerca de nosotros*/
-    .ph1 {
-      text-align: center;
-      color: white;
-      font-family: "Mulish", sans-serif;
-      font-optical-sizing: auto;
-      font-weight: 400;
-      font-style: normal;
-      font-size: 20px;
-      margin: 20px;
-      margin-left: 20px;
-      margin-right: 20px;
-    
-    }
-    
-    /* Para tipo de letra y color de parrafo*/
-    .dinamita-j-q {
-      color: white;
-      text-align: center;
-      font-family: "Mulish", sans-serif;
-      font-optical-sizing: auto;
-      font-weight: 400;
-      font-style: normal;
-      font-size: 18px;
-      padding: 27px;
-      margin: 30px;
-    }
-    
-    /*Título de la página contenedor*/
-    .h1an {
-      text-align: center;
-      font-family: "Corben", serif;
-      font-weight: 700;
-      font-style: normal;
-      font-size: 35px;
-      color: white;
-      justify-content: center;
-    
-    }
-    
-    /* para el color y tipo de letra de sub titulo*/
-    .h1sub {
-      font-family: "Corben", serif;
-      font-weight: 400;
-      font-style: normal;
-      text-align: center;
-      background-color: black;
-      color: white;
-      margin-top: 60px;
-      margin-bottom: 50px;
-    
-    }
-    
-    /*Contenedor titulo1*/
-    .container {
-      text-align: center;
-      justify-content: center;
-      background-color: #08807B;
-      margin-left: 100px;
-      margin-right: 100px;
-      margin-top: 20px;
-      margin-bottom: 20px;
-      padding: 20px;
-    }
-    
-    /*Estilo para el arreglo de tarjetas*/
-    #arreglo-tarjetas {
-      text-align: center;
-      display: flex;
-      justify-content: center;
-      background: black;
-      margin-left: 5px;
-      margin-right: 100px;
-    }
-  
-    element.style{
-      padding-right: 50px;
-    }
-    
-    .card {
-      background: #08807B;
-      justify-content: center;
-      margin-bottom: 50px;
-      margin-top: 10px;
-      width: 300px;
-      margin-left: 25px;
-      font-family: "Mulish", sans-serif;
-      font-optical-sizing: auto;
-      font-weight: 400;
-      font-style: normal;
-    }
-    
-    .card:hover {
-      background: #E4007F;
-    }
-    
-    .d-flex{
-      margin-left: 50px;
-    }
-    
-    .btn{
-      margin-right: 10px;
-    }
-  
-    .avatar{
-      padding-top: 10px;
-    }
-  
-  }
-
-  @media (max-width: 767.98px) {
-    .container-s {
-      margin-left: 0px;
-      margin-right: 0px;
-    }
-    
-    /*Texto Acerca de nosotros*/
-    .ph1 {
-      text-align: center;
-      color: white;
-      font-family: "Mulish", sans-serif;
-      font-optical-sizing: auto;
-      font-weight: 400;
-      font-style: normal;
-      font-size: 20px;
-      margin: 20px;
-      margin-left: 20px;
-      margin-right: 20px;
-    
-    }
-    
-    /* Para tipo de letra y color de parrafo*/
-    .dinamita-j-q {
-      color: white;
-      text-align: center;
-      font-family: "Mulish", sans-serif;
-      font-optical-sizing: auto;
-      font-weight: 400;
-      font-style: normal;
-      font-size: 18px;
-      padding: 27px;
-      margin: 30px;
-    }
-    
-    /*Título de la página contenedor*/
-    .h1an {
-      text-align: center;
-      font-family: "Corben", serif;
-      font-weight: 700;
-      font-style: normal;
-      font-size: 35px;
-      color: white;
-      justify-content: center;
-    
-    }
-    
-    /* para el color y tipo de letra de sub titulo*/
-    .h1sub {
-      font-family: "Corben", serif;
-      font-weight: 400;
-      font-style: normal;
-      text-align: center;
-      background-color: black;
-      color: white;
-      margin-top: 60px;
-      margin-bottom: 50px;
-    
-    }
-    
-    /*Contenedor titulo1*/
-    .container {
-      text-align: center;
-      justify-content: center;
-      background-color: #08807B;
-      margin-left: 100px;
-      margin-right: 100px;
-      margin-top: 20px;
-      margin-bottom: 20px;
-      padding: 20px;
-    }
-    
-    /*Estilo para el arreglo de tarjetas*/
-    #arreglo-tarjetas {
-      text-align: center;
-      display: flex;
-      justify-content: center;
-      background: black;
-      margin-left: 5px;
-      margin-right: 100px;
-    }
-  
-    element.style{
-      padding-right: 50px;
-    }
-    
-    .card {
-      background: #08807B;
-      justify-content: center;
-      margin-bottom: 50px;
-      margin-top: 10px;
-      width: 300px;
-      font-family: "Mulish", sans-serif;
-      font-optical-sizing: auto;
-      font-weight: 400;
-      font-style: normal;
-    }
-    
-    .card:hover {
-      background: #E4007F;
-    }
-    
-    .d-flex{
-      margin-left: 55px;
-    }
-    
-    .btn{
-      margin-right: 10px;
-    }
-  
-    .avatar{
-      padding-top: 10px;
-    }
-  
-  }
-
-  @media (max-width: 575.98px) {
-    .container-s {
-      margin-left: 0px;
-      margin-right: 0px;
-    }
-    
-    /*Texto Acerca de nosotros*/
-    .ph1 {
-      text-align: center;
-      color: white;
-      font-family: "Mulish", sans-serif;
-      font-optical-sizing: auto;
-      font-weight: 400;
-      font-style: normal;
-      font-size: 20px;
-      margin: 20px;
-      margin-left: 20px;
-      margin-right: 20px;
-    
-    }
-    
-    /* Para tipo de letra y color de parrafo*/
-    .dinamita-j-q {
-      color: white;
-      text-align: center;
-      font-family: "Mulish", sans-serif;
-      font-optical-sizing: auto;
-      font-weight: 400;
-      font-style: normal;
-      font-size: 18px;
-      padding: 27px;
-      margin: 30px;
-    }
-    
-    /*Título de la página contenedor*/
-    .h1an {
-      text-align: center;
-      font-family: "Corben", serif;
-      font-weight: 700;
-      font-style: normal;
-      font-size: 35px;
-      color: white;
-      justify-content: center;
-    
-    }
-    
-    /* para el color y tipo de letra de sub titulo*/
-    .h1sub {
-      font-family: "Corben", serif;
-      font-weight: 400;
-      font-style: normal;
-      text-align: center;
-      background-color: black;
-      color: white;
-      margin-top: 60px;
-      margin-bottom: 50px;
-    
-    }
-    
-    /*Contenedor titulo1*/
-    .container {
-      text-align: center;
-      justify-content: center;
-      background-color: #08807B;
-      margin-left: 100px;
-      margin-right: 100px;
-      margin-top: 20px;
-      margin-bottom: 20px;
-      padding: 20px;
-    }
-    
-    /*Estilo para el arreglo de tarjetas*/
-    #arreglo-tarjetas {
-      text-align: center;
-      display: flex;
-      justify-content: center;
-      background: black;
-      margin: 100px;
-      margin-left: 2px;
-      margin-right: 50px;
-    }
-    
-    .card {
-      background: #08807B;
-      justify-content: center;
-      margin-bottom: 50px;
-      margin-top: 10px;
-      font-family: "Mulish", sans-serif;
-      font-optical-sizing: auto;
-      font-weight: 400;
-      font-style: normal;
-    }
-    
-    .card:hover {
-      background: #E4007F;
-    }
-    
-    .d-flex{
-      margin-left: 55px;
-    }
-    
-    .btn{
-      margin-right: 10px;
-    }
-
-    .avatar{
-      padding-top: 10px;
-    }
-    .avatar{
-      padding-top: 10px;
-    }
-  }
-  

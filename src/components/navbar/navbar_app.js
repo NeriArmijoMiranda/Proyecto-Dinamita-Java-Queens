@@ -19,7 +19,7 @@ const navbarApp = () => {
               
               <input type="text" id="search-input-mobile" class="form-control" placeholder="" aria-label="Búsqueda"
                 aria-describedby="button-addon2">
-              <button class="btn btn-outline-secondary"  type="button" id="button-addon2">
+              <button class="btn btn-outline-secondary" type="button" id="search-button-mobile">
                 
               <!-- Se agrega ícono de lupa -->
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search"
@@ -97,7 +97,7 @@ const navbarApp = () => {
               <li class="nav-item d-none d-lg-block d-md-none d-sm-none"> <!-- La muestra cuando está grande y lo quita cuando es pequeño -->
                 <div class="input-group">
                   <input type="text" id="search-input-desktop" class="form-control" placeholder="Buscar" aria-label="Búsqueda" aria-describedby="button-addon2">
-                  <button class="btn btn-outline-secondary" type="button" id="button-addon2">
+                  <button class="btn btn-outline-secondary" type="button" id="search-button-desktop">
                     <!-- Se agrega ícono de lupa -->
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
                       <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
@@ -140,10 +140,54 @@ document.querySelectorAll('.dropdown-menu .dropdown-item').forEach(item => {
         const selectedCategory = item.getAttribute('href').split('category=')[1];
         
         // Redirigir a la página de productos con el parámetro de categoría
-        window.location.href = `/src/pages/Productos/Productos.html?category=${selectedCategory}`;
+        window.location.href = `/index.html?category=${selectedCategory}`;
     });
 });
 
+const handleSearch = (inputId) => {
+  const inputElement = document.getElementById(inputId);
+  const query = inputElement.value.trim().toLowerCase();
+  
+  if (query) {
+    // Definir las páginas y sus URLs
+    const pages = [
+      { name: 'Inicio', url: '/index.html' },
+      { name: 'Acerca de Nosotros', url: '/src/pages/acerca_de_nosotros/acerca_de_nosotros.html' },
+      { name: 'Compras', url: '/src/pages/compras/compras.html' },
+      { name: 'Contáctanos', url: '/src/pages/contactanos/contactanos.html' },
+      { name: 'Datos de Envío', url: '/src/pages/datos_de_envio/datos_de_envio.html' },
+      { name: 'Form Crea Objetos', url: '/src/pages/Form_crea_objetos/form_crea_objetos.html' },
+      { name: 'Iniciar Sesión', url: '/src/pages/iniciar_sesion/iniciar_sesion.html' },
+      { name: 'Productos', url: '/src/pages/Productos/Productos.html' },
+      { name: 'Quiénes Somos', url: '/src/pages/quienes_somos/quienes_somos.html' }
+    ];
+
+    // Encontrar la primera página que coincide con la búsqueda
+    const page = pages.find(p => p.name.toLowerCase().includes(query));
+    
+    if (page) {
+      // Redirigir a la página encontrada
+      window.location.href = page.url;
+    } else {
+      alert('No se encontraron resultados para: ' + query);
+    }
+  } else {
+    alert('Por favor ingresa un término de búsqueda.');
+  }
+};
+document.addEventListener('DOMContentLoaded', () => {
+  // Manejar clic en el botón de búsqueda para dispositivos móviles
+  const searchButtonMobile = document.getElementById('search-button-mobile');
+  if (searchButtonMobile) {
+    searchButtonMobile.addEventListener('click', () => handleSearch('search-input-mobile'));
+  }
+
+  // Manejar clic en el botón de búsqueda para escritorio
+  const searchButtonDesktop = document.getElementById('search-button-desktop');
+  if (searchButtonDesktop) {
+    searchButtonDesktop.addEventListener('click', () => handleSearch('search-input-desktop'));
+  }
+});
 
 
 

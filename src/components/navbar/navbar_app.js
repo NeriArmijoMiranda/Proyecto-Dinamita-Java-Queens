@@ -159,7 +159,23 @@ const handleSearch = (inputId) => {
       { name: 'Form Crea Objetos', url: '/src/pages/Form_crea_objetos/form_crea_objetos.html' },
       { name: 'Iniciar Sesión', url: '/src/pages/iniciar_sesion/iniciar_sesion.html' },
       { name: 'Productos', url: '/src/pages/Productos/Productos.html' },
-      { name: 'Quiénes Somos', url: '/src/pages/quienes_somos/quienes_somos.html' }
+      { name: 'Quiénes Somos', url: '/src/pages/quienes_somos/quienes_somos.html' },
+      { name: 'vaso de barro', url: 'src/pages/detalle_producto/1.html' },
+      { name: 'sombrero de palma', url: 'src/pages/detalle_producto/2.html' },
+      { name: 'bolsa de mimbre', url: 'src/pages/detalle_producto/3.html' },
+      { name: 'tapete de lana', url: 'src/pages/detalle_producto/4.html' },
+      { name: 'máscara de madera', url: 'src/pages/detalle_producto/5.html' },
+      { name: 'jarra de barro', url: 'src/pages/detalle_producto/6.html' },
+      { name: 'rebozo de algodón', url: 'src/pages/detalle_producto/7.html' },
+      { name: 'alebrije de gato', url: 'src/pages/detalle_producto/8.html' },
+      { name: 'collar de cuentas', url: 'src/pages/detalle_producto/9.html' },
+      { name: 'cesta de mimbre', url: 'src/pages/detalle_producto/10.html' },
+      { name: 'muñeca lele de cholula', url: 'src/pages/detalle_producto/11.html' },
+      { name: 'vajilla de cerámica', url: 'src/pages/detalle_producto/12.html' },
+      { name: 'cerámica', url: '/src/pages/Productos/Productos.html?category=Cerámica' },
+      { name: 'decoración', url: '/src/pages/Productos/Productos.html?category=Decoración' },
+      { name: 'joyería', url: '/src/pages/Productos/Productos.html?category=Joyería' },
+      { name: 'textiles', url: '/src/pages/Productos/Productos.html?category=Textiles' },
     ];
 
     // Encontrar la primera página que coincide con la búsqueda

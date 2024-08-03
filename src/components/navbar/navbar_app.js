@@ -5,7 +5,7 @@ const navbarApp = () => {
         <div class="container-fluid">
   
           <!-- Logo con link para redireccionar al Inicio -->
-          <a id="logo-title" class="navbar-brand" href="index.html">
+          <a id="logo-title" class="navbar-brand" href="/index.html">
             <img class="logo-image " src="/img/logo_yoatzin.png"
               alt="Logo de Yoatzin con flores de colores y fondo negro ">
           </a>
@@ -13,13 +13,13 @@ const navbarApp = () => {
           <!-- ---------Opciones celular -------------- -->
 
           <!-- Busqueda barra Celular-->
-          <li class="nav-item d-block d-lg-none d-md-block d-sm-block justify-content-felx-start"> <!-- Muetsra la barra arriba cuando se hace pequeño -->
+          <li class="nav-item d-block d-lg-none d-md-block d-sm-block justify-content-flex-start"> <!-- Mustra la barra arriba cuando se hace pequeño -->
             
           <div class="input-groupNav">
               
-              <input type="text" class="form-control" placeholder="" aria-label="Búsqueda"
+              <input type="text" id="search-input-mobile" class="form-control" placeholder="" aria-label="Búsqueda"
                 aria-describedby="button-addon2">
-              <button class="btn btn-outline-secondary"  type="button" id="button-addon2">
+              <button class="btn btn-outline-secondary" type="button" id="search-button-mobile">
                 
               <!-- Se agrega ícono de lupa -->
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search"
@@ -96,8 +96,8 @@ const navbarApp = () => {
               <!-- Busqueda barra--> <!-- none = no se muestra--> 
               <li class="nav-item d-none d-lg-block d-md-none d-sm-none"> <!-- La muestra cuando está grande y lo quita cuando es pequeño -->
                 <div class="input-group">
-                  <input type="text" class="form-control" placeholder="Buscar" aria-label="Búsqueda" aria-describedby="button-addon2">
-                  <button class="btn btn-outline-secondary" type="button" id="button-addon2">
+                  <input type="text" id="search-input-desktop" class="form-control" placeholder="Buscar" aria-label="Búsqueda" aria-describedby="button-addon2">
+                  <button class="btn btn-outline-secondary" type="button" id="search-button-desktop">
                     <!-- Se agrega ícono de lupa -->
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
                       <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
@@ -140,8 +140,81 @@ document.querySelectorAll('.dropdown-menu .dropdown-item').forEach(item => {
         const selectedCategory = item.getAttribute('href').split('category=')[1];
         
         // Redirigir a la página de productos con el parámetro de categoría
-        window.location.href = `/src/pages/Productos/Productos.html?category=${selectedCategory}`;
+        window.location.href = `/index.html?category=${selectedCategory}`;
     });
+});
+
+const handleSearch = (inputId) => {
+  const inputElement = document.getElementById(inputId);
+  const query = inputElement.value.trim().toLowerCase();
+  
+  if (query) {
+    // Definir las páginas y sus URLs
+    const pages = [
+      { name: 'Inicio', url: '/index.html' },
+      { name: 'Acerca de Nosotros', url: '/src/pages/acerca_de_nosotros/acerca_de_nosotros.html' },
+      { name: 'Compras', url: '/src/pages/compras/compras.html' },
+      { name: 'Contáctanos', url: '/src/pages/contactanos/contactanos.html' },
+      { name: 'Datos de Envío', url: '/src/pages/datos_de_envio/datos_de_envio.html' },
+      { name: 'Form Crea Objetos', url: '/src/pages/Form_crea_objetos/form_crea_objetos.html' },
+      { name: 'Iniciar Sesión', url: '/src/pages/iniciar_sesion/iniciar_sesion.html' },
+      { name: 'Productos', url: '/src/pages/Productos/Productos.html' },
+      { name: 'Quiénes Somos', url: '/src/pages/quienes_somos/quienes_somos.html' },
+      { name: 'vaso de barro', url: '/src/pages/detalle_producto/1.html' },
+      { name: 'sombrero de palma', url: '/src/pages/detalle_producto/2.html' },
+      { name: 'bolsa de mimbre', url: '/src/pages/detalle_producto/3.html' },
+      { name: 'tapete de lana', url: '/src/pages/detalle_producto/4.html' },
+      { name: 'máscara de madera', url: '/src/pages/detalle_producto/5.html' },
+      { name: 'jarra de barro', url: '/src/pages/detalle_producto/6.html' },
+      { name: 'rebozo de algodón', url: '/src/pages/detalle_producto/7.html' },
+      { name: 'alebrije de gato', url: '/src/pages/detalle_producto/8.html' },
+      { name: 'collar de cuentas', url: '/src/pages/detalle_producto/9.html' },
+      { name: 'cesta de mimbre', url: '/src/pages/detalle_producto/10.html' },
+      { name: 'muñeca lele de cholula', url: '/src/pages/detalle_producto/11.html' },
+      { name: 'vajilla de cerámica', url: '/src/pages/detalle_producto/12.html' },
+      { name: 'cerámica', url: '/src/pages/Productos/Productos.html?category=Cerámica' },
+      { name: 'decoración', url: '/src/pages/Productos/Productos.html?category=Decoración' },
+      { name: 'joyería', url: '/src/pages/Productos/Productos.html?category=Joyería' },
+      { name: 'textiles', url: '/src/pages/Productos/Productos.html?category=Textiles' },
+    ];
+
+    // Encontrar la primera página que coincide con la búsqueda
+    const page = pages.find(p => p.name.toLowerCase().includes(query));
+    
+    if (page) {
+      // Redirigir a la página encontrada
+      window.location.href = page.url;
+    } else {
+      alert('No se encontraron resultados para: ' + query);
+    }
+  } else {
+    alert('Por favor ingresa un término de búsqueda.');
+  }
+};
+document.addEventListener('DOMContentLoaded', () => {
+  // Manejar clic en el botón de búsqueda para dispositivos móviles
+  const searchButtonMobile = document.getElementById('search-button-mobile');
+  if (searchButtonMobile) {
+    searchButtonMobile.addEventListener('click', () => handleSearch('search-input-mobile'));
+  }
+
+  /* Manejar clic en el botón de búsqueda para escritorio */
+  const searchButtonDesktop = document.getElementById('search-button-desktop');
+  if (searchButtonDesktop) {
+    searchButtonDesktop.addEventListener('click', () => handleSearch('search-input-desktop'));
+  }
+});
+
+/* Función para identifar la página en la que nos encontramos */
+document.addEventListener('DOMContentLoaded', function () {
+  const currentPath = window.location.pathname;
+  const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+
+  navLinks.forEach(link => {
+    if (link.getAttribute('href') === currentPath) {
+      link.classList.add('active');
+    }
+  });
 });
 
 export { navbarApp };

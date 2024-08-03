@@ -198,13 +198,23 @@ document.addEventListener('DOMContentLoaded', () => {
     searchButtonMobile.addEventListener('click', () => handleSearch('search-input-mobile'));
   }
 
-  // Manejar clic en el botón de búsqueda para escritorio
+  /* Manejar clic en el botón de búsqueda para escritorio */
   const searchButtonDesktop = document.getElementById('search-button-desktop');
   if (searchButtonDesktop) {
     searchButtonDesktop.addEventListener('click', () => handleSearch('search-input-desktop'));
   }
 });
 
+/* Función para identifar la página en la que nos encontramos */
+document.addEventListener('DOMContentLoaded', function () {
+  const currentPath = window.location.pathname;
+  const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
 
+  navLinks.forEach(link => {
+    if (link.getAttribute('href') === currentPath) {
+      link.classList.add('active');
+    }
+  });
+});
 
 export { navbarApp };

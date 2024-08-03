@@ -161,7 +161,7 @@ const handleSearch = (inputId) => {
       { name: 'Productos', url: '/src/pages/Productos/Productos.html' },
       { name: 'Quiénes Somos', url: '/src/pages/quienes_somos/quienes_somos.html' },
       { name: 'vaso de barro', url: '/src/pages/detalle_producto/1.html' },
-      { name: 'sombrero de palma', url: '/rc/pages/detalle_producto/2.html' },
+      { name: 'sombrero de palma', url: '/src/pages/detalle_producto/2.html' },
       { name: 'bolsa de mimbre', url: '/src/pages/detalle_producto/3.html' },
       { name: 'tapete de lana', url: '/src/pages/detalle_producto/4.html' },
       { name: 'máscara de madera', url: '/src/pages/detalle_producto/5.html' },

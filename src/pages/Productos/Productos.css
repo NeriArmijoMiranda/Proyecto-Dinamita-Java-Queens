@@ -1,5 +1,5 @@
 .banner-productos {
-    background-image: url(/public/img/verdeaguamadera.png);
+    background-image: url(/public/img/colorido.png);
     background-repeat: no-repeat;
     background-size: cover;
     height: 7rem;
@@ -10,6 +10,7 @@
     text-align: center;
     color: white;
     border-radius: 1rem;
+    text-shadow: 0.3rem 0.3rem 0.3rem black;
 }
 
 /* Contenedor de filtros */
@@ -67,13 +68,13 @@
     padding: 1.3rem; /* Espaciado interno */
     width: 100%; /* Ancho completo del contenedor padre */
     max-width: 1450px; /* Ancho máximo para evitar que se expanda demasiado */
-    margin: 1rem auto 10rem; /* Margen superior e inferior de 1rem, centrado horizontalmente */
+    margin: 1rem auto 15rem; /* Margen superior e inferior de 1rem, centrado horizontalmente */
     border-radius: 1rem;
 }
 
 .card {
     background-color: #8d9c09;
-    padding: 15px;
+    padding: 1rem;
     border-radius: 2rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
     max-width: 100%; /* Ancho máximo de la tarjeta */
@@ -107,7 +108,7 @@ width: 100%;
     border-radius: 2rem;
     border: none;
     color: white;
-    width: 20rem;
+    width: 100%;
     height: 3rem;
     padding: 1rem auto;
     margin: 2rem auto;

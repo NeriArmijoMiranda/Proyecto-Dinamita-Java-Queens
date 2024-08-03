@@ -169,6 +169,7 @@ button:hover {
     padding: 2rem;
     text-align: center;
     color: white;
+    text-shadow: 0.3rem 0.3rem 0.3rem black;
     border-radius: 1rem;
     box-sizing: border-box; /* Incluye padding y border en el cálculo del ancho total */
 }

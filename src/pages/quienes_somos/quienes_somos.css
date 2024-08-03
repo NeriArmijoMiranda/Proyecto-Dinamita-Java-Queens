@@ -1,15 +1,16 @@
 /* Estilos particulares de ¿Quiénes somos? */
 .container1 {
-    background-image: url(/public/img/verdeaguamadera.png);
+    background-image: url(/public/img/piedra.png);
     background-repeat: no-repeat;
     background-size: cover;
-    margin-top: 200px;
-    margin-left: 0px;
-    margin-right: 0px;
-    margin-bottom: 10px;
+    width: 100%;
     padding: 20px;
 }
-
+.container1 h1{
+    text-shadow: 0.3rem 0.3rem 0.3rem black;
+    font-size: 3.3rem;
+}
+ 
 .container2 {
     margin-top: 1.4rem;
     margin-bottom: 20px;

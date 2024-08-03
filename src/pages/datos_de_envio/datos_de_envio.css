@@ -12,7 +12,7 @@
     text-indent: 10px; /* Sangría del texto */
     padding: 15px;
 }
-
+ 
 .horizontal-container {
     display: flex;
     justify-content: space-between; /* O "flex-start", "center", dependiendo de tu preferencia */

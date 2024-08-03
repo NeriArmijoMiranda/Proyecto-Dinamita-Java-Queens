@@ -1,24 +1,26 @@
 /* Estilos particulares de Iniciar-Sesión */
 
 .container{
-    margin-bottom: 100px;
-    padding-bottom: 100px;
+    margin-bottom: 10rem;
+    padding-bottom: 10rem;
 
 }
 
 
 form {
-    padding: 100px;
-    border-radius: 20px;
+    padding: 4rem;
+    border-radius: 3rem;
     text-align: center;
-    background-color: #088078;
+    background-image: url(/public/img/forproducto.png);
+    background-repeat: no-repeat;
+    background-size: cover;
     /*display y flex-direction cambios*/
     flex-direction: column;
     max-width: 90rem; 
 }
 
 .form-group{
-    margin-bottom: 3px;
+    margin-bottom: 0.2rem;
     display: flex;
     justify-content:baseline;
     text-align:left;
@@ -27,10 +29,10 @@ form {
 }
 
 .fform-control{
-    padding: 20px 25px; /* 20px arriba y abajo, 25px a los lados */
-    border-radius: 20px;
-    margin-bottom: 30px;
-    background-color: #5aece3;
+    padding: 1.3rem 1rem; /* 20px arriba y abajo, 25px a los lados */
+    border-radius: 1.6rem;
+    margin-bottom: 1.6rem;
+    background-color: hsla(178, 76%, 74%, 0.5); /* Color #5aece3 con 50% de opacidad */
     border: none; /* Sin borde */
     outline: none; /* Sin contorno */
     font-family: "Mulish", sans-serif;
@@ -40,7 +42,7 @@ form {
 label{
     color: white;
     font-family: "Mulish", sans-serif;
-    font-size: 25px;
+    font-size: 1.5rem;
     font-weight: 600;
     margin-bottom: 5px;
 }
@@ -53,23 +55,29 @@ label{
     color: white;
     background-color: #055e58;
     font-family: "Mulish", sans-serif;
+    border: none;
 }
 
 .BotonCrear:hover{
-    background-color: #088078;
+    background-color: #20d6ca;
     width: auto;
 }
 
 h1{
     margin-top: 30px;
-    background-color: #08807B;
+    background-image: url(/public/img/banerproducto.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 2rem;
     align-content: space-between;
     font-family: "Corben", serif;
     font-weight: 700; /* Grosor de la fuente */
     font-style: normal; /* Estilo de la fuente */
+    font-size: 3rem;
     text-align: center;
     color: white; /* Color del texto */
     text-indent: 10px; /* Sangría del texto */
+    text-shadow: 0.1rem 0.1rem 0.2rem #000
 }
 
 .invalid-feedback{
@@ -87,13 +95,7 @@ strong{
     font-weight: bold;
     font-family: "Corben", serif;
     font-size: 25px;
-    background-color: #17fb67;
 }
-
-.close{
-    background-color:#17fb67;
-}
-
 .alert-success{
     background-color: black;
 }

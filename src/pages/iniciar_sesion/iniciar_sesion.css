@@ -1,168 +1,140 @@
- /* Estilos particulares de Iniciar-Sesión */
- .horizontal-container {
+/* Estilo general del contenedor de contenido */
+#content-wrap {
     display: flex;
-    text-align: center;
-    justify-content: center;
-    /* Alineación horizontal */
-    align-items: center;
-    /* Alineación vertical */
-    gap: 10px;
-    /* Ajusta el espacio entre los contenedores según sea necesario */
-    padding-top: 60px;
-    /* Espacio suficiente para que no lo tape el navbar */
-    padding-bottom: 60px;
-    /* Espacio suficiente para que no lo tape el footer */
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px; /* Espacio entre los formularios */
+    padding: 60px 0;
     box-sizing: border-box;
-    /* Asegura que el padding se incluya en el cálculo del tamaño del contenedor */
     width: 100%;
-    /* Asegura que el contenedor ocupe todo el ancho disponible */
-    height: 100%;
-    /* Asegura que el contenedor ocupe todo el alto disponible */
+    flex-wrap: wrap;
 }
 
-h2 {
-    text-align: center;
-    color: white;
-}
-
-.container {
-    margin: 0 auto;
-    max-width: 95%;
-    /* Ancho máximo */
-    border-radius: 10px;
-    /* Bordes redondeados */
-    margin-bottom: 10px;
+/* Estilo para cada contenedor de formulario */
+.contenedor-iniciar-sesion,
+.container-crear-cuenta {
+    flex: 1 1 calc(50% - 20px); /* Ajusta el tamaño base del formulario, menos el gap */
+    max-width: calc(50% - 20px); /* Limita el ancho máximo, menos el gap */
     box-sizing: border-box;
 }
 
-/* Contenedor Formularios verdes-------------------------------- */
-.form-container {
-    padding: 50px;
-    border-radius: 20px;
-    text-align: left;
-    background-color: #088078;
-    flex-direction: column;
-    max-width: 100%;
-    margin-bottom: 0px;
-    /* Margen inferior*/
+/* Estilo del contenedor de iniciar sesión */
+.contenedor-iniciar-sesion {
+    background-color: #088078; /* Puedes ajustar el color de fondo si lo deseas */
+
 }
 
-.form-registro {
+/* Estilo del contenedor de crear cuenta */
+.container-crear-cuenta {
+    background-color: #F85931; /* Puedes ajustar el color de fondo si lo deseas */
+}
+
+/* Asegura que los formularios ocupen el 100% del ancho de sus contenedores */
+.form-container, .form-registro {
     padding: 50px;
     border-radius: 20px;
     text-align: left;
-    background-color: #F85931;
-    flex-direction: column;
     max-width: 100%;
-    margin-bottom: 200px;
-    /* Margen inferior*/
+    box-sizing: border-box;
+}
+
+/* Estilos para los campos de entrada */
+.input_registro, .input_c {
+    padding: 20px 25px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    border: none;
+    outline: none;
+    font-family: "Mulish", sans-serif;
+    height: auto;
 }
 
 .input_registro {
-    /* Estilos de las celdas naranjas*/
-    padding: 20px 25px;
-    /* 20px arriba y abajo, 25px a los lados */
-    border-radius: 20px;
-    margin-bottom: 30px;
+    background-color: #ea846a; /* Color específico para el formulario de registro */
+}
+
+.form-content-email{
     background-color: #ea846a;
+    margin: 1rem 3rem 3rem 1rem;
+    padding: 1rem 1rem 1rem 1rem;
+    text-align: center;
+}
+.form-content-contraseña{
+    background-color: antiquewhite;
+    margin: 1rem 3rem 0rem 1rem;
+    padding: 1rem 1rem 0.1rem 1rem;
+    width: 100%;
+    text-align: center;
+}
+#contraseña{
+    background-color: cornflowerblue;
+}
+.input_email {
+    background-color: #5aece3; /* Color específico para el formulario de inicio de sesión */
+   width: 60%;
+   height: 170%;
     border: none;
-    /* Sin borde */
-    outline: none;
-    /* Sin contorno */
-    font-family: "Mulish", sans-serif;
-    height: auto;
-    /* Ajustar la altura automática */
+    border-radius: 1.3rem;
 }
-
-.input_c {
-    /* Estilos de las celdas verdes*/
-    padding: 20px 25px;
-    /* 20px arriba y abajo, 25px a los lados */
-    border-radius: 20px;
-    margin-bottom: 30px;
-    background-color: #5aece3;
+.input_contraseña{
+    background-color: #5aece3; /* Color específico para el formulario de inicio de sesión */
+    margin: 1rem;
+    width: 60%;
+    height: 30%;
     border: none;
-    /* Sin borde */
-    outline: none;
-    /* Sin contorno */
-    font-family: "Mulish", sans-serif;
-    height: auto;
-    /* Ajustar la altura automática */
+    border-radius: 1.3rem;
+    align-content: center;
+
 }
 
-.form-content {
-    /* Ajustes de las celdas verdes*/
-    display: flex;
-    /* Modelo de caja flexible */
-    flex-direction: column;
-    /*Elementos se colocan en una columna, uno debajo del otro */
-}
-
-::placeholder {
-    /*Lo que va a adentro de las celdas verdes como "Jorge" */
-    color: rgba(46, 45, 45, 0.521);
-    /* Color del texto con transparencia */
-    font-size: 18px;
-}
-
-/* Estilos de los subtítulos en General*/
-label {
+/* Estilo de los botones */
+.btn-enviar, .btn-registro {
+    border-radius: 10px;
+    cursor: pointer;
     color: white;
-    font-family: "Mulish", sans-serif;
+    padding: 25px;
     font-size: 25px;
     font-weight: 600;
-    /* Grosor de la fuente */
-    margin-bottom: 5px;
-    /* Margen inferior */
+    text-align: center;
+    border: none;
 }
 
 .btn-enviar {
-    border-radius: 10px;
-    /* Bordes redondeados */
-    cursor: pointer;
     background-color: #055e58;
-    color: white;
-    padding: 25px;
-    font-size: 25px;
-    font-weight: 600;
-    /* Grosor de la fuente */
-    text-align: center;
 }
 
 .btn-registro {
-    border-radius: 10px;
-    /* Bordes redondeados */
-    cursor: pointer;
     background-color: #e33c13;
-    color: white;
-    padding: 25px;
-    font-size: 25px;
-    font-weight: 600;
-
-    /* Grosor de la fuente */
-    text-align: center;
 }
 
 .btn-registro:hover {
     background-color: #ec5a35;
-    width: auto;
 }
 
 .btn-enviar:hover {
     background-color: #088078;
-    width: auto;
 }
 
 /* Responsive */
-@media (max-width: 1199.98px) {
-    .form {
-        padding: 50px 55px;
-        border-radius: 20px;
-        text-align: center;
-        width: 200px;
-        background-color: #088078;
-        display: flex;
+@media (max-width: 768px) {
+    #content-wrap {
         flex-direction: column;
-        max-width: 200px;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .contenedor-iniciar-sesion, .container-crear-cuenta {
+        max-width: 90%;
+        flex: 1 1 90%;
+    }
+
+    .btn-enviar, .btn-registro {
+        padding: 15px;
+        font-size: 20px;
+    }
+
+    .input_registro, .input_c {
+        padding: 15px;
+        font-size: 16px;
     }
 }

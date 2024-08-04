@@ -21,6 +21,20 @@
 .navbar-nav {
     width: 100%;
     justify-content: space-around;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+/* Asegura que los enlaces dentro de los nav-item tengan el mismo tamaño */
+.nav-link {
+    display: flex;
+    align-items: center; /* Centra el contenido verticalmente */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    height: 100%;
+    padding: 0 15px; /* Ajusta el espaciado interno según sea necesario */
+    color: rgba(0, 0, 0, 0.873); /* Ajusta el color del texto si es necesario */
+    text-align: center;
 }
 
 .dropdown-menu {
@@ -38,11 +52,24 @@
     width: 110px;
     height:auto;
     
-  }
-  
-  .btn {
+    } 
+.btn {
     border-color: rgb(56, 55, 55);
     color: rgba(var(--bs-emphasis-color-rgb), 1);
     width: 50px;
-    height:auto;
-  }
+    height:100%;
+    align-items: center; /* Alinea verticalmente el ícono */
+    justify-content: center; /* Centra horizontalmente el ícono */
+    }
+    .input-groupNav {
+        display: flex; /* Establece el contenedor como un contenedor Flexbox */
+        align-items: center; /* Alinea los elementos verticalmente en el centro */
+    }     
+/*Estilos para saber en qué página nos encontramos */
+    .navbar-nav .nav-link {
+        text-decoration: none; 
+    }     
+    .navbar-nav .nav-link.active {
+        font-weight: bold; /* Resalta el texto */
+        border-bottom: 2px solid #000000; 
+    }

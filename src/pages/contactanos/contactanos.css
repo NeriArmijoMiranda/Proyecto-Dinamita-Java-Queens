@@ -1,12 +1,13 @@
 /* Estilos particulares de Contáctanos */
 
 .container-fluid-titulo-forms {
-    background-image: url(/public/img/jarronesdebarrocolores.png);
+    background-color: #08807B;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 7rem;
     font-family: "Corben", serif;
+    font-style: normal;
     margin: 0.8rem 2.4rem; /* Ajustes de margen */
+    margin: 1rem auto;
     width: calc(100% - 4.8rem); /* Ajuste para centrar y alinear */
     padding: 2rem;
     text-align: center;
@@ -14,9 +15,8 @@
     border-radius: 1rem;
 }
 .container-fluid-titulo-forms h1{
-    font-size: 3.6rem;
-    text-shadow: 0.4rem 0.4rem 0.2rem #000
-}
+    font-size: 4rem;
+    }
 
 .container-fluid-2 {
     background-color: black;

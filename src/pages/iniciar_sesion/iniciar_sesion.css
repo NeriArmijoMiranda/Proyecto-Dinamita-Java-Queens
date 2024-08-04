@@ -23,6 +23,7 @@
 h2{
     text-align: center;
     color: white;
+    font-family: "Corben", serif;
 }
 
 h2 {
@@ -103,7 +104,7 @@ h2 {
     /*Lo que va a adentro de las celdas verdes como "Jorge" */
     color: rgba(46, 45, 45, 0.521);
     /* Color del texto con transparencia */
-    font-size: 18px;
+    font-size: 10px;
 }
 
 /* Estilos de los subtítulos en General*/

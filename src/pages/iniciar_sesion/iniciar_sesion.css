@@ -94,7 +94,7 @@ h2 {
 
 .form-content {
     /* Ajustes de las celdas verdes*/
-    display: flex;
+    display:flex;
     /* Modelo de caja flexible */
     flex-direction: column;
     /*Elementos se colocan en una columna, uno debajo del otro */
@@ -104,7 +104,7 @@ h2 {
     /*Lo que va a adentro de las celdas verdes como "Jorge" */
     color: rgba(46, 45, 45, 0.521);
     /* Color del texto con transparencia */
-    font-size: 10px;
+    font-size: 20px;
 }
 
 /* Estilos de los subtítulos en General*/

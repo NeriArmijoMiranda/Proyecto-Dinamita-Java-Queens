@@ -174,7 +174,8 @@ button:hover {
 
 /* Estilos para el contenedor de sugerencias */
 .container-sugerencias {
-    background-image: url(/public/img/florestejidascolores.png);
+    /*background-image: url(/public/img/florestejidascolores.png);*/
+    background-color: #08807B;
     background-repeat: no-repeat;
     background-size: cover;
     font-family: "Corben", serif;

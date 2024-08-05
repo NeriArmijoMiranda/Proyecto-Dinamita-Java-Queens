@@ -1,15 +1,16 @@
 /* Estilos particulares de Acerca de Nosotros */
 .container-s {
-  background-color: #E4007F;
+  background: #08807B;
+  background-repeat: no-repeat;
+  background-size: cover;
   margin:1rem auto;
   text-align: center;
   padding: 1rem;
   color: white;
-  text-shadow: 0.29rem 0.2rem 0rem #000
 }
 .container-s h1{
-  font-family: "Corben";
-  font-size: 4rem;
+  font-family: "Corben", serif;
+  font-size: 3rem;
 }
 /*Texto Acerca de nosotros*/
 

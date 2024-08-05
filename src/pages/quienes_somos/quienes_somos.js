@@ -15,3 +15,4 @@ document.querySelector("#footer-app").innerHTML= footerApp();
 
 /* ------------------------------------------------------------- */
 carritoCounter();
+ 

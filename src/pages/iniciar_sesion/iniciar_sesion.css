@@ -16,104 +16,189 @@
     flex: 1 1 calc(50% - 20px); /* Ajusta el tamaño base del formulario, menos el gap */
     max-width: calc(50% - 20px); /* Limita el ancho máximo, menos el gap */
     box-sizing: border-box;
-}
-
-/* Estilo del contenedor de iniciar sesión */
-.contenedor-iniciar-sesion {
-    background-color: #088078; /* Puedes ajustar el color de fondo si lo deseas */
-
-}
-
-/* Estilo del contenedor de crear cuenta */
-.container-crear-cuenta {
-    background-color: #F85931; /* Puedes ajustar el color de fondo si lo deseas */
+    background-color: black; /* Asegura que el fondo sea negro para ambos */
 }
 
 /* Asegura que los formularios ocupen el 100% del ancho de sus contenedores */
-.form-container, .form-registro {
-    padding: 50px;
-    border-radius: 20px;
+.form-container {
+    position: relative; /* Necesario para posicionar el pseudo-elemento */
+    padding: 4rem 1rem 7rem 1rem;
+    border-radius: 1rem;
     text-align: left;
     max-width: 100%;
     box-sizing: border-box;
-}
-
-/* Estilos para los campos de entrada */
-.input_registro, .input_c {
-    padding: 20px 25px;
-    border-radius: 20px;
-    margin-bottom: 30px;
-    border: none;
-    outline: none;
-    font-family: "Mulish", sans-serif;
-    height: auto;
-}
-
-.input_registro {
-    background-color: #ea846a; /* Color específico para el formulario de registro */
-}
-
-.form-content-email{
-    background-color: #ea846a;
-    margin: 1rem 3rem 3rem 1rem;
-    padding: 1rem 1rem 1rem 1rem;
-    text-align: center;
-}
-.form-content-contraseña{
-    background-color: antiquewhite;
-    margin: 1rem 3rem 0rem 1rem;
-    padding: 1rem 1rem 0.1rem 1rem;
-    width: 100%;
-    text-align: center;
-}
-#contraseña{
-    background-color: cornflowerblue;
-}
-.input_email {
-    background-color: #5aece3; /* Color específico para el formulario de inicio de sesión */
-   width: 60%;
-   height: 170%;
-    border: none;
-    border-radius: 1.3rem;
-}
-.input_contraseña{
-    background-color: #5aece3; /* Color específico para el formulario de inicio de sesión */
+    background: url(/public/img/pie.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: auto; 
     margin: 1rem;
-    width: 60%;
-    height: 30%;
-    border: none;
-    border-radius: 1.3rem;
     align-content: center;
+}
 
+.form-container > * {
+    position: relative; /* Asegura que los hijos se muestren encima del pseudo-elemento */
+    z-index: 2;
+}
+.form-container h2{
+    color: white;
+    text-shadow: 0.29rem 0.2rem 0rem #000;
+    font-size: 2.7rem;
+    text-align: center;
+}
+
+.form-registro{
+    padding: 3rem;
+    border-radius: 1rem;
+    text-align: left;
+    max-width: 100%;
+    box-sizing: border-box;
+    background: #088078;
+    height: auto; /* Ajuste para que el formulario tenga altura automática */
+    margin: 1rem 1rem 10rem 1rem;
+} 
+.form-registro h2{
+    color: white;
+    text-shadow: 0.2rem 0.1rem 0rem black;
+    font-size: 2.7rem;
+    text-align: center;
+}
+/* Estilo para columnas de formulario */
+.form-column {
+    display: flex;
+    flex-direction: column; /* Asegura que los campos estén en columna */
+    gap: 20px; /* Espacio entre campos */
+    margin-bottom: 20px; /* Espacio inferior */
+}
+
+/* Estilo para filas de formulario en dos columnas */
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Espacio entre columnas */
+    margin-bottom: 20px; /* Espacio entre filas */
+}
+
+/* Estilo para cada contenido de formulario */
+.form-content {
+    flex: 1; /* Ocupa el ancho disponible */
+    margin-bottom: 15px; /* Espacio inferior */
+}
+
+/* Estilo para los campos de form registro */
+.input_registro {
+    background-color:  rgba(0, 0, 0, 0.6); 
+    color: white; 
+    padding: 1rem 0.7rem;
+    border: none;
+    border-radius: 1.3rem; 
+    width: 100%; 
+    box-sizing: border-box; 
+    font-family: "Mulish", sans-serif; 
+    margin: 0.4rem auto 1rem;
+}
+/* Estilo para el placeholder */
+.input_registro::placeholder {
+    color: white; 
+    font-style: italic; 
+    font-size: 1rem; 
+}
+
+/* Estilo para el campo de entrada */
+.input_email {
+    background-color: rgba(0, 0, 0, 0.8); 
+    color: white; 
+    padding: 1rem 0.7rem;
+    border: none;
+    border-radius: 1.3rem; 
+    width: 100%; 
+    box-sizing: border-box; 
+    font-family: "Mulish", sans-serif; 
+    margin: 0.4rem auto 1rem;
+}
+
+/* Estilo para el placeholder */
+.input_email::placeholder {
+    color: white; 
+    font-style: italic; 
+    font-size: 1rem; 
+}
+.form-content-email label,
+.form-content-contraseña label {
+    color: white;
+    text-shadow: 0.29rem 0.2rem 0rem #000;
+    font-size: 1.4rem;
+}
+.input_contraseña {
+    background-color: rgba(0, 0, 0, 0.8); 
+    color: white; 
+    padding: 1rem 0.7rem;
+    border: none;
+    border-radius: 1.3rem; 
+    width: 100%; 
+    box-sizing: border-box; 
+    font-family: "Mulish", sans-serif;
+    margin: 0.4rem auto 1rem; 
+}
+
+/* Estilo para el placeholder */
+.input_contraseña::placeholder {
+    color: white; 
+    font-style: italic; 
+    font-size: 1rem; 
+}
+
+.form-content label{
+    color: white;
+    text-shadow: 0.1rem 0.1rem 0.3rem black;
+    font-size: 1.3rem;
 }
 
 /* Estilo de los botones */
-.btn-enviar, .btn-registro {
+.btn-enviar,
+.btn-registro {
     border-radius: 10px;
     cursor: pointer;
     color: white;
-    padding: 25px;
-    font-size: 25px;
+    padding: 15px;
+    font-size: 1.4rem;
     font-weight: 600;
     text-align: center;
     border: none;
+    width: 100%; /* Ajusta el botón para que ocupe todo el ancho del formulario */
+    margin-top: 1rem;
+    text-shadow: 0.1rem 0.1rem 0.3rem black;
 }
 
 .btn-enviar {
-    background-color: #055e58;
+    background-color: rgba(228, 0, 127, 0.5);
 }
 
 .btn-registro {
-    background-color: #e33c13;
+    background-color:rgba(248, 89, 49, 0.7);
 }
 
 .btn-registro:hover {
-    background-color: #ec5a35;
+    background-color: #F1A20B;
 }
 
 .btn-enviar:hover {
     background-color: #088078;
 }
+/* Estilos de iconos */
+.social-icons {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    gap: 1rem; 
+    margin-top: 1rem; 
+}
+
+/* Asegúrate de que los íconos sean visibles y tengan un tamaño adecuado */
+.social-icons .icon i {
+    font-size: 2rem; 
+    color: white; 
+}
+
 
 /* Responsive */
 @media (max-width: 768px) {
@@ -133,7 +218,7 @@
         font-size: 20px;
     }
 
-    .input_registro, .input_c {
+    .input_registro {
         padding: 15px;
         font-size: 16px;
     }

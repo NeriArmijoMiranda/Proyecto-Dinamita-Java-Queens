@@ -1,14 +1,12 @@
 /* Estilos particulares de ¿Quiénes somos? */
 .container1 {
-    background-image: url(/public/img/piedra.png);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: #8D9C09;
     width: 100%;
     padding: 20px;
 }
 .container1 h1{
     text-shadow: 0.3rem 0.3rem 0.3rem black;
-    font-size: 3.3rem;
+    font-size: 3.6rem;
 }
  
 .container2 {
@@ -75,6 +73,8 @@
     color: white;
     font-size: 3rem;
     font-family: Corben;
+    text-shadow: 0.1rem 0.17rem 0.3rem #F1A20B;
+    
 }
 .titulo-nuestros-valores:hover{
     color: #E4007F;
@@ -226,7 +226,40 @@ transform: translatex(0.3rem);
     margin-bottom: 40px;
     border-radius: 1rem;
     /* Espacio inferior */
-}
+} 
 .subtitulo2:hover{
     background-color: #b0c209;
 }
+/* Para boton arriba*/
+.scroll-top-btn {
+    position: fixed;
+    bottom: 1rem; 
+    right: 1rem; 
+    background-color: rgba(241, 162, 11, 0.8);
+    color: black; 
+    border: none;
+    border-radius: 3rem;
+    padding: 1rem;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    font-size: 24px;
+    z-index: 1000; 
+    transition: opacity 0.3s, visibility 0.3s; 
+    opacity: 0; 
+    visibility: hidden; 
+}
+  
+  .scroll-top-btn.show {
+    opacity: 1; 
+    visibility: visible; 
+  }
+  
+  .scroll-top-btn:hover {
+    background-color: #08807B; 
+    transform: scale(1.1); 
+  }
+  
+  .scroll-top-btn svg {
+    margin: 1rem;
+  }

@@ -13,6 +13,11 @@
     padding: 15px;
 }
  
+.titulos-envio h1{
+    text-shadow: 0.4rem 0.4rem 0.3rem black;
+    font-size: 3.3rem;
+
+}
 .horizontal-container {
     display: flex;
     justify-content: space-between; /* O "flex-start", "center", dependiendo de tu preferencia */
@@ -47,6 +52,7 @@ label {
     flex-direction: column;
     max-width: 100%;
     margin-bottom: 1px; /* Margen inferior*/
+    text-shadow: 0.1rem 0.1rem 0.3rem black;
 }
 
 .input_c { /* Estilos de las celdas verdes*/
@@ -58,6 +64,7 @@ label {
     outline: none; /* Sin contorno */
     font-family: "Mulish", sans-serif;
     height: auto; /* Ajustar la altura automática */
+
 }
 
 .form-content { /* Ajustes de las celdas verdes*/
@@ -66,7 +73,7 @@ label {
 }
 
 ::placeholder { /*Lo que va a adentro de las celdas verdes como "Jorge" */
-    color: rgba(46, 45, 45, 0.521); /* Color del texto con transparencia */
+    color: rgba(46, 45, 45, 0.8); /* Color del texto con transparencia */
     font-size: 18px;
 }
 
@@ -111,6 +118,7 @@ option { /* Letra de las opciones en Estados */
     height: 100px; /* Ajustar la altura */
     margin-top: 5px;
     padding: 25px;
+    text-shadow: 0.1rem 0.1rem 0.3rem black;
 }
 
 .checkbox:hover {
@@ -156,6 +164,7 @@ option { /* Letra de las opciones en Estados */
     justify-content: center; /* Centrar horizontalmente */
     height: 100px; /* Ajustar altura según sea necesario */
     width: auto; /* Ajustar ancho según sea necesario */
+    text-shadow: 0.1rem 0.1rem 0.3rem black;
 }
 
 .btn-guardar:hover {
@@ -168,7 +177,7 @@ option { /* Letra de las opciones en Estados */
     border-radius: 10px; /* Bordes redondeados */
     cursor: pointer;
     background-color:  #F1A20B;
-    color: black;
+    color: white;
     padding: 25px;
     font-size: 25px;
     font-weight: 600; /* Grosor de la fuente */
@@ -180,6 +189,7 @@ option { /* Letra de las opciones en Estados */
     justify-content: center; /* Centrar horizontalmente */
     height: 100px; /* Ajustar altura según sea necesario */
     width: auto; /* Ajustar ancho según sea necesario */
+    text-shadow: 0.1rem 0.1rem 0.3rem black;
 }
 
 .btn-guardar-r:hover {

@@ -84,7 +84,7 @@ const pintarCarrito = () => {
                 d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z" />
             </svg> </span>
         </div>
-
+ 
         <p><strong>Total: $ ${product.cantidad * product.precio} mxn</strong></p>
         
         <span class="delete">
@@ -120,7 +120,7 @@ const pintarCarrito = () => {
             eliminarProducto(product.id);
             location.reload();
 
-        });
+        }); 
 
     });
 
@@ -132,12 +132,12 @@ const pintarCarrito = () => {
     const totalBuying = document.createElement("div")
     totalBuying.className = "total-content"
     totalBuying.innerHTML = `
-    <h2>Resumen de compra:</h2>
+    <h2><strong>Resumen de compra:</strong></h2>
     <p>Total parcial: $ ${total} mxn</p>
     <p>Descuento: 10 % </p>
     <p>Costo de envío: Gratis.</p>
     <hr/>
-    <p>Total a pagar: $${total * 0.9} mxn</p>
+    <p><strong>Total a pagar: $${total * 0.9} mxn</strong></p>
     <p>Aceptamos las siguientes tarjetas:</p>
     <p>
         <img class="tarjetas rounded-3 " src="/img/visa.png" alt="Tarjeta visa" height="60px" width="70px">
@@ -155,7 +155,7 @@ const pintarCarrito = () => {
     continuar.addEventListener("click", function () {
         window.location.href = "/src/pages/datos_de_envio/datos_de_envio.html"; 
     });
-};
+}; 
 pintarCarrito();
 
 /* Llamamos las funciones que importamos de Productos */

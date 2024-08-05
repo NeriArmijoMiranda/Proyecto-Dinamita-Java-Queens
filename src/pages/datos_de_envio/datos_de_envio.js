@@ -103,7 +103,7 @@ function validateForm(formId) {
             // Crear y mostrar el mensaje de error
             const errorMessage = document.createElement('div');
             errorMessage.classList.add('error-message');
-            errorMessage.style.color = 'red';
+            errorMessage.style.color = '#F1A20B';
             errorMessage.textContent = `Por favor, complete el campo: ${field.placeholder}`;
             field.parentNode.insertBefore(errorMessage, field.nextSibling); // Insertar el mensaje después del campo
         }

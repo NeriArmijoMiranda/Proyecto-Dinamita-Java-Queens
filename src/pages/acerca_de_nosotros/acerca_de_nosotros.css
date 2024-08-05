@@ -1,27 +1,21 @@
 /* Estilos particulares de Acerca de Nosotros */
 .container-s {
-  background-image: url(/public/img/verdecafe.png);
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: #E4007F;
   margin:1rem auto;
   text-align: center;
-  padding: 2rem;
+  padding: 1rem;
   color: white;
-  text-shadow: 0.3rem 0.3rem 0rem #000
+  text-shadow: 0.29rem 0.2rem 0rem #000
 }
 .container-s h1{
   font-family: "Corben";
-  font-size: 3rem;
+  font-size: 4rem;
 }
 /*Texto Acerca de nosotros*/
 
 .etiqueta-frase{
   display: block;
   display: none;
-}
-
-.container-texto-dinamitas{
-
 }
 .container-texto-dinamitas h1 {
   color: white;
@@ -30,7 +24,8 @@
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  font-size: 2.3rem;
+  font-size: 2.8rem;
+  text-shadow: 0.1rem 0.1rem 0.1rem #08807B;
 }
 .container-texto-dinamitas p{
   color: white;

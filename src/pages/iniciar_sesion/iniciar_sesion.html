@@ -4,115 +4,92 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Iniciar-Sesión</title>
+  <title>Crear Cuenta</title>
   <link rel="stylesheet" href="./iniciar_sesion.css">
-  <link rel="icon" href="/public/img/logo_yoatzin.png" type="imagen icono">
-
+  <link rel="icon" href="/public/img/logo_yoatzin.png" type="image/x-icon">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
- 
+
 <body>
-  <!-- CONTENEDOR GENERAL de la página -->
-  <div id="page-container">
-    <!-- Navbar = Header -->
-    <header id="navbar-app"> </header>
-
-    <!-- Contenido de la página -->
+<div id="page-container">
+    <header id="navbar-app"></header>
     <div id="content-wrap">
-      <!-- Aquí va el contenido -->
       <!-- Formulario de Iniciar Sesión -->
-      <div class="contenedor-iniciar-sesion">
-        <div class="container mt-3 justify-content-around">
-          <form id="login-form">
-            <div class="form-container">
-              <div class="row">
-                <!-- Contenido del primer formulario -->
-                <h2 id="iniciar-sesion">Iniciar Sesión</h2>
-                <div class="social-icons">
-                  <a href="#" class="icon">
-                    <i class="fa-brands fa-google"></i></a>
-                  <a href="#" class="icon">
-                    <i class="fa-brands fa-facebook"></i></a>
-                  <a href="#" class="icon">
-                    <i class="fa-brands fa-github"></i></a>
-                  <a href="#" class="icon">
-                    <i class="fa-brands fa-linkedin"></i></a>
-                </div>
-                <div class="form-content-email">
-                  <label for="email">Email</label>
-                  <input class="input_email" type="email" name="email" id="inicio-email" placeholder="alguien@example.com"
-                    required>
-                </div>
-                <div class="form-content-contraseña">
-                  <label for="message">Contraseña</label>
-                  <textarea class="input_contraseña" name="contraseña" id="message" cols="30" rows="5" placeholder="Contraseña"
-                    required></textarea>
-                  <!--  <a href="#"> ¿Olvidaste tu contraseña?</a> -->
-                </div>
-                <div class="form-content-enviar">
-                  <input class="btn-enviar" type="submit" value="Enviar">
-                  <p class="warnings" id="warnings"></p>
-                </div>
-              </div>
-            </div>
-          </form>
+    <div class="contenedor-iniciar-sesion">
+      <form id="login-form">
+         <!-- contenido del formulario -->
+          <div class="form-container">
+          <h2 id="iniciar-sesion">Iniciar Sesión</h2>
+          
+          <div class="form-content-email">
+            <label for="email"><strong>Email</strong></label>
+            <input class="input_email" type="email" name="email" id="inicio-email" placeholder="alguien@example.com" required>
+          </div>
+          <div class="form-content-contraseña">
+            <label for="message"><strong>Contraseña</strong></label>
+            <input class="input_contraseña" name="contraseña" id="message" placeholder="Contraseña" required>
+          </div>
+          <div class="form-content-enviar">
+            <input class="btn-enviar" type="submit" value="Enviar">
+            <p class="warnings" id="warnings"></p>
+          </div>
+          <div class="social-icons">
+            <a href="https://wa.me/" class="icon" target="_blank" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="https://www.facebook.com/" class="icon" target="_blank" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/yoatzin_artesanias/" class="icon" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://mail.google.com/" class="icon" target="_blank" title="Google"><i class="fa-brands fa-google"></i></a>
+          </div>
         </div>
-      </div>
-      <!-- Formulario de Crear Cuenta -->
-      <div class="container-crear-cuenta mt-3">
-        <form id="from-crear">
-          <div class="form-registro">
-            <div class="row">
-              <!-- Contenido del segundo formulario -->
-              <h2 id="Crear-cuenta">Crear cuenta</h2>
-              <!--División, con etiquetado e "id" conectar con javascript-->
-              <div class="input-grupo">
-                <div class="form-content">
-                  <label for="name">Nombre</label>
-                  <input class="input_registro" type="text" name="name" id="name" placeholder="Mariana" required>
-                </div>
-                <div class="form-content">
-                  <label for="phone">Teléfono</label>
-                  <input class="input_registro" type="tel" name="phone" id="phone" placeholder="0101010101" required>
-                </div>
-              </div>
-              <div class="input-grupo">
-
-                <div class="form-content">
-                  <label for="last-name">Apellido</label>
-                  <input class="input_registro" type="text" name="last-name" id="last-name" placeholder="López Pérez"
-                    required>
-                </div>
-                <div class="form-content">
-                  <label for="email"><strong>Email</strong></label>
-                  <input class="input_registro" type="email" name="email" id="crear-email" placeholder="alguien@example.com"
-                    required>
-                </div>
-              </div>
-              <div class="form-content">
-                <label for="contraseña"><strong>Contraseña</strong></label>
-                <input class="input_registro" type="password" id="contraseña" placeholder="Contraseña" required>
-              </div>
-              <!--Confirmar Contraseña-->
-              <div class="form-content">
-                <label for="contraseña">Confirmar Contraseña</label>
-                <input class="input_registro" id="Confirmar-dos" type="password" placeholder="Confirmar Contraseña"
-                  required>
-              </div>
-              <button class="btn-registro">Crear cuenta</button>
+      </form>
+    </div>
+      <!-- contenedor de Formulario de Crear Cuenta -->
+  <div class="container-crear-cuenta">
+        <!-- Formulario de Crear Cuenta -->
+    <form id="from-crear">
+          <!-- contenido del formulario -->
+        <div class="form-registro">
+          <h2 id="Crear-cuenta">Crear cuenta</h2>
+          <div class="form-column">
+            <div class="form-content">
+              <label for="name"><strong>Nombre</strong></label>
+              <input class="input_registro" type="text" name="name" id="name" placeholder="Mariana" required>
+            </div>
+            <div class="form-content">
+              <label for="last-name"><strong>Apellido</strong></label>
+              <input class="input_registro" type="text" name="last-name" id="last-name" placeholder="López Pérez" required>
+            </div>
+            <div class="form-content">
+              <label for="phone"><strong>Teléfono</strong></label>
+              <input class="input_registro" type="tel" name="phone" id="phone" placeholder="0101010101" required>
+            </div>
+            <div class="form-content">
+              <label for="email"><strong>Email</strong></label>
+              <input class="input_registro" type="email" name="email" id="crear-email" placeholder="alguien@example.com" required>
             </div>
           </div>
-        </form>
-      </div>
+          <div class="form-row">
+            <div class="form-content">
+              <label for="contraseña"><strong>Contraseña</strong></label>
+              <input class="input_registro" type="password" id="contraseña" placeholder="Contraseña" required>
+            </div>
+            <div class="form-content">
+              <label for="confirmar-contraseña"><strong>Confirmar Contraseña</strong></label>
+              <input class="input_registro" id="confirmar-contraseña" type="password" placeholder="Confirmar Contraseña" required>
+            </div>
+          </div>
+          <button class="btn-registro">Crear cuenta</button>
+        </div>
+      </form>
     </div>
-
-    <!-- Footer -->
-    <footer id="footer-app" class="footer-basic container-fluid"> </footer>
-
-    <!-- Aquí va la ruta del archivo js para funcionalidades -->
+    <footer id="footer-app" class="footer-basic container-fluid"></footer>
     <script type="module" src="./iniciar_sesion.js"></script>
-
-  </div>
+</div>
+  <a href="#" id="scrollTopBtn" class="scroll-top-btn">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-compact-up" viewBox="0 0 16 16">
+      <path fill-rule="evenodd" d="M7.776 5.553a.5.5 0 0 1 .448 0l6 3a.5.5 0 1 1-.448.894L8 6.56 2.224 9.447a.5.5 0 1 1-.448-.894z"/>
+    </svg>
+  </a>
 </body>
 
 </html>
+

@@ -221,3 +221,18 @@ label {
 .accordion-button:not(.collapsed) {
     background-color: #f27252;
 }
+
+.p{
+    text-align: center;
+    color: white;
+}
+/* Estilo para el aviso de iniciar sesión para enviar comentarios */
+.container-mensaje{
+    text-align: center;
+    color: white;
+    border-radius: 15px;
+    background-color: #08807B;
+    font-family: "Mulish", sans-serif;
+    font-size: 1.25rem;
+    font-style: normal;
+}

@@ -119,4 +119,3 @@ document.addEventListener('scroll', function() {
       behavior: 'smooth' // Desplazamiento suave
     });
   });
-  

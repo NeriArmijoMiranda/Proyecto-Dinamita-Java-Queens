@@ -1,16 +1,15 @@
 /* Estilos particulares de Acerca de Nosotros */
 .container-s {
-  background-image: url(/public/img/verdecafe.png);
+  background: #08807B;
   background-repeat: no-repeat;
   background-size: cover;
   margin:1rem auto;
   text-align: center;
   padding: 2rem;
   color: white;
-  text-shadow: 0.3rem 0.3rem 0rem #000
 }
 .container-s h1{
-  font-family: "Corben";
+  font-family: "Corben", serif;
   font-size: 3rem;
 }
 /*Texto Acerca de nosotros*/

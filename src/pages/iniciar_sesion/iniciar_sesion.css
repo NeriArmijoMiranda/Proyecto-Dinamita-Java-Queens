@@ -20,17 +20,21 @@
     /* Asegura que el contenedor ocupe todo el alto disponible */
 }
 
+h2{
+    text-align: center;
+    color: white;
+    font-family: "Corben", serif;
+}
+
 h2 {
     text-align: center;
     color: white;
 }
 
 .container {
-    margin: 0 auto;
-    max-width: 95%;
-    /* Ancho máximo */
-    border-radius: 10px;
-    /* Bordes redondeados */
+    margin: 0 auto; 
+    max-width: 95%; /* Ancho máximo */
+    border-radius: 10px; /* Bordes redondeados */
     margin-bottom: 10px;
     box-sizing: border-box;
 }
@@ -39,23 +43,21 @@ h2 {
 .form-container {
     padding: 50px;
     border-radius: 20px;
-    text-align: left;
+    text-align:left;
     background-color: #088078;
     flex-direction: column;
     max-width: 100%;
-    margin-bottom: 0px;
-    /* Margen inferior*/
+    margin-bottom: 0px; /* Margen inferior*/
 }
 
 .form-registro {
     padding: 50px;
     border-radius: 20px;
     text-align: left;
-    background-color: #F85931;
+    background-color:#F85931;
     flex-direction: column;
     max-width: 100%;
-    margin-bottom: 200px;
-    /* Margen inferior*/
+    margin-bottom: 200px; /* Margen inferior*/
 }
 
 .input_registro {
@@ -92,7 +94,7 @@ h2 {
 
 .form-content {
     /* Ajustes de las celdas verdes*/
-    display: flex;
+    display:flex;
     /* Modelo de caja flexible */
     flex-direction: column;
     /*Elementos se colocan en una columna, uno debajo del otro */
@@ -102,7 +104,7 @@ h2 {
     /*Lo que va a adentro de las celdas verdes como "Jorge" */
     color: rgba(46, 45, 45, 0.521);
     /* Color del texto con transparencia */
-    font-size: 18px;
+    font-size: 20px;
 }
 
 /* Estilos de los subtítulos en General*/
@@ -153,16 +155,15 @@ label {
     width: auto;
 }
 
-/* Responsive */
-@media (max-width: 1199.98px) {
-    .form {
-        padding: 50px 55px;
-        border-radius: 20px;
-        text-align: center;
-        width: 200px;
-        background-color: #088078;
-        display: flex;
-        flex-direction: column;
-        max-width: 200px;
-    }
+@media (max-width: 1199.98px){
+    .form{
+            padding: 50px 55px;
+            border-radius: 20px;
+            text-align: center;
+            width: 200px;
+            background-color:#088078;
+            display: flex;
+            flex-direction: column;
+            max-width: 200px;
+        }
 }

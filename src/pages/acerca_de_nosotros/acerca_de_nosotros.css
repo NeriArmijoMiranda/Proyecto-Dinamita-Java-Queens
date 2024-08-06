@@ -11,6 +11,8 @@
 .container-s h1{
   font-family: "Corben", serif;
   font-size: 3rem;
+  text-shadow: 0.3rem 0.2rem 0.1rem black;
+  font-size: 4rem;
 }
 /*Texto Acerca de nosotros*/
 

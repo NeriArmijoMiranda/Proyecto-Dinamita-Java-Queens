@@ -55,7 +55,7 @@
     background: #088078;
     height: auto; /* Ajuste para que el formulario tenga altura automática */
     margin: 1rem 1rem 10rem 1rem;
-} 
+}  
 .form-registro h2{
     color: white;
     text-shadow: 0.2rem 0.1rem 0rem black;
@@ -230,4 +230,24 @@
     margin: 0.4rem auto 1rem;
     font-weight: bold;
     text-align: justify;
+}
+.swal2-title{
+    background-color: #088078;
+    color: white;
+    text-shadow: 0.1rem 0.1rem 0.3rem black;
+}
+.swal2-popup{
+background-color: #088078;
+}
+#swal2-html-container{
+color: white;
+text-shadow: 0.1rem 0.1rem 0.1rem black;
+}
+.swal2-confirm{
+    background-color: #E4007F;
+    color: white;
+    text-shadow: 0.1rem 0.1rem 0.1rem black;
+}
+.swal2-confirm:hover{
+    background-color: #8D9C09;
 }

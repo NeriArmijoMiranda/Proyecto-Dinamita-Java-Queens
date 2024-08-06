@@ -14,7 +14,7 @@ import { footerApp } from '/src/components/footer/footer_app.js'
 document.querySelector("#navbar-app").innerHTML = navbarApp();
 document.querySelector("#footer-app").innerHTML = footerApp();
 
-/* ------------------------------------------------------------- */
+/* ------------------------------------------------------------ */
 // Obtener referencias a los formularios
 const loginForm = document.getElementById('login-form');
 const registerForm = document.getElementById('from-crear');
@@ -32,12 +32,22 @@ loginForm.addEventListener('submit', function (event) {
 
     // Validar si la contraseña y el email son correctos
     if (password === storedPassword && email === storedEmail) {
-        alert('Inicio de sesión exitoso.');
-        window.location.href = '/index.html'; // Cambia 'index.html' por tu página de inicio
+        Swal.fire({
+            icon: "success",
+            title: "¡BIENVENIDO!",
+        }).then(() => {
+            // Después de que el usuario inicie sesión lo envia a la página principal
+            window.location.href = '/index.html'; // Cambia 'index.html' por tu página de inicio
+        });
+     
     } else {
-        alert('Contraseña o email incorrecto.');
+        Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "¡Email o Contraseña Incorrecta!",
+        });
     }
-});
+}); 
 
 // Función para validar la contraseña
 function validatePassword(password) {
@@ -45,12 +55,12 @@ function validatePassword(password) {
     const specialCharPattern = /[!@#$%^&*(),.?":{}|<>]/;
 
     if (!upperCasePattern.test(password)) {
-        alert('La contraseña debe contener al menos una letra mayúscula.');
+        Swal.fire('La contraseña debe contener al menos una letra mayúscula.');
         return false;
     }
 
     if (!specialCharPattern.test(password)) {
-        alert('La contraseña debe contener al menos un carácter especial, ejemplo: [!@#$%^&*(),.?":{}|<>]');
+        Swal.fire('La contraseña debe contener al menos un carácter especial. Ejemplo: [!@#$%^&*(),.?":{}|<>]');
         return false;
     }
 
@@ -69,7 +79,7 @@ registerForm.addEventListener('submit', function (event) {
 
     // Validación de la longitud de la contraseña
     if (password.length < 10) { // Actualiza el mínimo a 10 caracteres si lo deseas
-        alert('La contraseña debe tener al menos 10 caracteres.');
+        Swal.fire('La contraseña debe tener al menos 10 caracteres.');
         return;
     }
 
@@ -80,7 +90,7 @@ registerForm.addEventListener('submit', function (event) {
 
     // Validación de coincidencia de contraseña
     if (password !== confirmPassword) {
-        alert('Las contraseñas no coinciden.');
+        Swal.fire('Las contraseñas no coinciden.');
         return;
     }
 
@@ -90,8 +100,16 @@ registerForm.addEventListener('submit', function (event) {
     localStorage.setItem('userLastName', lastName);
     localStorage.setItem('userEmail', email);
     localStorage.setItem('userPassword', password);
-    alert('Registro exitoso y datos guardados en localStorage.');
-    registerForm.submit(); // Descomentar esta línea si quieres enviar el formulario después de la validación
+
+    // Mostrar la alerta de éxito
+    Swal.fire({
+        icon: 'success',
+        title: '¡Registro Exitoso!',
+        text: 'Tus datos han sido registrados con éxito.'
+    }).then(() => {
+        // Después de que el usuario cierra la alerta, se envía el formulario
+        registerForm.submit();
+    });
 });
 
 //Boton arriba

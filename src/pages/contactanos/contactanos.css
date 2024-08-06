@@ -1,22 +1,21 @@
 /* Estilos particulares de Contáctanos */
 
 .container-fluid-titulo-forms {
-    background-color: #08807B;
+    background-color: #F85931;
     background-repeat: no-repeat;
     background-size: cover;
     font-family: "Corben", serif;
     font-style: normal;
     margin: 0.8rem 2.4rem; /* Ajustes de margen */
     margin: 1rem auto;
-    width: calc(100% - 4.8rem); /* Ajuste para centrar y alinear */
-    padding: 2rem;
+    width: 100%;
+    padding: 1.2rem;
     text-align: center;
     color: white;
-    border-radius: 1rem;
-}
+} 
 .container-fluid-titulo-forms h1{
     font-family: "Corben", serif;
-    text-shadow: 0.2rem 0.3rem 0.3rem black;
+    text-shadow: 0.2rem 0.2rem 0.1rem black;
     font-size: 3.7rem; 
     overflow-wrap: break-word; 
     margin: 0; 

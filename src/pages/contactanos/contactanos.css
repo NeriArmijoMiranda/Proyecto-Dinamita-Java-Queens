@@ -34,6 +34,7 @@
 .container2 h2 {
     font-size: 2.6rem; /* Ajusta el tamaño del texto según sea necesario */
     margin: 0; /* Elimina márgenes predeterminados del h2 */
+    text-shadow: 0.1rem 0.2rem 1rem #08807B;
 }
 
 
@@ -77,7 +78,6 @@
 /* Ajusta el tamaño del contenedor de las preguntas */
 .accordion-header {
     margin-bottom: 0.5rem; /* Ajusta el margen inferior si es necesario */
-    background-color: blue;
 }
 
 /* Estilo de las preguntas */
@@ -110,7 +110,7 @@
     font-size: 1.4rem; /* Ajusta el tamaño del texto de las respuestas */
     margin: 0; /* Elimina el margen por defecto */
 }
-
+ 
 /* Ajuste para el enlace dentro de las respuestas */
 .p-respuesta a {
     color: #F85931; /* Ajusta el color del enlace si es necesario */
@@ -147,6 +147,7 @@ form {
 /* Estilo del título */
 #escribenos {
     font-family: "Mulish", sans-serif;
+    text-shadow: 0.2rem 0.3rem 0.3rem black;
     color: white;
     font-size: 2.6rem;
     border-radius: 1rem;
@@ -166,6 +167,9 @@ form {
 .form-group-left, .form-group-right {
     flex: 1;
     min-width: 300px; /* Asegura que los grupos de campos se ajusten en pantallas pequeñas */
+    text-shadow: 0.2rem 0.3rem 0.3rem black;
+    font-size: 1.6rem;
+    
 }
 
 /* Estilo de los campos del formulario */
@@ -182,12 +186,10 @@ form {
 
 
 /* Estilo de los labels */
-label {
-    display: block;
-    color: white;
+.input_c::placeholder {
+    color: black;
     font-family: "Mulish", sans-serif;
-    font-size: 1.25rem;
-    font-weight: 600;
+    font-size: 1.2rem;
     margin-bottom: 0.5rem;
 }
 
@@ -196,13 +198,14 @@ label {
     font-size: 1.4rem;
     border-radius: 1rem;
     padding: 0.75rem;
-    color: white;
+    color: black;
     background-color:#c8af7f;
     border: none;
     cursor: pointer;
     width: 50%;
     margin-top: 1rem;
     margin-left: 9rem;
+    font-weight:bold;
 }
 .botonEnviar:hover{
     background-color: #1e9894;

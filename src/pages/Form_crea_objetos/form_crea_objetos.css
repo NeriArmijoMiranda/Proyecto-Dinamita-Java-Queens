@@ -1,99 +1,109 @@
-/* Estilos particulares de Iniciar-Sesión */
-
-.container{
-    margin-bottom: 100px;
-    padding-bottom: 100px;
-
+/* Estilos generales para el contenedor del formulario */
+.container {
+    margin-bottom: 10rem;
+    padding-bottom: 10rem;
 }
 
-
+/* Estilos para el formulario */
 form {
-    padding: 100px;
-    border-radius: 20px;
+    padding: 4rem;
+    border-radius: 3rem;
     text-align: center;
-    background-color: #088078;
-    /*display y flex-direction cambios*/
-    flex-direction: column;
-    max-width: 90rem; 
-}
-
-.form-group{
-    margin-bottom: 3px;
+    background-image: url(/public/img/forproducto.png);
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
-    justify-content:baseline;
-    text-align:left;
-    display: flex; /* Modelo de caja flexible */
     flex-direction: column;
+    max-width: 90rem;
 }
 
-.fform-control{
-    padding: 20px 25px; /* 20px arriba y abajo, 25px a los lados */
-    border-radius: 20px;
-    margin-bottom: 30px;
-    background-color: #5aece3;
+/* Estilos para el grupo de formulario */
+.form-group {
+    margin-bottom: 0.2rem;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+/* Estilos para los campos de entrada */
+.fform-control {
+    padding: 1.3rem 1rem; /* Espaciado interior */
+    border-radius: 1.6rem;
+    margin-bottom: 1.6rem;
+    background-color: hsla(178, 76%, 74%, 0.5); /* Color con opacidad */
     border: none; /* Sin borde */
     outline: none; /* Sin contorno */
     font-family: "Mulish", sans-serif;
-    height: auto; /* Ajustar la altura automática */
+    height: auto; /* Ajusta la altura automáticamente */
 }
 
-label{
+/* Estilos para los placeholders dentro de inputs y textareas */
+input::placeholder, textarea::placeholder {
+    color: #000; /* Color negro */
+    opacity: 1; /* Asegura que el color del texto del placeholder sea completamente visible */
+    font-style: italic; /* Opcional: Estilo en cursiva */
+    font-size: 1.1rem; /* Tamaño de fuente ajustable */
+}
+
+/* Estilos para las etiquetas */
+label {
     color: white;
+    text-shadow: 0.2rem 0.2rem 0.1rem #000;
     font-family: "Mulish", sans-serif;
-    font-size: 25px;
+    font-size: 1.5rem;
     font-weight: 600;
     margin-bottom: 5px;
 }
 
-.BotonCrear{
-    font-size: 20px;
+/* Estilos para el botón de crear */
+.BotonCrear {
+    font-size: 2rem;
     border-radius: 10px;
     padding: 25px;
     cursor: pointer;
     color: white;
+    text-shadow: 0.1rem 0.1rem 0.1rem #000;
     background-color: #055e58;
     font-family: "Mulish", sans-serif;
+    border: none;
 }
 
-.BotonCrear:hover{
-    background-color: #088078;
+.BotonCrear:hover {
+    background-color: #20d6ca;
     width: auto;
 }
 
-h1{
+/* Estilos para el título h1 */
+h1 {
     margin-top: 30px;
     background-color: #08807B;
-    align-content: space-between;
+    padding: 2rem;
     font-family: "Corben", serif;
-    font-weight: 700; /* Grosor de la fuente */
-    font-style: normal; /* Estilo de la fuente */
+    font-weight: 700;
+    font-size: 3.4rem;
     text-align: center;
-    color: white; /* Color del texto */
-    text-indent: 10px; /* Sangría del texto */
+    color: white;
+    text-indent: 10px;
+    text-shadow: 0.4rem 0.26rem 0.2rem #000;
 }
 
-.invalid-feedback{
+/* Estilos para los mensajes de retroalimentación */
+.invalid-feedback {
     font-size: 25px;
-    font-weight: bold ;
+    font-weight: bold;
     font-family: "Corben", serif;
+    color: #F1A20B;
+    text-shadow: 0.2rem 0.2rem 0.1rem #000;
 }
 
-::placeholder { /*Lo que va a adentro de las celdas verdes como "Jorge" */
-    color: rgba(46, 45, 45, 0.521); /* Color del texto con transparencia */
-    font-size: 18px;
-}
-
-strong{
+/* Estilos para elementos con etiqueta fuerte */
+strong {
     font-weight: bold;
     font-family: "Corben", serif;
     font-size: 25px;
-    background-color: #17fb67;
 }
 
-.close{
-    background-color:#17fb67;
-}
-
-.alert-success{
+/* Estilos para las alertas (si es necesario) */
+.alert-success {
     background-color: black;
 }

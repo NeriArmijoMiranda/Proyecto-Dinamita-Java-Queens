@@ -260,9 +260,9 @@ const displayProducts = (productsList) => {
             <h3>${product.origen}</h3>
             <h4>${product.categoría}</h4>
             <div class="descripcion" style="display: flex; flex-direction: column;">
-                <p>Talla: ${product.talla}</p>
+                <!--<p>Talla: ${product.talla}</p>-->
                 <p>Precio: $${product.precio.toFixed(2)}</p>
-                <p>Cantidad: ${product.cantidad}</p>
+                <!--<p>Cantidad: ${product.cantidad}</p>-->
             </div>
             <button class="detalleBoton">Ver más</button>
         `;
@@ -342,7 +342,32 @@ const eliminarProducto = (id) => {
     pintarCarrito();
 };
 
-
+ //Boton arriba
+document.addEventListener('scroll', function() {
+    const scrollTopBtn = document.getElementById('scrollTopBtn');
+    const scrollY = window.scrollY || window.pageYOffset;
+    const windowHeight = window.innerHeight;
+    const documentHeight = document.documentElement.scrollHeight;
+    
+    // Calcula el porcentaje de desplazamiento de la página
+    const scrollPercent = (scrollY / (documentHeight - windowHeight)) * 100;
+    
+    // Muestra el botón cuando el usuario ha desplazado más allá del 40% del contenido de la página
+    if (scrollPercent > 40) {
+      scrollTopBtn.classList.add('show');
+    } else {
+      scrollTopBtn.classList.remove('show');
+    }
+  });
+  
+  document.getElementById('scrollTopBtn').addEventListener('click', function(e) {
+    e.preventDefault(); // Evita el comportamiento predeterminado del enlace
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth' // Desplazamiento suave
+    });
+  });
+  
 
 /* ARLETE: Se exportan para usar en compras */
 export { getProducts }

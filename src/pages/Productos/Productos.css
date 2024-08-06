@@ -1,16 +1,28 @@
 .banner-productos {
     background-color: #08807B;
-    background-repeat: no-repeat;
-    background-size: cover;
     height: 7rem;
-    font-family: "Corben", serif;
     margin: 0.8rem 2.4rem; /* Ajustes de margen */
     width: calc(100% - 4.8rem); /* Ajuste para centrar y alinear */
-    padding: 2rem;
+    padding: 1rem; /* Ajusta el padding interno */
     text-align: center;
     color: white;
     border-radius: 1rem;
+    overflow: hidden; /* Asegura que el contenido que se desborde se oculte */
+    box-sizing: border-box; /* Incluye padding y border en el tamaño total */
+    display: flex; /* Usa flexbox para centrar el texto vertical y horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
 }
+
+.banner-productos h1 {
+    font-family: "Corben", serif;
+    text-shadow: 0.3rem 0.3rem 0.3rem black;
+    font-size: 3.5rem; /* Ajusta el tamaño del texto */
+    overflow-wrap: break-word; /* Asegura que el texto largo se ajuste */
+    margin: 0; /* Elimina el margen del h1 para evitar desbordamientos */
+    line-height: 1.2; /* Ajusta la altura de línea si es necesario */
+}
+
 
 /* Contenedor de filtros */
 .wrap {
@@ -67,13 +79,13 @@
     padding: 1.3rem; /* Espaciado interno */
     width: 100%; /* Ancho completo del contenedor padre */
     max-width: 1450px; /* Ancho máximo para evitar que se expanda demasiado */
-    margin: 1rem auto 10rem; /* Margen superior e inferior de 1rem, centrado horizontalmente */
+    margin: 1rem auto 15rem; /* Margen superior e inferior de 1rem, centrado horizontalmente */
     border-radius: 1rem;
 }
 
 .card {
     background-color: #8d9c09;
-    padding: 15px;
+    padding: 1rem;
     border-radius: 2rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
     max-width: 100%; /* Ancho máximo de la tarjeta */
@@ -107,9 +119,42 @@ width: 100%;
     border-radius: 2rem;
     border: none;
     color: white;
-    width: 20rem;
+    width: 100%;
     height: 3rem;
     padding: 1rem auto;
     margin: 2rem auto;
     font-size: 1.4rem;
 }
+/* Para boton arriba*/
+.scroll-top-btn {
+    position: fixed;
+    bottom: 1rem; 
+    right: 1rem; 
+    background-color: rgba(241, 162, 11, 0.8);
+    color: black; 
+    border: none;
+    border-radius: 3rem;
+    padding: 1rem;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    font-size: 24px;
+    z-index: 1000; 
+    transition: opacity 0.3s, visibility 0.3s; 
+    opacity: 0; 
+    visibility: hidden; 
+}
+  
+  .scroll-top-btn.show {
+    opacity: 1; 
+    visibility: visible; 
+  }
+  
+  .scroll-top-btn:hover {
+    background-color: #08807B; 
+    transform: scale(1.1); 
+  }
+  
+  .scroll-top-btn svg {
+    margin: 1rem;
+  }

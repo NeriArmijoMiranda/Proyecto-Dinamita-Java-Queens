@@ -11,3 +11,30 @@ import { footerApp } from './src/components/footer/footer_app.js' /* funcionalid
 document.querySelector("#navbar-app").innerHTML= navbarApp(); /* insertar función navbarapp dentro del html */
 document.querySelector("#footer-app").innerHTML= footerApp();
 
+/* ----------------------------------------------- */
+//Boton arriba
+document.addEventListener('scroll', function() {
+    const scrollTopBtn = document.getElementById('scrollTopBtn');
+    const scrollY = window.scrollY || window.pageYOffset;
+    const windowHeight = window.innerHeight;
+    const documentHeight = document.documentElement.scrollHeight;
+    
+    // Calcula el porcentaje de desplazamiento de la página
+    const scrollPercent = (scrollY / (documentHeight - windowHeight)) * 100;
+    
+    // Muestra el botón cuando el usuario ha desplazado más allá del 70% del contenido de la página
+    if (scrollPercent > 50) {
+      scrollTopBtn.classList.add('show');
+    } else {
+      scrollTopBtn.classList.remove('show');
+    }
+  });
+  
+  document.getElementById('scrollTopBtn').addEventListener('click', function(e) {
+    e.preventDefault(); // Evita el comportamiento predeterminado del enlace
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth' // Desplazamiento suave
+    });
+  });
+  

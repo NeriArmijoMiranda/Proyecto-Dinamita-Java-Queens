@@ -1,12 +1,18 @@
 /* Estilos particulares de Contáctanos */
 
 .container-fluid-titulo-forms {
-    background-color: #F85931;
-    height: 7rem;
-    width: 100%;
-    padding: 1rem;
-    align-content: center;
-    text-align: center; 
+    background-color: #08807B;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "Corben", serif;
+    font-style: normal;
+    margin: 0.8rem 2.4rem; /* Ajustes de margen */
+    margin: 1rem auto;
+    width: calc(100% - 4.8rem); /* Ajuste para centrar y alinear */
+    padding: 2rem;
+    text-align: center;
+    color: white;
+    border-radius: 1rem;
 }
 .container-fluid-titulo-forms h1{
     font-family: "Corben", serif;
@@ -224,24 +230,20 @@ form {
 .accordion-button:not(.collapsed) {
     background-color: #f27252;
 }
-/* Para boton arriba*/
-.scroll-top-btn {
-    position: fixed;
-    bottom: 1rem; 
-    right: 1rem; 
-    background-color: rgba(241, 162, 11, 0.8);
-    color: black; 
-    border: none;
-    border-radius: 3rem;
-    padding: 1rem;
-    cursor: pointer;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+
+.p{
     text-align: center;
-    font-size: 24px;
-    z-index: 1000; 
-    transition: opacity 0.3s, visibility 0.3s; 
-    opacity: 0; 
-    visibility: hidden; 
+    color: white;
+}
+/* Estilo para el aviso de iniciar sesión para enviar comentarios */
+.container-mensaje{
+    text-align: center;
+    color: white;
+    border-radius: 15px;
+    background-color: #08807B;
+    font-family: "Mulish", sans-serif;
+    font-size: 1.25rem;
+    font-style: normal;
 }
   
   .scroll-top-btn.show {

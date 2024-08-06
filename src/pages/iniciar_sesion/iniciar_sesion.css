@@ -223,3 +223,11 @@
         font-size: 16px;
     }
 }
+
+.privacy-notice{
+    color:white;
+    font-family: "Mulish"; 
+    margin: 0.4rem auto 1rem;
+    font-weight: bold;
+    text-align: justify;
+}

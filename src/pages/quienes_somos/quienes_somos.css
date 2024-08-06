@@ -52,7 +52,7 @@
 }
 
 .titulo-quienes-somos {
-    font-family: Corben;
+    font-family: "Corben", serif;
     color: white;
 
 }
@@ -218,7 +218,7 @@ transform: translatex(0.3rem);
 }
 .subtitulo2 {
     background-color: #8D9C09;
-    color: white;
+    color: rgb(255, 255, 255);
     text-align: center;
     font-family: "Corben", serif;
     padding: 10px 0;

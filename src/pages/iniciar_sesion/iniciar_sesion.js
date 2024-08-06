@@ -14,8 +14,8 @@ import { footerApp } from '/src/components/footer/footer_app.js'
 document.querySelector("#navbar-app").innerHTML = navbarApp();
 document.querySelector("#footer-app").innerHTML = footerApp();
 
-/* ------------------------------------------------------------- */
-// Obtener referencias a los formularios
+//*****************************************************************************************//
+
 const loginForm = document.getElementById('login-form');
 const registerForm = document.getElementById('from-crear');
 const scrollTopBtn = document.getElementById('scrollTopBtn');
@@ -66,6 +66,12 @@ registerForm.addEventListener('submit', function (event) {
     const email = document.getElementById('crear-email').value;
     const password = document.getElementById('contraseña').value;
     const confirmPassword = document.getElementById('confirmar-contraseña').value;
+    const termsAccepted = document.querySelector('.privacy-notice input').checked; // Obtener el estado del checkbox
+
+    if (!termsAccepted) {
+        alert('Debes aceptar los términos y condiciones antes de crear una cuenta.');
+        return;
+    }
 
     // Validación de la longitud de la contraseña
     if (password.length < 10) { // Actualiza el mínimo a 10 caracteres si lo deseas

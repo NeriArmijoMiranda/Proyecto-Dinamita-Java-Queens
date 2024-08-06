@@ -8,6 +8,7 @@ import '/src/components/navbar/navbar.css'
 import { navbarApp } from '/src/components/navbar/navbar_app.js'
 import { footerApp } from '/src/components/footer/footer_app.js'
 import { carritoCounter } from '../Productos/Productos.js'
+import Swal from 'sweetalert2'
 
 document.querySelector("#navbar-app").innerHTML= navbarApp();
 document.querySelector("#footer-app").innerHTML= footerApp();
@@ -23,24 +24,53 @@ document.querySelector("#footer-app").innerHTML= footerApp();
 con su respectivo "id="*/
 
 
-//Declarar las variables globalmente/
-
+// Declarar las variables globalmente
 const nombre = document.getElementById('name');
 const telefono = document.getElementById('phone');
 const apellido = document.getElementById('last-name');
 const email = document.getElementById('email');
 const comentarios = document.getElementById('message');
 
+// Función para mostrar alertas
+function showAlert(message, type = 'error') {
+    const alertContainer = document.getElementById('alert-container');
+    const alertDiv = document.createElement('div');
+    
+    alertDiv.className = `alert alert-${type} show`;
+    alertDiv.innerText = message;
+    
+    alertContainer.innerHTML = ''; // Limpiar el contenedor antes de añadir una nueva alerta
+    alertContainer.appendChild(alertDiv);
+    
+    // Ocultar la alerta después de 5 segundos
+    setTimeout(() => {
+        alertDiv.classList.remove('show');
+        alertContainer.innerHTML = ''; // Limpiar el contenedor
+    }, 5000);
+}
+
+// Validar campos en el formulario
 document.getElementById('form').addEventListener('submit', function(event) {
+    // Obtener los valores de los campos
+    const nombreValue = nombre.value;
+    const telefonoValue = telefono.value;
+    const apellidoValue = apellido.value;
+    const emailValue = email.value;
+    const comentariosValue = comentarios.value;
+
     // Validar que no estén vacíos
-    if (nombre.value === '' || telefono.value === '' || apellido.value === '' || email.value === '' || comentarios.value === '') {
+    if (nombreValue === '' || telefonoValue === '' || apellidoValue === '' || emailValue === '' || comentariosValue === '') {
         // Evitar el envío del formulario
         event.preventDefault();
         
-        // Mostrar alerta
-        alert('Hola, no puedes dejar campos vacíos :D');
+        // Mostrar alerta de error
+        showAlert('Hola, no puedes dejar campos vacíos :D.', 'error');
+    } else {
+        // Mostrar alerta de éxito
+        showAlert('Gracias, tus datos han sido enviados', 'success');
     }
-}); 
+});
+
 
  //Boton arriba
  document.addEventListener('scroll', function() {

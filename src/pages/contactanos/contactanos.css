@@ -11,126 +11,124 @@
 .container-fluid-titulo-forms h1{
     font-family: "Corben", serif;
     text-shadow: 0.2rem 0.3rem 0.3rem black;
-    font-size: 3.7rem; /* Ajusta el tamaño del texto */
-    overflow-wrap: break-word; /* Asegura que el texto largo se ajuste */
-    margin: 0; /* Elimina el margen del h1 para evitar desbordamientos */
-    line-height: 1.2; /* Ajusta la altura de línea si es necesario */
+    font-size: 3.7rem; 
+    overflow-wrap: break-word; 
+    margin: 0; 
+    line-height: 1.2; 
     color: white;
 
 }
-
+ 
 .container-fluid-2 {
     background-color: black;
-    text-align: center; /* Centra el texto dentro del contenedor */
+    text-align: center; 
     font-family: "Corben", serif;
     font-weight: 400;
     color: white;
-    padding: 2rem; /* Ajusta el padding para agregar espacio alrededor del texto */
-    box-sizing: border-box; /* Incluye el padding en el tamaño total del contenedor */
-    margin: 0 auto; /* Centra el contenedor */
-    width: calc(100% - 4.8rem); /* Ajuste para centrar y alinear */
+    padding: 2rem; 
+    box-sizing: border-box; 
+    margin: 0 auto; 
+    width: calc(100% - 4.8rem); 
     border-radius: 1rem;
 }
 
 .container2 h2 {
-    font-size: 2.6rem; /* Ajusta el tamaño del texto según sea necesario */
-    margin: 0; /* Elimina márgenes predeterminados del h2 */
+    font-size: 2.6rem; 
+    margin: 0; 
     text-shadow: 0.1rem 0.2rem 1rem #08807B;
 }
 
 
 .container-fluid-3 {
     background-color: black;
-    height: auto; /* Ajusta automáticamente la altura según el contenido */
+    height: auto; 
     font-family: "Corben", serif;
     font-weight: 700; 
-    margin: 0rem 2.4rem; /* Ajustes de margen */
-    width: calc(100% - 4.8rem); /* Ajuste para centrar y alinear */
-    padding: 1rem; /* Ajusta el padding para evitar desbordamiento */
+    margin: 0rem 2.4rem;
+    width: calc(100% - 4.8rem); 
+    padding: 1rem; 
     text-align: center;
     color: #F1A20B;
     border-radius: 1rem;
-    box-sizing: border-box; /* Incluye el padding y el borde en el tamaño total */
-    overflow: hidden; /* Oculta cualquier contenido desbordante */
+    box-sizing: border-box; 
+    overflow: hidden; 
 }
 
 /* Ajusta el tamaño del texto si es necesario */
 .container-fluid-3 h2 {
-    font-size: 2.5rem; /* Ajusta el tamaño del texto para que quepa en el contenedor */
-    margin: 0; /* Elimina márgenes predeterminados del h2 */
+    font-size: 2.5rem; 
+    margin: 0; 
 }
 
 
 /*=================Apartado de preguntas frecuentes bottones==========================*/
 .custom-accordion {
-    max-width: 100%; /* Permite que el acordeón ocupe todo el ancho disponible */
-    width: 100%; /* Asegura que el acordeón ocupe todo el ancho disponible */
+    max-width: 100%; 
+    width: 100%; 
 }
 
 /* Asegura que el botón del acordeón tenga el tamaño adecuado */
 .accordion-button {
     background-color: #F85931;
-    font-size: 1.25rem; /* Ajusta el tamaño del texto según sea necesario */
-    padding: 1rem; /* Ajusta el padding para hacer el botón más grande */
+    font-size: 1.25rem; 
+    padding: 1rem; 
 }
 .accordion-button:hover{
     background-color: #f27252;
 }
 /* Ajusta el tamaño del contenedor de las preguntas */
 .accordion-header {
-    margin-bottom: 0.5rem; /* Ajusta el margen inferior si es necesario */
+    margin-bottom: 0.5rem;
 }
 
 /* Estilo de las preguntas */
 .p-preguntas {
     font-family: "Corben", serif;
     font-weight: 700;
-    font-size: 1.7rem; /* Ajusta el tamaño del texto de las preguntas */
-    margin: 0; /* Elimina el margen por defecto */
+    font-size: 1.7rem; 
+    margin: 0; 
     color: black;
 }
 
 /* Estilo de las respuestas */
 .p-respuesta {
     font-family: "Mulish", sans-serif;
-    font-size: 1.4rem; /* Ajusta el tamaño del texto de las respuestas */
-    margin: 0; /* Elimina el margen por defecto */
+    font-size: 1.4rem; 
+    margin: 0; 
 }
 
 /* Estilo del cuerpo del acordeón */
 .accordion-body {
-    padding: 1rem; /* Ajusta el padding para hacer el cuerpo más grande */
+    padding: 1rem; 
     background-color: #1e9894;
 }
 
 /* Fondo y borde del acordeón */
 .accordion-item {
     background-color: #1e9894;
-    border: none; /* Elimina el borde si es necesario */
+    border: none; 
     font-family: "Mulish", sans-serif;
-    font-size: 1.4rem; /* Ajusta el tamaño del texto de las respuestas */
-    margin: 0; /* Elimina el margen por defecto */
+    font-size: 1.4rem; 
+    margin: 0; 
 }
  
 /* Ajuste para el enlace dentro de las respuestas */
 .p-respuesta a {
-    color: #F85931; /* Ajusta el color del enlace si es necesario */
-    text-decoration: underline; /* Añade un subrayado al enlace */
+    color: #F85931; 
+    text-decoration: underline; 
 }
 
 .accordion-button::after {
-    filter: invert(100%) sepia(100%) saturate(1000%) hue-rotate(180deg); /* Ajuste del ícono del acordeón */
+    filter: invert(100%) sepia(100%) saturate(1000%) hue-rotate(180deg); 
 }
 
 /* Opcional: Ajuste para mejorar la accesibilidad */
 .accordion-button:focus {
-    box-shadow: none; /* Elimina el enfoque predeterminado para mejorar la accesibilidad */
+    box-shadow: none; 
     background-color: #f27252;
 }
 
 /* ============Termina apartado de preguntas frecuentes==================*/
-/*Cómo se ve el cuerpo del form*/
-
 /* Estilo general del formulario */
 form {
     padding: 2rem;
@@ -152,7 +150,7 @@ form {
     color: white;
     font-size: 2.6rem;
     border-radius: 1rem;
-    background-color: transparent; /* Totalmente transparente */
+    background-color: transparent;
     text-align: center;
     margin-bottom: 1rem;
 }
@@ -167,7 +165,7 @@ form {
 /* Estilo para el grupo de campos a la izquierda */
 .form-group-left, .form-group-right {
     flex: 1;
-    min-width: 300px; /* Asegura que los grupos de campos se ajusten en pantallas pequeñas */
+    min-width: 300px;
     text-shadow: 0.2rem 0.3rem 0.3rem black;
     font-size: 1.6rem;
     
@@ -178,11 +176,11 @@ form {
     padding: 1rem;
     border-radius: 10px;
     margin-bottom: 1rem;
-    background-color: rgba(240, 219, 179, 0.5); /* Color #f0dbb3 con 50% de transparencia */
+    background-color: rgba(240, 219, 179, 0.5); 
     border: none;
     outline: none;
     width: 100%;
-    color: white;
+    color: black;
 }
 
 
@@ -207,6 +205,7 @@ form {
     margin-top: 1rem;
     margin-left: 9rem;
     font-weight:bold;
+    text-shadow: 0.1rem 0.1rem 0.1rem white;
 }
 .botonEnviar:hover{
     background-color: #1e9894;
@@ -258,3 +257,33 @@ form {
   .scroll-top-btn svg {
     margin: 1rem;
   }
+ /* Estilos para el contenedor de alertas */
+#alert-container {
+    margin-top: 10px; 
+    max-width: 100%; 
+}
+
+/* Estilos para la alerta */
+.alert {
+    padding: 1rem;
+    border-radius: 1rem;
+    color: #fff;
+    font-size: 1rem;
+    display: none; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 1rem; 
+}
+
+/* Alerta de éxito */
+.alert-success {
+    background-color: #08807B;
+}
+
+/* Alerta de error */
+.alert-error {
+    background-color: #F85931;
+}
+

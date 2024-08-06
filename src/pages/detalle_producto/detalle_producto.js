@@ -184,8 +184,16 @@ function obtenerDatosProducto() {
   
   // Actualiza el contador al cargar la página
   document.addEventListener('DOMContentLoaded', carritoCounter);
+//================================imagen
+document.addEventListener('DOMContentLoaded', function() {
+  const zoomImage = document.querySelector('.img-detalles-principal');
 
-  //Boton arriba
+  zoomImage.addEventListener('click', function() {
+      // Alterna la clase 'zoomed' en la imagen para aplicar o quitar el zoom
+      zoomImage.classList.toggle('zoomed');
+  });
+});
+  //============================Boton arriba
   document.addEventListener('scroll', function() {
     const scrollTopBtn = document.getElementById('scrollTopBtn');
     const scrollY = window.scrollY || window.pageYOffset;

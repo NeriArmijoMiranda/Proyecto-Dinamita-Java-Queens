@@ -24,8 +24,8 @@
     border-radius: 3rem;
 }
 
-.img-detalles-principal:hover {
-    transform: scale(1.10); /* Zoom al 110% al pasar el mouse sobre la imagen */
+.img-detalles-principal.zoomed {
+    transform: scale(1.50); /* Zoom al 110% al pasar el mouse sobre la imagen */
 }
 
 /* Lupa que aparece al pasar el mouse sobre la imagen */
@@ -175,7 +175,7 @@ button:hover {
 /* Estilos para el contenedor de sugerencias */
 .container-sugerencias {
     /*background-image: url(/public/img/florestejidascolores.png);*/
-    background-color: #08807B;
+    background-image: url(/public/img/florestejidascolores.png);
     background-repeat: no-repeat;
     background-size: cover;
     font-family: "Corben", serif;

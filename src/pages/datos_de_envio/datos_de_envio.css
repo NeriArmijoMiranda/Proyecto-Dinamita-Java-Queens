@@ -225,4 +225,28 @@ option { /* Letra de las opciones en Estados */
     outline: none; /* Sin contorno */
     font-family: "Mulish", sans-serif;
     height: auto; /* Ajustar la altura automática */
+    color: black
 };
+
+swal2-title{
+    background-color: #088078;
+    color: white;
+    text-shadow: 0.1rem 0.1rem 0.3rem black;
+}
+.swal2-popup{
+background-color: #088078;
+color: white;
+    text-shadow: 0.1rem 0.1rem 0.3rem black;
+}
+#swal2-html-container{
+color: white;
+text-shadow: 0.1rem 0.1rem 0.1rem black;
+}
+.swal2-confirm{
+    background-color: #E4007F;
+    color: white;
+    text-shadow: 0.1rem 0.1rem 0.1rem black;
+}
+.swal2-confirm:hover{
+    background-color: #8D9C09;
+}

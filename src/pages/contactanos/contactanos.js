@@ -31,23 +31,6 @@ const apellido = document.getElementById('last-name');
 const email = document.getElementById('email');
 const comentarios = document.getElementById('message');
 
-// Función para mostrar alertas
-function showAlert(message, type = 'error') {
-    const alertContainer = document.getElementById('alert-container');
-    const alertDiv = document.createElement('div');
-    
-    alertDiv.className = `alert alert-${type} show`;
-    alertDiv.innerText = message;
-    
-    alertContainer.innerHTML = ''; // Limpiar el contenedor antes de añadir una nueva alerta
-    alertContainer.appendChild(alertDiv);
-    
-    // Ocultar la alerta después de 5 segundos
-    setTimeout(() => {
-        alertDiv.classList.remove('show');
-        alertContainer.innerHTML = ''; // Limpiar el contenedor
-    }, 5000);
-}
 
 // Validar campos en el formulario
 document.getElementById('form').addEventListener('submit', function(event) {
@@ -57,17 +40,24 @@ document.getElementById('form').addEventListener('submit', function(event) {
     const apellidoValue = apellido.value;
     const emailValue = email.value;
     const comentariosValue = comentarios.value;
-
+ 
     // Validar que no estén vacíos
     if (nombreValue === '' || telefonoValue === '' || apellidoValue === '' || emailValue === '' || comentariosValue === '') {
         // Evitar el envío del formulario
         event.preventDefault();
         
         // Mostrar alerta de error
-        showAlert('Hola, no puedes dejar campos vacíos :D.', 'error');
+        Swal.fire({
+          icon: "warning",
+          title: "¡Hola!",
+          text: "No puedes dejar los campos vacíos.",
+        });
     } else {
-        // Mostrar alerta de éxito
-        showAlert('Gracias, tus datos han sido enviados', 'success');
+      Swal.fire({
+        icon: "success",
+        title: "¡Gracias por tus comentarios!",
+        text: "Se han enviado, correctamente.",
+      });      
     }
 });
 

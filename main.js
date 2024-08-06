@@ -29,7 +29,7 @@ document.addEventListener('scroll', function() {
       scrollTopBtn.classList.remove('show');
     }
   });
-  
+   
   document.getElementById('scrollTopBtn').addEventListener('click', function(e) {
     e.preventDefault(); // Evita el comportamiento predeterminado del enlace
     window.scrollTo({

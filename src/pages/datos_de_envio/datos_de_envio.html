@@ -34,7 +34,7 @@
               <div class="form-content col-sm-12 col-md-4">
                 <label for="full-name">Nombre Completo</label>
                 <input type="text" class="input_c" id="full-name" name="full-name" placeholder="Jorge Pérez Sánchez" required>
-              </div>
+              </div> 
               <!-- Estado -->
               <div class="form-content col-sm-6 col-md-4">
                 <label for="estados">Estado</label>
@@ -179,12 +179,12 @@
               <!-- CVC -->
               <div class="form-content col-sm-3 col-md-3 align-items-center">
                 <label for="cvc">Código de Seguridad</label>
-                <input type="text" class="input_c small-input" id="cvc" name="cvc" maxlength="3" placeholder="CVC" required>
+                <input type="text" class="input_c small-input" id="cvc" name="cvc" maxlength="4" placeholder="CVC" required>
               </div>
               <!-- Total a pagar -->
-              <div class="form-content col-sm-3 col-md-6 align-items-center" id="totalPago"> 
-                <label for="total" id="totalparaPagar">Total a Pagar</label>
-                <input type="text" class="input_c medium-input" id="total" name="total" readonly>
+              <div class="form-content col-sm-3 col-md-6 align-items-center" > 
+                <label for="total" >Total a Pagar</label>
+                <input id="totalPago" type="text" class="input_c medium-input"  name="total" readonly>
               </div>
             </div>
             <br>
@@ -226,6 +226,7 @@
     
     <!-- Aquí va la ruta del archivo js para funcionalidades -->
     <script type="module" src="./datos_de_envio.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </div> <!-- Page container -->
   <a href="#" id="scrollTopBtn" class="scroll-top-btn">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-compact-up" viewBox="0 0 16 16">

@@ -127,8 +127,8 @@ const pintarCarrito = () => {
     /////////////// Resumen de Compras ///////////
     /*Esto lo que hace funcionar es el total de los productos */
     /* acc = acumulador, el = cada producto */
-    const total = carrito.reduce((acc, el) => acc + el.precio * el.cantidad, 0);
-// Guarda el total en localStorage
+    // Calcula el total y lo guarda en localStorage
+const total = carrito.reduce((acc, el) => acc + el.precio * el.cantidad, 0);
 localStorage.setItem('totalCompra', total);
 
 

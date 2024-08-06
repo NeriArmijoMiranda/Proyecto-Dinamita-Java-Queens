@@ -94,7 +94,7 @@ p{
     text-align: center;
 }
 
-
+ 
 
 /* carrusel.css */
 .container-inicio {
@@ -125,6 +125,7 @@ p{
  width: 100%; 
  height: auto; /* Mantener la proporción de la imagen */
  display: block; /* Eliminar espacios blancos debajo de la imagen */
+ background: transparent;
 }
 /* Para boton arriba*/
 .scroll-top-btn {

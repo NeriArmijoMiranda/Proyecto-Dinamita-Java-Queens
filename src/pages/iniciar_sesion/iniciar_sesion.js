@@ -25,7 +25,7 @@ loginForm.addEventListener('submit', function (event) {
     event.preventDefault();
     const email = document.getElementById('inicio-email').value;
     const password = document.getElementById('message').value;
-
+ 
     // Obtener contraseña guardada en localStorage
     const storedPassword = localStorage.getItem('userPassword');
     const storedEmail = localStorage.getItem('userEmail');
@@ -76,7 +76,6 @@ registerForm.addEventListener('submit', function (event) {
     const email = document.getElementById('crear-email').value;
     const password = document.getElementById('contraseña').value;
     const confirmPassword = document.getElementById('confirmar-contraseña').value;
-
     // Validación de la longitud de la contraseña
     if (password.length < 10) { // Actualiza el mínimo a 10 caracteres si lo deseas
         Swal.fire('La contraseña debe tener al menos 10 caracteres.');

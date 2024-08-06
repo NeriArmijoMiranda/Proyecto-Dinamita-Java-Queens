@@ -66,19 +66,24 @@ function calculateTotal() {
     return totalConDescuento.toFixed(2);
 }
 
+// Función para mostrar el total en el campo de entrada
 function displayTotal() {
     const total = calculateTotal();
     const totalElement = document.getElementById('totalPago');
     if (totalElement) {
-        totalElement.innerText = `$${total} mxn`; 
+        totalElement.value = `$${total} mxn`; // Usa .value para los campos de entrada
     } else {
-        console.error('Elemento con ID "total" no encontrado.');
+        console.error('Elemento con ID "totalPago" no encontrado.');
     }
 }
 
+// Ejecuta displayTotal cuando el contenido del DOM se haya cargado
 document.addEventListener('DOMContentLoaded', () => {
     displayTotal(); // Muestra el total al cargar la página
 });
+
+console.log(localStorage.getItem('totalCompra'));
+
 
 // Función para el Botón Regresar-------------------------------------------------------------------->
 function goBack() {
@@ -157,7 +162,10 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log('Dirección de envío guardada:', shippingAddress);
 
         // Mensaje de confirmación
-        alert('Dirección guardada exitosamente!');
+        Swal.fire({
+            icon: "success",
+            title: "La dirección se ha guardado exitosamente",
+          });      
     }
 
     // Evento de clic al botón cuando el DOM esté completamente cargado-------->
@@ -198,7 +206,10 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log('Datos de la tarjeta guardados:', cardData);
 
         // Mensaje de confirmación
-        alert('Tarjeta guardada exitosamente!');
+        Swal.fire({
+            icon: "success",
+            title: "La dirección se ha guardado exitosamente",
+          });  
     }
     //Evento de clic al botón cuando el DOM esté completamente cargado-------->
     document.addEventListener('DOMContentLoaded', () => {
@@ -230,6 +241,10 @@ function validateAndSubmit() {
     });
 
     if (valid) {
+        Swal.fire({
+            icon: "success",
+            title: "La dirección se ha guardado exitosamente",
+          });  
         const form = document.createElement('form');
         form.action = 'https://formsubmit.co/abhyinfinito4@gmail.com';
         form.method = 'POST';
@@ -247,7 +262,11 @@ function validateAndSubmit() {
         document.body.appendChild(form);
         form.submit();
     } else {
-        alert('Por favor, completa todos los campos.');
+        Swal.fire({
+            icon: "warning",
+            title: "¡Hola!",
+            text: "Completa todos los campos, por favor...",
+          });
     }
 }
 

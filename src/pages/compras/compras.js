@@ -128,6 +128,9 @@ const pintarCarrito = () => {
     /*Esto lo que hace funcionar es el total de los productos */
     /* acc = acumulador, el = cada producto */
     const total = carrito.reduce((acc, el) => acc + el.precio * el.cantidad, 0);
+// Guarda el total en localStorage
+localStorage.setItem('totalCompra', total);
+
 
     const totalBuying = document.createElement("div")
     totalBuying.className = "total-content"
@@ -161,4 +164,8 @@ pintarCarrito();
 /* Llamamos las funciones que importamos de Productos */
 carritoCounter(); /*Al llamar la función, se muestra el número del carrito.*/
 eliminarProducto(); /* Elimina elemento del carrito al refrescar */
+
+
+
+
 

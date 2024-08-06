@@ -55,26 +55,30 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById('default-card').checked = savedCardData.isDefaultCard;
     }
 });
+// Mostrar el total en la página de pago
+
 
 // Función para calcular el total de la compra acumulada en el carrito------------------------>
 function calculateTotal() {
-    // Ejemplo de cálculo del total. Reemplaza esta lógica con la tuya.
-    const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
-    let total = 0;
-
-    cartItems.forEach(item => {
-        total += item.price * item.quantity;
-    });
-    return total.toFixed(2); // Retorna el total con dos decimales
+    const total = parseFloat(localStorage.getItem('totalCompra')) || 0;
+    const descuento = 0.10; // 10% de descuento
+    const totalConDescuento = total * (1 - descuento); // Aplica el descuento
+    return totalConDescuento.toFixed(2);
 }
 
-// Función para mostrar el total en el campo correspondiente------------------------------------>
 function displayTotal() {
     const total = calculateTotal();
-    document.getElementById('total').value = total;
+    const totalElement = document.getElementById('totalPago');
+    if (totalElement) {
+        totalElement.innerText = `$${total} mxn`; 
+    } else {
+        console.error('Elemento con ID "total" no encontrado.');
+    }
 }
-// Llama a displayTotal al cargar la página para mostrar el total
-window.onload = displayTotal;
+
+document.addEventListener('DOMContentLoaded', () => {
+    displayTotal(); // Muestra el total al cargar la página
+});
 
 // Función para el Botón Regresar-------------------------------------------------------------------->
 function goBack() {
@@ -103,7 +107,7 @@ function validateForm(formId) {
             // Crear y mostrar el mensaje de error
             const errorMessage = document.createElement('div');
             errorMessage.classList.add('error-message');
-            errorMessage.style.color = 'red';
+            errorMessage.style.color = '#F1A20B';
             errorMessage.textContent = `Por favor, complete el campo: ${field.placeholder}`;
             field.parentNode.insertBefore(errorMessage, field.nextSibling); // Insertar el mensaje después del campo
         }

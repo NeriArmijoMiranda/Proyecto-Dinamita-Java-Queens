@@ -37,6 +37,13 @@ label {
     font-weight: 600; /* Grosor de la fuente */
     margin-bottom: 5px; /* Margen inferior */
 }
+#totalparaPagar{
+    color: white;
+    font-family: "Mulish", sans-serif;
+    font-size: 25px;
+    font-weight: 600; /* Grosor de la fuente */
+    margin-bottom: 5px; /* Margen inferior */
+}
 
 /* Contenedor Formularios verdes-------------------------------- */
 .form-container {
@@ -199,3 +206,13 @@ option { /* Letra de las opciones en Estados */
     border: solid 3px green;
 }
  */
+#totalPago{
+    padding: 20px 25px; /* 20px arriba y abajo, 25px a los lados */
+    border-radius: 20px;
+    margin-bottom: 30px;
+    background-color: #5aece3;
+    border: none; /* Sin borde */
+    outline: none; /* Sin contorno */
+    font-family: "Mulish", sans-serif;
+    height: auto; /* Ajustar la altura automática */
+};

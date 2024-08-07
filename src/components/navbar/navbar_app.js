@@ -177,7 +177,7 @@ const handleSearch = (inputId) => {
       { name: 'joyería', url: '/src/pages/Productos/Productos.html?category=Joyería' },
       { name: 'textiles', url: '/src/pages/Productos/Productos.html?category=Textiles' },
     ];
-
+ 
     // Encontrar la primera página que coincide con la búsqueda
     const page = pages.find(p => p.name.toLowerCase().includes(query));
     
@@ -185,10 +185,14 @@ const handleSearch = (inputId) => {
       // Redirigir a la página encontrada
       window.location.href = page.url;
     } else {
-      alert('No se encontraron resultados para: ' + query);
+      Swal.fire({
+        icon: "warning",
+        title: "Lo siento",
+        text: "No se encontraron resultados para: " + query,
+      });
     }
   } else {
-    alert('Por favor ingresa un término de búsqueda.');
+    Swal.fire("¡Por favor, ingresa un término de búsqueda!");
   }
 };
 document.addEventListener('DOMContentLoaded', () => {

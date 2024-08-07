@@ -10,7 +10,6 @@ import { navbarApp } from '/src/components/navbar/navbar_app.js'
 import { footerApp } from '/src/components/footer/footer_app.js'
 import { carritoCounter } from '../Productos/Productos.js'
 
-
 document.querySelector("#navbar-app").innerHTML = navbarApp();
 document.querySelector("#footer-app").innerHTML = footerApp();
 
@@ -57,7 +56,6 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 // Mostrar el total en la página de pago
 
-
 // Función para calcular el total de la compra acumulada en el carrito------------------------>
 function calculateTotal() {
     const total = parseFloat(localStorage.getItem('totalCompra')) || 0;
@@ -83,7 +81,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 console.log(localStorage.getItem('totalCompra'));
-
 
 // Función para el Botón Regresar-------------------------------------------------------------------->
 function goBack() {
@@ -211,16 +208,15 @@ document.addEventListener('DOMContentLoaded', () => {
             title: "La dirección se ha guardado exitosamente",
           });  
     }
-    //Evento de clic al botón cuando el DOM esté completamente cargado-------->
+
+    // Evento de clic al botón cuando el DOM esté completamente cargado
     document.addEventListener('DOMContentLoaded', () => {
-        const cardButton = document.querySelector('.localstore-tarjeta');
-        cardButton.addEventListener('click', saveCardData);
+        const button = document.querySelector('.btn-guardar-tarjeta');
+        button.addEventListener('click', saveCardData);
     });
 });
-// Fin de Validación de los campos de entrada------------------------------------------------------------>
-/* ----------------------------------------------------------------------------------------------- */
 
-// Función para validar los campos del formulario y enviar los datos a formsubmit.co------------------->
+/* Función para validar y enviar el formulario-----------------------------------------------------------> */
 function validateAndSubmit() {
     const requiredFields = [
         'full-name', 'estados', 'city', 'neighborhood',
@@ -239,6 +235,20 @@ function validateAndSubmit() {
             field.style.borderColor = '';
         }
     });
+
+    // Validar que el campo cvc tenga exactamente 4 dígitos
+    const cvcField = document.getElementById('cvc');
+    if (cvcField.value.length !== 4) {
+        cvcField.style.borderColor = 'red';
+        valid = false;
+        Swal.fire({
+            icon: "warning",
+            title: "¡Error!",
+            text: "El código de seguridad (CVC) debe tener exactamente 4 dígitos.",
+        });
+    } else {
+        cvcField.style.borderColor = '';
+    }
 
     if (valid) {
         Swal.fire({
@@ -274,5 +284,3 @@ document.addEventListener('DOMContentLoaded', () => {
     const confirmButton = document.querySelector('.btn-confirmar');
     confirmButton.addEventListener('click', validateAndSubmit);
 });
-
-carritoCounter();

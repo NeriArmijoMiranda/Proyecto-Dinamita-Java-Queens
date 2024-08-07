@@ -51,7 +51,7 @@
     font-style: normal;
     width: 110px;
     height:auto;
-    
+     
     } 
 .btn {
     border-color: rgb(56, 55, 55);
@@ -72,4 +72,24 @@
     .navbar-nav .nav-link.active {
         font-weight: bold; /* Resalta el texto */
         border-bottom: 2px solid #000000; 
+    }
+    .swal2-title{
+        background-color: #088078;
+        color: white;
+        text-shadow: 0.1rem 0.1rem 0.3rem black;
+    }
+    .swal2-popup{
+    background-color: #088078;
+    }
+    #swal2-html-container{
+    color: white;
+    text-shadow: 0.1rem 0.1rem 0.1rem black;
+    }
+    .swal2-confirm{
+        background-color: #E4007F;
+        color: white;
+        text-shadow: 0.1rem 0.1rem 0.1rem black;
+    }
+    .swal2-confirm:hover{
+        background-color: #8D9C09;
     }

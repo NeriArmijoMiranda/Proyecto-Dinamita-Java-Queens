@@ -66,6 +66,13 @@ registerForm.addEventListener('submit', function (event) {
     const email = document.getElementById('crear-email').value;
     const password = document.getElementById('contraseña').value;
     const confirmPassword = document.getElementById('confirmar-contraseña').value;
+    const termsAccepted = document.querySelector('.privacy-notice input').checked; // Obtener el estado del checkbox
+
+    if (!termsAccepted) {
+        alert('Debes aceptar los términos y condiciones antes de crear una cuenta.');
+        return;
+    }
+
 
     // Validación de la longitud de la contraseña
     if (password.length < 10) { // Actualiza el mínimo a 10 caracteres si lo deseas

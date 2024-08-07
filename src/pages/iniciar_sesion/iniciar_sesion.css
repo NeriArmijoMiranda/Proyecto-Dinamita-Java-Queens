@@ -226,13 +226,27 @@
     }
 }
 
-.privacy-notice{
-    color:white;
-    font-family: "Mulish"; 
-    margin: 0.4rem auto 1rem;
-    font-weight: bold;
-    text-align: justify;
+
+.privacy-notice {
+    margin-top: 1rem; 
+    color: white;
+    text-shadow: 0.1rem 0.1rem 0.3rem black;
+    text-align: center;
 }
+
+.privacy-notice input {
+    margin-right: 1rem; 
+}
+
+.privacy-notice label {
+    margin-right: 2rem; 
+}
+
+.privacy-notice p{
+    margin: 0.7rem;
+    font-size: 0.7rem;
+}
+
 .swal2-title{
     background-color: #088078;
     color: white;

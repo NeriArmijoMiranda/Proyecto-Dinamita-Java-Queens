@@ -76,6 +76,9 @@ registerForm.addEventListener('submit', function (event) {
     const email = document.getElementById('crear-email').value;
     const password = document.getElementById('contraseña').value;
     const confirmPassword = document.getElementById('confirmar-contraseña').value;
+    const avisoAccepted = document.getElementById('aviso').checked; // Obtener el estado del checkbox de aviso
+    const termsAccepted = document.getElementById('terms').checked; // Obtener el estado del checkbox de términos
+
     // Validación de la longitud de la contraseña
     if (password.length < 10) { // Actualiza el mínimo a 10 caracteres si lo deseas
         Swal.fire('La contraseña debe tener al menos 10 caracteres.');
@@ -90,6 +93,23 @@ registerForm.addEventListener('submit', function (event) {
     // Validación de coincidencia de contraseña
     if (password !== confirmPassword) {
         Swal.fire('Las contraseñas no coinciden.');
+        return;
+    }
+
+    // Validación de aceptación de aviso y términos
+    if (!avisoAccepted) {
+        Swal.fire({
+            icon: "info",
+            title: "¡Debes aceptar el Aviso de Privacidad para crear la cuenta!",
+        });
+        return;
+    }
+
+    if (!termsAccepted) {
+        Swal.fire({
+            icon: "info",
+            title: "¡Debes aceptar los Términos y Condiciones para crear la cuenta!",
+        });
         return;
     }
 

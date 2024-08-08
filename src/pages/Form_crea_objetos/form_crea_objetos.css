@@ -85,15 +85,16 @@ h1 {
     color: white;
     text-indent: 10px;
     text-shadow: 0.4rem 0.26rem 0.2rem #000;
-}
+} 
 
 /* Estilos para los mensajes de retroalimentación */
 .invalid-feedback {
-    font-size: 25px;
     font-weight: bold;
     font-family: "Corben", serif;
-    color: #F1A20B;
-    text-shadow: 0.2rem 0.2rem 0.1rem #000;
+    font-size: 1.38rem;
+    font-weight: bold;
+    color: white;
+    text-shadow: 0.1rem 0.1rem 0.1rem rgb(230, 13, 42);
 }
 
 /* Estilos para elementos con etiqueta fuerte */

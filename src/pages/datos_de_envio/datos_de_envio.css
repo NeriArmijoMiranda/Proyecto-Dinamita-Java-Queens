@@ -60,7 +60,7 @@ label {
     max-width: 100%;
     margin-bottom: 1px; /* Margen inferior*/
     text-shadow: 0.1rem 0.1rem 0.3rem black;
-}
+} 
 
 .input_c { /* Estilos de las celdas verdes*/
     padding: 20px 25px; /* 20px arriba y abajo, 25px a los lados */
@@ -250,3 +250,9 @@ text-shadow: 0.1rem 0.1rem 0.1rem black;
 .swal2-confirm:hover{
     background-color: #8D9C09;
 }
+.error-message{ 
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: white;
+    text-shadow: 0.1rem 0.1rem 0.1rem rgb(230, 13, 42);
+} 

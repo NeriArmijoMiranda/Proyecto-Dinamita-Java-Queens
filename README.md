@@ -1,4 +1,7 @@
 # DINAMITA JAVA QUEENS 👑💣
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](#contributors-)
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 ¡Hola! Somos Dinamita Java Queens.
 Nosotras como equipo de mujeres apasionadas por el desarrollo web y comprometidas con el empoderamiento, nos enorgullece ser parte de este ambicioso proyecto que busca llevar las hermosas artesanías de Yoatzin a todo el territorio nacional, a través de la creación de esta plataforma e-commerce.
@@ -64,7 +67,8 @@ http://localhost:3000
 
 
 📝 Contribuciones
-Las contribuciones son bienvenidas. Si tienes alguna sugerencia o quieres contribuir al desarrollo, por favor sigue los siguientes pasos:
+Las contribuciones son bienvenidas. Si tienes alguna sugerencia o quieres contribuir al desarrollo, 
+por favor sigue los siguientes pasos:
 
 🏵️ Haz un fork del repositorio.
 🏵️ Crea una nueva rama para tu característica (git checkout -b feature/nueva-caracteristica).
@@ -74,11 +78,11 @@ Las contribuciones son bienvenidas. Si tienes alguna sugerencia o quieres contri
 
 ## 🤝 Nuestro equipo:
 
-- [@usuario1](https://github.com/AlejandraAC/usuario1)
-- [@usuario2](https://github.com/Arlette-Miranda/usuario2)
-- [@usuario3](https://github.com/dessgrc1609/usuario3)
-- [@usuario4](https://github.com/JazzCI/usuario4)
-- [@usuario5](https://github.com/Jhorchss/usuario5)
-- [@usuario6](https://github.com/marbellacabrera/usuario6)
-- [@usuario7](https://github.com/EusbekMendoza/usuario7)
-- [@usuario8](https://github.com/NeriArmijoMiranda/usuario8)
+- [@AlejandraAC](https://github.com/AlejandraAC)
+- [@Arlette-Miranda](https://github.com/Arlette-Miranda)
+- [@dessgrc1609](https://github.com/dessgrc1609)
+- [@JazzCI](https://github.com/JazzCI)
+- [@Jhorchss](https://github.com/Jhorchss)
+- [@marbellacabrera](https://github.com/marbellacabrera)
+- [@EusbekMendoza](https://github.com/EusbekMendoza)
+- [@NeriArmijoMiranda](https://github.com/NeriArmijoMiranda/)

@@ -1,8 +1,8 @@
-# Yoatzin
+# Yoatzin 🪷
 
 ![Logo con flores y fondo negro de Yoatzin](public/img/logo_yoatzin.png)
 
-**Yoatzin** Yoatzin es una tienda de productos artesanales que ofrece diseños mexicanos únicos y coloridos. 
+**Yoatzin** es una tienda de productos artesanales que ofrece diseños mexicanos únicos y coloridos. 
 Te damos la bienvenida a nuestra tienda, donde encontrarás una amplia colección de cerámica, decoración, joyería y textiles que se adaptan a todas tus necesidades. 
 Enamórate de nuestros productos y descubre la diversidad de México a través de ellos.
 
@@ -42,3 +42,17 @@ Enamórate de nuestros productos y descubre la diversidad de México a través d
 └── vite.config.js         # Archivo de configuración de Vite
 
 
+🛠 Instalación y Uso
+
+🪷 Clona este repositorio:
+git clone https://github.com/tuusuario/yoatzin.git
+
+
+🪷 Instala las dependencias:
+npm install
+
+🪷 Inicia el servidor de desarrollo:
+npm run dev
+
+🪷 Explora la tienda en tu navegador:
+http://localhost:3000

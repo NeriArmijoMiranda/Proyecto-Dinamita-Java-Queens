@@ -1,0 +1,162 @@
+@import "bootstrap/scss/bootstrap";
+
+/* ///////////  NO TOCAR ////////*/
+/* Posición para Contendio GENERAL */
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Posición Contenido pagina */
+#content-wrap {
+  padding-bottom: 2.5rem;    /* altura de pie de página */
+}
+
+/* Clase de fuente titulos */
+.corben-regular {
+  font-family: "Corben", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.corben-bold {
+  font-family: "Corben", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Clase de fuente texto */
+.mulish {
+  font-family: "Mulish", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.mulish {
+  font-family: "Mulish", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+body{
+  background-color: black;
+}
+
+/* ///////////  NO TOCAR ////////*/
+
+/* Estilos particulares de Inicio */
+
+
+#title {
+  text-align: center;
+  font-weight: bold;
+  font-family: "Corben regular";
+  font-size: 30rem;
+  text-align: center;
+}
+#title h1{
+  font-weight: bold;
+  font-family: "Corben regular";
+  font-size: 6rem;
+  text-align: center;
+  color: white;
+  animation: mover-izquierda-derecha 3s 1;
+}
+@keyframes mover-izquierda-derecha{
+  from{
+    transform: translateX(-6rem);
+  }
+}
+
+#title h1:hover{
+  color: #08807b;
+}
+
+#welcome{
+  background-color: #08807b;
+  text-shadow: 0.1rem 0.1rem 0.1rem black;
+  border-radius: 30px ;
+  color: #fff;
+  padding: 20px 40px;
+  text-align: center;
+  font-family: "Corben regular";
+  font-size: 400 px;
+  margin: 50px;
+}
+p{
+  font-family: "Mulish", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: large;
+    text-align: center;
+}
+
+ 
+
+/* carrusel.css */
+.container-inicio {
+    background-color: #F85931;
+    padding: 20px; /* Ajusta según sea necesario */
+    max-width: 100%; /* Establece el ancho máximo del contenedor */
+    max-height: auto;
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    border-radius: 30px;
+    margin-bottom: 100px ;
+}
+.carousel-item{
+  flex-direction: column;
+}
+.carousel-img {
+  height: 500px; /* Ajusta este valor según la altura deseada */
+  object-fit: cover; /* Mantiene el aspecto de la imagen recortando el exceso */
+}
+
+.banner_inicio {
+  position: relative;
+  width: 100%;
+  height: 400px; /* Ajustar la altura automáticamente */
+  overflow: hidden; /* Ocultar cualquier desbordamiento */
+  margin-bottom: 150px;
+}
+.banner_inicio img {
+ width: 100%; 
+ height: auto; /* Mantener la proporción de la imagen */
+ display: block; /* Eliminar espacios blancos debajo de la imagen */
+ background: transparent;
+}
+/* Para boton arriba*/
+.scroll-top-btn {
+  position: fixed;
+  bottom: 1rem; 
+  right: 1rem; 
+  background-color: rgba(241, 162, 11, 0.8);
+  color: black; 
+  border: none;
+  border-radius: 3rem;
+  padding: 1rem;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  font-size: 24px;
+  z-index: 1000; 
+  transition: opacity 0.3s, visibility 0.3s; 
+  opacity: 0; 
+  visibility: hidden; 
+}
+
+.scroll-top-btn.show {
+  opacity: 1; 
+  visibility: visible; 
+}
+
+.scroll-top-btn:hover {
+  background-color: #08807B; 
+  transform: scale(1.1); 
+}
+
+.scroll-top-btn svg {
+  margin: 1rem;
+}

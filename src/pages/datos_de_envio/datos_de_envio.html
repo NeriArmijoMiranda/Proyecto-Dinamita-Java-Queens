@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="icon" href="/public/img/logo_yoatzin.png" type="imagen icono">
+  <title>Datos de Envío</title>
+</head>
+ 
+<body>
+  <!-- CONTENEDOR GENERAL de la página -->
+  <div id="page-container">
+
+    <!-- Navbar = Header -->
+    <header id="navbar-app"> </header>
+
+
+    <!-- Contenido de la página -->
+    <div id="content-wrap">
+       
+      <!-- Título Datos de Envío -->
+      <section class="titulos-envio mt-3 text-left">
+        <h1>1. Datos de envío</h1>
+      </section>
+    
+      <!-- Formulario Datos de Envío -->
+      <div class="container mt-3 bg-black">
+        <form id="shipping-form" action="">
+          <!-- Contenedor Formulario 1 -->
+          <div class="form-container">
+            <!-- Fila 1 -->
+            <div class="row">
+              <!-- Nombre completo -->
+              <div class="form-content col-sm-12 col-md-4">
+                <label for="full-name">Nombre Completo</label>
+                <input type="text" class="input_c" id="full-name" name="full-name" placeholder="Jorge Pérez Sánchez" required>
+              </div> 
+              <!-- Estado -->
+              <div class="form-content col-sm-6 col-md-4">
+                <label for="estados">Estado</label>
+                <select class="form-select input_c custom-font" id="estados" required >
+                  <option selected>Selecciona un estado</option>
+                  <option value="Aguascalientes">Aguascalientes</option>
+                  <option value="Baja California">Baja California</option>
+                  <option value="Baja California Sur">Baja California Sur</option>
+                  <option value="Campeche">Campeche</option>
+                  <option value="Chiapas">Chiapas</option>
+                  <option value="Chihuahua">Chihuahua</option>
+                  <option value="Ciudad de México">Ciudad de México</option>
+                  <option value="Coahuila">Coahuila</option>
+                  <option value="Colima">Colima</option>
+                  <option value="Durango">Durango</option>
+                  <option value="Estado de México">Estado de México</option>
+                  <option value="Guanajuato">Guanajuato</option>
+                  <option value="Guerrero">Guerrero</option>
+                  <option value="Hidalgo">Hidalgo</option>
+                  <option value="Jalisco">Jalisco</option>
+                  <option value="Michoacán">Michoacán</option>
+                  <option value="Morelos">Morelos</option>
+                  <option value="Nayarit">Nayarit</option>
+                  <option value="Nuevo León">Nuevo León</option>
+                  <option value="Oaxaca">Oaxaca</option>
+                  <option value="Puebla">Puebla</option>
+                  <option value="Querétaro">Querétaro</option>
+                  <option value="Quintana Roo">Quintana Roo</option>
+                  <option value="San Luis Potosí">San Luis Potosí</option>
+                  <option value="Sinaloa">Sinaloa</option>
+                  <option value="Sonora">Sonora</option>
+                  <option value="Tabasco">Tabasco</option>
+                  <option value="Tamaulipas">Tamaulipas</option>
+                  <option value="Tlaxcala">Tlaxcala</option>
+                  <option value="Veracruz">Veracruz</option>
+                  <option value="Yucatán">Yucatán</option>
+                  <option value="Zacatecas">Zacatecas</option>
+                </select>
+              </div>
+              <!-- Ciudad-->
+              <div class="form-content col-sm-6 col-md-4">
+                <label for="city">Ciudad</label>
+                <input type="text" class="input_c" id="city" name="city" placeholder="Coyoacán" required>
+              </div>
+            </div>
+            <br>
+            <!-- Fila 2 -->
+            <div class="row">
+              <!-- Colonia -->
+              <div class="form-content col-sm-12 col-md-4">
+                <label for="neighborhood">Colonia</label>
+                <input type="text" class="input_c" id="neighborhood" name="neighborhood" placeholder="Santa Catarina" required>
+              </div>
+              <!-- Calle -->
+              <div class="form-content col-sm-6 col-md-4">
+                <label for="street">Calle y Número</label>
+                <input type="text" class="input_c" id="street" name="street" placeholder="Calle de las Artesanías, 8" required>
+              </div>
+              <!-- Código postal -->
+              <div class="form-content col-sm-6 col-md-4">
+                <label for="postal-code">Código Postal</label>
+                <input type="text" class="input_c" id="postal-code" name="postal-code" placeholder="04010" required>
+              </div>
+            </div>
+            <br>
+            <!-- Fila 3 -->
+            <div class="row">
+              <!-- Número -->
+              <div class="form-content col-sm-5 col-md-4">
+                <label for="phone">Número de Teléfono</label>
+                <input type="text" class="input_c" id="phone" name="phone" placeholder="5534567890" required>
+              </div>
+              <!-- Indicaciones Adicionales -->
+              <div class="form-content col-sm-7 col-md-8">
+                <label for="additional-info">Indicaciones Adicionales</label>
+                <input type="text" class="input_c" id="additional-info" name="additional-info"
+                  placeholder="Junto al mercado de las Artesanías y la calle Florencia">
+              </div>
+            </div>
+          </div>
+          <!-- Contenedor negro para Guardar dirección-->
+          <div class="contenedor-negro mt-3">
+            <div class="row">
+              <div class="col-sm-1 col-md-5"> <!-- Columna vacía -->
+              </div>
+              <!-- Checkbox -->
+              <div class="col-sm-6 col-md-5 checkbox">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="default-address" name="default-address">
+                  <label class="form-check-label" for="default-address"> Usar dirección como predeterminada</label>
+                </div>
+              </div>
+              <!-- Botón Guardar-->
+              <div class="form-content col-sm-5 col-md-2 d-flex justify-content-center ">
+                <button type="button" class="btn-guardar localstore-direccion">Guardar Dirección</button>
+              </div>
+            </div>
+          </div>
+        </form> 
+      </div> <!-- Fin Formulario 1 -->
+
+      <!-- Título Datos de Tarjeta -->
+      <section class="titulos-envio text-left">
+        <h1>2. Datos de Tarjeta de Débito o Crédito</h1>
+      </section>
+
+      <!-- Formulario de Datos de Tarjeta -->
+      <div class="container mt-3 bg-black">
+        <form id="card-form" action="">
+          <!-- Contenedor Formulario 2 -->
+          <div class="form-container">
+            <!-- Fila 1 -->
+            <div class="row">
+              <!-- Número de Tarjeta -->
+              <div class="form-content col-md-6">
+                <label for="card-number">Número de Tarjeta</label>
+                <input type="text" class="input_c" id="card-number" name="card-number" maxlength="16" placeholder="xxxx xxxx xxxx xxxx" required>
+              </div>
+              <!-- Nombre de Tarjeta -->
+              <div class="form-content col-md-6">
+                <label for="card-name">Nombre de la Tarjeta</label>
+                <input type="text" class="input_c" id="card-name" name="card-name" placeholder="Jorge Pérez Sánchez" required>
+              </div>
+            </div>
+            <br>
+            <!-- Fila 2 -->
+            <div class="row align-items-center">
+              <!-- Fecha de vencimiento -->
+              <div class="form-content col-sm-6 col-md-3">
+                <label>Fecha de Vencimiento</label>
+                <div class="row justify-content-center">
+                  <div class="col-auto">
+                    <!-- Mes -->
+                    <input type="text" class="input_c small-input" id="exp-month" name="exp-month" maxlength="2" placeholder="Mes" required>
+                  </div>
+                  <div class="col-auto">
+                    <!-- Año -->
+                    <input type="text" class="input_c small-input" id="exp-year" name="exp-year" maxlength="4" placeholder="Año" required>
+                  </div>
+                </div>
+              </div>
+              <!-- CVC -->
+              <div class="form-content col-sm-3 col-md-3 align-items-center">
+                <label for="cvc">Código de Seguridad</label>
+                <input type="text" class="input_c small-input" id="cvc" name="cvc" maxlength="4" placeholder="CVC" required>
+              </div>
+              <!-- Total a pagar -->
+              <div class="form-content col-sm-3 col-md-6 align-items-center" > 
+                <label for="total" >Total a Pagar</label>
+                <input id="totalPago" type="text" class="input_c medium-input"  name="total" readonly>
+              </div>
+            </div>
+            <br>
+          </div> 
+
+          <!-- Contenedor negro para Guardar tarjeta -->
+          <div class="contenedor-negro2 mt-3">
+            <div class="row">
+              <!-- Checkbox -->
+              <div class="col-sm-6 col-md-4 checkbox">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="default-card" name="default-card">
+                  <label class="form-check-label" for="default-card"> Usar tarjeta como predeterminada</label>
+                </div>
+              </div>
+              <!-- Botón Guardar Tarjeta -->
+              <div class="form-content col-sm-6 col-md-2 d-flex justify-content-center">
+                <button type="button" class="btn-guardar localstore-tarjeta">Guardar Tarjeta</button>
+              </div>
+              <div class="col-sm-0 col-md-1"> <!-- Columna vacía -->
+              </div>
+              <!-- Botón Regresar -->
+              <div class="form-content col-md-2 d-flex justify-content-center">
+                <button type="button" class="btn-guardar-r">Regresar</button>
+              </div>
+              <!-- Botón Confirmar Pago -->
+              <div class="form-content col-sm-12 col-md-3 d-flex justify-content-center">
+                <button type="button" class="btn-guardar btn-confirmar">Confirmar Pago</button>
+              </div>
+            </div>
+          </div>
+        </form> <!-- Fin Formulario 2 -->
+      </div>
+
+    </div> <!-- Fin del Contendor principal -->
+
+    <!-- Footer -->
+    <footer id="footer-app" class="footer-basic container-fluid"> </footer>
+    
+    <!-- Aquí va la ruta del archivo js para funcionalidades -->
+    <script type="module" src="./datos_de_envio.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </div> <!-- Page container -->
+  <a href="#" id="scrollTopBtn" class="scroll-top-btn">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-compact-up" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M7.776 5.553a.5.5 0 0 1 .448 0l6 3a.5.5 0 1 1-.448.894L8 6.56 2.224 9.447a.5.5 0 1 1-.448-.894z"/>
+      </svg>
+  </a>
+</body>
+</html>

@@ -1,0 +1,160 @@
+.banner-productos {
+    background-color: #08807B;
+    height: 7rem;
+    margin: 0.8rem 2.4rem; /* Ajustes de margen */
+    width: calc(100% - 4.8rem); /* Ajuste para centrar y alinear */
+    padding: 1rem; /* Ajusta el padding interno */
+    text-align: center;
+    color: white;
+    border-radius: 1rem;
+    overflow: hidden; /* Asegura que el contenido que se desborde se oculte */
+    box-sizing: border-box; /* Incluye padding y border en el tamaño total */
+    display: flex; /* Usa flexbox para centrar el texto vertical y horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+}
+
+.banner-productos h1 {
+    font-family: "Corben", serif;
+    text-shadow: 0.3rem 0.3rem 0.3rem black;
+    font-size: 3.5rem; /* Ajusta el tamaño del texto */
+    overflow-wrap: break-word; /* Asegura que el texto largo se ajuste */
+    margin: 0; /* Elimina el margen del h1 para evitar desbordamientos */
+    line-height: 1.2; /* Ajusta la altura de línea si es necesario */
+}
+
+
+/* Contenedor de filtros */
+.wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centrar contenido verticalmente */
+    align-items: center; /* Centrar contenido horizontalmente */
+}
+
+.filtros {
+    background-color: #08807B;
+    border-radius: 1rem;
+    display: flex;
+    flex-wrap: wrap; /* Permitir que los elementos se envuelvan si no caben en una línea */
+    justify-content: center;
+    gap: 20px; /* Espacio entre elementos */
+    padding: 0.8rem 1rem 0.8rem 1rem; /* Ajustes de padding */
+    width: 100%; /* Ancho máximo */
+    max-width: 95%; /* Ajuste de ancho máximo */
+    font-family: "Corben", serif;
+}
+
+.categoryitem{
+    background-color: #109995;
+    border-radius: 1rem;
+    display: inline-block; /* Para que los elementos se muestren en línea */
+    padding: 1rem 3rem 1rem 3rem; /* Ajusta el padding para hacer los botones más grandes */
+    margin: 2%1; /* Ajuste de margen */
+    text-align: center;
+    color: white;
+    font-family: Mulish;
+    font-size: 1.6rem; /* Ajusta el tamaño de la fuente */
+    white-space: nowrap; /* Evita que el texto se envuelva */
+    max-width: 100%; /* Evita que los botones se salgan del contenedor */
+    overflow: hidden; /* Oculta el contenido que sobresale */
+    text-overflow: ellipsis; /* Añade puntos suspensivos (...) si el texto es demasiado largo */
+}
+.categoryitem:hover{
+    background-color: #08807B;
+}
+#shopContent {
+    background-image: url(/public/img/fondoprod.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    font-family: "Mulish", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    font-style: normal;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas de tamaño igual */
+    gap: 20px; /* Espacio entre tarjetas */
+    justify-items: center; /* Centrar elementos horizontalmente en el grid */
+    padding: 1.3rem; /* Espaciado interno */
+    width: 100%; /* Ancho completo del contenedor padre */
+    max-width: 1450px; /* Ancho máximo para evitar que se expanda demasiado */
+    margin: 1rem auto 15rem; /* Margen superior e inferior de 1rem, centrado horizontalmente */
+    border-radius: 1rem;
+}
+
+.card {
+    background-color: #8d9c09;
+    padding: 1rem;
+    border-radius: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    max-width: 100%; /* Ancho máximo de la tarjeta */
+    text-align: center;
+}
+.card-title{
+    text-align: center;
+}
+
+@media (max-width: 992px) {
+    #shopContent {
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas en pantallas medianas */
+    }
+}
+
+@media (max-width: 768px) {
+    #shopContent {
+        grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+    }
+}
+
+.card:hover {
+    background-color: #b0bd3b;
+}
+.imagenProduct{
+padding: 1rem 1rem 1rem 1rem;
+width: 100%;
+}
+.detalleBoton{
+    background-color: #08807B;
+    border-radius: 2rem;
+    border: none;
+    color: white;
+    width: 100%;
+    height: 3rem;
+    padding: 1rem auto;
+    margin: 2rem auto;
+    font-size: 1.4rem;
+}
+/* Para boton arriba*/
+.scroll-top-btn {
+    position: fixed;
+    bottom: 1rem; 
+    right: 1rem; 
+    background-color: rgba(241, 162, 11, 0.8);
+    color: black; 
+    border: none;
+    border-radius: 3rem;
+    padding: 1rem;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    font-size: 24px;
+    z-index: 1000; 
+    transition: opacity 0.3s, visibility 0.3s; 
+    opacity: 0; 
+    visibility: hidden; 
+}
+  
+  .scroll-top-btn.show {
+    opacity: 1; 
+    visibility: visible; 
+  }
+  
+  .scroll-top-btn:hover {
+    background-color: #08807B; 
+    transform: scale(1.1); 
+  }
+  
+  .scroll-top-btn svg {
+    margin: 1rem;
+  }

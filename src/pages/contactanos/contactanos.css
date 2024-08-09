@@ -1,0 +1,318 @@
+/* Estilos particulares de Contáctanos */
+
+.container-fluid-titulo-forms {
+    background-color: #F85931;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "Corben", serif;
+    font-style: normal;
+    margin: 0.8rem 2.4rem; /* Ajustes de margen */
+    margin: 1rem auto;
+    width: 100%;
+    padding: 1.2rem;
+    text-align: center;
+    color: white;
+} 
+.container-fluid-titulo-forms h1{
+    font-family: "Corben", serif;
+    text-shadow: 0.2rem 0.2rem 0.1rem black;
+    font-size: 3.7rem; 
+    overflow-wrap: break-word; 
+    margin: 0; 
+    line-height: 1.2; 
+    color: white;
+ 
+}
+ 
+.container-fluid-2 {
+    background-color: black;
+    text-align: center; 
+    font-family: "Corben", serif;
+    font-weight: 400;
+    color: white;
+    padding: 2rem; 
+    box-sizing: border-box; 
+    margin: 0 auto; 
+    width: calc(100% - 4.8rem); 
+    border-radius: 1rem;
+}
+
+.container2 h2 {
+    font-size: 2.6rem; 
+    margin: 0; 
+    text-shadow: 0.1rem 0.2rem 1rem #08807B;
+}
+
+
+.container-fluid-3 {
+    background-color: black;
+    height: auto; 
+    font-family: "Corben", serif;
+    font-weight: 700; 
+    margin: 0rem 2.4rem;
+    width: calc(100% - 4.8rem); 
+    padding: 1rem; 
+    text-align: center;
+    color: #F1A20B;
+    border-radius: 1rem;
+    box-sizing: border-box; 
+    overflow: hidden; 
+}
+
+/* Ajusta el tamaño del texto si es necesario */
+.container-fluid-3 h2 {
+    font-size: 2.5rem; 
+    margin: 0; 
+}
+
+
+/*=================Apartado de preguntas frecuentes bottones==========================*/
+.custom-accordion {
+    max-width: 100%; 
+    width: 100%; 
+}
+
+/* Asegura que el botón del acordeón tenga el tamaño adecuado */
+.accordion-button {
+    background-color: #F85931;
+    font-size: 1.25rem; 
+    padding: 1rem; 
+}
+.accordion-button:hover{
+    background-color: #f27252;
+}
+/* Ajusta el tamaño del contenedor de las preguntas */
+.accordion-header {
+    margin-bottom: 0.5rem;
+}
+
+/* Estilo de las preguntas */
+.p-preguntas {
+    font-family: "Corben", serif;
+    font-weight: 700;
+    font-size: 1.7rem; 
+    margin: 0; 
+    color: black;
+}
+
+/* Estilo de las respuestas */
+.p-respuesta {
+    font-family: "Mulish", sans-serif;
+    font-size: 1.4rem; 
+    margin: 0; 
+}
+
+/* Estilo del cuerpo del acordeón */
+.accordion-body {
+    padding: 1rem; 
+    background-color: #1e9894;
+}
+
+/* Fondo y borde del acordeón */
+.accordion-item {
+    background-color: #1e9894;
+    border: none; 
+    font-family: "Mulish", sans-serif;
+    font-size: 1.4rem; 
+    margin: 0; 
+}
+ 
+/* Ajuste para el enlace dentro de las respuestas */
+.p-respuesta a {
+    color: #F85931; 
+    text-decoration: underline; 
+}
+
+.accordion-button::after {
+    filter: invert(100%) sepia(100%) saturate(1000%) hue-rotate(180deg); 
+}
+
+/* Opcional: Ajuste para mejorar la accesibilidad */
+.accordion-button:focus {
+    box-shadow: none; 
+    background-color: #f27252;
+}
+
+/* ============Termina apartado de preguntas frecuentes==================*/
+/* Estilo general del formulario */
+form {
+    padding: 2rem;
+    border-radius: 20px;
+    background-image: url(/public/img/huarachescolorazul.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    max-width: 100%;
+    margin: 0 auto 10rem 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilo del título */
+#escribenos {
+    font-family: "Mulish", sans-serif;
+    text-shadow: 0.2rem 0.3rem 0.3rem black;
+    color: white;
+    font-size: 2.6rem;
+    border-radius: 1rem;
+    background-color: transparent;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+/* Contenedor de los grupos de campos */
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+/* Estilo para el grupo de campos a la izquierda */
+.form-group-left, .form-group-right {
+    flex: 1;
+    min-width: 300px;
+    text-shadow: 0.2rem 0.3rem 0.3rem black;
+    font-size: 1.6rem;
+    
+}
+
+/* Estilo de los campos del formulario */
+.input_c {
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    background-color: rgba(240, 219, 179, 0.5); 
+    border: none;
+    outline: none;
+    width: 100%;
+    color: black;
+}
+
+
+/* Estilo de los labels */
+.input_c::placeholder {
+    color: black;
+    font-family: "Mulish", sans-serif;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Estilo del botón de enviar */
+.botonEnviar {
+    font-size: 1.4rem;
+    border-radius: 1rem;
+    padding: 0.75rem;
+    color: black;
+    background-color:#c8af7f;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+    margin-top: 1rem;
+    margin-left: 9rem;
+    font-weight:bold;
+    text-shadow: 0.1rem 0.1rem 0.1rem white;
+}
+.botonEnviar:hover{
+    background-color: #1e9894;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    .form-row {
+        flex-direction: column;
+    }
+    
+    .form-group-left, .form-group-right {
+        min-width: 100%;
+    }
+}
+.accordion-button:not(.collapsed) {
+    background-color: #f27252;
+}
+
+.p{
+    text-align: center;
+    color: white;
+}
+/* Estilo para el aviso de iniciar sesión para enviar comentarios */
+.container-mensaje{
+    text-align: center;
+    color: white;
+    border-radius: 15px;
+    background-color: #08807B;
+    font-family: "Mulish", sans-serif;
+    font-size: 1.25rem;
+    font-style: normal;
+}
+  
+  .scroll-top-btn.show {
+    opacity: 1; 
+    visibility: visible; 
+  }
+  
+  .scroll-top-btn:hover {
+    background-color: #08807B; 
+    transform: scale(1.1); 
+  }
+  
+  .scroll-top-btn svg {
+    margin: 1rem;
+  }
+ /* Estilos para el contenedor de alertas */
+#alert-container {
+    margin-top: 10px; 
+    max-width: 100%; 
+}
+
+/* Estilos para la alerta */
+.alert {
+    padding: 1rem;
+    border-radius: 1rem;
+    color: #fff;
+    font-size: 1rem;
+    display: none; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 1rem; 
+}
+
+/* Alerta de éxito */
+.alert-success {
+    background-color: #08807B;
+}
+
+/* Alerta de error */
+.alert-error {
+    background-color: #F85931;
+}
+.swal2-title{
+    background-color: #088078;
+    color: white;
+    text-shadow: 0.1rem 0.1rem 0.3rem black;
+}
+.swal2-popup{
+background-color: #088078;
+}
+#swal2-html-container{
+color: white;
+text-shadow: 0.1rem 0.1rem 0.1rem black;
+}
+.swal2-confirm{
+    background-color: #E4007F;
+    color: white;
+    text-shadow: 0.1rem 0.1rem 0.1rem black;
+}
+.swal2-confirm:hover{
+    background-color: #F1A20B;
+}
+.swal2-modal{
+background-color: #08807B;
+}
+.swal2-icon-warning{
+background-color: #08807B;
+} 
+.swal2-show{
+background-color: #08807B;
+}

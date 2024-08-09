@@ -1,0 +1,328 @@
+/* ===========================NO MOVER==========================================*/
+/* Estilos generales para el contenedor de detalles del producto */
+.container-detalles-producto {
+    background-color: #8D9C09;
+    padding: 2rem;
+    margin: 0.4rem auto; /* Centra el contenedor horizontalmente y aplica margen superior e inferior */
+    border-radius: 2rem;
+    width: 90%; /* Ajusta el ancho para que todos los contenedores tengan el mismo ancho */
+    box-sizing: border-box; /* Incluye padding y border en el cálculo del ancho total */
+}
+
+/* Contenedor para la imagen con efecto de zoom */
+.contenedor-imagen {
+    position: relative;
+    overflow: hidden;
+}
+
+.img-detalles-principal {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease; /* Transición para el zoom */
+    cursor: zoom-in;
+    border-radius: 3rem;
+}
+
+.img-detalles-principal.zoomed {
+    transform: scale(1.50); /* Zoom al 110% al pasar el mouse sobre la imagen */
+}
+
+/* Lupa que aparece al pasar el mouse sobre la imagen */
+.lupa {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-image: url('/public/img/lupa-icon.png'); /* URL de la imagen de la lupa */
+    background-size: cover;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.contenedor-imagen:hover .lupa {
+    opacity: 1;
+}
+/*Estilos de título y texto detalles*/
+.titulo-pagina1{
+    text-align: center;
+    font-family: "Mulish";
+    font-weight: 700;
+    font-size: 3.6rem;
+    text-shadow: 0.1rem 0.1rem 0.1rem white;
+    color: black;
+}
+.titulo-pagina2{
+text-align: center;
+text-shadow: 0rem 0.1rem 0.1rem white;
+color: black;
+font-size: 2.3rem;
+}
+.titulo-pagina3{
+    text-align: center;
+text-shadow: 0rem 0.1rem 0.1rem white;
+color: black;
+font-size: 1.8rem;
+}
+/* Estilos para los grupos de cantidad y talla */
+.form-group {
+    background-color: #8D9C09;
+    width: 100%;
+    font-family: "Corben", serif;
+    font-weight: 700;
+    color: rgb(7, 7, 7);
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 1rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column; /* Cambia a row si quieres alineación horizontal */
+}
+
+.form-group label {
+    margin-bottom: 0.5rem; /* Espacio entre el label y el input/select */
+    font-size: 1.4rem;
+}
+
+.input-group1 {
+    background-color: #8D9C09;
+    display: flex;
+    align-items: center; /* Alinea el contenido verticalmente en el centro */
+}
+
+#cantidad{
+    background-color: #a8b912;
+    font-size: 1.3rem;
+    padding: 0.5rem; /* Ajusta el padding según sea necesario */
+    width: 70%; /* Asegúrate de que ocupe todo el ancho disponible */
+    box-sizing: border-box; /* Incluye padding y border en el cálculo del ancho total */
+    border: none;
+}
+#cantidad:hover{
+    background-color: #cee219;
+}
+#talla {
+    background-color: #a8b912;
+    font-size: 1.3rem;
+    border: none;
+    padding: 0.5rem; /* Ajusta el padding según sea necesario */
+    width: 70%; /* Asegúrate de que ocupe todo el ancho disponible */
+    box-sizing: border-box; /* Incluye padding y border en el cálculo del ancho total */
+}
+#talla:hover{
+    background-color: #cee219;
+}
+/*Fin de estilos cantidad y talla*/
+/* Estilos para el botón "Agregar al carrito" */
+#agregarCarrito {
+    background-color: #08807B;
+    border-radius: 1rem;
+    width: 100%; /* Cambiado a 100% para mantener consistencia en el contenedor */
+    max-width: 12rem; /* Máximo ancho del botón */
+    height: 4rem;
+    border: none;
+    color: white;
+    text-align: center; /* Centra el texto dentro del botón */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centra el contenido del botón */
+    margin-top: 10px; /* Separación del contenido superior */
+    text-shadow: 0.1rem 0.1rem 0.1rem black;
+    
+}
+#agregarCarrito:hover {
+    background-color: #408b88;
+    transform: translateY(0.1rem);
+}
+
+/* Estilos para el contenedor de acordeón de detalles */
+.container-acordeon-detalles {
+    max-width: 100%; /* Cambiado a 100% para ajustarse al contenedor padre */
+    margin-left: 0; /* Alinea el contenedor con el contenido padre */
+}
+
+/* Estilos para el ítem del acordeón */
+.accordion-item-detalles {
+    background-color: #a8b912;
+    border-radius: 2rem;
+}
+
+/* Estilos para el botón del acordeón */
+.accordion-button-detalles {
+    background-color: #08807B;
+    width: 100%;
+    font-family: "Corben", serif;
+    font-weight: 400;
+    text-align: left;
+    border: none;
+    color: white;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 1rem;
+    text-shadow: 0.1rem 0.1rem 0.1rem black;
+}
+
+/* Estilos para botones al pasar el ratón sobre ellos */
+button:hover {
+    background-color: #F85931;
+}
+
+/* Estilos para los botones de sugerencias al pasar el ratón sobre ellos */
+.btn-sug:hover {
+    background-color: #d478ab;
+}
+
+/* Estilos para el contenedor de sugerencias */
+.container-sugerencias {
+    /*background-image: url(/public/img/florestejidascolores.png);*/
+    background-image: url(/public/img/florestejidascolores.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "Corben", serif;
+    margin: 1rem auto 2rem auto; /* Centra el contenedor horizontalmente y aplica margen superior e inferior */
+    width: 90%; /* Ajusta el ancho para que todos los contenedores tengan el mismo ancho */
+    padding: 2rem;
+    text-align: center;
+    color: white;
+    text-shadow: 0.3rem 0.3rem 0.3rem black;
+    border-radius: 1rem;
+    box-sizing: border-box; /* Incluye padding y border en el cálculo del ancho total */
+}
+.container-sugerencias h1{
+    font-size: 3.3rem;
+    text-shadow: 0.2rem 0.2rem 0.3rem black;
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 1rem;
+    width: 40%;
+
+}
+
+/* Estilos para el botón de sugerencias */
+.btn-sug {
+    background-color: #08807B;
+    padding: 0.5rem 1rem; /* Ajusta el padding para un tamaño de botón adecuado */
+    color: white;
+    text-align: center;
+    border-radius: 1rem;
+    display: inline-block; /* Asegura que el botón respete el tamaño del contenido */
+    margin-top: 1rem; /* Añade un margen en la parte superior para separación */
+    border: none;
+    text-decoration: none; /* Elimina el subrayado si es un enlace */
+}
+
+/* Estilos para el botón al pasar el ratón sobre él */
+.btn-sug:hover {
+    background-color: #d478ab;
+}
+ 
+/* Estilos para el contenedor de productos sugeridos */
+.container-productos-sugeridos {
+    background-color: #08807B;
+    display: flex;
+    flex-wrap: nowrap; /* Asegura que las tarjetas no se envuelvan */
+    overflow-x: auto; /* Permite el desplazamiento horizontal si las tarjetas exceden el ancho del contenedor */
+    gap: 1rem; /* Espacio entre las tarjetas */
+    padding: 3rem 1rem 3rem 5rem;
+    margin: 1rem auto 11rem auto; /* Centra el contenedor horizontalmente y aplica margen superior e inferior */
+    border-radius: 2rem;
+    width: 90%; /* Ajusta el ancho para que todos los contenedores tengan el mismo ancho */
+    box-sizing: border-box; /* Incluye padding y border en el cálculo del ancho total */
+    align-items: center; /* Centra verticalmente las tarjetas */
+}
+
+/* Estilos para las tarjetas */
+.card {
+    background-color: #8D9C09;
+    color: white;
+    border-radius: 2rem;
+    flex: 0 0 18rem; /* Cada tarjeta tiene un ancho fijo de 18rem */
+    box-sizing: border-box; /* Incluye padding y border en el cálculo del ancho total */
+    margin: 0; /* Elimina el margen alrededor de las tarjetas */
+    padding: 0.4rem; /* Espacio interno de las tarjetas */
+    text-shadow: 0rem 0.1rem 0.1rem black;
+}
+.card:hover {
+    background-color: #a8b912;
+    transform: translateY(2rem);
+}
+
+/* Estilos para las imágenes en las tarjetas */
+.card-img-top {
+    border-radius: 2rem;
+    height: 17rem;
+    object-fit: cover; /* Asegura que la imagen cubra el área de la tarjeta sin distorsionar */
+}
+.card-text-sug{
+    text-align: center;
+}
+
+/* Estilos generales para pantallas pequeñas */
+@media (max-width: 768px) {
+    .card {
+        flex: 0 0 14rem; /* Ajusta el ancho de las tarjetas en pantallas más pequeñas */
+    }
+}
+
+/* Estilos para pantallas muy pequeñas (móviles) */
+@media (max-width: 576px) {
+    .card {
+        flex: 0 0 100%; /* Una tarjeta por fila en pantallas muy pequeñas */
+    }
+
+    .card-img-top {
+        height: 12rem; /* Ajusta la altura de las imágenes en móviles */
+    }
+}
+
+/* Estilos para los botones dentro de las tarjetas */
+.card-body .btn-sug {
+    display: block; /* Asegúrate de que el botón ocupe todo el ancho disponible */
+    width: 100%; /* Ancho del botón igual al ancho de la tarjeta */
+    margin: 1rem auto; /* Espacio alrededor del botón */
+}
+
+/*Para boton atrás*/
+.atras-productos{
+    background-color: #8D9C09;
+    border-radius: 1rem;
+    margin: 1rem 3rem;
+    width: 100%;
+    padding: 0.6rem;
+    color: white;
+}
+/* Para boton arriba*/
+.scroll-top-btn {
+    position: fixed;
+    bottom: 1rem; 
+    right: 1rem; 
+    background-color: rgba(241, 162, 11, 0.8); 
+    color: black; 
+    border: none;
+    border-radius: 3rem;
+    padding: 1rem;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    font-size: 24px;
+    z-index: 1000; 
+    transition: opacity 0.3s, visibility 0.3s; 
+    opacity: 0; 
+    visibility: hidden; 
+  }
+   
+  .scroll-top-btn.show {
+    opacity: 1; 
+    visibility: visible; 
+  }
+  
+  .scroll-top-btn:hover {
+    background-color: #08807B; 
+    transform: scale(1.1); 
+  }
+  
+  .scroll-top-btn svg {
+    margin: 1rem;
+  }
+  
+/* ===============================NO MOVER====================================*/

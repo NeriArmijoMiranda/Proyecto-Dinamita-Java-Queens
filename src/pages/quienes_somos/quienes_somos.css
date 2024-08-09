@@ -1,0 +1,265 @@
+/* Estilos particulares de ¿Quiénes somos? */
+.container1 {
+    background-color: #08807B;
+    width: 100%;
+    padding: 1.2rem;
+}
+.container1 h1{
+    text-shadow: 0.3rem 0.3rem 0.3rem black;
+    font-size: 3.6rem;
+}
+ 
+.container2 {
+    margin-top: 1.4rem;
+    margin-bottom: 20px;
+    background-image: url(/public/img/artesanosombreros.png);
+    background-image: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px;
+    margin-left: 100px;
+    margin-right: 100px;
+    border-radius: 2rem;
+}
+
+.container3 {
+    background-color: #F85931;
+    margin-left: 100px;
+    margin-right: 100px;
+    padding: 15px;
+    margin-top: 100px;
+    margin-bottom: 10px;
+    min-height: 150px; /* Se puede utilizar margin al rededor del parrafo */
+    justify-content: center;
+    text-align: center;
+    border-radius: 1rem;
+
+}
+
+.container4 {
+    margin-top: 20px;
+    margin-bottom: 100px;
+    background-image: url(/public/img/artesanias_mx_en_casa.jpg);
+    background-image: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px;
+    margin-left: 100px;
+    margin-right: 100px;
+    border-radius: 2rem;
+}
+
+.titulo-quienes-somos {
+    font-family: "Corben", serif;
+    color: white;
+
+}
+
+.parrafo {
+    font-family: Mulish;
+    color: white;
+    font-size: 23px;
+    margin-bottom: 10px;
+}
+
+.titulo-nuestros-valores {
+    margin-top: 1rem;
+    margin-bottom: 0.3rem;
+    height: 100%;
+    margin-left: 100px;
+    margin-right: 100px;
+    color: white;
+    font-size: 3rem;
+    font-family: Corben;
+    text-shadow: 0.1rem 0.17rem 0.3rem #F1A20B;
+    
+}
+.titulo-nuestros-valores:hover{
+    color: #E4007F;
+}
+
+/*Nuestros Valores*/
+.container6 {
+    margin: top 10px;
+    font-family: Mulish;
+    color: white;
+    justify-content: center;
+    text-align: center;
+    font-size: 20px;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 0px;
+}
+
+.propiedades {
+    color: #E4007F;
+    margin-left: 30px;
+    margin-right: 10px;
+}
+.text-valores{
+    color: white;
+}
+.text-valores:hover{
+    color: #F1A20B;
+}
+/* Contenido misión y visión */
+
+.contenido {
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.contenedor-mision {
+    color: white;
+    padding: 20px;
+    text-align: center;
+    /* Alineación del texto al centro */
+    height: 100%;
+    /* Ocupa el 100% de la altura disponible */
+    width: 100%;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagenmision {
+    background-image: url(/public/img/aguaazzu.png);
+    background-position: center;
+    background-size: cover;
+    height: 300px;
+    /* Altura de la imagen */
+    width: 100%;
+    /* Ancho completo del contenedor */
+    margin-bottom: 200px;
+    border-radius: 2rem;
+
+}
+.imagenmision:hover{
+transform: translatex(0.3rem);
+}
+
+.mision {
+    color: white;
+    /* Color del texto */
+    font-family: Mulish;
+    text-align: center;
+    /* Alineación del texto al centro */
+    margin-bottom: 50px;
+    /* Espacio inferior */
+    font-size: 20px;
+}
+.mision:hover{
+    color: #F1A20B;
+}
+
+.contenedor-vision {
+    color: white;
+    padding: 20px;
+    text-align: center;
+    /* Alineación del texto al centro */
+    height: 100%;
+    /* Ocupa el 100% de la altura disponible */
+    width: 100%;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.vision {
+    color: white;
+    /* Color del texto */
+    font-family: Mulish;
+    text-align: center;
+    /* Alineación del texto al centro */
+    margin-bottom: 200px;
+    /* Espacio inferior */
+    font-size: 20px;
+}
+.vision:hover{
+    color: #F1A20B;
+}
+.imagenvision {
+    background-image: url(/public/img/artesanoplatos.png);
+    background-position: center;
+    background-size: cover;
+    height: 300px;
+    /* Altura de la imagen */
+    width: 100%;
+    /* Ancho completo del contenedor */
+    margin-bottom: 50px;
+    border-radius: 2rem;
+}
+.imagenvision:hover{
+    transform: translatex(0.3rem);
+}
+
+.subtitulo {
+    background-color: #08807B;
+    color: white;
+    text-align: center;
+    font-family: "Corben", serif;
+    padding: 10px 0;
+    width: 100%;
+    margin-bottom: 40px;
+    border-radius: 1rem;
+    /* Espacio inferior */
+}
+.subtitulo:hover{
+    background-color: #0da49f;
+}
+.subtitulo2 {
+    background-color: #8D9C09;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-family: "Corben", serif;
+    padding: 10px 0;
+    width: 100%;
+    margin-bottom: 40px;
+    border-radius: 1rem;
+    /* Espacio inferior */
+} 
+.subtitulo2:hover{
+    background-color: #b0c209;
+}
+/* Para boton arriba*/
+.scroll-top-btn {
+    position: fixed;
+    bottom: 1rem; 
+    right: 1rem; 
+    background-color: rgba(241, 162, 11, 0.8);
+    color: black; 
+    border: none;
+    border-radius: 3rem;
+    padding: 1rem;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    font-size: 24px;
+    z-index: 1000; 
+    transition: opacity 0.3s, visibility 0.3s; 
+    opacity: 0; 
+    visibility: hidden; 
+}
+  
+  .scroll-top-btn.show {
+    opacity: 1; 
+    visibility: visible; 
+  }
+  
+  .scroll-top-btn:hover {
+    background-color: #08807B; 
+    transform: scale(1.1); 
+  }
+  
+  .scroll-top-btn svg {
+    margin: 1rem;
+  }

@@ -1,0 +1,269 @@
+/* Estilo general del contenedor de contenido */
+#content-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px; /* Espacio entre los formularios */
+    padding: 60px 0;
+    box-sizing: border-box;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+/* Estilo para cada contenedor de formulario */
+.contenedor-iniciar-sesion,
+.container-crear-cuenta {
+    flex: 1 1 calc(50% - 20px); /* Ajusta el tamaño base del formulario, menos el gap */
+    max-width: calc(50% - 20px); /* Limita el ancho máximo, menos el gap */
+    box-sizing: border-box;
+    background-color: black; /* Asegura que el fondo sea negro para ambos */
+}
+
+/* Asegura que los formularios ocupen el 100% del ancho de sus contenedores */
+.form-container {
+    position: relative; /* Necesario para posicionar el pseudo-elemento */
+    padding: 4rem 1rem 7rem 1rem;
+    border-radius: 1rem;
+    text-align: left;
+    max-width: 100%;
+    box-sizing: border-box;
+    background: url(/public/img/pie.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: auto; 
+    margin: 1rem;
+    align-content: center;
+}
+
+.form-container > * {
+    position: relative; /* Asegura que los hijos se muestren encima del pseudo-elemento */
+    z-index: 2;
+}
+.form-container h2{
+    color: white;
+    text-shadow: 0.29rem 0.2rem 0rem #000;
+    size: 2.7rem;
+    text-align: center;
+}
+
+.form-registro{
+    padding: 3rem;
+    border-radius: 1rem;
+    text-align: left;
+    max-width: 100%;
+    box-sizing: border-box;
+    background: #088078;
+    height: auto; /* Ajuste para que el formulario tenga altura automática */
+    margin: 1rem 1rem 10rem 1rem;
+}  
+.form-registro h2{
+    color: white;
+    text-shadow: 0.2rem 0.1rem 0rem black;
+    font-size: 2.7rem;
+    text-align: center;
+}
+/* Estilo para columnas de formulario */
+.form-column {
+    display: flex;
+    flex-direction: column; /* Asegura que los campos estén en columna */
+    gap: 20px; /* Espacio entre campos */
+    margin-bottom: 20px; /* Espacio inferior */
+}
+
+/* Estilo para filas de formulario en dos columnas */
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Espacio entre columnas */
+    margin-bottom: 20px; /* Espacio entre filas */
+}
+
+/* Estilo para cada contenido de formulario */
+.form-content {
+    flex: 1; /* Ocupa el ancho disponible */
+    margin-bottom: 15px; /* Espacio inferior */
+}
+
+/* Estilo para los campos de form registro */
+.input_registro {
+    background-color:  rgba(0, 0, 0, 0.6); 
+    color: white; 
+    padding: 1rem 0.7rem;
+    border: none;
+    border-radius: 1.3rem; 
+    width: 100%; 
+    box-sizing: border-box; 
+    font-family: "Mulish", sans-serif; 
+    margin: 0.4rem auto 1rem;
+}
+/* Estilo para el placeholder */
+.input_registro::placeholder {
+    color: white; 
+    font-style: italic; 
+    font-size: 1rem; 
+}
+
+/* Estilo para el campo de entrada */
+.input_email {
+    background-color: rgba(0, 0, 0, 0.8); 
+    color: white; 
+    padding: 1rem 0.7rem;
+    border: none;
+    border-radius: 1.3rem; 
+    width: 100%; 
+    box-sizing: border-box; 
+    font-family: "Mulish", sans-serif; 
+    margin: 0.4rem auto 1rem;
+}
+
+/* Estilo para el placeholder */
+.input_email::placeholder {
+    color: white; 
+    font-style: italic; 
+    font-size: 1rem; 
+}
+.form-content-email label,
+.form-content-contraseña label {
+    color: white;
+    text-shadow: 0.29rem 0.2rem 0rem #000;
+    font-size: 1.4rem;
+    display: flex;
+}
+
+.input_contraseña {
+    background-color: rgba(0, 0, 0, 0.8); 
+    color: white; 
+    padding: 1rem 0.7rem;
+    border: none;
+    border-radius: 1.3rem; 
+    width: 100%; 
+    box-sizing: border-box; 
+    font-family: "Mulish", sans-serif;
+    margin: 0.4rem auto 1rem; 
+}
+
+/* Estilo para el placeholder */
+.input_contraseña::placeholder {
+    color: white; 
+    font-style: italic; 
+    font-size: 1rem; 
+}
+
+.form-content label{
+    color: white;
+    text-shadow: 0.1rem 0.1rem 0.3rem black;
+    font-size: 1.3rem;
+}
+
+/* Estilo de los botones */
+.btn-enviar,
+.btn-registro {
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+    padding: 15px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-align: center;
+    border: none;
+    width: 100%; /* Ajusta el botón para que ocupe todo el ancho del formulario */
+    margin-top: 1rem;
+    text-shadow: 0.1rem 0.1rem 0.3rem black;
+}
+
+.btn-enviar {
+    background-color: rgba(228, 0, 127, 0.5);
+}
+
+.btn-registro {
+    background-color:rgba(248, 89, 49, 0.7);
+}
+
+.btn-registro:hover {
+    background-color: #F1A20B;
+}
+
+.btn-enviar:hover {
+    background-color: #088078;
+}
+/* Estilos de iconos */
+.social-icons {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    gap: 1rem; 
+    margin-top: 1rem; 
+}
+
+/* Asegúrate de que los íconos sean visibles y tengan un tamaño adecuado */
+.social-icons .icon i {
+    font-size: 2rem; 
+    color: white; 
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    #content-wrap {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .contenedor-iniciar-sesion, .container-crear-cuenta {
+        max-width: 90%;
+        flex: 1 1 90%;
+    }
+
+    .btn-enviar, .btn-registro {
+        padding: 15px;
+        font-size: 20px;
+    }
+
+    .input_registro {
+        padding: 15px;
+        font-size: 16px;
+    }
+}
+
+
+.privacy-notice {
+    margin-top: 1rem; 
+    color: white;
+    text-shadow: 0.1rem 0.1rem 0.3rem black;
+    text-align: center;
+}
+
+.privacy-notice input {
+    margin-right: 1rem; 
+}
+
+.privacy-notice label {
+    margin-right: 2rem; 
+}
+
+.privacy-notice p{
+    margin: 0.7rem;
+    font-size: 0.7rem;
+}
+
+.swal2-title{
+    background-color: #088078;
+    color: white;
+    text-shadow: 0.1rem 0.1rem 0.3rem black;
+}
+.swal2-popup{
+background-color: #088078;
+}
+#swal2-html-container{
+color: white;
+text-shadow: 0.1rem 0.1rem 0.1rem black;
+}
+.swal2-confirm{
+    background-color: #E4007F;
+    color: white;
+    text-shadow: 0.1rem 0.1rem 0.1rem black;
+}
+.swal2-confirm:hover{
+    background-color: #8D9C09;
+}

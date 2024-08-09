@@ -1,0 +1,169 @@
+/* Estilos particulares de Compras */
+.banner-carrito {
+    color: white;
+   /* background-image: url(/public/img/colcha2.png);*/
+    background-color: #08807B;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-style: normal;
+    text-align: center;
+    margin: 1rem auto;
+    width: 100%;
+    height: 10%;
+    padding: 1rem;
+    text-shadow: 0.3rem 0.2rem 0.1rem black;
+}
+
+/* Estilos del carrito */
+.banner-carrito h1 {
+    font-family: "Corben", serif;
+    font-weight: 400;
+    font-size: 3.9rem;
+    text-align: center;
+}
+ 
+/* Contenedor general para productos y resumen de compra */
+#contenedorGeneral {
+    display: flex;
+    justify-content: space-between; /* Distribuye el espacio entre los elementos */
+    padding: 2rem;
+    margin: 2rem auto 15rem;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan */
+}
+
+/* Estilos para el contenedor de productos */
+#modalContainer {
+    background-color: #08807B;
+    border-radius: 1.4rem;
+    font-optical-sizing: auto;
+    width: 52%; /* Cambiar a 100% en pantallas pequeñas */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
+    height: 100%;
+}
+
+/* Estilos para cada tarjeta dentro del contenedor */
+.modal-content {
+    background-color: #8d9c09;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin: 0.8rem auto;
+    color: white;
+    font-family: "Mulish", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    width: calc(47% - 0.2rem); /* Ancho de la tarjeta, con un pequeño ajuste para el espacio entre ellas */
+    height: 45%;
+}
+
+/* Ajustes específicos para las tarjetas */
+.modal-content h1 {
+    font-family: "Corben", serif;
+    color: black;
+    text-align: center;
+    font-weight: 400;
+    font-size: 2rem;
+}
+.modal-content h3 {
+    font-family: "Corben", serif;
+    color: black;
+    text-align: center;
+    font-weight: 400;
+    font-size: 1.4rem;
+}
+.modal-content img {
+    align-self: center;
+    width: 70%;
+}
+.modal-content h4 {
+    font-family: "Corben", serif;
+    text-align: center;
+    font-weight: 400;
+    font-size: 1.4rem;
+    color: black;
+}
+.cantidad {
+    background-color: #08807B;
+    width: 10rem;
+    border-radius: 1rem;
+    margin: 1rem auto;
+}
+.delete, .sumar, .restar {
+    cursor: pointer;
+}
+.modal-content p {
+    font-family: "Corben", serif;
+    text-align: center;
+    font-weight: 400;
+    font-size: 1.4rem;
+    color: black;
+}
+
+/* Estilo del resumen de compra */
+#contenedorResumen {
+    margin: 1rem auto;
+    background-color: #8d9c09;
+    justify-content: flex;
+    border-radius: 1.3rem;
+    padding: 2rem;
+    width: 100%; /* Cambiar a 100% en pantallas pequeñas */
+    font-family: "Corben";
+}
+.continuarBoton{
+    background-color: #08807B;
+    text-shadow: 0.1rem 0.1rem 0rem #000;
+    border: none;
+    border-radius: 1rem;
+    width: 40%;
+    padding: 1rem;
+    color: white;
+    font-size: 1rem;
+}
+.continuarBoton:hover{
+    background-color: #13615e;
+} 
+/* Estilos del carrusel */
+.container-artesanos {
+    margin-top: 5rem; /* Espacio entre el resumen y el carrusel */
+    width: 80%; /* Asegura que el carrusel ocupe todo el ancho del contenedor */
+} 
+.container-artesanos img {
+    border-radius: 2rem;
+}
+
+/* Asegúrate de que el carrusel ocupe todo el ancho del contenedor */
+.carousel {
+    width: 100%;
+}
+
+/* Media queries para pantallas pequeñas */
+@media (max-width: 992px) {
+    #contenedorGeneral {
+        flex-direction: column; /* Cambia la dirección a columna en pantallas más pequeñas */
+    }
+
+    #modalContainer {
+        width: 100%; /* Asegura que el contenedor de productos ocupe todo el ancho disponible */
+    }
+
+    .modal-content {
+        width: 100%; /* Ajusta el ancho de las tarjetas para pantallas más pequeñas */
+    }
+
+    #contenedorResumen {
+        width: 100%; /* Asegura que el resumen de compra ocupe todo el ancho disponible */
+    }
+
+    .container-artesanos {
+        width: 100%; /* Asegura que el carrusel ocupe todo el ancho del contenedor */
+    }
+}
+
+/* Media queries para pantallas muy pequeñas */
+@media (max-width: 576px) {
+    .modal-content {
+        width: 100%; /* Ajusta el ancho de las tarjetas para pantallas muy pequeñas */
+    }
+}

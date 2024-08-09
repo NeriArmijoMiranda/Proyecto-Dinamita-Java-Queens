@@ -1,0 +1,102 @@
+
+[
+    {
+        "id": 1,
+        "nombre": "Vaso de Barro",
+        "categoría": "Cerámica",
+        "precio": 80.00,
+        "imagen": "/img/vaso de barro negro.jpg",
+        "origen": "Oaxaca, México"
+    },
+    {
+        "id": 2,
+        "nombre": "Sombrero de Palma",
+        "categoría": "Textiles",
+        "precio": 230.00,
+        "imagen": "/img/sombrero de palma.jpg",
+        "origen": "Yucatán, México"
+    },
+    {
+        "id": 3,
+        "nombre": "Bolsa de Flores",
+        "categoría": "Textiles",
+        "precio": 560.00,
+        "imagen": "/img/bolsa de mimbre.jpg",
+        "origen": "Oaxaca, México"
+    },
+    {
+        "id": 4,
+        "nombre": "Tapete de Lana",
+        "categoría": "Textiles",
+        "precio": 350.00,
+        "imagen": "/img/tapete de lana.jpg",
+        "origen": "Zacatecas, México"
+        
+    },
+    {
+        "id": 5,
+        "nombre": "Máscara de Madera",
+        "categoría": "Decoración",
+        "precio": 440.00,
+        "imagen": "/img/mascara de madera.jpg",
+        "origen": "Guerrero, México"
+        
+    },
+    {
+        "id": 6,
+        "nombre": "Jarra de Barro",
+        "categoría": "Cerámica",
+        "precio": 360.00,
+        "imagen": "/img/jarra de barro.jpg",
+        "origen": "Puebla, México"
+    },
+    {
+        "id": 7,
+        "nombre": "Rebozo de Algodón",
+        "categoría": "Textiles",
+        "precio": 580.00,
+        "imagen": "/img/reboso de algodon.jpg",
+        "origen": "Hidalgo, México"
+    },
+    {
+        "id": 8,
+        "nombre": "Alebrije de Gato",
+        "categoría": "Cerámica",
+        "precio": 590.00,
+        "imagen": "/img/figurilla de barro.jpg",
+        "origen": "Ciudad de México, México"
+    },
+    {
+        "id": 9,
+        "nombre": "Collar de Cuentas",
+        "categoría": "Joyería",
+        "precio": 270.00,
+        "imagen": "/img/collar de cuentas.jpg",
+        "origen": "Nayarit, México"    
+    },
+    {
+        "id": 10,
+        "nombre": "Cesta de Mimbre",
+        "categoría": "Textiles",
+        "precio": 630.00,
+        "imagen": "/img/cesta de mimbre.jpg",
+        "origen": "Veracruz, México"
+    },
+    {
+        "id": 11,
+        "nombre": "Muñeca Lele",
+        "categoría": "Decoración",
+        "precio": 180.00,
+        "imagen": "/img/muñecalele.jpg",
+        "origen": "Querétaro, México"
+    },
+    {
+        "id": 12,
+        "nombre": "Vajilla de Cerámica",
+        "categoría": "Cerámica",
+        "precio": 2300.00,
+        "imagen": "/img/platosceramica.jpg",
+        "origen": "Puebla, México"
+    }
+
+]

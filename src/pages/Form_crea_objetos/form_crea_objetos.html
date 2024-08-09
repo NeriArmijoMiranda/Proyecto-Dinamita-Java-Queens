@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario productos</title>
+    <!-- Bootstrap CSS 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">-->
+    <link rel="icon" href="/public/img/logo_yoatzin.png" type="imagen icono">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+</head>
+
+<body> 
+    <!-- CONTENEDOR GENERAL de la página -->
+    <div id="page-container">
+
+        <!-- Navbar = Header -->
+        <header id="navbar-app"> </header>
+
+        <!-- Contenido de la página -->
+        <div id="content-wrap">
+            <h1>Formulario de Producto Nuevo</h1>
+
+            <div class="container mt-5 col-12 col-md-12 mt-4 mb-4">
+                    <form id="productForm" class="needs-validation" novalidate>
+                        <div class="row">
+                            <div class="col-sm-4 col-md-4">
+                                <div class="form-group">
+                                    <label for="ID">ID:</label>
+                                    <input type="number" class="fform-control" id="ID" name="ID" placeholder="01" required>
+                                    <div class="invalid-feedback">
+                                        Por favor ingrese el ID del producto.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-8 col-md-8 ">
+                                <div class="form-group">
+                                    <label for="categoria">Categoría:</label>
+                                    <input type="text" class="fform-control" id="categoria" name="categoria" placeholder="Ceramica" required>
+                                    <div class="invalid-feedback">
+                                        Por favor ingresa la categoría.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="nombre">Nombre:</label>
+                                    <input type="text" class="fform-control" id="nombre" name="nombre" placeholder="Alebrijes" required>
+                                    <div class="invalid-feedback">
+                                        Por favor ingresa el nombre.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="precio">Precio:</label>
+                                    <input type="number" class="fform-control" id="precio" name="precio" step="0.01"
+                                        placeholder="100.00" required>
+                                    <div class="invalid-feedback">
+                                        Por favor ingresa un precio válido.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="imagen">Imagen URL:</label>
+                                <input type="file" class="fform-control" id="imagen" name="imagen" required>
+                                <div class="invalid-feedback">
+                                    Por favor ingresa una URL de imagen válida.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12 col-md-4">
+                                <div class="form-group">
+                                    <label for="origen">Origen:</label>
+                                    <input type="text" class="fform-control" id="origen" name="origen" placeholder="Monterrey" required>
+                                    <div class="invalid-feedback">
+                                        Por favor ingresa el origen.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4">
+                                <div class="form-group">
+                                    <label for="talla">Talla:</label>
+                                    <input type="text" class="fform-control" id="talla" name="talla" placeholder="Única" required>
+                                    <div class="invalid-feedback">
+                                        Por favor ingresa la talla.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4">
+                                <div class="form-group">
+                                    <label for="cantidad">Cantidad:</label>
+                                    <input type="number" class="fform-control" id="cantidad" name="cantidad" placeholder="1" required>
+                                    <div class="invalid-feedback">
+                                        Por favor ingresa la cantidad.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="form-group">
+                                <label for="descripcion">Descripción:</label>
+                                <textarea class="fform-control" id="descripcion" name="descripcion" rows="3"
+                                    placeholder="Descripción del producto" required></textarea>
+                                <div class="invalid-feedback">
+                                    Por favor ingresa la descripción.
+                                </div>
+                            </div>
+                        </div>
+                            <button class="BotonCrear" type="submit">Crear Producto</button>
+                    </form>
+            </div>
+        </div>
+
+
+    <!-- Footer -->
+    <footer id="footer-app" class="footer-basic container-fluid"> </footer>
+
+        <!-- Aquí va la ruta del archivo js para funcionalidades -->
+        <script type="module" src="./form_crea_objetos.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+        <!-- Bootstrap JS and dependencies (jQuery)
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script> -->
+
+    </div>
+    <a href="#" id="scrollTopBtn" class="scroll-top-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-compact-up" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M7.776 5.553a.5.5 0 0 1 .448 0l6 3a.5.5 0 1 1-.448.894L8 6.56 2.224 9.447a.5.5 0 1 1-.448-.894z"/>
+          </svg>
+      </a>
+</body>
+
+</html>

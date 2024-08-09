@@ -75,11 +75,11 @@ por favor sigue los siguientes pasos:
 
 ## 🤝 Nuestro equipo:
 
-- [@AlejandraAC](https://github.com/AlejandraAC)
-- [@Arlette-Miranda](https://github.com/Arlette-Miranda)
-- [@dessgrc1609](https://github.com/dessgrc1609)
-- [@JazzCI](https://github.com/JazzCI)
-- [@Jhorchss](https://github.com/Jhorchss)
-- [@marbellacabrera](https://github.com/marbellacabrera)
-- [@EusbekMendoza](https://github.com/EusbekMendoza)
-- [@NeriArmijoMiranda](https://github.com/NeriArmijoMiranda/)
+![@AlejandraAC](https://github.com/AlejandraAC)
+![@Arlette-Miranda](https://github.com/Arlette-Miranda)
+![@dessgrc1609](https://github.com/dessgrc1609)
+![@JazzCI](https://github.com/JazzCI)
+![@Jhorchss](https://github.com/Jhorchss)
+![@marbellacabrera](https://github.com/marbellacabrera)
+![@EusbekMendoza](https://github.com/EusbekMendoza)
+![@NeriArmijoMiranda](https://github.com/NeriArmijoMiranda/)

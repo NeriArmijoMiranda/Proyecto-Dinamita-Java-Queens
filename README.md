@@ -1,3 +1,8 @@
+# DINAMITA JAVA QUEENS 
+
+¡Hola! Somos Dinamita Java Queens.
+Nosotras como equipo de mujeres apasionadas por el desarrollo web y comprometidas con el empoderamiento, nos enorgullece ser parte de este ambicioso proyecto que busca llevar las hermosas artesanías de Yoatzin a todo el territorio nacional, a través de la creación de esta plataforma e-commerce.
+
 # Yoatzin 🪷
 
 ![Logo con flores y fondo negro de Yoatzin](public/img/logo_yoatzin.png)
@@ -41,8 +46,8 @@ Enamórate de nuestros productos y descubre la diversidad de México a través d
 ├── package-lock.json      # Archivo de lock de versiones de dependencias
 └── vite.config.js         # Archivo de configuración de Vite
 
-
 🛠 Instalación y Uso
+Aquí te dejamos algunos pasos para poder desplegar la página y visualizarla:
 
 🪷 Clona este repositorio:
 git clone https://github.com/tuusuario/yoatzin.git
@@ -56,3 +61,24 @@ npm run dev
 
 🪷 Explora la tienda en tu navegador:
 http://localhost:3000
+
+
+📝 Contribuciones
+Las contribuciones son bienvenidas. Si tienes alguna sugerencia o quieres contribuir al desarrollo, por favor sigue los siguientes pasos:
+
+🏵️ Haz un fork del repositorio.
+🏵️ Crea una nueva rama para tu característica (git checkout -b feature/nueva-caracteristica).
+🏵️ Realiza tus cambios y haz un commit (git commit -m 'Añadir nueva característica').
+🏵️ Sube los cambios a tu repositorio (git push origin feature/nueva-caracteristica).
+🏵️ Abre un Pull Request.
+
+## 🤝 Nuestro equipo:
+
+- [@usuario1](https://github.com/AlejandraAC/usuario1)
+- [@usuario2](https://github.com/Arlette-Miranda/usuario2)
+- [@usuario3](https://github.com/dessgrc1609/usuario3)
+- [@usuario4](https://github.com/JazzCI/usuario4)
+- [@usuario5](https://github.com/Jhorchss/usuario5)
+- [@usuario6](https://github.com/marbellacabrera/usuario6)
+- [@usuario7](https://github.com/EusbekMendoza/usuario7)
+- [@usuario8](https://github.com/NeriArmijoMiranda/usuario8)

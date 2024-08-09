@@ -1,4 +1,4 @@
-# DINAMITA JAVA QUEENS 
+# DINAMITA JAVA QUEENS 👑💣
 
 ¡Hola! Somos Dinamita Java Queens.
 Nosotras como equipo de mujeres apasionadas por el desarrollo web y comprometidas con el empoderamiento, nos enorgullece ser parte de este ambicioso proyecto que busca llevar las hermosas artesanías de Yoatzin a todo el territorio nacional, a través de la creación de esta plataforma e-commerce.

@@ -147,7 +147,10 @@ function obtenerDatosProducto() {
   
     // Verifica si la talla está seleccionada
     if (producto.talla === 'Seleccione') {
-      alert('Por favor, seleccione una talla.');
+      Swal.fire({
+        icon: "info",
+        title: "Por favor, selecciona una talla",
+    });
       return;
     }
   
@@ -168,9 +171,10 @@ function obtenerDatosProducto() {
     localStorage.setItem('carrito', JSON.stringify(carrito));
   
     // Mensaje de éxito
-    alert('El producto se ha agregado al carrito.');
-    location.reload();
-
+    Swal.fire({
+      icon: "success",
+      title: "¡El producto se ha agregado correctamente!",
+  });
   }
   
   // Asocia la función al botón "Agregar al carrito"

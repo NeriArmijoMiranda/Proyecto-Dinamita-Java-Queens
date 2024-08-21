@@ -97,6 +97,14 @@
         "precio": 2300.00,
         "imagen": "/img/platosceramica.jpg",
         "origen": "Puebla, México"
+    },
+    {
+        "id": 13,
+        "nombre": "Aretes Artesanales",
+        "categoría": "Joyería",
+        "precio": 80.00,
+        "imagen": "/img/aretesproductonuevo.jpeg",
+        "origen": "Chiapas, México"
     }
 
 ]

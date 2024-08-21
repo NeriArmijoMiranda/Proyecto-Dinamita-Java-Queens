@@ -150,3 +150,8 @@ const crearTarjeta = (etiqueta) => {
 arregloTarjetas.innerHTML = crearArregloTarjetas(integrantes);
 
 carritoCounter();
+// Función para mostrar el spinner
+function showSpinner() {
+    document.getElementById('spinner-prod').style.display = 'flex';
+  }
+  

@@ -15,4 +15,20 @@ document.querySelector("#footer-app").innerHTML= footerApp();
 
 /* ------------------------------------------------------------- */
 carritoCounter();
- 
+ // Función para mostrar el spinner
+function showSpinner() {
+    document.getElementById('spinner').style.display = 'flex';
+  }
+  
+  // Función para ocultar el spinner
+  function hideSpinner() {
+    document.getElementById('spinner').style.display = 'none';
+  }
+  
+  // Mostrar el spinner al cargar la página
+  window.addEventListener('load', () => {
+    showSpinner();
+    // Simular un retraso para ocultar el spinner (por ejemplo, después de 1 segundos)
+    setTimeout(hideSpinner, 1000);
+  });
+  

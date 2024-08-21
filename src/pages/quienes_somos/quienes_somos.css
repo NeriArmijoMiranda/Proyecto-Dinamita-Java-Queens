@@ -73,7 +73,7 @@
     color: white;
     font-size: 3rem;
     font-family: Corben;
-    text-shadow: 0.1rem 0.17rem 0.3rem #F1A20B;
+    text-shadow: 0rem 0.1rem 0rem #E4007F;
     
 }
 .titulo-nuestros-valores:hover{
@@ -211,7 +211,7 @@ transform: translatex(0.3rem);
     width: 100%;
     margin-bottom: 40px;
     border-radius: 1rem;
-    /* Espacio inferior */
+    text-shadow: 0.1rem 0.1rem 0.1rem black;
 }
 .subtitulo:hover{
     background-color: #0da49f;
@@ -225,7 +225,7 @@ transform: translatex(0.3rem);
     width: 100%;
     margin-bottom: 40px;
     border-radius: 1rem;
-    /* Espacio inferior */
+    text-shadow: 0.1rem 0.1rem 0.1rem black;
 } 
 .subtitulo2:hover{
     background-color: #b0c209;
@@ -263,3 +263,35 @@ transform: translatex(0.3rem);
   .scroll-top-btn svg {
     margin: 1rem;
   }
+  /* Estilos para el spinner */
+.spinner-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(/public/img/viejita1.jpg);
+    opacity: 0.7;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    display: none; /* Ocultar por defecto */
+  }
+  
+  .spinner {
+    border: 2rem solid #08807B; /* Color de fondo del spinner */
+    border-top: 2rem solid #F85931; /* Color del spinner */
+    border-radius: 50%;
+    width: 25rem;
+    height: 25rem;
+    animation: spin 0.6s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  

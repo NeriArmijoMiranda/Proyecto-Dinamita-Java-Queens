@@ -165,7 +165,22 @@ pintarCarrito();
 carritoCounter(); /*Al llamar la función, se muestra el número del carrito.*/
 eliminarProducto(); /* Elimina elemento del carrito al refrescar */
 
-
+// Función para mostrar el spinner
+function showSpinner() {
+    document.getElementById('spinner-prod').style.display = 'flex';
+  }
+  
+  // Función para ocultar el spinner
+  function hideSpinner() {
+    document.getElementById('spinner-prod').style.display = 'none';
+  }
+  
+  // Mostrar el spinner al cargar la página
+  window.addEventListener('load', () => {
+    showSpinner();
+    // Simular un retraso para ocultar el spinner (por ejemplo, después de 1 segundo)
+    setTimeout(hideSpinner, 1000);
+  });
 
 
 

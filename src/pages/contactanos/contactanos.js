@@ -87,3 +87,19 @@ document.getElementById('form').addEventListener('submit', function(event) {
       behavior: 'smooth' // Desplazamiento suave
     });
   });
+  // Función para mostrar el spinner
+function showSpinner() {
+  document.getElementById('spinner-cont').style.display = 'flex';
+}
+
+// Función para ocultar el spinner
+function hideSpinner() {
+  document.getElementById('spinner-cont').style.display = 'none';
+}
+
+// Mostrar el spinner al cargar la página
+window.addEventListener('load', () => {
+  showSpinner();
+  // Simular un retraso para ocultar el spinner (por ejemplo, después de 1 segundo)
+  setTimeout(hideSpinner, 1000);
+});
